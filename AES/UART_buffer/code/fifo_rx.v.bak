@@ -1,0 +1,48 @@
+module fifo_rx (
+    input        clk,           // Clock
+    input        reset,         // Synchronous reset
+    input        wr_en,         // Write enable
+    input        rd_en,         // Read enable
+    input  [8:0] din,          // Data input (8-bit data + 1-bit parity)
+    output reg [8:0] dout,     // Data output (8-bit data + 1-bit parity)
+    output       full,          // FIFO full
+    output       empty          // FIFO empty
+);
+    parameter DEPTH = 8;        // Same depth as TX FIFO
+    parameter ADDR_WIDTH = 5;
+    
+    // Storage memory
+    reg [8:0] mem [0:DEPTH-1];
+    
+    // Pointers
+    reg [ADDR_WIDTH:0] wr_ptr, rd_ptr;  // Extra bit for full/empty detection
+    
+    // Status flags
+    assign full  = ((wr_ptr[ADDR_WIDTH-1:0] == rd_ptr[ADDR_WIDTH-1:0]) && 
+                   (wr_ptr[ADDR_WIDTH] != rd_ptr[ADDR_WIDTH]));
+    assign empty = (wr_ptr == rd_ptr);
+    
+    // Valid operation signals
+    wire wr_valid = wr_en && !full;
+    wire rd_valid = rd_en && !empty;
+    
+    always @(posedge clk) begin
+        if (reset) begin
+            wr_ptr <= 0;
+            rd_ptr <= 0;
+            dout   <= 0;
+        end else begin
+            // Write operation
+            if (wr_valid) begin
+                mem[wr_ptr[ADDR_WIDTH-1:0]] <= din;
+                wr_ptr <= wr_ptr + 1;
+            end
+            
+            // Read operation
+            if (rd_valid) begin
+                dout <= mem[rd_ptr[ADDR_WIDTH-1:0]];
+                rd_ptr <= rd_ptr + 1;
+            end
+        end
+    end
+endmodule

@@ -1,0 +1,113 @@
+module UART_RX(
+input clk_3125,
+input rx,
+output reg[7:0]rx_msg,
+output reg rx_parity,
+output reg rx_complete
+);
+
+initial begin
+	rx_msg = 0;
+	rx_parity = 0;
+	rx_complete = 0;
+end
+
+
+localparam clocks_per_bit = 14;
+localparam final_cycle = 13;
+localparam sample_cycle = 7;
+// ----states used in Finite State Machine-----
+
+localparam s_idle = 4'b0000;
+localparam s_start = 4'b0001;
+localparam s_data = 4'b0010;
+localparam s_parity = 4'b0011;
+localparam s_stop = 4'b0100;
+localparam s_done = 4'b0101;
+
+// -------Internal registers------
+
+reg[3:0]state = s_idle;
+reg[3:0]clk_counter = 0;
+reg[2:0]bit_counter = 7;
+reg [7:0] data_reg = 0;
+reg rx_start, sampled_parity;
+
+always@(posedge clk_3125)begin
+	
+rx_complete = 0;
+
+	case(state)
+		s_idle : begin
+			if(rx == 0)begin
+				state <= s_start;
+			end
+			else begin
+				state <= s_idle;
+			end
+		end
+		
+		s_start : begin
+			clk_counter <= 0;
+			bit_counter <= 7;
+			if(clk_counter == sampled_parity)begin
+				if(rx == 0)begin
+					rx_start <= rx;
+					state <= s_data;
+				end
+				else begin
+					state <= s_idle;
+				end
+			end
+			else begin
+				clk_counter = clk_counter + 1;
+			end
+		end
+		
+		s_data : begin	
+			if(clk_counter == 13)begin
+				data_reg[7:0] = {data_reg[6:0],rx};
+				clk_counter <= 0;
+				if(bit_counter == 0)begin
+					state <= s_parity;
+				end
+				else begin
+					bit_counter <= bit_counter - 1;
+				end
+			end
+			else begin
+				clk_counter = clk_counter + 1;
+			end
+		end
+		
+		s_parity : begin
+			if(clk_counter == 13)begin
+				sampled_parity <= rx;
+				state <= s_done;
+				clk_counter <= 0;
+			end
+			else begin
+				clk_counter = clk_counter + 1;
+			end
+		end
+		
+		s_stop : begin
+			if(clk_counter == 20)begin
+				clk_counter <= 1;
+				rx_msg <= data_reg;
+				rx_parity <= sampled_parity;
+				rx_complete <= 1;
+				state <= s_idle;
+			end
+			else begin
+				clk_counter = clk_counter + 1;
+			end
+		end
+		
+		default : begin
+			state <= s_idle;
+		end
+	endcase
+end
+
+endmodule

@@ -1,0 +1,42 @@
+
+
+module shiftRows (
+    inout  wire clk,
+    input  wire [127:0] in,
+    output wire [127:0] out
+);
+
+    // Extract bytes (0 = MSB)
+    wire [7:0] b [0:15];
+    genvar i;
+    generate
+        for (i = 0; i < 16; i = i + 1) begin : BYTE_EXTRACT
+            assign b[i] = in[127 - 8*i -: 8];
+        end
+    endgenerate
+
+    // Row 0: no shift
+    assign out[127 -: 8] = b[0];
+    assign out[119 -: 8] = b[1];
+    assign out[111 -: 8] = b[2];
+    assign out[103 -: 8] = b[3];
+
+    // Row 1: left shift by 1
+    assign out[95  -: 8] = b[5];
+    assign out[87  -: 8] = b[6];
+    assign out[79  -: 8] = b[7];
+    assign out[71  -: 8] = b[4];
+
+    // Row 2: left shift by 2
+    assign out[63  -: 8] = b[10];
+    assign out[55  -: 8] = b[11];
+    assign out[47  -: 8] = b[8];
+    assign out[39  -: 8] = b[9];
+
+    // Row 3: left shift by 3
+    assign out[31  -: 8] = b[15];
+    assign out[23  -: 8] = b[12];
+    assign out[15  -: 8] = b[13];
+    assign out[7   -: 8] = b[14];
+
+endmodule

@@ -1,0 +1,20 @@
+Fitter Status : Successful - Sat Jan 31 14:47:12 2026
+Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Revision Name : aes_uart_top
+Top-level Entity Name : aes_uart_top
+Family : Cyclone V
+Device : 5CGXFC9E6F35I7
+Timing Models : Final
+Logic utilization (in ALMs) : 5,355 / 113,560 ( 5 % )
+Total registers : 987
+Total pins : 402 / 616 ( 65 % )
+Total virtual pins : 0
+Total block memory bits : 512 / 12,492,800 ( < 1 % )
+Total RAM Blocks : 2 / 1,220 ( < 1 % )
+Total DSP Blocks : 0 / 342 ( 0 % )
+Total HSSI RX PCSs : 0 / 12 ( 0 % )
+Total HSSI PMA RX Deserializers : 0 / 12 ( 0 % )
+Total HSSI TX PCSs : 0 / 12 ( 0 % )
+Total HSSI PMA TX Serializers : 0 / 12 ( 0 % )
+Total PLLs : 0 / 20 ( 0 % )
+Total DLLs : 0 / 4 ( 0 % )

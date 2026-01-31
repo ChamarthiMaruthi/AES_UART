@@ -1,0 +1,8 @@
+
+State Machine - |ADS_TOP|fsm_state
+Name fsm_state.S_FINAL fsm_state.S_ROUND fsm_state.S_LOAD fsm_state.S_IDLE fsm_state.S_DONE 
+fsm_state.S_IDLE 0 0 0 0 0 
+fsm_state.S_LOAD 0 0 1 1 0 
+fsm_state.S_ROUND 0 1 0 1 0 
+fsm_state.S_FINAL 1 0 0 1 0 
+fsm_state.S_DONE 0 0 0 1 1 

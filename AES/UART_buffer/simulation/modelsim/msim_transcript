@@ -1,0 +1,101 @@
+# do Buffer_top_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying /home/maruthi/intelFPGA_lite/20.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/UART_buffer/code {/home/maruthi/intelFPGA_lite/20.1/quartus/UART_buffer/code/fifo_tx.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:28:12 on Jan 14,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/UART_buffer/code" /home/maruthi/intelFPGA_lite/20.1/quartus/UART_buffer/code/fifo_tx.v 
+# -- Compiling module fifo_tx
+# 
+# Top level modules:
+# 	fifo_tx
+# End time: 13:28:13 on Jan 14,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/UART_buffer/code {/home/maruthi/intelFPGA_lite/20.1/quartus/UART_buffer/code/fifo_rx.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:28:13 on Jan 14,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/UART_buffer/code" /home/maruthi/intelFPGA_lite/20.1/quartus/UART_buffer/code/fifo_rx.v 
+# -- Compiling module fifo_rx
+# 
+# Top level modules:
+# 	fifo_rx
+# End time: 13:28:13 on Jan 14,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/UART_buffer/code {/home/maruthi/intelFPGA_lite/20.1/quartus/UART_buffer/code/Buffer_top.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:28:13 on Jan 14,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/UART_buffer/code" /home/maruthi/intelFPGA_lite/20.1/quartus/UART_buffer/code/Buffer_top.v 
+# -- Compiling module Buffer_top
+# 
+# Top level modules:
+# 	Buffer_top
+# End time: 13:28:13 on Jan 14,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/UART_buffer/code {/home/maruthi/intelFPGA_lite/20.1/quartus/UART_buffer/code/UART_RX.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:28:13 on Jan 14,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/UART_buffer/code" /home/maruthi/intelFPGA_lite/20.1/quartus/UART_buffer/code/UART_RX.v 
+# -- Compiling module uart_rx
+# 
+# Top level modules:
+# 	uart_rx
+# End time: 13:28:13 on Jan 14,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/UART_buffer/code {/home/maruthi/intelFPGA_lite/20.1/quartus/UART_buffer/code/UART_TX.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:28:13 on Jan 14,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/UART_buffer/code" /home/maruthi/intelFPGA_lite/20.1/quartus/UART_buffer/code/UART_TX.v 
+# -- Compiling module uart_tx
+# 
+# Top level modules:
+# 	uart_tx
+# End time: 13:28:13 on Jan 14,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/UART_buffer/test {/home/maruthi/intelFPGA_lite/20.1/quartus/UART_buffer/test/tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:28:13 on Jan 14,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/UART_buffer/test" /home/maruthi/intelFPGA_lite/20.1/quartus/UART_buffer/test/tb.v 
+# -- Compiling module tb
+# ** Warning: /home/maruthi/intelFPGA_lite/20.1/quartus/UART_buffer/test/tb.v(204): (vlog-2609) indexed range expression contains whitespace between '+' and ':'.
+# 
+# Top level modules:
+# 	tb
+# End time: 13:28:13 on Jan 14,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb 
+# Start time: 13:28:13 on Jan 14,2026
+# Loading work.tb
+# Loading work.Buffer_top
+# Loading work.fifo_tx
+# Loading work.uart_tx
+# Loading work.uart_rx
+# Loading work.fifo_rx
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fgets'.
+#    Time: 0 ps  Iteration: 0  Instance: /tb File: /home/maruthi/intelFPGA_lite/20.1/quartus/UART_buffer/test/tb.v Line: 189
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'rd_rx'. The port definition is at: /home/maruthi/intelFPGA_lite/20.1/quartus/UART_buffer/code/fifo_rx.v(8).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/uut/rx_fifo_inst File: /home/maruthi/intelFPGA_lite/20.1/quartus/UART_buffer/code/Buffer_top.v Line: 70
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# TX : No errors encountered, congratulations!
+# RX : No errors encountered, congratulations!
+# ** Note: $stop    : /home/maruthi/intelFPGA_lite/20.1/quartus/UART_buffer/test/tb.v(338)
+#    Time: 240 us  Iteration: 1  Instance: /tb
+# Break in Module tb at /home/maruthi/intelFPGA_lite/20.1/quartus/UART_buffer/test/tb.v line 338
+# End time: 13:30:52 on Jan 14,2026, Elapsed time: 0:02:39
+# Errors: 0, Warnings: 2

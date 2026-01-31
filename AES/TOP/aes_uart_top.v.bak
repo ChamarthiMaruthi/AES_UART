@@ -1,0 +1,207 @@
+module aes_uart_top (
+    // ===== Clocks & Reset =====
+    input  wire        clk_100,        // 100 MHz AES clock
+    input  wire        clk_3125_tx,     // 3.125 MHz UART TX clock
+    input  wire        clk_3125_rx,     // 3.125 MHz UART RX clock
+    input  wire        rst_n,
+
+    // ===== Control =====
+    input  wire        start,           // Start full encrypt→tx→rx→decrypt flow
+
+    // ===== AES Inputs =====
+    input  wire [127:0] plaintext,
+    input  wire [127:0] key,
+
+    // ===== AES Output =====
+    output reg  [127:0] decrypted_text,
+    output reg          done,
+
+    // ===== UART Physical Loopback =====
+    output wire        tx,
+    input  wire        rx
+);
+
+    // ============================================================
+    // FSM States (System-level controller)
+    // ============================================================
+    localparam ST_IDLE        = 4'd0;
+    localparam ST_ENC_START   = 4'd1;
+    localparam ST_ENC_WAIT    = 4'd2;
+    localparam ST_TX_BYTES    = 4'd3;
+    localparam ST_TX_WAIT     = 4'd4;
+    localparam ST_RX_WAIT     = 4'd5;
+    localparam ST_DEC_START   = 4'd6;
+    localparam ST_DEC_WAIT    = 4'd7;
+    localparam ST_DONE        = 4'd8;
+
+    reg [3:0] sys_state;
+
+    // ============================================================
+    // AES Encryption Signals
+    // ============================================================
+    reg         enc_start;
+    wire        enc_done;
+    wire [127:0] enc_ciphertext;
+
+    AES_TOP u_aes_encrypt (
+        .clk        (clk_100),
+        .rst_n      (rst_n),
+        .start      (enc_start),
+        .plaintext  (plaintext),
+        .key        (key),
+        .ciphertext (enc_ciphertext),
+        .done       (enc_done)
+    );
+
+    // ============================================================
+    // UART Buffer System Signals
+    // ============================================================
+    reg         fifo_wr_en;
+    reg  [7:0]  fifo_wr_data;
+    wire        fifo_full;
+    wire        fifo_empty;
+    wire [7:0]  fifo_rd_data;
+    wire        fifo_rd_en;
+
+    wire [7:0]  rx_dout;
+    wire        rx_empty;
+
+    Buffer_top u_uart_buffer (
+        .clk_3125_tx (clk_3125_tx),
+        .clk_3125_rx (clk_3125_rx),
+        .reset       (!rst_n),
+
+        // TX side
+        .parity_type (1'b0),
+        .tx_start    (1'b1),     // always enabled; FIFO controls flow
+        .ft_data     (fifo_wr_data),
+        .wr_en       (fifo_wr_en),
+        .ft_full     (fifo_full),
+        .ft_empty    (fifo_empty),
+        .ft_out      (),
+        .rd_en       (fifo_rd_en),
+        .tx          (tx),
+        .tx_done     (),
+        .tx_busy     (),
+
+        // RX side
+        .rx          (rx),
+        .rx_msg      (),
+        .rx_parity   (),
+        .rx_complete (),
+        .rd_rx       (1'b1),
+        .wr_rx       (),
+        .dout        (rx_dout),
+        .full        (),
+        .empty       (rx_empty)
+    );
+
+    // ============================================================
+    // AES Decryption Signals
+    // ============================================================
+    reg         dec_start;
+    wire        dec_done;
+    reg  [127:0] dec_ciphertext;
+
+    ADS_TOP u_aes_decrypt (
+        .clk        (clk_100),
+        .rst_n      (rst_n),
+        .start      (dec_start),
+        .ciphertext (dec_ciphertext),
+        .key        (key),
+        .plaintext  (decrypted_text),
+        .done       (dec_done)
+    );
+
+    // ============================================================
+    // Byte Counters
+    // ============================================================
+    reg [3:0] tx_byte_cnt;
+    reg [3:0] rx_byte_cnt;
+
+    // ============================================================
+    // System FSM
+    // ============================================================
+    always @(posedge clk_100 or negedge rst_n) begin
+        if (!rst_n) begin
+            sys_state       <= ST_IDLE;
+            enc_start       <= 0;
+            dec_start       <= 0;
+            fifo_wr_en      <= 0;
+            fifo_wr_data    <= 0;
+            tx_byte_cnt     <= 0;
+            rx_byte_cnt     <= 0;
+            dec_ciphertext  <= 0;
+            done            <= 0;
+        end else begin
+            enc_start  <= 0;
+            dec_start  <= 0;
+            fifo_wr_en <= 0;
+            done       <= 0;
+
+            case (sys_state)
+
+                ST_IDLE: begin
+                    if (start) begin
+                        sys_state <= ST_ENC_START;
+                    end
+                end
+
+                ST_ENC_START: begin
+                    enc_start <= 1'b1;
+                    sys_state <= ST_ENC_WAIT;
+                end
+
+                ST_ENC_WAIT: begin
+                    if (enc_done) begin
+                        tx_byte_cnt <= 0;
+                        sys_state   <= ST_TX_BYTES;
+                    end
+                end
+
+                ST_TX_BYTES: begin
+                    if (!fifo_full) begin
+                        fifo_wr_data <= enc_ciphertext[127 - tx_byte_cnt*8 -: 8];
+                        fifo_wr_en   <= 1'b1;
+                        tx_byte_cnt  <= tx_byte_cnt + 1'b1;
+                        if (tx_byte_cnt == 4'd15)
+                            sys_state <= ST_TX_WAIT;
+                    end
+                end
+
+                ST_TX_WAIT: begin
+                    if (fifo_empty)
+                        sys_state <= ST_RX_WAIT;
+                end
+
+                ST_RX_WAIT: begin
+                    if (!rx_empty) begin
+                        dec_ciphertext[127 - rx_byte_cnt*8 -: 8] <= rx_dout;
+                        rx_byte_cnt <= rx_byte_cnt + 1'b1;
+                        if (rx_byte_cnt == 4'd15)
+                            sys_state <= ST_DEC_START;
+                    end
+                end
+
+                ST_DEC_START: begin
+                    dec_start <= 1'b1;
+                    sys_state <= ST_DEC_WAIT;
+                end
+
+                ST_DEC_WAIT: begin
+                    if (dec_done)
+                        sys_state <= ST_DONE;
+                end
+
+                ST_DONE: begin
+                    done      <= 1'b1;
+                    sys_state <= ST_IDLE;
+                end
+
+                default: sys_state <= ST_IDLE;
+
+            endcase
+        end
+    end
+
+endmodule

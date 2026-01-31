@@ -1,0 +1,56 @@
+module Buffer_top(
+    // Global Clock
+    input clk_3125,
+
+    // Inputs to the UART Transmitter (from your testbench or external source)
+    input [7:0] tx_data_in,
+    input       tx_parity_type_in, // This should be the 'parity_bit' as defined in UART_TX
+    input       tx_start_in,
+
+    // Outputs from the UART Transmitter
+    output      tx_out,          // Serial data out (also goes to RX input)
+    output      tx_done_out,     // Transmission completion flag
+
+    // Outputs from the UART Receiver
+    output [7:0] rx_data_out,    // Received 8-bit data
+    output      rx_parity_out,   // Received parity bit
+    output      rx_complete_out  // Reception completion flag
+);
+
+    // --- Internal Wires ---
+    // These wires connect the TX and RX modules together,
+    // and might also be exposed as top-level ports if needed.
+    wire uart_tx_line; // This wire carries the serial data from TX to RX
+    wire uart_tx_done;
+    wire [7:0] uart_rx_msg;
+    wire uart_rx_parity;
+    wire uart_rx_complete;
+
+    // --- UART_TX Instantiation ---
+    UART_TX tx_inst (
+        .clk_3125(clk_3125),
+        .parity_bit(tx_parity_type_in), // The actual parity bit to be sent
+        .tx_start(tx_start_in),
+        .data(tx_data_in),
+        .tx(uart_tx_line),          // TX output drives this internal wire
+        .tx_done(uart_tx_done)
+    );
+
+    // --- UART_RX Instantiation ---
+    UART_RX rx_inst (
+        .clk_3125(clk_3125),
+        .rx(uart_tx_line),          // RX input takes data from the internal TX line
+        .rx_msg(uart_rx_msg),
+        .rx_parity(uart_rx_parity),
+        .rx_complete(uart_rx_complete)
+    );
+
+    // --- Assign Internal Wires to Top-Level Outputs ---
+    // This connects the internal signals from TX and RX to the external ports of Buffer_top.
+    assign tx_out = uart_tx_line;
+    assign tx_done_out = uart_tx_done;
+    assign rx_data_out = uart_rx_msg;
+    assign rx_parity_out = uart_rx_parity;
+    assign rx_complete_out = uart_rx_complete;
+
+endmodule

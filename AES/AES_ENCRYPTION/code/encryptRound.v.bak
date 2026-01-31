@@ -1,0 +1,26 @@
+module encryptRound (
+    input  wire [127:0] state_in,
+    input  wire [127:0] round_key,
+    output wire [127:0] state_out
+);
+
+    wire [127:0] after_sub;
+    wire [127:0] after_shift;
+    wire [127:0] after_mix;
+    wire [127:0] after_add;
+
+    // SubBytes
+    subBytes sb (.in(state_in), .out(after_sub));
+
+    // ShiftRows
+    shiftRows sr (.in(after_sub), .out(after_shift));
+
+    // MixColumns
+    mixColumns mc (.state_in(after_shift), .state_out(after_mix));
+
+    // AddRoundKey
+    addRoundKey ark (.data(after_mix), .key(round_key), .out(after_add));
+
+    assign state_out = after_add;
+
+endmodule

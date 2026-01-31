@@ -1,0 +1,2 @@
+Info (10281): Verilog HDL Declaration information at AES_TOP.v(156): object "done" differs only in case from object "DONE" in the same scope File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES_ENCRYPTION/code/AES_TOP.v Line: 156
+Info (10281): Verilog HDL Declaration information at AES_TOP.v(172): object "ROUND" differs only in case from object "round" in the same scope File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES_ENCRYPTION/code/AES_TOP.v Line: 172

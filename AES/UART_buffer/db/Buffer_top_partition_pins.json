@@ -1,0 +1,205 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "tx",
+					"strict" : false
+				},
+				{
+					"name" : "tx_done",
+					"strict" : false
+				},
+				{
+					"name" : "tx_busy",
+					"strict" : false
+				},
+				{
+					"name" : "ft_full",
+					"strict" : false
+				},
+				{
+					"name" : "ft_empty",
+					"strict" : false
+				},
+				{
+					"name" : "ft_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ft_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ft_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ft_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ft_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ft_out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ft_out[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ft_out[7]",
+					"strict" : false
+				},
+				{
+					"name" : "rd_en",
+					"strict" : false
+				},
+				{
+					"name" : "rx_msg[0]",
+					"strict" : false
+				},
+				{
+					"name" : "rx_msg[1]",
+					"strict" : false
+				},
+				{
+					"name" : "rx_msg[2]",
+					"strict" : false
+				},
+				{
+					"name" : "rx_msg[3]",
+					"strict" : false
+				},
+				{
+					"name" : "rx_msg[4]",
+					"strict" : false
+				},
+				{
+					"name" : "rx_msg[5]",
+					"strict" : false
+				},
+				{
+					"name" : "rx_msg[6]",
+					"strict" : false
+				},
+				{
+					"name" : "rx_msg[7]",
+					"strict" : false
+				},
+				{
+					"name" : "rx_parity",
+					"strict" : false
+				},
+				{
+					"name" : "rx_complete",
+					"strict" : false
+				},
+				{
+					"name" : "dout[0]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[1]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[2]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[3]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[4]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[5]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[6]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[7]",
+					"strict" : false
+				},
+				{
+					"name" : "full",
+					"strict" : false
+				},
+				{
+					"name" : "empty",
+					"strict" : false
+				},
+				{
+					"name" : "tx_start",
+					"strict" : false
+				},
+				{
+					"name" : "clk_3125_tx",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "wr_en",
+					"strict" : false
+				},
+				{
+					"name" : "clk_3125_rx",
+					"strict" : false
+				},
+				{
+					"name" : "rx",
+					"strict" : false
+				},
+				{
+					"name" : "parity_type",
+					"strict" : false
+				},
+				{
+					"name" : "ft_data[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ft_data[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ft_data[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ft_data[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ft_data[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ft_data[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ft_data[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ft_data[7]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

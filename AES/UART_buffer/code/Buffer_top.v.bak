@@ -1,0 +1,38 @@
+
+module Buffer_top(
+    input        clk_3125_tx,    // UART TX clock
+    input        clk_3125_rx,    // UART RX clock
+    // ===== UART TX Management Ports =====
+    input        parity_type,    // Parity type for UART TX
+    input        tx_start,       // Start UART TX transmission (writes to FIFO)
+    input  [7:0] data,           // Data to transmit
+    output       tx,        // UART TX output line
+    output       tx_done,        // UART TX completion flag
+    // ===== UART RX Management Ports =====
+    input        rx,             // UART RX input line
+    output [7:0] rx_msg,    // Data read from RX FIFO
+    output       rx_parity,  // Parity read from RX FIFO
+	 output       rx_complete
+);
+
+
+// ===== UART TX Instance =====
+uart_tx tx_inst (
+    .clk_3125_tx (clk_3125_tx),
+    .parity_type (parity_type),
+    .tx_start    (tx_start_signal),   // Driven by our corrected FSM
+    .data        (tx_current_data),   // Driven by our corrected FSM
+    .tx          (tx),
+    .tx_done     (tx_done)
+);
+
+// ===== UART RX Instance =====
+uart_rx rx_inst (
+    .clk_3125_rx (clk_3125_rx),
+    .rx          (rx),
+    .rx_msg      (rx_msg),
+    .rx_parity   (rx_parity),
+    .rx_complete (rx_complete)
+);
+
+endmodule

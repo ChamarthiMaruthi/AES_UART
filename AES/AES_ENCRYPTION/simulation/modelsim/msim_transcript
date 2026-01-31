@@ -1,0 +1,154 @@
+# do AES_TOP_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying /home/maruthi/intelFPGA_lite/20.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES_ENCRYPTION/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES_ENCRYPTION/code/AES_TOP.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:46:23 on Jan 14,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES_ENCRYPTION/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES_ENCRYPTION/code/AES_TOP.v 
+# -- Compiling module AES_TOP
+# 
+# Top level modules:
+# 	AES_TOP
+# End time: 22:46:23 on Jan 14,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES_ENCRYPTION/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES_ENCRYPTION/code/sbox.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:46:23 on Jan 14,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES_ENCRYPTION/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES_ENCRYPTION/code/sbox.v 
+# -- Compiling module sbox
+# 
+# Top level modules:
+# 	sbox
+# End time: 22:46:23 on Jan 14,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES_ENCRYPTION/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES_ENCRYPTION/code/keyExpansion.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:46:23 on Jan 14,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES_ENCRYPTION/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES_ENCRYPTION/code/keyExpansion.v 
+# -- Compiling module keyExpansion
+# 
+# Top level modules:
+# 	keyExpansion
+# End time: 22:46:23 on Jan 14,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES_ENCRYPTION/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES_ENCRYPTION/code/mixColumns.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:46:23 on Jan 14,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES_ENCRYPTION/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES_ENCRYPTION/code/mixColumns.v 
+# -- Compiling module mixColumns
+# 
+# Top level modules:
+# 	mixColumns
+# End time: 22:46:23 on Jan 14,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES_ENCRYPTION/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES_ENCRYPTION/code/shiftRows.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:46:23 on Jan 14,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES_ENCRYPTION/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES_ENCRYPTION/code/shiftRows.v 
+# -- Compiling module shiftRows
+# 
+# Top level modules:
+# 	shiftRows
+# End time: 22:46:23 on Jan 14,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES_ENCRYPTION/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES_ENCRYPTION/code/subBytes.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:46:23 on Jan 14,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES_ENCRYPTION/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES_ENCRYPTION/code/subBytes.v 
+# -- Compiling module subBytes
+# 
+# Top level modules:
+# 	subBytes
+# End time: 22:46:23 on Jan 14,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES_ENCRYPTION/testbench {/home/maruthi/intelFPGA_lite/20.1/quartus/AES_ENCRYPTION/testbench/tb_aes_en.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:46:23 on Jan 14,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES_ENCRYPTION/testbench" /home/maruthi/intelFPGA_lite/20.1/quartus/AES_ENCRYPTION/testbench/tb_aes_en.v 
+# -- Compiling module tb_aes_en
+# 
+# Top level modules:
+# 	tb_aes_en
+# End time: 22:46:23 on Jan 14,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_aes_en
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb_aes_en 
+# Start time: 22:46:23 on Jan 14,2026
+# Loading work.tb_aes_en
+# Loading work.AES_TOP
+# Loading work.keyExpansion
+# Loading work.subBytes
+# Loading work.shiftRows
+# Loading work.mixColumns
+# Loading work.sbox
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# time : 160000 | Entered done handshake block. ct=00000000000000000000000000000000
+# PASS | ct=00000000000000000000000000000000 | latency=11
+# plaintext: 00000000000000000000000000000000
+# Ciphertext: 00000000000000000000000000000000
+# time : 300000 | Entered done handshake block. ct=66e94bd4ef8a2c3b884cfa59ca342b2e
+# PASS | ct=66e94bd4ef8a2c3b884cfa59ca342b2e | latency=11
+# plaintext: 00000000000000000000000000000001
+# Ciphertext: 66e94bd4ef8a2c3b884cfa59ca342b2e
+# time : 440000 | Entered done handshake block. ct=58e2fccefa7e3061367f1d57a4e7455a
+# PASS | ct=58e2fccefa7e3061367f1d57a4e7455a | latency=11
+# plaintext: 00000000000000000000000000000002
+# Ciphertext: 58e2fccefa7e3061367f1d57a4e7455a
+# time : 580000 | Entered done handshake block. ct=0388dace60b6a392f328c2b971b2fe78
+# PASS | ct=0388dace60b6a392f328c2b971b2fe78 | latency=11
+# plaintext: 00000000000000000000000000000003
+# Ciphertext: 0388dace60b6a392f328c2b971b2fe78
+# time : 720000 | Entered done handshake block. ct=f795aaab494b5923f7fd89ff948bc1e0
+# PASS | ct=f795aaab494b5923f7fd89ff948bc1e0 | latency=11
+# plaintext: 00000000000000000000000000000004
+# Ciphertext: f795aaab494b5923f7fd89ff948bc1e0
+# time : 860000 | Entered done handshake block. ct=200211214e7394da2089b6acd093abe0
+# PASS | ct=200211214e7394da2089b6acd093abe0 | latency=11
+# plaintext: 00000000000000000000000000000005
+# Ciphertext: 200211214e7394da2089b6acd093abe0
+# time : 1000000 | Entered done handshake block. ct=c94da219118e297d7b7ebcbcc9c388f2
+# PASS | ct=c94da219118e297d7b7ebcbcc9c388f2 | latency=11
+# plaintext: 00000000000000000000000000000006
+# Ciphertext: c94da219118e297d7b7ebcbcc9c388f2
+# time : 1140000 | Entered done handshake block. ct=8ade7d85a8ee35616f7124a9d5270291
+# PASS | ct=8ade7d85a8ee35616f7124a9d5270291 | latency=11
+# plaintext: 00000000000000000000000000000007
+# Ciphertext: 8ade7d85a8ee35616f7124a9d5270291
+# time : 1280000 | Entered done handshake block. ct=95b84d1b96c690ff2f2de30bf2ec89e0
+# PASS | ct=95b84d1b96c690ff2f2de30bf2ec89e0 | latency=11
+# plaintext: 00000000000000000000000000000008
+# Ciphertext: 95b84d1b96c690ff2f2de30bf2ec89e0
+# time : 1420000 | Entered done handshake block. ct=0253786e126504f0dab90c48a30321de
+# PASS | ct=0253786e126504f0dab90c48a30321de | latency=11
+# plaintext: 00000000000000000000000000000009
+# Ciphertext: 0253786e126504f0dab90c48a30321de
+# ----------------------------------
+# AES ENCRYPTION TEST SUMMARY
+# PASS        : 10
+# FAIL        : 0
+# LATENCY ERR : 0
+# LATENCY REF : 11
+# ----------------------------------
+# ✅ AES ENCRYPTION TB PASSED
+# ** Note: $finish    : /home/maruthi/intelFPGA_lite/20.1/quartus/AES_ENCRYPTION/testbench/tb_aes_en.v(412)
+#    Time: 1420 ns  Iteration: 2  Instance: /tb_aes_en
+# 1
+# Break in Module tb_aes_en at /home/maruthi/intelFPGA_lite/20.1/quartus/AES_ENCRYPTION/testbench/tb_aes_en.v line 412
+# End time: 22:51:09 on Jan 14,2026, Elapsed time: 0:04:46
+# Errors: 0, Warnings: 0

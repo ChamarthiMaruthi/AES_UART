@@ -1,0 +1,187 @@
+# do ADS_TOP_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying /home/maruthi/intelFPGA_lite/20.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES_DECRYPTION/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES_DECRYPTION/code/ADS_TOP.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:16:53 on Jan 17,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES_DECRYPTION/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES_DECRYPTION/code/ADS_TOP.v 
+# -- Compiling module ADS_TOP
+# 
+# Top level modules:
+# 	ADS_TOP
+# End time: 16:16:53 on Jan 17,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES_DECRYPTION/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES_DECRYPTION/code/keyexpanison.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:16:53 on Jan 17,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES_DECRYPTION/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES_DECRYPTION/code/keyexpanison.v 
+# -- Compiling module keyExpansion
+# 
+# Top level modules:
+# 	keyExpansion
+# End time: 16:16:53 on Jan 17,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES_DECRYPTION/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES_DECRYPTION/code/inverseSbox.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:16:53 on Jan 17,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES_DECRYPTION/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES_DECRYPTION/code/inverseSbox.v 
+# -- Compiling module inverseSbox
+# 
+# Top level modules:
+# 	inverseSbox
+# End time: 16:16:53 on Jan 17,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES_DECRYPTION/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES_DECRYPTION/code/inverseShiftrows.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:16:53 on Jan 17,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES_DECRYPTION/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES_DECRYPTION/code/inverseShiftrows.v 
+# -- Compiling module inverseShiftRows
+# 
+# Top level modules:
+# 	inverseShiftRows
+# End time: 16:16:53 on Jan 17,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES_DECRYPTION/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES_DECRYPTION/code/inverseSubBytes.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:16:53 on Jan 17,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES_DECRYPTION/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES_DECRYPTION/code/inverseSubBytes.v 
+# -- Compiling module inverseSubBytes
+# 
+# Top level modules:
+# 	inverseSubBytes
+# End time: 16:16:53 on Jan 17,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES_DECRYPTION/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES_DECRYPTION/code/invMixColumns.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:16:53 on Jan 17,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES_DECRYPTION/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES_DECRYPTION/code/invMixColumns.v 
+# -- Compiling module invMixColumns
+# 
+# Top level modules:
+# 	invMixColumns
+# End time: 16:16:53 on Jan 17,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES_DECRYPTION/code/../testbench {/home/maruthi/intelFPGA_lite/20.1/quartus/AES_DECRYPTION/code/../testbench/tb_de_aes.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:16:53 on Jan 17,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES_DECRYPTION/code/../testbench" /home/maruthi/intelFPGA_lite/20.1/quartus/AES_DECRYPTION/code/../testbench/tb_de_aes.v 
+# -- Compiling module tb_de_aes
+# 
+# Top level modules:
+# 	tb_de_aes
+# End time: 16:16:53 on Jan 17,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_de_aes
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb_de_aes 
+# Start time: 16:16:53 on Jan 17,2026
+# Loading work.tb_de_aes
+# Loading work.ADS_TOP
+# Loading work.keyExpansion
+# Loading work.inverseShiftRows
+# Loading work.inverseSubBytes
+# Loading work.invMixColumns
+# Loading work.inverseSbox
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# time:0, Entered reset block. state=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# time:320000, Entered reset block. state=00000000000000000000000000000000
+# time:640000, Entered reset block. state=00000000000000000000000000000000
+# time:               960000, IDLE:Starting decryption, ciphertext=00000000000000000000000000000000, key=00000000000000000000000000000000,
+# time:              4800000, DONE, plaintext=140f0f1011b5223d79587717ffd9ec3a, imc_in=9be5028be3fb8387afd2fba27d5e947c, round_key=00000000000000000000000000000000
+# time : 4800000 | Entered done handshake block. pt=140f0f1011b5223d79587717ffd9ec3a
+# ✅ PASS
+#   Ciphertext : 00000000000000000000000000000000
+#   Plaintext  : 140f0f1011b5223d79587717ffd9ec3a
+#   Expected   : 140f0f1011b5223d79587717ffd9ec3a
+# time:              5120000, IDLE:Starting decryption, ciphertext=66e94bd4ef8a2c3b884cfa59ca342b2e, key=00000000000000000000000000000000,
+# time:              8960000, DONE, plaintext=00000000000000000000000000000000, imc_in=52525252525252525252525252525252, round_key=00000000000000000000000000000000
+# time : 8960000 | Entered done handshake block. pt=00000000000000000000000000000000
+# ✅ PASS
+#   Ciphertext : 66e94bd4ef8a2c3b884cfa59ca342b2e
+#   Plaintext  : 00000000000000000000000000000000
+#   Expected   : 00000000000000000000000000000000
+# time:              9280000, IDLE:Starting decryption, ciphertext=58e2fccefa7e3061367f1d57a4e7455a, key=00000000000000000000000000000000,
+# time:             13120000, DONE, plaintext=00000000000000000000000000000001, imc_in=52525252525252525252520952525252, round_key=00000000000000000000000000000000
+# time : 13120000 | Entered done handshake block. pt=00000000000000000000000000000001
+# ✅ PASS
+#   Ciphertext : 58e2fccefa7e3061367f1d57a4e7455a
+#   Plaintext  : 00000000000000000000000000000001
+#   Expected   : 00000000000000000000000000000001
+# time:             13440000, IDLE:Starting decryption, ciphertext=0388dace60b6a392f328c2b971b2fe78, key=00000000000000000000000000000000,
+# time:             17280000, DONE, plaintext=00000000000000000000000000000002, imc_in=52525252525252525252526a52525252, round_key=00000000000000000000000000000000
+# time : 17280000 | Entered done handshake block. pt=00000000000000000000000000000002
+# ✅ PASS
+#   Ciphertext : 0388dace60b6a392f328c2b971b2fe78
+#   Plaintext  : 00000000000000000000000000000002
+#   Expected   : 00000000000000000000000000000002
+# time:             17600000, IDLE:Starting decryption, ciphertext=f795aaab494b5923f7fd89ff948bc1e0, key=00000000000000000000000000000000,
+# time:             21440000, DONE, plaintext=00000000000000000000000000000003, imc_in=5252525252525252525252d552525252, round_key=00000000000000000000000000000000
+# time : 21440000 | Entered done handshake block. pt=00000000000000000000000000000003
+# ✅ PASS
+#   Ciphertext : f795aaab494b5923f7fd89ff948bc1e0
+#   Plaintext  : 00000000000000000000000000000003
+#   Expected   : 00000000000000000000000000000003
+# time:             21760000, IDLE:Starting decryption, ciphertext=200211214e7394da2089b6acd093abe0, key=00000000000000000000000000000000,
+# time:             25600000, DONE, plaintext=00000000000000000000000000000004, imc_in=52525252525252525252523052525252, round_key=00000000000000000000000000000000
+# time : 25600000 | Entered done handshake block. pt=00000000000000000000000000000004
+# ✅ PASS
+#   Ciphertext : 200211214e7394da2089b6acd093abe0
+#   Plaintext  : 00000000000000000000000000000004
+#   Expected   : 00000000000000000000000000000004
+# time:             25920000, IDLE:Starting decryption, ciphertext=c94da219118e297d7b7ebcbcc9c388f2, key=00000000000000000000000000000000,
+# time:             29760000, DONE, plaintext=00000000000000000000000000000005, imc_in=52525252525252525252523652525252, round_key=00000000000000000000000000000000
+# time : 29760000 | Entered done handshake block. pt=00000000000000000000000000000005
+# ✅ PASS
+#   Ciphertext : c94da219118e297d7b7ebcbcc9c388f2
+#   Plaintext  : 00000000000000000000000000000005
+#   Expected   : 00000000000000000000000000000005
+# time:             30080000, IDLE:Starting decryption, ciphertext=8ade7d85a8ee35616f7124a9d5270291, key=00000000000000000000000000000000,
+# time:             33920000, DONE, plaintext=00000000000000000000000000000006, imc_in=5252525252525252525252a552525252, round_key=00000000000000000000000000000000
+# time : 33920000 | Entered done handshake block. pt=00000000000000000000000000000006
+# ✅ PASS
+#   Ciphertext : 8ade7d85a8ee35616f7124a9d5270291
+#   Plaintext  : 00000000000000000000000000000006
+#   Expected   : 00000000000000000000000000000006
+# time:             34240000, IDLE:Starting decryption, ciphertext=95b84d1b96c690ff2f2de30bf2ec89e0, key=00000000000000000000000000000000,
+# time:             38080000, DONE, plaintext=00000000000000000000000000000007, imc_in=52525252525252525252523852525252, round_key=00000000000000000000000000000000
+# time : 38080000 | Entered done handshake block. pt=00000000000000000000000000000007
+# ✅ PASS
+#   Ciphertext : 95b84d1b96c690ff2f2de30bf2ec89e0
+#   Plaintext  : 00000000000000000000000000000007
+#   Expected   : 00000000000000000000000000000007
+# time:             38400000, IDLE:Starting decryption, ciphertext=0253786e126504f0dab90c48a30321de, key=00000000000000000000000000000000,
+# time:             42240000, DONE, plaintext=00000000000000000000000000000008, imc_in=5252525252525252525252bf52525252, round_key=00000000000000000000000000000000
+# time : 42240000 | Entered done handshake block. pt=00000000000000000000000000000008
+# ✅ PASS
+#   Ciphertext : 0253786e126504f0dab90c48a30321de
+#   Plaintext  : 00000000000000000000000000000008
+#   Expected   : 00000000000000000000000000000008
+# ----------------------------------
+# AES DECRYPTION TEST SUMMARY
+# PASS        : 9
+# FAIL        : 0
+# LATENCY ERR : 0
+# LATENCY REF : 11
+# ----------------------------------
+# ✅ AES DECRYPTION TB PASSED
+# ** Note: $finish    : /home/maruthi/intelFPGA_lite/20.1/quartus/AES_DECRYPTION/code/../testbench/tb_de_aes.v(482)
+#    Time: 42240 ns  Iteration: 1  Instance: /tb_de_aes
+# 1
+# Break in Module tb_de_aes at /home/maruthi/intelFPGA_lite/20.1/quartus/AES_DECRYPTION/code/../testbench/tb_de_aes.v line 482
+# End time: 16:17:00 on Jan 17,2026, Elapsed time: 0:00:07
+# Errors: 0, Warnings: 0

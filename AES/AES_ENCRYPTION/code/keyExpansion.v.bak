@@ -1,0 +1,74 @@
+
+
+module keyExpansion #(
+    parameter Nk = 4,   // 4=128-bit key, 6=192-bit key, 8=256-bit key
+    parameter Nr = 10   // 10/12/14 rounds
+)(
+    input  wire [(Nk*32)-1:0] key,
+    output reg  [(128*(Nr+1))-1:0] fullkeys
+);
+
+    // 32-bit word array (total 4*(Nr+1) words)
+    localparam TOTAL_WORDS = 4*(Nr + 1);
+    reg [31:0] w [0:TOTAL_WORDS-1];
+
+    // Rcon table (only first 10 needed)
+    reg [31:0] Rcon[0:10];
+    initial begin
+        Rcon[0] = 32'h01000000;
+        Rcon[1] = 32'h02000000;
+        Rcon[2] = 32'h04000000;
+        Rcon[3] = 32'h08000000;
+        Rcon[4] = 32'h10000000;
+        Rcon[5] = 32'h20000000;
+        Rcon[6] = 32'h40000000;
+        Rcon[7] = 32'h80000000;
+        Rcon[8] = 32'h1b000000;
+        Rcon[9] = 32'h36000000;
+    end
+
+    // Rotate word (e.g., ABCD -> BCDA)
+    function [31:0] RotWord(input [31:0] x);
+        RotWord = {x[23:0], x[31:24]};
+    endfunction
+
+    // SubWord using S-box
+    wire [7:0] s0, s1, s2, s3;
+    sbox sb0(.a(tmp_word[31:24]), .sbout(s0));
+    sbox sb1(.a(tmp_word[23:16]), .sbout(s1));
+    sbox sb2(.a(tmp_word[15:8]),  .sbout(s2));
+    sbox sb3(.a(tmp_word[7:0]),   .sbout(s3));
+
+    reg [31:0] tmp_word;
+
+    integer i;
+
+    always @* begin
+        // Load initial Nk words from key
+        for (i = 0; i < Nk; i = i + 1)
+            w[i] = key[(Nk*32 - 1) - i*32 -: 32];
+
+        // Generate all other words
+        for (i = Nk; i < TOTAL_WORDS; i = i + 1) begin
+            tmp_word = w[i-1];
+
+            if (i % Nk == 0) begin
+                tmp_word = {s0, s1, s2, s3} ^ Rcon[(i/Nk)-1] ^ RotWord(tmp_word);
+            end 
+            else if (Nk == 8 && i % Nk == 4) begin
+                tmp_word = {s0, s1, s2, s3};
+            end
+
+            w[i] = w[i-Nk] ^ tmp_word;
+        end
+
+        // Pack fullkeys
+        fullkeys = 0;
+        for (i = 0; i <= Nr; i = i + 1) begin
+            fullkeys[i*128 +: 128] = {
+                w[4*i], w[4*i + 1], w[4*i + 2], w[4*i + 3]
+            };
+        end
+    end
+
+endmodule

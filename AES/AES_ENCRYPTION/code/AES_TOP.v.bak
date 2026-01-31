@@ -1,0 +1,163 @@
+// aes_top.v
+// Top-level AES-128 encryption module (round-based, sequential controller)
+// NOTE: This file assumes the existence of the modules provided in your ZIP:
+//  - keyexpanison (note: file is keyexpanison.v) : expands 128-bit key into round keys
+//  - subBytes, shiftRows, mixColums, encryptRound, finalRound, sbox, etc.
+//
+// IMPORTANT INTERFACE ASSUMPTIONS (if your actual submodules have different ports,
+// edit this top module or tell me and I'll adapt):
+// 1) keyexpanison module assumed port:
+//      input  [127:0] key_in;
+//      output [1407:0] round_keys; // 11 round keys * 128 = 1408 bits (0..1407)
+//    If your keyexpanison produces keys in a different format, wire adaptation is needed.
+//
+// 2) encryptRound module assumed to implement one AES Encryption round (SubBytes->ShiftRows->MixColumns->AddRoundKey)
+//      module encryptRound(input [127:0] state_in, input [127:0] round_key, output [127:0] state_out);
+//
+// 3) finalRound module assumed to implement final AES round (SubBytes->ShiftRows->AddRoundKey)
+//      module finalRound(input [127:0] state_in, input [127:0] round_key, output [127:0] state_out);
+//
+// The top-level controller performs a sequential 11-step AES round process, one round per clock cycle
+// (1 cycle per round + initial AddRoundKey + final round). This is simple and easy to understand.
+
+module aes_top (
+    input  wire         clk,
+    input  wire         rst_n,       // active-low reset
+    input  wire         start,       // assert for 1 cycle to start encryption
+    input  wire [127:0] key,         // 128-bit AES key
+    input  wire [127:0] plaintext,   // 128-bit input
+    output reg  [127:0] ciphertext,  // 128-bit output
+    output reg          done         // pulses high for 1 cycle when ciphertext valid
+);
+
+    // Local parameters
+    localparam IDLE        = 3'd0;
+    localparam KEY_EXPAND  = 3'd1;
+    localparam ADD_ROUND0  = 3'd2; // initial AddRoundKey
+    localparam ROUNDS      = 3'd3; // rounds 1..9
+    localparam FINAL_ROUND = 3'd4; // round 10 (final)
+    localparam DONE_STATE  = 3'd5;
+
+    reg [2:0] state, next_state;
+    reg [3:0] round_cnt; // 0..10
+
+    // Instantiate key expansion
+    // ASSUMPTION: keyexpanison outputs all round keys as a big bus: round_keys[1407:0]
+    // round key i occupies round_keys[127 + 128*i : 128*i]
+    wire [1407:0] round_keys;
+
+    // If your keyexpanison module name/ports differ, update this instantiation.
+    keyexpanison keyexp_inst (
+        .key(key),
+        .round_keys(round_keys)
+    );
+
+    // Current state register and combinational next-state logic
+    reg [127:0] state_reg, next_state_reg;
+
+    // Wires for combinational round outputs
+    wire [127:0] round_out;
+    wire [127:0] final_out;
+
+    // Current round key
+    wire [127:0] current_round_key;
+
+    // Select current_round_key from round_keys bus
+    assign current_round_key = round_keys[128*round_cnt +: 128];
+    // Note: if your toolchain expects little-endian ordering, you may need to reverse indices.
+
+    // Instantiate encryptRound and finalRound
+    encryptRound enc_round (
+        .state_in(state_reg),
+        .round_key(current_round_key),
+        .state_out(round_out)
+    );
+
+    finalRound enc_final (
+        .state_in(state_reg),
+        .round_key(current_round_key),
+        .state_out(final_out)
+    );
+
+    // FSM sequential
+    always @(posedge clk or negedge rst_n) begin
+        if (!rst_n) begin
+            state <= IDLE;
+            round_cnt <= 4'd0;
+            state_reg <= 128'd0;
+            done <= 1'b0;
+            ciphertext <= 128'd0;
+        end else begin
+            state <= next_state;
+            // update registers when progressing states
+            case (next_state)
+                IDLE: begin
+                    done <= 1'b0;
+                end
+                KEY_EXPAND: begin
+                    // wait for keyexpansion combinational output
+                end
+                ADD_ROUND0: begin
+                    // initial AddRoundKey: state_reg = plaintext ^ round_keys[0]
+                    state_reg <= plaintext ^ round_keys[127:0];
+                    round_cnt <= 4'd1; // move to round 1 on next cycle
+                end
+                ROUNDS: begin
+                    // For rounds 1..9 use encryptRound combinational result
+                    state_reg <= round_out;
+                    round_cnt <= round_cnt + 1'b1;
+                end
+                FINAL_ROUND: begin
+                    // final round combinational
+                    state_reg <= final_out;
+                    round_cnt <= round_cnt + 1'b1;
+                end
+                DONE_STATE: begin
+                    // produce ciphertext
+                    ciphertext <= state_reg;
+                    done <= 1'b1; // pulse
+                end
+                default: begin end
+            endcase
+        end
+    end
+
+    // FSM combinational next-state logic
+    always @(*) begin
+        next_state = state; // default hold
+        case (state)
+            IDLE: begin
+                if (start) next_state = KEY_EXPAND;
+                else next_state = IDLE;
+            end
+            KEY_EXPAND: begin
+                // Assuming keyexpansion is combinational or ready immediately
+                next_state = ADD_ROUND0;
+            end
+            ADD_ROUND0: begin
+                next_state = ROUNDS;
+            end
+            ROUNDS: begin
+                // rounds from 1 to 9 inclusive (round_cnt == 1..9)
+                if (round_cnt < 4'd10) begin
+                    // if at round 10 -> final round
+                    if (round_cnt == 4'd9) next_state = FINAL_ROUND;
+                    else next_state = ROUNDS;
+                end else begin
+                    next_state = FINAL_ROUND;
+                end
+            end
+            FINAL_ROUND: begin
+                next_state = DONE_STATE;
+            end
+            DONE_STATE: begin
+                next_state = IDLE;
+            end
+            default: next_state = IDLE;
+        endcase
+    end
+
+    // Ensure ciphertext is set once final round has been latched
+    // We rely on DONE_STATE to output the final state_reg as ciphertext
+
+endmodule

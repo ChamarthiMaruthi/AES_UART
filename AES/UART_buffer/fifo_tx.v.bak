@@ -1,0 +1,48 @@
+module fifo_tx (
+    input        clk,       // Clock
+    input        reset,     // Synchronous reset
+    input        wr_en,     // Write enable
+    input        rd_en,     // Read enable
+    input  [7:0] din,       // Data input
+    output reg [7:0] dout,  // Data output
+    output       full,      // FIFO full
+    output       empty      // FIFO empty
+);
+
+    // Storage for 5 entries of 8 bits each
+    reg [7:0] mem [0:4];
+
+    // Pointers and counter
+    reg [2:0] wr_ptr;
+    reg [2:0] rd_ptr;
+    reg [2:0] count;
+
+    // Flags
+    assign full  = (count == 5);
+    assign empty = (count == 0);
+
+    // Sequential logic
+    always @(posedge clk) begin
+        if (reset) begin
+            wr_ptr <= 0;
+            rd_ptr <= 0;
+            count  <= 0;
+            dout   <= 0;
+        end else begin
+            // Write operation
+            if (wr_en && !full) begin
+                mem[wr_ptr] <= din;
+                wr_ptr <= (wr_ptr == 4) ? 0 : wr_ptr + 1;
+                count  <= count + 1;
+            end
+
+            // Read operation
+            if (rd_en && !empty) begin
+                dout <= mem[rd_ptr];
+                rd_ptr <= (rd_ptr == 4) ? 0 : rd_ptr + 1;
+                count <= count - 1;
+            end
+        end
+    end
+
+endmodule

@@ -1,0 +1,101 @@
+module UART_TX(
+	input clk_3125,
+	input parity_bit,tx_start,
+	input [7:0]data,
+	output reg tx,tx_done
+);
+
+initial begin
+	tx = 1; // tx = 0 indicates the start of transmission of UART packket
+	tx_done = 0; // tx_done = 0 indicates the successfull transmission of UART packet
+end
+
+localparam clocks_per_bit = 14;
+localparam final_cycle = 13;
+
+// ----states used in Finite State Machine-----
+
+localparam s_idle = 4'b0000;
+localparam s_start = 4'b0001;
+localparam s_data = 4'b0010;
+localparam s_parity = 4'b0011;
+localparam s_stop = 4'b0100;
+localparam s_done = 4'b0101;
+
+// -------Internal registers------
+
+reg[3:0]state = s_idle;
+reg[3:0]clk_counter = 0;
+reg[2:0]bit_counter = 7;
+
+always@(posedge clk_3125)begin
+tx_done <= 0;
+	case(state)
+		s_idle : begin
+			clk_counter <= 0;
+			bit_counter <= 0;
+			if(tx_start)begin
+				state <= s_start;
+				tx <= 0;
+			end
+		end
+		
+		s_start : begin
+			if(clk_counter == 13)begin
+				clk_counter <= 0;
+				tx <= 0;
+			end
+			else
+				clk_counter = clk_counter + 1;
+		end
+		
+		s_data : begin
+			if(clk_counter == 13)begin
+				clk_counter <= 0;
+				tx <= data[bit_counter];
+				if(bit_counter == 0)begin
+					state <= s_parity;
+				end
+				else begin
+					bit_counter = bit_counter - 1;
+				end
+			end
+			else begin
+				clk_counter = clk_counter + 1;
+			end
+		end
+		
+		s_parity : begin
+			if(clk_counter == 13)begin
+				clk_counter <= 0;
+				tx <= (^data)^parity_bit;
+				state <= s_done;
+			end
+			else begin
+				clk_counter = clk_counter + 1;
+			end
+		end
+		
+		s_stop : begin
+			if(clk_counter == 13)begin
+				clk_counter <= 0;
+				tx_done <= 1;
+				tx <= 1;
+				state <= s_done;
+			end
+			else begin
+				clk_counter = clk_counter + 1;
+			end
+		end
+		
+		s_done : begin
+			state <= s_idle;
+		end
+		
+		default : begin
+			state <= s_idle;
+		end
+	endcase
+end
+
+endmodule

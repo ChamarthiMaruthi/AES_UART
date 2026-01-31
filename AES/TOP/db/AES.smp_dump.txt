@@ -1,0 +1,45 @@
+
+State Machine - |aes_uart_top|sys_state
+Name sys_state.ST_DEC_WAIT sys_state.ST_DEC_START sys_state.ST_RX_WAIT sys_state.ST_TX_WAIT sys_state.ST_TX_BYTES sys_state.ST_ENC_WAIT sys_state.ST_ENC_START sys_state.ST_IDLE sys_state.ST_DONE 
+sys_state.ST_IDLE 0 0 0 0 0 0 0 0 0 
+sys_state.ST_ENC_START 0 0 0 0 0 0 1 1 0 
+sys_state.ST_ENC_WAIT 0 0 0 0 0 1 0 1 0 
+sys_state.ST_TX_BYTES 0 0 0 0 1 0 0 1 0 
+sys_state.ST_TX_WAIT 0 0 0 1 0 0 0 1 0 
+sys_state.ST_RX_WAIT 0 0 1 0 0 0 0 1 0 
+sys_state.ST_DEC_START 0 1 0 0 0 0 0 1 0 
+sys_state.ST_DEC_WAIT 1 0 0 0 0 0 0 1 0 
+sys_state.ST_DONE 0 0 0 0 0 0 0 1 1 
+
+State Machine - |aes_uart_top|ADS_TOP:u_aes_decrypt|fsm_state
+Name fsm_state.S_FINAL fsm_state.S_ROUND fsm_state.S_LOAD fsm_state.S_IDLE fsm_state.S_DONE 
+fsm_state.S_IDLE 0 0 0 0 0 
+fsm_state.S_LOAD 0 0 1 1 0 
+fsm_state.S_ROUND 0 1 0 1 0 
+fsm_state.S_FINAL 1 0 0 1 0 
+fsm_state.S_DONE 0 0 0 1 1 
+
+State Machine - |aes_uart_top|Buffer_top:u_uart_buffer|uart_rx:rx_inst|state
+Name state.S_PARITY state.S_DATA state.S_START state.S_IDLE state.S_STOP 
+state.S_IDLE 0 0 0 0 0 
+state.S_START 0 0 1 1 0 
+state.S_DATA 0 1 0 1 0 
+state.S_PARITY 1 0 0 1 0 
+state.S_STOP 0 0 0 1 1 
+
+State Machine - |aes_uart_top|Buffer_top:u_uart_buffer|uart_tx:tx_inst|state
+Name state.S_DONE state.S_STOP state.S_PARITY state.S_DATA state.S_START state.S_IDLE 
+state.S_IDLE 0 0 0 0 0 0 
+state.S_START 0 0 0 0 1 1 
+state.S_DATA 0 0 0 1 0 1 
+state.S_PARITY 0 0 1 0 0 1 
+state.S_STOP 0 1 0 0 0 1 
+state.S_DONE 1 0 0 0 0 1 
+
+State Machine - |aes_uart_top|AES_TOP:u_aes_encrypt|fsm_state
+Name fsm_state.S_FINAL fsm_state.S_ROUND fsm_state.S_LOAD fsm_state.S_IDLE fsm_state.S_DONE 
+fsm_state.S_IDLE 0 0 0 0 0 
+fsm_state.S_LOAD 0 0 1 1 0 
+fsm_state.S_ROUND 0 1 0 1 0 
+fsm_state.S_FINAL 1 0 0 1 0 
+fsm_state.S_DONE 0 0 0 1 1 
