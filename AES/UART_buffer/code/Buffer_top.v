@@ -70,8 +70,8 @@ uart_rx rx_inst (
 fifo_rx rx_fifo_inst (
     .clk_3125_rx (clk_3125_rx),
     .reset       (reset),
-    .wr_rx       (rx_complete && !full), // Write when RX is complete
-    .rd_rx       (!empty),
+    .wr_rx       (wr_rx), // Write when RX is complete
+    .rd_rx       (rd_rx),
     .din         (rx_msg),
     .full     (full),
     .empty    (empty),

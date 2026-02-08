@@ -22,6 +22,7 @@ module tb;
     wire [127:0] decrypted_text;
     wire         done;
     wire         RD_RX;
+    wire         WR_RX;
 
     wire tx;
     reg rx;
@@ -57,6 +58,7 @@ module tb;
         .rst_n_slow     (rst_n_slow),
         .rst_n_fast     (rst_n_fast),
         .RD_RX          (RD_RX),
+        .WR_RX          (WR_RX),
         .fifo_wr_en     (fifo_wr_en),
         .fifo_wr_pulse  (fifo_wr_pulse),
         //.tx_active      (tx_active),
@@ -105,6 +107,124 @@ module tb;
         rst_n_slow = 0;
     end
 
+
+    // ============================================================
+    // DRIVER
+    // ============================================================
+    task aes_send_block(input [127:0] pt, input [127:0] k);
+    begin
+        //@(posedge clk);
+        plaintext <= pt;
+        key       <= k;
+        start     <= 1'b1;
+
+        @(posedge clk_100);
+        start     <= 1'b0;
+    end
+    endtask
+
+    // ============================================================
+    // SCOREBOARD
+    // ============================================================
+    integer i = 0;
+    integer pass_count = 0;
+    integer fail_count = 0;
+
+    // latency / handshake tracking
+    integer latency_cnt = 0;
+    integer latency_ref = 11;
+    integer latency_err = 0;
+    reg     in_flight = 0;
+    reg     done_d = 0;
+    reg [127:0] pt_prev;
+
+    // ============================================================
+    // MONITOR + CHECKERS
+    // ============================================================
+    always @(posedge clk_100) begin
+        done_d <= done;
+
+        if (!rst_n) begin
+            latency_cnt <= 0;
+            in_flight   <= 0;
+            pt_prev     <= plaintext;
+        end else begin
+
+            // start handshake
+            if (start && !in_flight) begin
+                in_flight   <= 1;
+                latency_cnt <= 0;
+            end
+
+            if (in_flight && !done)
+                latency_cnt <= latency_cnt + 1;
+
+            // done handshake
+            if (done && in_flight) begin
+                in_flight <= 0;
+                $display("time : %0t | Entered done handshake block. pt=%h", $time, plaintext);
+                
+
+                if (latency_cnt != latency_ref) begin
+                    latency_err <= latency_err + 1;
+                    $display("❌ LATENCY ERROR exp=%0d got=%0d",latency_ref, latency_cnt);
+                end
+            end
+
+            // done must be 1 cycle
+            if (done && done_d) begin
+                $display("❌ ERROR: done > 1 cycle @ %0t", $time);
+                fail_count <= fail_count + 1;
+            end
+
+            // ciphertext must not change before done
+            if (!rst_n && in_flight && !done && plaintext !== pt_prev) begin
+                $display("❌ ERROR: ciphertext changed before done @ %0t", $time);
+                fail_count <= fail_count + 1;
+            end
+
+            pt_prev <= plaintext;
+        end
+    end
+
+    always@(posedge clk_100) begin
+        if(done && in_flight) begin
+            if(decrypted_text === plaintext) begin
+                pass_count <= pass_count + 1;
+                //$display("PASS | ct=%h | latency=%0d",ciphertext, latency_cnt);
+                $display("S.No: %0d PASS", i);
+                //$display("  Ciphertext : %h", ciphertext);
+                $display("  Plaintext  : %h", decrypted_text);
+                $display("  Expected   : %h", plaintext);
+            end 
+            if(decrypted_text !== plaintext) begin
+                fail_count <= fail_count + 1;
+                //$display("time : %0t | FAIL | fail_count=%0d | Expected: %h | Got: %h", $time, fail_count, expected_ciphertext, ciphertext);
+                $display("S.No: %0d FAIL", i);
+                //$display("  Ciphertext : %h", ciphertext);
+                $display("  Expected   : %h", plaintext);
+                $display("  Got     : %h", decrypted_text);
+            end
+        end
+    end
+
+    reg [127:0] golden_plaintext [0:9];
+
+    initial begin
+        golden_plaintext[0] = 128'h140f0f1011b5223d79587717ffd9ec3a;
+        golden_plaintext[1] = 128'h00000000000000000000000000000000;
+        golden_plaintext[2] = 128'h00000000000000000000000000000001;
+        golden_plaintext[3] = 128'h00000000000000000000000000000002;
+        golden_plaintext[4] = 128'h00000000000000000000000000000003;
+        golden_plaintext[5] = 128'h00000000000000000000000000000004;
+        golden_plaintext[6] = 128'h00000000000000000000000000000005;
+        golden_plaintext[7] = 128'h00000000000000000000000000000006;
+        golden_plaintext[8] = 128'h00000000000000000000000000000007;
+        golden_plaintext[9] = 128'h00000000000000000000000000000008;
+    end
+
+
+
     // ==============================
     // Protocol Monitors
     // ==============================
@@ -146,25 +266,53 @@ module tb;
         //@(posedge clk_100);
         plaintext = 128'h00000000000000000000000000000000;
         key       = 128'h00000000000000000000000000000000;
+        start     = 1'b0;
+        pass_count = 0;
+        fail_count = 0;
+        latency_err = 0;
 
-        @(posedge clk_100);
+        /*@(posedge clk_100);
         start = 1;
         @(posedge clk_100);
-        start = 0;
+        start = 0;*/
 
         // Wait for system completion
-        wait(done);
+        for (i = 0; i < 10; i = i + 1) begin
+            aes_send_block(golden_plaintext[i], key);
+            wait(done);
+            plaintext = golden_plaintext[i];
+            @(posedge clk_100);
+        end
+        //wait(done);
 
         // Final correctness check
-        if (decrypted_text !== plaintext) begin
+        /*if (decrypted_text !== plaintext) begin
             //$fatal(1, "Time:%0t, FAIL: Decrypted text mismatch. Expected=%h Got=%h", $time, plaintext, decrypted_text);
             $display("FAIL: End-to-end AES→UART→AES verification failed at time %t", $time);
-            $display("Expected=%h Got=%h", plaintext, decrypted_text);
+            $display("Expected=%h Got=%h, input:%h", plaintext, decrypted_text, dut.u_uart_buffer.ft_data);
             $finish;
         end else begin
             $display("PASS: End-to-end AES→UART→AES verified at time %t", $time);
             $finish;
-        end
+        end*/
+
+        // ========================================================
+        // FINAL REPORT
+        // ========================================================
+        $display("----------------------------------");
+        $display("AES DECRYPTION TEST SUMMARY");
+        $display("PASS        : %0d", pass_count);
+        $display("FAIL        : %0d", fail_count);
+        $display("LATENCY ERR : %0d", latency_err);
+        $display("LATENCY REF : %0d", latency_ref);
+        $display("----------------------------------");
+
+        if (fail_count == 0 && latency_err == 0)
+            $display("✅ AES DECRYPTION TB PASSED");
+        else
+            $display("❌ AES DECRYPTION TB FAILED");
+
+        $finish;
 
         //#1000;
         //$finish;

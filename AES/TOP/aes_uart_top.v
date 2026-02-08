@@ -3,11 +3,12 @@ module aes_uart_top (
     input  wire        clk_100,        // 100 MHz AES clock
     input  wire        clk_3125_tx,     // 3.125 MHz UART TX clock
     input  wire        clk_3125_rx,     // 3.125 MHz UART RX clock
-    input  wire        rst_n,
+    input  wire        rst_n,   // Synchronized reset for faster clock domain
 
     // ===== Control =====
     input  wire        start,           // Start full encrypt→tx→rx→decrypt flow
 	 output reg         RD_RX,
+     output reg         WR_RX,
 
     // ===== AES Inputs =====
     input  wire [127:0] plaintext,
@@ -78,6 +79,10 @@ module aes_uart_top (
 
     wire [7:0]  rx_dout;
     wire        rx_empty;
+    wire        rx_complete;
+    wire        full;
+    wire        empty;
+    //wire wr_rx = rx_complete && !full; // Write to FIFO when RX is complete and FIFO is not full
 	 //wire         RD_RX;
 	 
 	 // ============================================================
@@ -168,7 +173,7 @@ module aes_uart_top (
         else if (enc_done) begin
             enc_done_toggle <= ~enc_done_toggle;
             //if(enc_done_toggle == 1'b1)
-                $display("time:%0t | enc_done_toggle toggled to %b", $time, enc_done_toggle);
+                //$display("time:%0t | enc_done_toggle toggled to %b", $time, enc_done_toggle);
         end
     end
 
@@ -187,14 +192,13 @@ module aes_uart_top (
         end
     end
 
-    //assign tx_start_1 = enc_sync[1] ^ enc_sync_d;   // one-cycle pulse
     //reg tx_start_1;
     always @(posedge clk_3125_tx or posedge rst_n_slow) begin
         if (rst_n_slow) begin
             tx_start_1 <= 1'b0;
         end else if (enc_sync[1] ^ enc_sync_d) begin
             tx_start_1 <= 1'b1;
-            $display("time:%0t | tx_start_1 is asserted", $time);
+            //$display("time:%0t | tx_start_1 is asserted", $time);
         end
         else begin
             tx_start_1 <= 1'b0;
@@ -202,45 +206,36 @@ module aes_uart_top (
         end
     end
 
-    //reg        tx_active;
-
+    reg tx_active;
     always @(posedge clk_3125_tx or posedge rst_n_slow) begin
         if (rst_n_slow) begin
-            //tx_active   <= 1'b0;
             fifo_wr_en  <= 1'b0;
-        end else begin
-            //fifo_wr_en <= 1'b0;  // default
-
-            // ---- START TX ----
-            if (tx_start_1) begin
-                //tx_active   <= 1'b1;
-                fifo_wr_en  <= 1'b1;
-                $display("time:%0t | Starting TX of encrypted data | tx_active is set to 1", $time);
-            end
-            else if (tx_byte_cnt == 4'd15) begin
+        end else  begin
+            if (tx_byte_cnt == 4'd15) begin
                 fifo_wr_en <= 1'b0;
-                //$display("time:%0t | Completed TX of encrypted data | tx_active is set to 0", $time);
+                //$display("time:%0t | All bytes written to FIFO, fifo_wr_en is de-asserted", $time);
+            end else if (tx_start_1) begin
+                fifo_wr_en <= 1'b1;
+                //$display("time:%0t | fifo_wr_en is asserted", $time);
             end
         end
     end
    
-    //reg storage_done = 0;
+    reg fifo_wr_en_hold;
     always @(posedge clk_3125_tx or posedge rst_n_slow) begin
         if (rst_n_slow) begin
             tx_byte_cnt  <= 4'd0;
             fifo_wr_data <= 8'd0;
-        end else if (tx_start_1) begin
-            tx_byte_cnt  <= 4'd0;
-            //storage_done <= 1'b0;
+            fifo_wr_en_hold <= 1'b0;
         end else if (fifo_wr_en) begin
+            fifo_wr_en_hold <= 1'b1;
             fifo_wr_data <= enc_ciphertext[127 - tx_byte_cnt*8 -: 8];
-            if(tx_byte_cnt == 4'd15) begin
-                tx_byte_cnt <= 0;
-                //$display("time:%0t | tx_byte_cnt is made zero after sending 16 bytes | storage_done is set to 1", $time);
-                //$display("time:%0t | tx_byte_cnt is made zero after sending 16 bytes | storage_done is set to 1", $time);
-            end else begin
-                tx_byte_cnt  <= tx_byte_cnt + 1'b1;
-            end
+            //$display("time:%0t | Writing byte %0d to FIFO: %h", $time, tx_byte_cnt, fifo_wr_data);
+            tx_byte_cnt  <= tx_byte_cnt + 1'b1;
+        end
+        else if (fifo_wr_en == 1'b0) begin
+            fifo_wr_en_hold <= 1'b0;
+            tx_byte_cnt <= 4'd0;
         end
     end
 
@@ -249,7 +244,6 @@ module aes_uart_top (
             storage_done <= 1'b0;
         end else if (fifo_wr_en == 1'b0 && !fifo_empty) begin
             storage_done <= 1'b1;
-            //$display("time:%0t | storage_done is asserted", $time);
         end else begin
             storage_done <= 1'b0;
         end
@@ -262,9 +256,9 @@ module aes_uart_top (
 
         // TX side
         .parity_type (1'b0),
-        .tx_start    (storage_done),     // always enabled; FIFO controls flow
-        .ft_data     (enc_ciphertext[127 - tx_byte_cnt*8 -: 8]),
-        .wr_en       (fifo_wr_en),
+        .tx_start    (storage_done), 
+        .ft_data     (fifo_wr_data),
+        .wr_en       (fifo_wr_en_hold),
         .ft_full     (fifo_full),
         .ft_empty    (fifo_empty),
         .ft_out      (),
@@ -274,46 +268,54 @@ module aes_uart_top (
         .tx_busy     (),
 
         // RX side
-        .rx          (rx),
+        .rx          (tx),
         .rx_msg      (),
         .rx_parity   (),
-        .rx_complete (),
+        .rx_complete (rx_complete), 
         .rd_rx       (RD_RX),
-        .wr_rx       (),
+        .wr_rx       (WR_RX),
         .dout        (rx_dout),
-        .full        (),
-        .empty       (rx_empty)
+        .full        (full),
+        .empty       (empty)
     );
 
+    //reg WR_RX;
+    always @(posedge clk_3125_rx or posedge rst_n_slow) begin
+        if (rst_n_slow) begin
+            WR_RX <= 1'b0;
+        end else if (rx_complete && !full) begin
+            WR_RX <= 1'b1;
+            //$display("time:%0t, WR_RX is asserted to write byte to FIFO", $time);
+        end else if (full) begin
+            WR_RX <= 1'b0;
+            //$display("time:%0t, WR_RX is de-asserted", $time);
+        end
+    end
+
     reg [127:0] rx_block;
-    always @(posedge clk_3125_rx or negedge rst_n) begin
-        if (!rst_n) begin
+    always @(posedge clk_3125_rx or posedge rst_n_slow) begin
+        if (rst_n_slow) begin
             RD_RX <= 1'b0;
-        end else if ((!rx_empty)/* && (rx_byte_cnt < 4'd16)*/) begin
+        end else if ((!empty)/* && (rx_byte_cnt < 4'd16)*/) begin
             RD_RX <= 1'b1;
-            $display("time:%0t, RD_RX is asserted to read byte %0d", $time, rx_byte_cnt);
+            //$display("time:%0t, RD_RX is asserted to read byte %0d", $time, rx_byte_cnt);
+        end else if (empty) begin
+            RD_RX <= 1'b0;
+            //$display("time:%0t, RD_RX is de-asserted as FIFO is empty", $time);
         end else begin
             RD_RX <= 1'b0;
+            //$display("time:%0t, RD_RX is de-asserted", $time);
         end
     end
 
     reg rx_block_ready;
 
-    always @(posedge clk_3125_rx or negedge rst_n) begin
-        if (!rst_n) begin
-            rx_block_ready <= 1'b0;
-        end else if (RD_RX && rx_byte_cnt == 4'd15) begin
-				$display("Inside rx_block_ready assertion block at time:%0t", $time);
-            rx_block_ready <= 1'b1;
-        end else if (dec_start) begin
-            rx_block_ready <= 1'b0;
-        end
-    end
+
 	 
-	 always @(posedge clk_3125_tx) begin
+	/*always @(posedge clk_3125_tx) begin
 		if(rx_block_ready)
 			$display("rx_block_ready is asserted at time:%0t", $time);
-	 end
+	end*/
 
     always @(posedge clk_3125_rx or negedge rst_n) begin
         if (!rst_n) begin
@@ -322,9 +324,21 @@ module aes_uart_top (
         end else if (RD_RX) begin
             rx_block[127 - rx_byte_cnt*8 -: 8] <= rx_dout;
             rx_byte_cnt <= rx_byte_cnt + 1'b1;
+            //$display("time:%0t, Received byte %0d: %h", $time, rx_byte_cnt, rx_dout);
         end else if (rx_block_ready) begin
             rx_byte_cnt <= 4'd0;
-				$display("time:%0t, rx_byte_cnt is made zero", $time);
+				//$display("time:%0t, rx_byte_cnt is made zero", $time);
+        end
+    end
+
+    always @(posedge clk_3125_rx or negedge rst_n) begin
+        if (!rst_n) begin
+            rx_block_ready <= 1'b0;
+        end else if (RD_RX && rx_byte_cnt == 4'd15) begin
+				//$display("Inside rx_block_ready assertion block at time:%0t", $time);
+            rx_block_ready <= 1'b1;
+        end else if (dec_start) begin
+            rx_block_ready <= 1'b0;
         end
     end
 
@@ -333,7 +347,7 @@ module aes_uart_top (
             dec_ciphertext <= 0;
         end else if (rx_block_ready) begin
             dec_ciphertext <= rx_block;
-				$display("time:%0t, dec_ciphertext:%0h", $time, rx_block);
+				//$display("time:%0t, dec_ciphertext:%0h", $time, rx_block);
         end
     end
 
@@ -367,13 +381,13 @@ module aes_uart_top (
 
                 ST_IDLE: begin
                     if (start) begin
-								$display("time:%0t | Entered IDLE state in top module.", $time);
+								//$display("time:%0t | Entered IDLE state in top module.", $time);
                         sys_state <= ST_ENC_START;
                     end
                 end
 
                 ST_ENC_START: begin
-						  $display("time:%0t | Entered start encryption state " , $time);
+						  //$display("time:%0t | Entered start encryption state " , $time);
                     enc_start <= 1'b1;
                     sys_state <= ST_ENC_WAIT;
                 end
@@ -382,42 +396,42 @@ module aes_uart_top (
 						  
                     if (enc_done) begin
                         sys_state   <= ST_TX_BYTES;
-								$display("time:%0t | Entered wait encryption state | tx_byte_cnt is made zero " , $time);
+								//$display("time:%0t | Entered wait encryption state | tx_byte_cnt is made zero " , $time);
                     end
                 end
 
                 ST_TX_BYTES: begin
                     if (!fifo_full) begin
-								if (tx_byte_cnt <= 4'd15) begin
+								if (tx_byte_cnt == 4'd15) begin
                             sys_state <= ST_TX_WAIT;
-									 $display("time:%0t | tx_byte_cnt:%0d | tx_block_ack received", $time, tx_byte_cnt);
+									 //$display("time:%0t | tx_byte_cnt:%0d | tx_block_ack received", $time, tx_byte_cnt);
                         end
                     end
                 end
 
                 ST_TX_WAIT: begin
                     if (!fifo_empty) begin
-								$display("time:%0t | Next state | fifo_wr_en:%b | tx_byte_cnt:%0d", $time, fifo_wr_en, tx_byte_cnt);
+								//$display("time:%0t | Next state | fifo_wr_en:%b | tx_byte_cnt:%0d", $time, fifo_wr_en, tx_byte_cnt);
                         sys_state <= ST_RX_WAIT;
                     end
                 end
 
                 ST_RX_WAIT: begin
                     if (rx_block_ready) begin
-								$display("time:%0t | RX_wait state " , $time);
+								//$display("time:%0t | RX_wait state " , $time);
                         sys_state <= ST_DEC_START;
                     end
                 end
 
                 ST_DEC_START: begin
-						  $display("time:%0t | Decryption start state", $time);
+						  //$display("time:%0t | Decryption start state", $time);
                     dec_start <= 1'b1;
                     sys_state <= ST_DEC_WAIT;
                 end
 
                 ST_DEC_WAIT: begin
                     if (dec_done) begin
-								$display("time:%0t | Decryption done state", $time);
+								//$display("time:%0t | Decryption done state", $time);
                         sys_state <= ST_DONE;
                     end
                 end

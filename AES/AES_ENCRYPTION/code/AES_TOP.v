@@ -91,7 +91,7 @@ module AES_TOP (
                 S_IDLE: begin
 						  //ciphertext <= 128'd0;
                     if (start) begin
-                        $display("time: %t, IDLE:Starting encryption | encryption | plaintext:%0d", $time, plaintext);
+                        $display("time: %t, IDLE:Starting encryption | encryption | plaintext:%0h", $time, plaintext);
                         fsm_state <= S_LOAD;
                     end
                 end

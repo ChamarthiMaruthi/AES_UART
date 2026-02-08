@@ -1,5 +1,5 @@
 module fifo_rx #(
-    parameter DEPTH = 32,
+    parameter DEPTH = 256,
     parameter ADDR_WIDTH = $clog2(DEPTH)
 )(
     input        clk_3125_rx,
@@ -23,8 +23,7 @@ module fifo_rx #(
 		end
 	 end
 
-    assign full  = (wr_ptr[ADDR_WIDTH-1:0] == rd_ptr[ADDR_WIDTH-1:0]) &&
-                   (wr_ptr[ADDR_WIDTH]     != rd_ptr[ADDR_WIDTH]);
+    assign full  = (wr_ptr[ADDR_WIDTH-1:0] == rd_ptr[ADDR_WIDTH-1:0]) && (wr_ptr[ADDR_WIDTH]     != rd_ptr[ADDR_WIDTH]);
     assign empty = (wr_ptr == rd_ptr);
 
     wire wr_valid = wr_rx && !full;
@@ -36,15 +35,15 @@ module fifo_rx #(
             rd_ptr <= 0;
             dout   <= 0;
         end else begin
-            if (wr_valid) begin
+            if (wr_rx) begin
                 mem[wr_ptr[ADDR_WIDTH-1:0]] <= din;
                 wr_ptr <= wr_ptr + 1;
-					 //$strobe("time:%0t, din:%0h, wr_ptr:%d, mem:%0h", $time, din, wr_ptr, mem[wr_ptr[ADDR_WIDTH-1:0]]);
+					//$display("time:%0t, din:%0h, wr_ptr:%d, mem:%0h", $time, din, wr_ptr, mem[wr_ptr[ADDR_WIDTH-1:0]]);
             end
-            if (rd_valid) begin
+            if (rd_rx) begin
                 dout <= mem[rd_ptr[ADDR_WIDTH-1:0]];
                 rd_ptr <= rd_ptr + 1;
-					 //$display("time:%0t, dout:%0h, rd_ptr:%d", $time, dout, rd_ptr);
+					//$display("time:%0t, dout:%0h, rd_ptr:%d", $time, dout, rd_ptr);
             end
         end
     end

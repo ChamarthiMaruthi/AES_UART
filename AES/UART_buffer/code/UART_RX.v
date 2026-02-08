@@ -45,7 +45,7 @@ case(state)
 					 //$display("time:%0t, Inside idle state of UART_RX", $time);
 					 if (rx == 0) begin
 						state <= S_START;
-                        //$display("Time: %t | S_IDLE  -> Detected Start Bit.", $time);
+                        $display("Time: %t | S_IDLE  -> Detected Start Bit.", $time);
 					 end
 					 else begin
 						state <= S_IDLE;
@@ -93,7 +93,7 @@ case(state)
                     sampled_parity <= rx; // Sample the parity bit
                     clk_counter <= 0;
                     state <= S_STOP;
-						  //$display("Time: %t | S_PARITY-> Sampling Parity Bit. Waited %d cycles. rx value: %b", $time, clk_counter + 1, rx);
+						$display("Time: %t | S_PARITY-> Sampling Parity Bit. Waited %d cycles. rx value: %b", $time, clk_counter + 1, rx);
                 end else begin
                     clk_counter <= clk_counter + 1;
                 end
@@ -108,7 +108,7 @@ case(state)
 							rx_parity <= sampled_parity;
 						end
 						state <= S_IDLE;
-						//$display("Time: %t | S_STOP  -> Sampling Stop Bit. Waited %d cycles. rx_msg value: %0h. FRAME COMPLETE.", $time, clk_counter + 1, data_shift_reg);
+						$display("Time: %t | S_STOP  -> Sampling Stop Bit. Waited %d cycles. rx_msg value: %0h. FRAME COMPLETE.", $time, clk_counter + 1, data_shift_reg);
 					end 
 					else begin
                   clk_counter <= clk_counter + 1;

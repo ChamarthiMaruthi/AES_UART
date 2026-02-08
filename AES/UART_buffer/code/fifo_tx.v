@@ -1,6 +1,6 @@
 module fifo_tx #(
-    parameter DEPTH = 64,
-    parameter ADDR_WIDTH = 5
+    parameter DEPTH = 256,
+    parameter ADDR_WIDTH = $clog2(DEPTH)
 )(
     input              clk_3125_tx,  // Clock
     input              reset,        // Synchronous reset
@@ -49,7 +49,7 @@ module fifo_tx #(
             // Write Operation
             // -----------------------
             if (wr_en & !ft_full) begin
-					 $display("time:%0t | ft_data : %0h | rd_ptr:%d | wr_ptr:%d | wr_en:%b",$time,ft_data,rd_ptr,wr_ptr, wr_en);
+					 //$display("time:%0t | ft_data : %0h | rd_ptr:%d | wr_ptr:%d | wr_en:%b",$time,ft_data,rd_ptr,wr_ptr, wr_en);
                 mem[wr_ptr[ADDR_WIDTH-1:0]] <= ft_data;
                 wr_ptr <= wr_ptr + 1;
             end

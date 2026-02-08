@@ -8,6 +8,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "WR_RX",
+					"strict" : false
+				},
+				{
 					"name" : "decrypted_text[0]",
 					"strict" : false
 				},
@@ -556,7 +560,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "rst_n",
+					"name" : "rst_n_slow",
 					"strict" : false
 				},
 				{
@@ -1076,11 +1080,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "clk_3125_tx",
+					"name" : "rst_n",
 					"strict" : false
 				},
 				{
-					"name" : "rst_n_slow",
+					"name" : "clk_3125_tx",
 					"strict" : false
 				},
 				{
@@ -1088,7 +1092,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "rx",
+					"name" : "start",
 					"strict" : false
 				},
 				{
@@ -1156,67 +1160,67 @@
 					"strict" : false
 				},
 				{
-					"name" : "plaintext[125]",
+					"name" : "plaintext[127]",
 					"strict" : false
 				},
 				{
-					"name" : "plaintext[109]",
+					"name" : "plaintext[111]",
 					"strict" : false
 				},
 				{
-					"name" : "plaintext[117]",
+					"name" : "plaintext[119]",
 					"strict" : false
 				},
 				{
-					"name" : "plaintext[101]",
+					"name" : "plaintext[103]",
 					"strict" : false
 				},
 				{
-					"name" : "plaintext[61]",
+					"name" : "plaintext[63]",
 					"strict" : false
 				},
 				{
-					"name" : "plaintext[45]",
+					"name" : "plaintext[47]",
 					"strict" : false
 				},
 				{
-					"name" : "plaintext[53]",
+					"name" : "plaintext[55]",
 					"strict" : false
 				},
 				{
-					"name" : "plaintext[37]",
+					"name" : "plaintext[39]",
 					"strict" : false
 				},
 				{
-					"name" : "plaintext[93]",
+					"name" : "plaintext[95]",
 					"strict" : false
 				},
 				{
-					"name" : "plaintext[77]",
+					"name" : "plaintext[79]",
 					"strict" : false
 				},
 				{
-					"name" : "plaintext[85]",
+					"name" : "plaintext[87]",
 					"strict" : false
 				},
 				{
-					"name" : "plaintext[69]",
+					"name" : "plaintext[71]",
 					"strict" : false
 				},
 				{
-					"name" : "plaintext[29]",
+					"name" : "plaintext[31]",
 					"strict" : false
 				},
 				{
-					"name" : "plaintext[13]",
+					"name" : "plaintext[15]",
 					"strict" : false
 				},
 				{
-					"name" : "plaintext[21]",
+					"name" : "plaintext[23]",
 					"strict" : false
 				},
 				{
-					"name" : "plaintext[5]",
+					"name" : "plaintext[7]",
 					"strict" : false
 				},
 				{
@@ -1284,67 +1288,67 @@
 					"strict" : false
 				},
 				{
-					"name" : "plaintext[127]",
+					"name" : "plaintext[125]",
 					"strict" : false
 				},
 				{
-					"name" : "plaintext[111]",
+					"name" : "plaintext[109]",
 					"strict" : false
 				},
 				{
-					"name" : "plaintext[119]",
+					"name" : "plaintext[117]",
 					"strict" : false
 				},
 				{
-					"name" : "plaintext[103]",
+					"name" : "plaintext[101]",
 					"strict" : false
 				},
 				{
-					"name" : "plaintext[63]",
+					"name" : "plaintext[61]",
 					"strict" : false
 				},
 				{
-					"name" : "plaintext[47]",
+					"name" : "plaintext[45]",
 					"strict" : false
 				},
 				{
-					"name" : "plaintext[55]",
+					"name" : "plaintext[53]",
 					"strict" : false
 				},
 				{
-					"name" : "plaintext[39]",
+					"name" : "plaintext[37]",
 					"strict" : false
 				},
 				{
-					"name" : "plaintext[95]",
+					"name" : "plaintext[93]",
 					"strict" : false
 				},
 				{
-					"name" : "plaintext[79]",
+					"name" : "plaintext[77]",
 					"strict" : false
 				},
 				{
-					"name" : "plaintext[87]",
+					"name" : "plaintext[85]",
 					"strict" : false
 				},
 				{
-					"name" : "plaintext[71]",
+					"name" : "plaintext[69]",
 					"strict" : false
 				},
 				{
-					"name" : "plaintext[31]",
+					"name" : "plaintext[29]",
 					"strict" : false
 				},
 				{
-					"name" : "plaintext[15]",
+					"name" : "plaintext[13]",
 					"strict" : false
 				},
 				{
-					"name" : "plaintext[23]",
+					"name" : "plaintext[21]",
 					"strict" : false
 				},
 				{
-					"name" : "plaintext[7]",
+					"name" : "plaintext[5]",
 					"strict" : false
 				},
 				{
@@ -1601,10 +1605,6 @@
 				},
 				{
 					"name" : "plaintext[3]",
-					"strict" : false
-				},
-				{
-					"name" : "start",
 					"strict" : false
 				}
 			]
