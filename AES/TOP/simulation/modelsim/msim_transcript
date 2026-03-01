@@ -11,189 +11,189 @@
 # 
 # vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/aes_uart_top.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:41:05 on Feb 08,2026
+# Start time: 11:46:46 on Mar 01,2026
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/aes_uart_top.v 
 # -- Compiling module aes_uart_top
 # 
 # Top level modules:
 # 	aes_uart_top
-# End time: 18:41:05 on Feb 08,2026, Elapsed time: 0:00:00
+# End time: 11:46:46 on Mar 01,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/AES_TOP.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:41:05 on Feb 08,2026
+# Start time: 11:46:46 on Mar 01,2026
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/AES_TOP.v 
 # -- Compiling module AES_TOP
 # 
 # Top level modules:
 # 	AES_TOP
-# End time: 18:41:05 on Feb 08,2026, Elapsed time: 0:00:00
+# End time: 11:46:46 on Mar 01,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/keyExpansion.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:41:05 on Feb 08,2026
+# Start time: 11:46:46 on Mar 01,2026
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/keyExpansion.v 
 # -- Compiling module keyExpansion
 # 
 # Top level modules:
 # 	keyExpansion
-# End time: 18:41:05 on Feb 08,2026, Elapsed time: 0:00:00
+# End time: 11:46:46 on Mar 01,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/mixColumns.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:41:05 on Feb 08,2026
+# Start time: 11:46:46 on Mar 01,2026
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/mixColumns.v 
 # -- Compiling module mixColumns
 # 
 # Top level modules:
 # 	mixColumns
-# End time: 18:41:05 on Feb 08,2026, Elapsed time: 0:00:00
+# End time: 11:46:46 on Mar 01,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/sbox.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:41:05 on Feb 08,2026
+# Start time: 11:46:46 on Mar 01,2026
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/sbox.v 
 # -- Compiling module sbox
 # 
 # Top level modules:
 # 	sbox
-# End time: 18:41:05 on Feb 08,2026, Elapsed time: 0:00:00
+# End time: 11:46:46 on Mar 01,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/shiftRows.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:41:05 on Feb 08,2026
+# Start time: 11:46:46 on Mar 01,2026
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/shiftRows.v 
 # -- Compiling module shiftRows
 # 
 # Top level modules:
 # 	shiftRows
-# End time: 18:41:05 on Feb 08,2026, Elapsed time: 0:00:00
+# End time: 11:46:46 on Mar 01,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/subBytes.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:41:05 on Feb 08,2026
+# Start time: 11:46:46 on Mar 01,2026
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/subBytes.v 
 # -- Compiling module subBytes
 # 
 # Top level modules:
 # 	subBytes
-# End time: 18:41:05 on Feb 08,2026, Elapsed time: 0:00:00
+# End time: 11:46:46 on Mar 01,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/Buffer_top.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:41:05 on Feb 08,2026
+# Start time: 11:46:46 on Mar 01,2026
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/Buffer_top.v 
 # -- Compiling module Buffer_top
 # 
 # Top level modules:
 # 	Buffer_top
-# End time: 18:41:05 on Feb 08,2026, Elapsed time: 0:00:00
+# End time: 11:46:46 on Mar 01,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/fifo_tx.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:41:06 on Feb 08,2026
+# Start time: 11:46:46 on Mar 01,2026
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/fifo_tx.v 
 # -- Compiling module fifo_tx
 # 
 # Top level modules:
 # 	fifo_tx
-# End time: 18:41:06 on Feb 08,2026, Elapsed time: 0:00:00
+# End time: 11:46:46 on Mar 01,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_TX.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:41:06 on Feb 08,2026
+# Start time: 11:46:46 on Mar 01,2026
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_TX.v 
 # -- Compiling module uart_tx
 # 
 # Top level modules:
 # 	uart_tx
-# End time: 18:41:06 on Feb 08,2026, Elapsed time: 0:00:00
+# End time: 11:46:46 on Mar 01,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_RX.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:41:06 on Feb 08,2026
+# Start time: 11:46:46 on Mar 01,2026
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_RX.v 
 # -- Compiling module uart_rx
 # 
 # Top level modules:
 # 	uart_rx
-# End time: 18:41:06 on Feb 08,2026, Elapsed time: 0:00:00
+# End time: 11:46:46 on Mar 01,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/fifo_rx.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:41:06 on Feb 08,2026
+# Start time: 11:46:46 on Mar 01,2026
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/fifo_rx.v 
 # -- Compiling module fifo_rx
 # 
 # Top level modules:
 # 	fifo_rx
-# End time: 18:41:06 on Feb 08,2026, Elapsed time: 0:00:00
+# End time: 11:46:46 on Mar 01,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/ADS_TOP.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:41:06 on Feb 08,2026
+# Start time: 11:46:46 on Mar 01,2026
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/ADS_TOP.v 
 # -- Compiling module ADS_TOP
 # 
 # Top level modules:
 # 	ADS_TOP
-# End time: 18:41:06 on Feb 08,2026, Elapsed time: 0:00:00
+# End time: 11:46:47 on Mar 01,2026, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/inverseShiftrows.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:41:06 on Feb 08,2026
+# Start time: 11:46:47 on Mar 01,2026
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/inverseShiftrows.v 
 # -- Compiling module inverseShiftRows
 # 
 # Top level modules:
 # 	inverseShiftRows
-# End time: 18:41:06 on Feb 08,2026, Elapsed time: 0:00:00
+# End time: 11:46:47 on Mar 01,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/inverseSbox.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:41:06 on Feb 08,2026
+# Start time: 11:46:47 on Mar 01,2026
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/inverseSbox.v 
 # -- Compiling module inverseSbox
 # 
 # Top level modules:
 # 	inverseSbox
-# End time: 18:41:06 on Feb 08,2026, Elapsed time: 0:00:00
+# End time: 11:46:47 on Mar 01,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/inverseSubBytes.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:41:06 on Feb 08,2026
+# Start time: 11:46:47 on Mar 01,2026
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/inverseSubBytes.v 
 # -- Compiling module inverseSubBytes
 # 
 # Top level modules:
 # 	inverseSubBytes
-# End time: 18:41:06 on Feb 08,2026, Elapsed time: 0:00:00
+# End time: 11:46:47 on Mar 01,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/invMixColumns.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:41:06 on Feb 08,2026
+# Start time: 11:46:47 on Mar 01,2026
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/invMixColumns.v 
 # -- Compiling module invMixColumns
 # 
 # Top level modules:
 # 	invMixColumns
-# End time: 18:41:06 on Feb 08,2026, Elapsed time: 0:00:00
+# End time: 11:46:47 on Mar 01,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/../testbench {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/../testbench/tb.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:41:06 on Feb 08,2026
+# Start time: 11:46:47 on Mar 01,2026
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/../testbench" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/../testbench/tb.v 
 # -- Compiling module tb
 # 
 # Top level modules:
 # 	tb
-# End time: 18:41:06 on Feb 08,2026, Elapsed time: 0:00:00
+# End time: 11:46:47 on Mar 01,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb 
-# Start time: 18:41:06 on Feb 08,2026
+# Start time: 11:46:47 on Mar 01,2026
 # Loading work.tb
 # Loading work.aes_uart_top
 # Loading work.AES_TOP
@@ -212,6 +212,9 @@
 # Loading work.invMixColumns
 # Loading work.sbox
 # Loading work.inverseSbox
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'u_uart_buffer'.  Expected 25, found 24.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/dut/u_uart_buffer File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/aes_uart_top.v Line: 266
+# ** Warning: (vsim-3722) /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/aes_uart_top.v(266): [TFMPC] - Missing connection for port 'ft_ready'.
 # 
 # add wave *
 # view structure
@@ -219,114 +222,308 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# time:                30000, IDLE:Starting encryption | encryption | plaintext:140f0f1011b5223d79587717ffd9ec3a
-# time:               150000, Inside DONE state, ciphertext=00000000000000000000000000000000, round=10, done:1
-# Time:              7200000 | S_IDLE  -> Detected Start Bit.
-# Time:             49760000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. rx value: 0
-# Time:             56480000 | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 0. FRAME COMPLETE.
-# Time:             57120000 | S_IDLE  -> Detected Start Bit.
-# time:             62590000, IDLE:Starting decryption, ciphertext=00000000000000000000000000000000, key=00000000000000000000000000000000,
-# time:             62710000, DONE, plaintext=140f0f1011b5223d79587717ffd9ec3a, imc_in=9be5028be3fb8387afd2fba27d5e947c, round_key=00000000000000000000000000000000
-# time : 62730000 | Entered done handshake block. pt=140f0f1011b5223d79587717ffd9ec3a
-# ❌ LATENCY ERROR exp=11 got=6271
+# time: 10000 | in_flight : 0 | latency_cnt : 0
+# time:                30000, IDLE:Starting encryption | encryption | plaintext:0
+# time:               150000, Inside DONE state, ciphertext=66e94bd4ef8a2c3b884cfa59ca342b2e, round=10, done:1
+# Time:            800480000 | UART_RX | Received 16 bytes. Byte counter reset. rx_block_ok asserted. byte_counter: 15
+# time:801120000 | RD_RX is asserted
+# time:801760000 | rx_byte_cnt : 0 | dout : 66
+# time:802080000 | rx_byte_cnt : 1 | dout : e9
+# time:802400000 | rx_byte_cnt : 2 | dout : 4b
+# time:802720000 | rx_byte_cnt : 3 | dout : d4
+# time:803040000 | rx_byte_cnt : 4 | dout : ef
+# time:803360000 | rx_byte_cnt : 5 | dout : 8a
+# time:803680000 | rx_byte_cnt : 6 | dout : 2c
+# time:804000000 | rx_byte_cnt : 7 | dout : 3b
+# time:804320000 | rx_byte_cnt : 8 | dout : 88
+# time:804640000 | rx_byte_cnt : 9 | dout : 4c
+# time:804960000 | rx_byte_cnt : 10 | dout : fa
+# time:805280000 | rx_byte_cnt : 11 | dout : 59
+# time:805600000 | rx_byte_cnt : 12 | dout : ca
+# time:805920000 | rx_byte_cnt : 13 | dout : 34
+# time:806240000 | rx_byte_cnt : 14 | dout : 2b
+# time:806560000 | rx_byte_cnt is made zero and dec_block_ready is asserted. dout : 2e
+# time:806560000 | dec_block_ready is asserted | rx_block : 0
+# time:806570000 | RX_wait state 
+# time:            806590000, IDLE:Starting decryption, ciphertext=66e94bd4ef8a2c3b884cfa59ca342b2e, key=00000000000000000000000000000000,
+# time:            806710000, DONE, plaintext=00000000000000000000000000000000, imc_in=52525252525252525252525252525252, round_key=00000000000000000000000000000000
+# time : 806730000 | in_flight is made zero | Entered done handshake block. pt=00000000000000000000000000000000
+# ❌ LATENCY ERROR exp=80670 got=80671
 # S.No: 0 PASS
-#   Plaintext  : 140f0f1011b5223d79587717ffd9ec3a
-#   Expected   : 140f0f1011b5223d79587717ffd9ec3a
-# time:             62760000, IDLE:Starting encryption | encryption | plaintext:0
-# time:             62880000, Inside DONE state, ciphertext=66e94bd4ef8a2c3b884cfa59ca342b2e, round=10, done:1
-# time:             68850000, IDLE:Starting decryption, ciphertext=00000000000000000000000000000000, key=00000000000000000000000000000000,
-# time:             68970000, DONE, plaintext=140f0f1011b5223d79587717ffd9ec3a, imc_in=9be5028be3fb8387afd2fba27d5e947c, round_key=00000000000000000000000000000000
-# time : 68990000 | Entered done handshake block. pt=00000000000000000000000000000000
-# ❌ LATENCY ERROR exp=11 got=624
-# S.No: 1 FAIL
-#   Expected   : 00000000000000000000000000000000
-#   Got     : 140f0f1011b5223d79587717ffd9ec3a
-# time:             69020000, IDLE:Starting encryption | encryption | plaintext:1
-# time:             69140000, Inside DONE state, ciphertext=58e2fccefa7e3061367f1d57a4e7455a, round=10, done:1
-# time:             75250000, IDLE:Starting decryption, ciphertext=00000000000000000000000000000000, key=00000000000000000000000000000000,
-# time:             75370000, DONE, plaintext=140f0f1011b5223d79587717ffd9ec3a, imc_in=9be5028be3fb8387afd2fba27d5e947c, round_key=00000000000000000000000000000000
-# time : 75390000 | Entered done handshake block. pt=00000000000000000000000000000001
-# ❌ LATENCY ERROR exp=11 got=638
-# S.No: 2 FAIL
-#   Expected   : 00000000000000000000000000000001
-#   Got     : 140f0f1011b5223d79587717ffd9ec3a
-# time:             75420000, IDLE:Starting encryption | encryption | plaintext:2
-# time:             75540000, Inside DONE state, ciphertext=0388dace60b6a392f328c2b971b2fe78, round=10, done:1
-# time:             81650000, IDLE:Starting decryption, ciphertext=00000000000000000000000000000000, key=00000000000000000000000000000000,
-# time:             81770000, DONE, plaintext=140f0f1011b5223d79587717ffd9ec3a, imc_in=9be5028be3fb8387afd2fba27d5e947c, round_key=00000000000000000000000000000000
-# time : 81790000 | Entered done handshake block. pt=00000000000000000000000000000002
-# ❌ LATENCY ERROR exp=11 got=638
-# S.No: 3 FAIL
-#   Expected   : 00000000000000000000000000000002
-#   Got     : 140f0f1011b5223d79587717ffd9ec3a
-# time:             81820000, IDLE:Starting encryption | encryption | plaintext:3
-# time:             81940000, Inside DONE state, ciphertext=f795aaab494b5923f7fd89ff948bc1e0, round=10, done:1
-# time:             88050000, IDLE:Starting decryption, ciphertext=00000000000000000000000000000000, key=00000000000000000000000000000000,
-# time:             88170000, DONE, plaintext=140f0f1011b5223d79587717ffd9ec3a, imc_in=9be5028be3fb8387afd2fba27d5e947c, round_key=00000000000000000000000000000000
-# time : 88190000 | Entered done handshake block. pt=00000000000000000000000000000003
-# ❌ LATENCY ERROR exp=11 got=638
-# S.No: 4 FAIL
-#   Expected   : 00000000000000000000000000000003
-#   Got     : 140f0f1011b5223d79587717ffd9ec3a
-# time:             88220000, IDLE:Starting encryption | encryption | plaintext:4
-# time:             88340000, Inside DONE state, ciphertext=200211214e7394da2089b6acd093abe0, round=10, done:1
-# time:             94450000, IDLE:Starting decryption, ciphertext=00000000000000000000000000000000, key=00000000000000000000000000000000,
-# time:             94570000, DONE, plaintext=140f0f1011b5223d79587717ffd9ec3a, imc_in=9be5028be3fb8387afd2fba27d5e947c, round_key=00000000000000000000000000000000
-# time : 94590000 | Entered done handshake block. pt=00000000000000000000000000000004
-# ❌ LATENCY ERROR exp=11 got=638
-# S.No: 5 FAIL
-#   Expected   : 00000000000000000000000000000004
-#   Got     : 140f0f1011b5223d79587717ffd9ec3a
-# time:             94620000, IDLE:Starting encryption | encryption | plaintext:5
-# time:             94740000, Inside DONE state, ciphertext=c94da219118e297d7b7ebcbcc9c388f2, round=10, done:1
-# Time:             99680000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. rx value: 0
-# time:            100850000, IDLE:Starting decryption, ciphertext=00000000000000000000000000000000, key=00000000000000000000000000000000,
-# time:            100970000, DONE, plaintext=140f0f1011b5223d79587717ffd9ec3a, imc_in=9be5028be3fb8387afd2fba27d5e947c, round_key=00000000000000000000000000000000
-# time : 100990000 | Entered done handshake block. pt=00000000000000000000000000000005
-# ❌ LATENCY ERROR exp=11 got=638
-# S.No: 6 FAIL
-#   Expected   : 00000000000000000000000000000005
-#   Got     : 140f0f1011b5223d79587717ffd9ec3a
-# time:            101020000, IDLE:Starting encryption | encryption | plaintext:6
-# time:            101140000, Inside DONE state, ciphertext=8ade7d85a8ee35616f7124a9d5270291, round=10, done:1
-# Time:            106400000 | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 0. FRAME COMPLETE.
-# time:            107250000, IDLE:Starting decryption, ciphertext=00000000000000000000000000000000, key=00000000000000000000000000000000,
-# time:            107370000, DONE, plaintext=140f0f1011b5223d79587717ffd9ec3a, imc_in=9be5028be3fb8387afd2fba27d5e947c, round_key=00000000000000000000000000000000
-# time : 107390000 | Entered done handshake block. pt=00000000000000000000000000000006
-# ❌ LATENCY ERROR exp=11 got=638
-# S.No: 7 FAIL
-#   Expected   : 00000000000000000000000000000006
-#   Got     : 140f0f1011b5223d79587717ffd9ec3a
-# time:            107420000, IDLE:Starting encryption | encryption | plaintext:7
-# time:            107540000, Inside DONE state, ciphertext=95b84d1b96c690ff2f2de30bf2ec89e0, round=10, done:1
-# Time:            108320000 | S_IDLE  -> Detected Start Bit.
-# time:            113650000, IDLE:Starting decryption, ciphertext=00000000000000000000000000000000, key=00000000000000000000000000000000,
-# time:            113770000, DONE, plaintext=140f0f1011b5223d79587717ffd9ec3a, imc_in=9be5028be3fb8387afd2fba27d5e947c, round_key=00000000000000000000000000000000
-# time : 113790000 | Entered done handshake block. pt=00000000000000000000000000000007
-# ❌ LATENCY ERROR exp=11 got=638
-# S.No: 8 FAIL
-#   Expected   : 00000000000000000000000000000007
-#   Got     : 140f0f1011b5223d79587717ffd9ec3a
-# time:            113820000, IDLE:Starting encryption | encryption | plaintext:8
-# time:            113940000, Inside DONE state, ciphertext=0253786e126504f0dab90c48a30321de, round=10, done:1
-# time:            120050000, IDLE:Starting decryption, ciphertext=00000000000000000000000000000000, key=00000000000000000000000000000000,
-# time:            120170000, DONE, plaintext=140f0f1011b5223d79587717ffd9ec3a, imc_in=9be5028be3fb8387afd2fba27d5e947c, round_key=00000000000000000000000000000000
-# time : 120190000 | Entered done handshake block. pt=00000000000000000000000000000008
-# ❌ LATENCY ERROR exp=11 got=638
-# S.No: 9 FAIL
-#   Expected   : 00000000000000000000000000000008
-#   Got     : 140f0f1011b5223d79587717ffd9ec3a
+# Time:806730000 | Plaintext  : 00000000000000000000000000000000
+# Time:806730000 |  Expected   : 00000000000000000000000000000000
+# time: 806740000 | in_flight : 0 | latency_cnt : 80671
+# time:            806760000, IDLE:Starting encryption | encryption | plaintext:0
+# time:            806880000, Inside DONE state, ciphertext=66e94bd4ef8a2c3b884cfa59ca342b2e, round=10, done:1
+# Time:           1607200000 | UART_RX | Received 16 bytes. Byte counter reset. rx_block_ok asserted. byte_counter: 15
+# time:1607840000 | RD_RX is asserted
+# time:1608480000 | rx_byte_cnt : 0 | dout : 66
+# time:1608800000 | rx_byte_cnt : 1 | dout : e9
+# time:1609120000 | rx_byte_cnt : 2 | dout : 4b
+# time:1609440000 | rx_byte_cnt : 3 | dout : d4
+# time:1609760000 | rx_byte_cnt : 4 | dout : ef
+# time:1610080000 | rx_byte_cnt : 5 | dout : 8a
+# time:1610400000 | rx_byte_cnt : 6 | dout : 2c
+# time:1610720000 | rx_byte_cnt : 7 | dout : 3b
+# time:1611040000 | rx_byte_cnt : 8 | dout : 88
+# time:1611360000 | rx_byte_cnt : 9 | dout : 4c
+# time:1611680000 | rx_byte_cnt : 10 | dout : fa
+# time:1612000000 | rx_byte_cnt : 11 | dout : 59
+# time:1612320000 | rx_byte_cnt : 12 | dout : ca
+# time:1612640000 | rx_byte_cnt : 13 | dout : 34
+# time:1612960000 | rx_byte_cnt : 14 | dout : 2b
+# time:1613280000 | rx_byte_cnt is made zero and dec_block_ready is asserted. dout : 2e
+# time:1613280000 | dec_block_ready is asserted | rx_block : 2e
+# time:1613290000 | RX_wait state 
+# time:           1613310000, IDLE:Starting decryption, ciphertext=66e94bd4ef8a2c3b884cfa59ca342b2e, key=00000000000000000000000000000000,
+# time:           1613430000, DONE, plaintext=00000000000000000000000000000000, imc_in=52525252525252525252525252525252, round_key=00000000000000000000000000000000
+# time : 1613450000 | in_flight is made zero | Entered done handshake block. pt=00000000000000000000000000000000
+# S.No: 1 PASS
+# Time:1613450000 | Plaintext  : 00000000000000000000000000000000
+# Time:1613450000 |  Expected   : 00000000000000000000000000000000
+# time: 1613460000 | in_flight : 0 | latency_cnt : 80670
+# time:           1613480000, IDLE:Starting encryption | encryption | plaintext:1
+# time:           1613600000, Inside DONE state, ciphertext=58e2fccefa7e3061367f1d57a4e7455a, round=10, done:1
+# Time:           2413920000 | UART_RX | Received 16 bytes. Byte counter reset. rx_block_ok asserted. byte_counter: 15
+# time:2414560000 | RD_RX is asserted
+# time:2415200000 | rx_byte_cnt : 0 | dout : 58
+# time:2415520000 | rx_byte_cnt : 1 | dout : e2
+# time:2415840000 | rx_byte_cnt : 2 | dout : fc
+# time:2416160000 | rx_byte_cnt : 3 | dout : ce
+# time:2416480000 | rx_byte_cnt : 4 | dout : fa
+# time:2416800000 | rx_byte_cnt : 5 | dout : 7e
+# time:2417120000 | rx_byte_cnt : 6 | dout : 30
+# time:2417440000 | rx_byte_cnt : 7 | dout : 61
+# time:2417760000 | rx_byte_cnt : 8 | dout : 36
+# time:2418080000 | rx_byte_cnt : 9 | dout : 7f
+# time:2418400000 | rx_byte_cnt : 10 | dout : 1d
+# time:2418720000 | rx_byte_cnt : 11 | dout : 57
+# time:2419040000 | rx_byte_cnt : 12 | dout : a4
+# time:2419360000 | rx_byte_cnt : 13 | dout : e7
+# time:2419680000 | rx_byte_cnt : 14 | dout : 45
+# time:2420000000 | rx_byte_cnt is made zero and dec_block_ready is asserted. dout : 5a
+# time:2420000000 | dec_block_ready is asserted | rx_block : 2e
+# time:2420010000 | RX_wait state 
+# time:           2420030000, IDLE:Starting decryption, ciphertext=58e2fccefa7e3061367f1d57a4e7455a, key=00000000000000000000000000000000,
+# time:           2420150000, DONE, plaintext=00000000000000000000000000000001, imc_in=52525252525252525252520952525252, round_key=00000000000000000000000000000000
+# time : 2420170000 | in_flight is made zero | Entered done handshake block. pt=00000000000000000000000000000001
+# S.No: 2 PASS
+# Time:2420170000 | Plaintext  : 00000000000000000000000000000001
+# Time:2420170000 |  Expected   : 00000000000000000000000000000001
+# time: 2420180000 | in_flight : 0 | latency_cnt : 80670
+# time:           2420200000, IDLE:Starting encryption | encryption | plaintext:2
+# time:           2420320000, Inside DONE state, ciphertext=0388dace60b6a392f328c2b971b2fe78, round=10, done:1
+# Time:           3220640000 | UART_RX | Received 16 bytes. Byte counter reset. rx_block_ok asserted. byte_counter: 15
+# time:3221280000 | RD_RX is asserted
+# time:3221920000 | rx_byte_cnt : 0 | dout : 3
+# time:3222240000 | rx_byte_cnt : 1 | dout : 88
+# time:3222560000 | rx_byte_cnt : 2 | dout : da
+# time:3222880000 | rx_byte_cnt : 3 | dout : ce
+# time:3223200000 | rx_byte_cnt : 4 | dout : 60
+# time:3223520000 | rx_byte_cnt : 5 | dout : b6
+# time:3223840000 | rx_byte_cnt : 6 | dout : a3
+# time:3224160000 | rx_byte_cnt : 7 | dout : 92
+# time:3224480000 | rx_byte_cnt : 8 | dout : f3
+# time:3224800000 | rx_byte_cnt : 9 | dout : 28
+# time:3225120000 | rx_byte_cnt : 10 | dout : c2
+# time:3225440000 | rx_byte_cnt : 11 | dout : b9
+# time:3225760000 | rx_byte_cnt : 12 | dout : 71
+# time:3226080000 | rx_byte_cnt : 13 | dout : b2
+# time:3226400000 | rx_byte_cnt : 14 | dout : fe
+# time:3226720000 | rx_byte_cnt is made zero and dec_block_ready is asserted. dout : 78
+# time:3226720000 | dec_block_ready is asserted | rx_block : 5a
+# time:3226730000 | RX_wait state 
+# time:           3226750000, IDLE:Starting decryption, ciphertext=0388dace60b6a392f328c2b971b2fe78, key=00000000000000000000000000000000,
+# time:           3226870000, DONE, plaintext=00000000000000000000000000000002, imc_in=52525252525252525252526a52525252, round_key=00000000000000000000000000000000
+# time : 3226890000 | in_flight is made zero | Entered done handshake block. pt=00000000000000000000000000000002
+# S.No: 3 PASS
+# Time:3226890000 | Plaintext  : 00000000000000000000000000000002
+# Time:3226890000 |  Expected   : 00000000000000000000000000000002
+# time: 3226900000 | in_flight : 0 | latency_cnt : 80670
+# time:           3226920000, IDLE:Starting encryption | encryption | plaintext:3
+# time:           3227040000, Inside DONE state, ciphertext=f795aaab494b5923f7fd89ff948bc1e0, round=10, done:1
+# Time:           4027360000 | UART_RX | Received 16 bytes. Byte counter reset. rx_block_ok asserted. byte_counter: 15
+# time:4028000000 | RD_RX is asserted
+# time:4028640000 | rx_byte_cnt : 0 | dout : f7
+# time:4028960000 | rx_byte_cnt : 1 | dout : 95
+# time:4029280000 | rx_byte_cnt : 2 | dout : aa
+# time:4029600000 | rx_byte_cnt : 3 | dout : ab
+# time:4029920000 | rx_byte_cnt : 4 | dout : 49
+# time:4030240000 | rx_byte_cnt : 5 | dout : 4b
+# time:4030560000 | rx_byte_cnt : 6 | dout : 59
+# time:4030880000 | rx_byte_cnt : 7 | dout : 23
+# time:4031200000 | rx_byte_cnt : 8 | dout : f7
+# time:4031520000 | rx_byte_cnt : 9 | dout : fd
+# time:4031840000 | rx_byte_cnt : 10 | dout : 89
+# time:4032160000 | rx_byte_cnt : 11 | dout : ff
+# time:4032480000 | rx_byte_cnt : 12 | dout : 94
+# time:4032800000 | rx_byte_cnt : 13 | dout : 8b
+# time:4033120000 | rx_byte_cnt : 14 | dout : c1
+# time:4033440000 | rx_byte_cnt is made zero and dec_block_ready is asserted. dout : e0
+# time:4033440000 | dec_block_ready is asserted | rx_block : 78
+# time:4033450000 | RX_wait state 
+# time:           4033470000, IDLE:Starting decryption, ciphertext=f795aaab494b5923f7fd89ff948bc1e0, key=00000000000000000000000000000000,
+# time:           4033590000, DONE, plaintext=00000000000000000000000000000003, imc_in=5252525252525252525252d552525252, round_key=00000000000000000000000000000000
+# time : 4033610000 | in_flight is made zero | Entered done handshake block. pt=00000000000000000000000000000003
+# S.No: 4 PASS
+# Time:4033610000 | Plaintext  : 00000000000000000000000000000003
+# Time:4033610000 |  Expected   : 00000000000000000000000000000003
+# time: 4033620000 | in_flight : 0 | latency_cnt : 80670
+# time:           4033640000, IDLE:Starting encryption | encryption | plaintext:4
+# time:           4033760000, Inside DONE state, ciphertext=200211214e7394da2089b6acd093abe0, round=10, done:1
+# Time:           4834080000 | UART_RX | Received 16 bytes. Byte counter reset. rx_block_ok asserted. byte_counter: 15
+# time:4834720000 | RD_RX is asserted
+# time:4835360000 | rx_byte_cnt : 0 | dout : 20
+# time:4835680000 | rx_byte_cnt : 1 | dout : 2
+# time:4836000000 | rx_byte_cnt : 2 | dout : 11
+# time:4836320000 | rx_byte_cnt : 3 | dout : 21
+# time:4836640000 | rx_byte_cnt : 4 | dout : 4e
+# time:4836960000 | rx_byte_cnt : 5 | dout : 73
+# time:4837280000 | rx_byte_cnt : 6 | dout : 94
+# time:4837600000 | rx_byte_cnt : 7 | dout : da
+# time:4837920000 | rx_byte_cnt : 8 | dout : 20
+# time:4838240000 | rx_byte_cnt : 9 | dout : 89
+# time:4838560000 | rx_byte_cnt : 10 | dout : b6
+# time:4838880000 | rx_byte_cnt : 11 | dout : ac
+# time:4839200000 | rx_byte_cnt : 12 | dout : d0
+# time:4839520000 | rx_byte_cnt : 13 | dout : 93
+# time:4839840000 | rx_byte_cnt : 14 | dout : ab
+# time:4840160000 | rx_byte_cnt is made zero and dec_block_ready is asserted. dout : e0
+# time:4840160000 | dec_block_ready is asserted | rx_block : e0
+# time:4840170000 | RX_wait state 
+# time:           4840190000, IDLE:Starting decryption, ciphertext=200211214e7394da2089b6acd093abe0, key=00000000000000000000000000000000,
+# time:           4840310000, DONE, plaintext=00000000000000000000000000000004, imc_in=52525252525252525252523052525252, round_key=00000000000000000000000000000000
+# time : 4840330000 | in_flight is made zero | Entered done handshake block. pt=00000000000000000000000000000004
+# S.No: 5 PASS
+# Time:4840330000 | Plaintext  : 00000000000000000000000000000004
+# Time:4840330000 |  Expected   : 00000000000000000000000000000004
+# time: 4840340000 | in_flight : 0 | latency_cnt : 80670
+# time:           4840360000, IDLE:Starting encryption | encryption | plaintext:5
+# time:           4840480000, Inside DONE state, ciphertext=c94da219118e297d7b7ebcbcc9c388f2, round=10, done:1
+# Time:           5640800000 | UART_RX | Received 16 bytes. Byte counter reset. rx_block_ok asserted. byte_counter: 15
+# time:5641440000 | RD_RX is asserted
+# time:5642080000 | rx_byte_cnt : 0 | dout : c9
+# time:5642400000 | rx_byte_cnt : 1 | dout : 4d
+# time:5642720000 | rx_byte_cnt : 2 | dout : a2
+# time:5643040000 | rx_byte_cnt : 3 | dout : 19
+# time:5643360000 | rx_byte_cnt : 4 | dout : 11
+# time:5643680000 | rx_byte_cnt : 5 | dout : 8e
+# time:5644000000 | rx_byte_cnt : 6 | dout : 29
+# time:5644320000 | rx_byte_cnt : 7 | dout : 7d
+# time:5644640000 | rx_byte_cnt : 8 | dout : 7b
+# time:5644960000 | rx_byte_cnt : 9 | dout : 7e
+# time:5645280000 | rx_byte_cnt : 10 | dout : bc
+# time:5645600000 | rx_byte_cnt : 11 | dout : bc
+# time:5645920000 | rx_byte_cnt : 12 | dout : c9
+# time:5646240000 | rx_byte_cnt : 13 | dout : c3
+# time:5646560000 | rx_byte_cnt : 14 | dout : 88
+# time:5646880000 | rx_byte_cnt is made zero and dec_block_ready is asserted. dout : f2
+# time:5646880000 | dec_block_ready is asserted | rx_block : e0
+# time:5646890000 | RX_wait state 
+# time:           5646910000, IDLE:Starting decryption, ciphertext=c94da219118e297d7b7ebcbcc9c388f2, key=00000000000000000000000000000000,
+# time:           5647030000, DONE, plaintext=00000000000000000000000000000005, imc_in=52525252525252525252523652525252, round_key=00000000000000000000000000000000
+# time : 5647050000 | in_flight is made zero | Entered done handshake block. pt=00000000000000000000000000000005
+# S.No: 6 PASS
+# Time:5647050000 | Plaintext  : 00000000000000000000000000000005
+# Time:5647050000 |  Expected   : 00000000000000000000000000000005
+# time: 5647060000 | in_flight : 0 | latency_cnt : 80670
+# time:           5647080000, IDLE:Starting encryption | encryption | plaintext:6
+# time:           5647200000, Inside DONE state, ciphertext=8ade7d85a8ee35616f7124a9d5270291, round=10, done:1
+# Time:           6447520000 | UART_RX | Received 16 bytes. Byte counter reset. rx_block_ok asserted. byte_counter: 15
+# time:6448160000 | RD_RX is asserted
+# time:6448800000 | rx_byte_cnt : 0 | dout : 8a
+# time:6449120000 | rx_byte_cnt : 1 | dout : de
+# time:6449440000 | rx_byte_cnt : 2 | dout : 7d
+# time:6449760000 | rx_byte_cnt : 3 | dout : 85
+# time:6450080000 | rx_byte_cnt : 4 | dout : a8
+# time:6450400000 | rx_byte_cnt : 5 | dout : ee
+# time:6450720000 | rx_byte_cnt : 6 | dout : 35
+# time:6451040000 | rx_byte_cnt : 7 | dout : 61
+# time:6451360000 | rx_byte_cnt : 8 | dout : 6f
+# time:6451680000 | rx_byte_cnt : 9 | dout : 71
+# time:6452000000 | rx_byte_cnt : 10 | dout : 24
+# time:6452320000 | rx_byte_cnt : 11 | dout : a9
+# time:6452640000 | rx_byte_cnt : 12 | dout : d5
+# time:6452960000 | rx_byte_cnt : 13 | dout : 27
+# time:6453280000 | rx_byte_cnt : 14 | dout : 2
+# time:6453600000 | rx_byte_cnt is made zero and dec_block_ready is asserted. dout : 91
+# time:6453600000 | dec_block_ready is asserted | rx_block : f2
+# time:6453610000 | RX_wait state 
+# time:           6453630000, IDLE:Starting decryption, ciphertext=8ade7d85a8ee35616f7124a9d5270291, key=00000000000000000000000000000000,
+# time:           6453750000, DONE, plaintext=00000000000000000000000000000006, imc_in=5252525252525252525252a552525252, round_key=00000000000000000000000000000000
+# time : 6453770000 | in_flight is made zero | Entered done handshake block. pt=00000000000000000000000000000006
+# S.No: 7 PASS
+# Time:6453770000 | Plaintext  : 00000000000000000000000000000006
+# Time:6453770000 |  Expected   : 00000000000000000000000000000006
+# time: 6453780000 | in_flight : 0 | latency_cnt : 80670
+# time:           6453800000, IDLE:Starting encryption | encryption | plaintext:7
+# time:           6453920000, Inside DONE state, ciphertext=95b84d1b96c690ff2f2de30bf2ec89e0, round=10, done:1
+# Time:           7254240000 | UART_RX | Received 16 bytes. Byte counter reset. rx_block_ok asserted. byte_counter: 15
+# time:7254880000 | RD_RX is asserted
+# time:7255520000 | rx_byte_cnt : 0 | dout : 95
+# time:7255840000 | rx_byte_cnt : 1 | dout : b8
+# time:7256160000 | rx_byte_cnt : 2 | dout : 4d
+# time:7256480000 | rx_byte_cnt : 3 | dout : 1b
+# time:7256800000 | rx_byte_cnt : 4 | dout : 96
+# time:7257120000 | rx_byte_cnt : 5 | dout : c6
+# time:7257440000 | rx_byte_cnt : 6 | dout : 90
+# time:7257760000 | rx_byte_cnt : 7 | dout : ff
+# time:7258080000 | rx_byte_cnt : 8 | dout : 2f
+# time:7258400000 | rx_byte_cnt : 9 | dout : 2d
+# time:7258720000 | rx_byte_cnt : 10 | dout : e3
+# time:7259040000 | rx_byte_cnt : 11 | dout : b
+# time:7259360000 | rx_byte_cnt : 12 | dout : f2
+# time:7259680000 | rx_byte_cnt : 13 | dout : ec
+# time:7260000000 | rx_byte_cnt : 14 | dout : 89
+# time:7260320000 | rx_byte_cnt is made zero and dec_block_ready is asserted. dout : e0
+# time:7260320000 | dec_block_ready is asserted | rx_block : 91
+# time:7260330000 | RX_wait state 
+# time:           7260350000, IDLE:Starting decryption, ciphertext=95b84d1b96c690ff2f2de30bf2ec89e0, key=00000000000000000000000000000000,
+# time:           7260470000, DONE, plaintext=00000000000000000000000000000007, imc_in=52525252525252525252523852525252, round_key=00000000000000000000000000000000
+# time : 7260490000 | in_flight is made zero | Entered done handshake block. pt=00000000000000000000000000000007
+# S.No: 8 PASS
+# Time:7260490000 | Plaintext  : 00000000000000000000000000000007
+# Time:7260490000 |  Expected   : 00000000000000000000000000000007
+# time: 7260500000 | in_flight : 0 | latency_cnt : 80670
+# time:           7260520000, IDLE:Starting encryption | encryption | plaintext:8
+# time:           7260640000, Inside DONE state, ciphertext=0253786e126504f0dab90c48a30321de, round=10, done:1
+# Time:           8060960000 | UART_RX | Received 16 bytes. Byte counter reset. rx_block_ok asserted. byte_counter: 15
+# time:8061600000 | RD_RX is asserted
+# time:8062240000 | rx_byte_cnt : 0 | dout : 2
+# time:8062560000 | rx_byte_cnt : 1 | dout : 53
+# time:8062880000 | rx_byte_cnt : 2 | dout : 78
+# time:8063200000 | rx_byte_cnt : 3 | dout : 6e
+# time:8063520000 | rx_byte_cnt : 4 | dout : 12
+# time:8063840000 | rx_byte_cnt : 5 | dout : 65
+# time:8064160000 | rx_byte_cnt : 6 | dout : 4
+# time:8064480000 | rx_byte_cnt : 7 | dout : f0
+# time:8064800000 | rx_byte_cnt : 8 | dout : da
+# time:8065120000 | rx_byte_cnt : 9 | dout : b9
+# time:8065440000 | rx_byte_cnt : 10 | dout : c
+# time:8065760000 | rx_byte_cnt : 11 | dout : 48
+# time:8066080000 | rx_byte_cnt : 12 | dout : a3
+# time:8066400000 | rx_byte_cnt : 13 | dout : 3
+# time:8066720000 | rx_byte_cnt : 14 | dout : 21
+# time:8067040000 | rx_byte_cnt is made zero and dec_block_ready is asserted. dout : de
+# time:8067040000 | dec_block_ready is asserted | rx_block : e0
+# time:8067050000 | RX_wait state 
+# time:           8067070000, IDLE:Starting decryption, ciphertext=0253786e126504f0dab90c48a30321de, key=00000000000000000000000000000000,
+# time:           8067190000, DONE, plaintext=00000000000000000000000000000008, imc_in=5252525252525252525252bf52525252, round_key=00000000000000000000000000000000
+# time : 8067210000 | in_flight is made zero | Entered done handshake block. pt=00000000000000000000000000000008
+# S.No: 9 PASS
+# Time:8067210000 | Plaintext  : 00000000000000000000000000000008
+# Time:8067210000 |  Expected   : 00000000000000000000000000000008
 # ----------------------------------
 # AES DECRYPTION TEST SUMMARY
-# PASS        : 1
-# FAIL        : 8
-# LATENCY ERR : 9
-# LATENCY REF : 11
+# PASS        : 9
+# FAIL        : 0
+# LATENCY ERR : 1
+# LATENCY REF : 80670
 # ----------------------------------
-# ❌ AES DECRYPTION TB FAILED
-# ** Note: $finish    : /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/../testbench/tb.v(315)
-#    Time: 120190 ns  Iteration: 1  Instance: /tb
+# ✅ AES DECRYPTION TB PASSED
+# ** Note: $finish    : /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/../testbench/tb.v(320)
+#    Time: 8067210 ns  Iteration: 1  Instance: /tb
 # 1
-# Break in Module tb at /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/../testbench/tb.v line 315
-# End time: 18:43:54 on Feb 08,2026, Elapsed time: 0:02:48
-# Errors: 0, Warnings: 0
+# Break in Module tb at /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/../testbench/tb.v line 320
+# End time: 11:55:27 on Mar 01,2026, Elapsed time: 0:08:40
+# Errors: 0, Warnings: 2

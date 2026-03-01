@@ -1,1 +1,1 @@
-Warning (10268): Verilog HDL information at UART_RX.v(39): always construct contains both blocking and non-blocking assignments File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_RX.v Line: 39
+Info (10281): Verilog HDL Declaration information at aes_uart_top.v(11): object "WR_RX" differs only in case from object "wr_rx" in the same scope File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/aes_uart_top.v Line: 11

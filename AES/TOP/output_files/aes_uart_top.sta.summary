@@ -2,196 +2,196 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1100mV 100C Model Setup 'clk_100'
-Slack : -7.327
-TNS   : -2529.857
-
 Type  : Slow 1100mV 100C Model Setup 'clk_3125_tx'
-Slack : -7.243
-TNS   : -334.829
+Slack : -9.671
+TNS   : -431.147
+
+Type  : Slow 1100mV 100C Model Setup 'clk_100'
+Slack : -7.488
+TNS   : -2328.634
 
 Type  : Slow 1100mV 100C Model Setup 'Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|rd_ptr[0]'
-Slack : -4.596
-TNS   : -4.596
+Slack : -5.269
+TNS   : -5.269
 
 Type  : Slow 1100mV 100C Model Setup 'clk_3125_rx'
-Slack : -2.880
-TNS   : -450.474
+Slack : -3.802
+TNS   : -497.242
 
 Type  : Slow 1100mV 100C Model Hold 'clk_3125_tx'
-Slack : 0.302
-TNS   : 0.000
+Slack : -0.090
+TNS   : -0.090
 
 Type  : Slow 1100mV 100C Model Hold 'clk_3125_rx'
-Slack : 0.328
+Slack : 0.361
 TNS   : 0.000
 
 Type  : Slow 1100mV 100C Model Hold 'clk_100'
-Slack : 0.351
+Slack : 0.377
 TNS   : 0.000
 
 Type  : Slow 1100mV 100C Model Hold 'Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|rd_ptr[0]'
-Slack : 2.806
+Slack : 2.802
 TNS   : 0.000
 
 Type  : Slow 1100mV 100C Model Minimum Pulse Width 'clk_3125_rx'
 Slack : -3.166
-TNS   : -264.971
+TNS   : -307.913
 
 Type  : Slow 1100mV 100C Model Minimum Pulse Width 'clk_3125_tx'
 Slack : -3.166
-TNS   : -165.374
+TNS   : -200.755
 
 Type  : Slow 1100mV 100C Model Minimum Pulse Width 'clk_100'
 Slack : -0.538
-TNS   : -636.992
+TNS   : -535.429
 
 Type  : Slow 1100mV 100C Model Minimum Pulse Width 'Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|rd_ptr[0]'
-Slack : 0.353
+Slack : 0.261
 TNS   : 0.000
 
 Type  : Slow 1100mV -40C Model Setup 'clk_3125_tx'
-Slack : -6.981
-TNS   : -321.888
+Slack : -9.213
+TNS   : -411.078
 
 Type  : Slow 1100mV -40C Model Setup 'clk_100'
-Slack : -6.972
-TNS   : -2454.181
+Slack : -7.306
+TNS   : -2267.372
 
 Type  : Slow 1100mV -40C Model Setup 'Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|rd_ptr[0]'
-Slack : -4.850
-TNS   : -4.850
+Slack : -5.488
+TNS   : -5.488
 
 Type  : Slow 1100mV -40C Model Setup 'clk_3125_rx'
-Slack : -2.752
-TNS   : -435.847
+Slack : -3.744
+TNS   : -481.013
 
 Type  : Slow 1100mV -40C Model Hold 'clk_3125_tx'
-Slack : 0.019
+Slack : -0.568
+TNS   : -0.672
+
+Type  : Slow 1100mV -40C Model Hold 'clk_100'
+Slack : 0.311
 TNS   : 0.000
 
 Type  : Slow 1100mV -40C Model Hold 'clk_3125_rx'
-Slack : 0.312
-TNS   : 0.000
-
-Type  : Slow 1100mV -40C Model Hold 'clk_100'
-Slack : 0.328
+Slack : 0.352
 TNS   : 0.000
 
 Type  : Slow 1100mV -40C Model Hold 'Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|rd_ptr[0]'
-Slack : 2.907
+Slack : 2.991
 TNS   : 0.000
 
 Type  : Slow 1100mV -40C Model Minimum Pulse Width 'clk_3125_rx'
 Slack : -3.166
-TNS   : -287.774
+TNS   : -333.136
 
 Type  : Slow 1100mV -40C Model Minimum Pulse Width 'clk_3125_tx'
 Slack : -3.166
-TNS   : -171.550
+TNS   : -208.820
 
 Type  : Slow 1100mV -40C Model Minimum Pulse Width 'clk_100'
 Slack : -0.538
-TNS   : -687.781
+TNS   : -580.523
 
 Type  : Slow 1100mV -40C Model Minimum Pulse Width 'Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|rd_ptr[0]'
-Slack : 0.361
+Slack : 0.174
 TNS   : 0.000
 
-Type  : Fast 1100mV 100C Model Setup 'clk_100'
-Slack : -3.918
-TNS   : -1028.110
-
 Type  : Fast 1100mV 100C Model Setup 'clk_3125_tx'
-Slack : -3.851
-TNS   : -141.313
+Slack : -5.348
+TNS   : -193.098
+
+Type  : Fast 1100mV 100C Model Setup 'clk_100'
+Slack : -4.054
+TNS   : -971.747
 
 Type  : Fast 1100mV 100C Model Setup 'Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|rd_ptr[0]'
-Slack : -1.654
-TNS   : -1.654
+Slack : -2.047
+TNS   : -2.047
 
 Type  : Fast 1100mV 100C Model Setup 'clk_3125_rx'
-Slack : -1.273
-TNS   : -139.498
+Slack : -1.805
+TNS   : -155.914
 
 Type  : Fast 1100mV 100C Model Hold 'clk_3125_tx'
-Slack : 0.084
+Slack : 0.088
 TNS   : 0.000
 
 Type  : Fast 1100mV 100C Model Hold 'clk_3125_rx'
-Slack : 0.171
-TNS   : 0.000
-
-Type  : Fast 1100mV 100C Model Hold 'clk_100'
 Slack : 0.181
 TNS   : 0.000
 
+Type  : Fast 1100mV 100C Model Hold 'clk_100'
+Slack : 0.182
+TNS   : 0.000
+
 Type  : Fast 1100mV 100C Model Hold 'Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|rd_ptr[0]'
-Slack : 1.433
+Slack : 1.394
 TNS   : 0.000
 
 Type  : Fast 1100mV 100C Model Minimum Pulse Width 'clk_3125_rx'
 Slack : -2.636
-TNS   : -86.336
+TNS   : -109.347
 
 Type  : Fast 1100mV 100C Model Minimum Pulse Width 'clk_3125_tx'
 Slack : -2.636
-TNS   : -79.557
+TNS   : -103.240
 
 Type  : Fast 1100mV 100C Model Minimum Pulse Width 'clk_100'
-Slack : -0.077
-TNS   : -56.075
+Slack : -0.080
+TNS   : -49.331
 
 Type  : Fast 1100mV 100C Model Minimum Pulse Width 'Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|rd_ptr[0]'
-Slack : 0.429
+Slack : 0.399
 TNS   : 0.000
-
-Type  : Fast 1100mV -40C Model Setup 'clk_100'
-Slack : -3.083
-TNS   : -751.050
 
 Type  : Fast 1100mV -40C Model Setup 'clk_3125_tx'
-Slack : -3.014
-TNS   : -105.747
+Slack : -4.212
+TNS   : -145.928
+
+Type  : Fast 1100mV -40C Model Setup 'clk_100'
+Slack : -3.209
+TNS   : -718.052
 
 Type  : Fast 1100mV -40C Model Setup 'Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|rd_ptr[0]'
-Slack : -1.510
-TNS   : -1.510
+Slack : -1.875
+TNS   : -1.875
 
 Type  : Fast 1100mV -40C Model Setup 'clk_3125_rx'
-Slack : -0.890
-TNS   : -91.987
+Slack : -1.306
+TNS   : -104.037
 
 Type  : Fast 1100mV -40C Model Hold 'clk_3125_tx'
-Slack : 0.076
-TNS   : 0.000
+Slack : -0.199
+TNS   : -0.199
 
 Type  : Fast 1100mV -40C Model Hold 'clk_3125_rx'
-Slack : 0.147
+Slack : 0.120
 TNS   : 0.000
 
 Type  : Fast 1100mV -40C Model Hold 'clk_100'
-Slack : 0.162
+Slack : 0.167
 TNS   : 0.000
 
 Type  : Fast 1100mV -40C Model Hold 'Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|rd_ptr[0]'
-Slack : 1.390
+Slack : 1.393
 TNS   : 0.000
 
 Type  : Fast 1100mV -40C Model Minimum Pulse Width 'clk_3125_rx'
 Slack : -2.636
-TNS   : -87.281
+TNS   : -110.265
 
 Type  : Fast 1100mV -40C Model Minimum Pulse Width 'clk_3125_tx'
 Slack : -2.636
-TNS   : -80.401
+TNS   : -102.867
 
 Type  : Fast 1100mV -40C Model Minimum Pulse Width 'clk_100'
-Slack : -0.076
-TNS   : -54.838
+Slack : -0.072
+TNS   : -45.735
 
 Type  : Fast 1100mV -40C Model Minimum Pulse Width 'Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|rd_ptr[0]'
-Slack : 0.457
+Slack : 0.406
 TNS   : 0.000
 
 ------------------------------------------------------------

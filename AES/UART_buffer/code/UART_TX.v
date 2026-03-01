@@ -53,12 +53,12 @@
                 if (state == S_IDLE && tx_start && !ft_empty) begin
 						  rd_en   <= 1'b1;
                     state <= S_START;
-						  //$display("time:%0t | Moving to s_start state | ft_out:%0h", $time, ft_out);
+						  //$display("time:%0t | UART_TX | Moving to s_start state. rd_en asserted | ft_out:%0h", $time, ft_out);
                 end
             end
             
             S_START: begin
-					 //$display("time:%0t, Entered start state", $time);
+					 //$display("time:%0t, Entered start state. rd_en deasserted", $time);
 					 rd_en <= 1'b0;
 					 tx_busy <= 1'b1;
 					 data_reg <= ft_out;
@@ -67,9 +67,9 @@
                     clk_counter <= 0;
                     state <= S_DATA;
                     bit_counter <= 7; // Prepare to send MSB (data[7])
+                    //$display("Time: %0t | UART_TX | State: S_START | clk_counter = %0d, bit_counter = %0d, ft_out = %0h", $time, clk_counter, bit_counter, ft_out);
                 end else begin
-                    clk_counter <= clk_counter + 1;
-						  //$display("Time: %0t | State: S_START | clk_counter = %0d, bit_counter = %0d, tx = %0b", $time, clk_counter, bit_counter, tx);
+                    clk_counter <= clk_counter + 1;	  
                 end
 					 
             end
@@ -116,6 +116,7 @@
             S_DONE: begin
                 //$display("time:%0t, Transmission done in UART_TX module.", $time);
                 state <= S_IDLE;
+                tx_busy <= 0;
 					 rd_en <= 0;
             end
 
