@@ -11,189 +11,189 @@
 # 
 # vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/aes_uart_top.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:46:46 on Mar 01,2026
+# Start time: 12:59:57 on Mar 01,2026
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/aes_uart_top.v 
 # -- Compiling module aes_uart_top
 # 
 # Top level modules:
 # 	aes_uart_top
-# End time: 11:46:46 on Mar 01,2026, Elapsed time: 0:00:00
+# End time: 12:59:57 on Mar 01,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/AES_TOP.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:46:46 on Mar 01,2026
+# Start time: 12:59:57 on Mar 01,2026
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/AES_TOP.v 
 # -- Compiling module AES_TOP
 # 
 # Top level modules:
 # 	AES_TOP
-# End time: 11:46:46 on Mar 01,2026, Elapsed time: 0:00:00
+# End time: 12:59:57 on Mar 01,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/keyExpansion.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:46:46 on Mar 01,2026
+# Start time: 12:59:57 on Mar 01,2026
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/keyExpansion.v 
 # -- Compiling module keyExpansion
 # 
 # Top level modules:
 # 	keyExpansion
-# End time: 11:46:46 on Mar 01,2026, Elapsed time: 0:00:00
+# End time: 12:59:57 on Mar 01,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/mixColumns.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:46:46 on Mar 01,2026
+# Start time: 12:59:57 on Mar 01,2026
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/mixColumns.v 
 # -- Compiling module mixColumns
 # 
 # Top level modules:
 # 	mixColumns
-# End time: 11:46:46 on Mar 01,2026, Elapsed time: 0:00:00
+# End time: 12:59:57 on Mar 01,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/sbox.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:46:46 on Mar 01,2026
+# Start time: 12:59:57 on Mar 01,2026
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/sbox.v 
 # -- Compiling module sbox
 # 
 # Top level modules:
 # 	sbox
-# End time: 11:46:46 on Mar 01,2026, Elapsed time: 0:00:00
+# End time: 12:59:57 on Mar 01,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/shiftRows.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:46:46 on Mar 01,2026
+# Start time: 12:59:57 on Mar 01,2026
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/shiftRows.v 
 # -- Compiling module shiftRows
 # 
 # Top level modules:
 # 	shiftRows
-# End time: 11:46:46 on Mar 01,2026, Elapsed time: 0:00:00
+# End time: 12:59:57 on Mar 01,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/subBytes.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:46:46 on Mar 01,2026
+# Start time: 12:59:57 on Mar 01,2026
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/subBytes.v 
 # -- Compiling module subBytes
 # 
 # Top level modules:
 # 	subBytes
-# End time: 11:46:46 on Mar 01,2026, Elapsed time: 0:00:00
+# End time: 12:59:57 on Mar 01,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/Buffer_top.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:46:46 on Mar 01,2026
+# Start time: 12:59:57 on Mar 01,2026
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/Buffer_top.v 
 # -- Compiling module Buffer_top
 # 
 # Top level modules:
 # 	Buffer_top
-# End time: 11:46:46 on Mar 01,2026, Elapsed time: 0:00:00
+# End time: 12:59:57 on Mar 01,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/fifo_tx.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:46:46 on Mar 01,2026
+# Start time: 12:59:57 on Mar 01,2026
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/fifo_tx.v 
 # -- Compiling module fifo_tx
 # 
 # Top level modules:
 # 	fifo_tx
-# End time: 11:46:46 on Mar 01,2026, Elapsed time: 0:00:00
+# End time: 12:59:57 on Mar 01,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_TX.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:46:46 on Mar 01,2026
+# Start time: 12:59:57 on Mar 01,2026
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_TX.v 
 # -- Compiling module uart_tx
 # 
 # Top level modules:
 # 	uart_tx
-# End time: 11:46:46 on Mar 01,2026, Elapsed time: 0:00:00
+# End time: 12:59:57 on Mar 01,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_RX.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:46:46 on Mar 01,2026
+# Start time: 12:59:57 on Mar 01,2026
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_RX.v 
 # -- Compiling module uart_rx
 # 
 # Top level modules:
 # 	uart_rx
-# End time: 11:46:46 on Mar 01,2026, Elapsed time: 0:00:00
+# End time: 12:59:58 on Mar 01,2026, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/fifo_rx.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:46:46 on Mar 01,2026
+# Start time: 12:59:58 on Mar 01,2026
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/fifo_rx.v 
 # -- Compiling module fifo_rx
 # 
 # Top level modules:
 # 	fifo_rx
-# End time: 11:46:46 on Mar 01,2026, Elapsed time: 0:00:00
+# End time: 12:59:58 on Mar 01,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/ADS_TOP.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:46:46 on Mar 01,2026
+# Start time: 12:59:58 on Mar 01,2026
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/ADS_TOP.v 
 # -- Compiling module ADS_TOP
 # 
 # Top level modules:
 # 	ADS_TOP
-# End time: 11:46:47 on Mar 01,2026, Elapsed time: 0:00:01
+# End time: 12:59:58 on Mar 01,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/inverseShiftrows.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:46:47 on Mar 01,2026
+# Start time: 12:59:58 on Mar 01,2026
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/inverseShiftrows.v 
 # -- Compiling module inverseShiftRows
 # 
 # Top level modules:
 # 	inverseShiftRows
-# End time: 11:46:47 on Mar 01,2026, Elapsed time: 0:00:00
+# End time: 12:59:58 on Mar 01,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/inverseSbox.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:46:47 on Mar 01,2026
+# Start time: 12:59:58 on Mar 01,2026
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/inverseSbox.v 
 # -- Compiling module inverseSbox
 # 
 # Top level modules:
 # 	inverseSbox
-# End time: 11:46:47 on Mar 01,2026, Elapsed time: 0:00:00
+# End time: 12:59:58 on Mar 01,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/inverseSubBytes.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:46:47 on Mar 01,2026
+# Start time: 12:59:58 on Mar 01,2026
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/inverseSubBytes.v 
 # -- Compiling module inverseSubBytes
 # 
 # Top level modules:
 # 	inverseSubBytes
-# End time: 11:46:47 on Mar 01,2026, Elapsed time: 0:00:00
+# End time: 12:59:58 on Mar 01,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/invMixColumns.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:46:47 on Mar 01,2026
+# Start time: 12:59:58 on Mar 01,2026
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/invMixColumns.v 
 # -- Compiling module invMixColumns
 # 
 # Top level modules:
 # 	invMixColumns
-# End time: 11:46:47 on Mar 01,2026, Elapsed time: 0:00:00
+# End time: 12:59:58 on Mar 01,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/../testbench {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/../testbench/tb.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:46:47 on Mar 01,2026
+# Start time: 12:59:58 on Mar 01,2026
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/../testbench" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/../testbench/tb.v 
 # -- Compiling module tb
 # 
 # Top level modules:
 # 	tb
-# End time: 11:46:47 on Mar 01,2026, Elapsed time: 0:00:00
+# End time: 12:59:58 on Mar 01,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb 
-# Start time: 11:46:47 on Mar 01,2026
+# Start time: 12:59:58 on Mar 01,2026
 # Loading work.tb
 # Loading work.aes_uart_top
 # Loading work.AES_TOP
@@ -245,7 +245,7 @@
 # time:806560000 | rx_byte_cnt is made zero and dec_block_ready is asserted. dout : 2e
 # time:806560000 | dec_block_ready is asserted | rx_block : 0
 # time:806570000 | RX_wait state 
-# time:            806590000, IDLE:Starting decryption, ciphertext=66e94bd4ef8a2c3b884cfa59ca342b2e, key=00000000000000000000000000000000,
+# time:            806590000, IDLE:Starting decryption, ciphertext=00000000000000000000000000000000, key=00000000000000000000000000000000,
 # time:            806710000, DONE, plaintext=00000000000000000000000000000000, imc_in=52525252525252525252525252525252, round_key=00000000000000000000000000000000
 # time : 806730000 | in_flight is made zero | Entered done handshake block. pt=00000000000000000000000000000000
 # ❌ LATENCY ERROR exp=80670 got=80671
@@ -304,7 +304,7 @@
 # time:2420000000 | rx_byte_cnt is made zero and dec_block_ready is asserted. dout : 5a
 # time:2420000000 | dec_block_ready is asserted | rx_block : 2e
 # time:2420010000 | RX_wait state 
-# time:           2420030000, IDLE:Starting decryption, ciphertext=58e2fccefa7e3061367f1d57a4e7455a, key=00000000000000000000000000000000,
+# time:           2420030000, IDLE:Starting decryption, ciphertext=66e94bd4ef8a2c3b884cfa59ca342b2e, key=00000000000000000000000000000000,
 # time:           2420150000, DONE, plaintext=00000000000000000000000000000001, imc_in=52525252525252525252520952525252, round_key=00000000000000000000000000000000
 # time : 2420170000 | in_flight is made zero | Entered done handshake block. pt=00000000000000000000000000000001
 # S.No: 2 PASS
@@ -333,7 +333,7 @@
 # time:3226720000 | rx_byte_cnt is made zero and dec_block_ready is asserted. dout : 78
 # time:3226720000 | dec_block_ready is asserted | rx_block : 5a
 # time:3226730000 | RX_wait state 
-# time:           3226750000, IDLE:Starting decryption, ciphertext=0388dace60b6a392f328c2b971b2fe78, key=00000000000000000000000000000000,
+# time:           3226750000, IDLE:Starting decryption, ciphertext=58e2fccefa7e3061367f1d57a4e7455a, key=00000000000000000000000000000000,
 # time:           3226870000, DONE, plaintext=00000000000000000000000000000002, imc_in=52525252525252525252526a52525252, round_key=00000000000000000000000000000000
 # time : 3226890000 | in_flight is made zero | Entered done handshake block. pt=00000000000000000000000000000002
 # S.No: 3 PASS
@@ -362,7 +362,7 @@
 # time:4033440000 | rx_byte_cnt is made zero and dec_block_ready is asserted. dout : e0
 # time:4033440000 | dec_block_ready is asserted | rx_block : 78
 # time:4033450000 | RX_wait state 
-# time:           4033470000, IDLE:Starting decryption, ciphertext=f795aaab494b5923f7fd89ff948bc1e0, key=00000000000000000000000000000000,
+# time:           4033470000, IDLE:Starting decryption, ciphertext=0388dace60b6a392f328c2b971b2fe78, key=00000000000000000000000000000000,
 # time:           4033590000, DONE, plaintext=00000000000000000000000000000003, imc_in=5252525252525252525252d552525252, round_key=00000000000000000000000000000000
 # time : 4033610000 | in_flight is made zero | Entered done handshake block. pt=00000000000000000000000000000003
 # S.No: 4 PASS
@@ -391,7 +391,7 @@
 # time:4840160000 | rx_byte_cnt is made zero and dec_block_ready is asserted. dout : e0
 # time:4840160000 | dec_block_ready is asserted | rx_block : e0
 # time:4840170000 | RX_wait state 
-# time:           4840190000, IDLE:Starting decryption, ciphertext=200211214e7394da2089b6acd093abe0, key=00000000000000000000000000000000,
+# time:           4840190000, IDLE:Starting decryption, ciphertext=f795aaab494b5923f7fd89ff948bc1e0, key=00000000000000000000000000000000,
 # time:           4840310000, DONE, plaintext=00000000000000000000000000000004, imc_in=52525252525252525252523052525252, round_key=00000000000000000000000000000000
 # time : 4840330000 | in_flight is made zero | Entered done handshake block. pt=00000000000000000000000000000004
 # S.No: 5 PASS
@@ -420,7 +420,7 @@
 # time:5646880000 | rx_byte_cnt is made zero and dec_block_ready is asserted. dout : f2
 # time:5646880000 | dec_block_ready is asserted | rx_block : e0
 # time:5646890000 | RX_wait state 
-# time:           5646910000, IDLE:Starting decryption, ciphertext=c94da219118e297d7b7ebcbcc9c388f2, key=00000000000000000000000000000000,
+# time:           5646910000, IDLE:Starting decryption, ciphertext=200211214e7394da2089b6acd093abe0, key=00000000000000000000000000000000,
 # time:           5647030000, DONE, plaintext=00000000000000000000000000000005, imc_in=52525252525252525252523652525252, round_key=00000000000000000000000000000000
 # time : 5647050000 | in_flight is made zero | Entered done handshake block. pt=00000000000000000000000000000005
 # S.No: 6 PASS
@@ -449,7 +449,7 @@
 # time:6453600000 | rx_byte_cnt is made zero and dec_block_ready is asserted. dout : 91
 # time:6453600000 | dec_block_ready is asserted | rx_block : f2
 # time:6453610000 | RX_wait state 
-# time:           6453630000, IDLE:Starting decryption, ciphertext=8ade7d85a8ee35616f7124a9d5270291, key=00000000000000000000000000000000,
+# time:           6453630000, IDLE:Starting decryption, ciphertext=c94da219118e297d7b7ebcbcc9c388f2, key=00000000000000000000000000000000,
 # time:           6453750000, DONE, plaintext=00000000000000000000000000000006, imc_in=5252525252525252525252a552525252, round_key=00000000000000000000000000000000
 # time : 6453770000 | in_flight is made zero | Entered done handshake block. pt=00000000000000000000000000000006
 # S.No: 7 PASS
@@ -478,7 +478,7 @@
 # time:7260320000 | rx_byte_cnt is made zero and dec_block_ready is asserted. dout : e0
 # time:7260320000 | dec_block_ready is asserted | rx_block : 91
 # time:7260330000 | RX_wait state 
-# time:           7260350000, IDLE:Starting decryption, ciphertext=95b84d1b96c690ff2f2de30bf2ec89e0, key=00000000000000000000000000000000,
+# time:           7260350000, IDLE:Starting decryption, ciphertext=8ade7d85a8ee35616f7124a9d5270291, key=00000000000000000000000000000000,
 # time:           7260470000, DONE, plaintext=00000000000000000000000000000007, imc_in=52525252525252525252523852525252, round_key=00000000000000000000000000000000
 # time : 7260490000 | in_flight is made zero | Entered done handshake block. pt=00000000000000000000000000000007
 # S.No: 8 PASS
@@ -507,7 +507,7 @@
 # time:8067040000 | rx_byte_cnt is made zero and dec_block_ready is asserted. dout : de
 # time:8067040000 | dec_block_ready is asserted | rx_block : e0
 # time:8067050000 | RX_wait state 
-# time:           8067070000, IDLE:Starting decryption, ciphertext=0253786e126504f0dab90c48a30321de, key=00000000000000000000000000000000,
+# time:           8067070000, IDLE:Starting decryption, ciphertext=95b84d1b96c690ff2f2de30bf2ec89e0, key=00000000000000000000000000000000,
 # time:           8067190000, DONE, plaintext=00000000000000000000000000000008, imc_in=5252525252525252525252bf52525252, round_key=00000000000000000000000000000000
 # time : 8067210000 | in_flight is made zero | Entered done handshake block. pt=00000000000000000000000000000008
 # S.No: 9 PASS
@@ -525,5 +525,5 @@
 #    Time: 8067210 ns  Iteration: 1  Instance: /tb
 # 1
 # Break in Module tb at /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/../testbench/tb.v line 320
-# End time: 11:55:27 on Mar 01,2026, Elapsed time: 0:08:40
+# End time: 13:00:59 on Mar 01,2026, Elapsed time: 0:01:01
 # Errors: 0, Warnings: 2

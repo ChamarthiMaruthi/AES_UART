@@ -323,9 +323,10 @@ module aes_uart_top (
 
     reg [127:0] rx_block;
     reg rx_block_ready = 0;
-    reg rx_block_ready_d = 0;
     reg dec_block_ready = 0;
     reg [4:0] rd_counter = 0;
+    reg dec_sync_d = 0;
+    reg [1:0] dec_sync = 0;
 
 
     always @(posedge clk_3125_rx or posedge rst_n_slow) begin
@@ -405,11 +406,17 @@ module aes_uart_top (
         end
     end
 
+    always @(posedge clk_100) begin
+        dec_sync <= {dec_sync[0], dec_block_ready};
+        dec_sync_d <= dec_sync[1];
+    end
+
+    wire dec_block_ready_fast = dec_sync[1] ^ dec_sync_d;
 
     always @(posedge clk_100 or posedge rst_n_fast) begin
         if (rst_n_fast) begin
             dec_ciphertext <= 0;
-        end else if (dec_block_ready) begin
+        end else if (dec_block_ready_fast) begin
             dec_ciphertext <= rx_block;
 				//$display("time:%0t, dec_ciphertext:%0h", $time, rx_block);
         end

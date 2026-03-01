@@ -1,5 +1,5 @@
 Analysis & Synthesis report for aes_uart_top
-Sun Mar  1 10:24:29 2026
+Sun Mar  1 12:59:33 2026
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -183,13 +183,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Mar  1 10:24:29 2026       ;
+; Analysis & Synthesis Status     ; Successful - Sun Mar  1 12:59:33 2026       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; aes_uart_top                                ;
 ; Top-level Entity Name           ; aes_uart_top                                ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 1002                                        ;
+; Total registers                 ; 1005                                        ;
 ; Total pins                      ; 409                                         ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 4,096                                       ;
@@ -359,16 +359,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+---------------+
 ; Resource                                    ; Usage         ;
 +---------------------------------------------+---------------+
-; Estimate of Logic utilization (ALMs needed) ; 5580          ;
+; Estimate of Logic utilization (ALMs needed) ; 5581          ;
 ;                                             ;               ;
-; Combinational ALUT usage for logic          ; 6620          ;
+; Combinational ALUT usage for logic          ; 6621          ;
 ;     -- 7 input functions                    ; 140           ;
 ;     -- 6 input functions                    ; 4338          ;
 ;     -- 5 input functions                    ; 696           ;
 ;     -- 4 input functions                    ; 554           ;
-;     -- <=3 input functions                  ; 892           ;
+;     -- <=3 input functions                  ; 893           ;
 ;                                             ;               ;
-; Dedicated logic registers                   ; 1002          ;
+; Dedicated logic registers                   ; 1005          ;
 ;                                             ;               ;
 ; I/O pins                                    ; 409           ;
 ; Total MLAB memory bits                      ; 0             ;
@@ -377,8 +377,8 @@ https://fpgasoftware.intel.com/eula.
 ; Total DSP Blocks                            ; 0             ;
 ;                                             ;               ;
 ; Maximum fan-out node                        ; clk_100~input ;
-; Maximum fan-out                             ; 672           ;
-; Total fan-out                               ; 39526         ;
+; Maximum fan-out                             ; 675           ;
+; Total fan-out                               ; 39534         ;
 ; Average fan-out                             ; 4.67          ;
 +---------------------------------------------+---------------+
 
@@ -388,7 +388,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                             ; Entity Name     ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |aes_uart_top                                ; 6620 (97)           ; 1002 (306)                ; 4096              ; 0          ; 409  ; 0            ; |aes_uart_top                                                                                                   ; aes_uart_top    ; work         ;
+; |aes_uart_top                                ; 6621 (98)           ; 1005 (309)                ; 4096              ; 0          ; 409  ; 0            ; |aes_uart_top                                                                                                   ; aes_uart_top    ; work         ;
 ;    |ADS_TOP:u_aes_decrypt|                   ; 4614 (1035)         ; 265 (265)                 ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|ADS_TOP:u_aes_decrypt                                                                             ; ADS_TOP         ; work         ;
 ;       |invMixColumns:u_imc|                  ; 265 (265)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|ADS_TOP:u_aes_decrypt|invMixColumns:u_imc                                                         ; invMixColumns   ; work         ;
 ;       |inverseSubBytes:u_isb|                ; 640 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|ADS_TOP:u_aes_decrypt|inverseSubBytes:u_isb                                                       ; inverseSubBytes ; work         ;
@@ -618,7 +618,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1002  ;
+; Total registers                              ; 1005  ;
 ; Number of registers using Synchronous Clear  ; 71    ;
 ; Number of registers using Synchronous Load   ; 8     ;
 ; Number of registers using Asynchronous Clear ; 831   ;
@@ -2039,7 +2039,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 1002                        ;
+; arriav_ff             ; 1005                        ;
 ;     CLR               ; 44                          ;
 ;     CLR SCLR          ; 3                           ;
 ;     ENA               ; 35                          ;
@@ -2047,17 +2047,17 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA SCLR          ; 9                           ;
 ;     ENA SCLR SLD      ; 8                           ;
 ;     SCLR              ; 51                          ;
-;     plain             ; 68                          ;
-; arriav_lcell_comb     ; 6621                        ;
+;     plain             ; 71                          ;
+; arriav_lcell_comb     ; 6622                        ;
 ;     arith             ; 34                          ;
 ;         1 data inputs ; 32                          ;
 ;         2 data inputs ; 2                           ;
 ;     extend            ; 140                         ;
 ;         7 data inputs ; 140                         ;
-;     normal            ; 6447                        ;
+;     normal            ; 6448                        ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 3                           ;
-;         2 data inputs ; 417                         ;
+;         2 data inputs ; 418                         ;
 ;         3 data inputs ; 438                         ;
 ;         4 data inputs ; 554                         ;
 ;         5 data inputs ; 696                         ;
@@ -2066,7 +2066,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; stratixv_ram_block    ; 16                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 33.00                       ;
-; Average LUT depth     ; 19.78                       ;
+; Average LUT depth     ; 19.77                       ;
 +-----------------------+-----------------------------+
 
 
@@ -2085,7 +2085,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Sun Mar  1 10:24:00 2026
+    Info: Processing started: Sun Mar  1 12:59:03 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off AES -c aes_uart_top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -2133,7 +2133,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file /home/m
     Info (12023): Found entity 1: invMixColumns File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/invMixColumns.v Line: 1
 Warning (10236): Verilog HDL Implicit Net warning at Buffer_top.v(57): created implicit net for "tx_start" File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/Buffer_top.v Line: 57
 Info (12127): Elaborating entity "aes_uart_top" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at aes_uart_top.v(326): object "rx_block_ready_d" assigned a value but never read File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/aes_uart_top.v Line: 326
 Critical Warning (10237): Verilog HDL warning at aes_uart_top.v(167): can't infer register for assignment in edge-triggered always construct because the clock isn't obvious. Generated combinational logic instead File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/aes_uart_top.v Line: 167
 Warning (10034): Output port "WR_RX" at aes_uart_top.v(11) has no driver File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/aes_uart_top.v Line: 11
 Info (12128): Elaborating entity "AES_TOP" for hierarchy "AES_TOP:u_aes_encrypt" File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/aes_uart_top.v Line: 70
@@ -2172,7 +2171,7 @@ Warning (10036): Verilog HDL or VHDL warning at fifo_rx.v(57): object "rx_block_
 Warning (10230): Verilog HDL assignment warning at fifo_rx.v(28): truncated value with size 32 to match size of target (9) File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/fifo_rx.v Line: 28
 Warning (10230): Verilog HDL assignment warning at fifo_rx.v(45): truncated value with size 32 to match size of target (9) File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/fifo_rx.v Line: 45
 Warning (10230): Verilog HDL assignment warning at fifo_rx.v(51): truncated value with size 32 to match size of target (9) File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/fifo_rx.v Line: 51
-Info (12128): Elaborating entity "ADS_TOP" for hierarchy "ADS_TOP:u_aes_decrypt" File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/aes_uart_top.v Line: 427
+Info (12128): Elaborating entity "ADS_TOP" for hierarchy "ADS_TOP:u_aes_decrypt" File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/aes_uart_top.v Line: 434
 Info (12128): Elaborating entity "inverseShiftRows" for hierarchy "ADS_TOP:u_aes_decrypt|inverseShiftRows:u_isr" File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/ADS_TOP.v Line: 77
 Info (12128): Elaborating entity "inverseSubBytes" for hierarchy "ADS_TOP:u_aes_decrypt|inverseSubBytes:u_isb" File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/ADS_TOP.v Line: 81
 Info (12128): Elaborating entity "inverseSbox" for hierarchy "ADS_TOP:u_aes_decrypt|inverseSubBytes:u_isb|inverseSbox:ISB[0].isb" File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/inverseSubBytes.v Line: 14
@@ -2346,16 +2345,16 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "rx" File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/aes_uart_top.v Line: 23
-Info (21057): Implemented 7680 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 7684 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 264 input pins
     Info (21059): Implemented 145 output pins
-    Info (21061): Implemented 7255 logic cells
+    Info (21061): Implemented 7259 logic cells
     Info (21064): Implemented 16 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 39 warnings
-    Info: Peak virtual memory: 593 megabytes
-    Info: Processing ended: Sun Mar  1 10:24:29 2026
-    Info: Elapsed time: 00:00:29
-    Info: Total CPU time (on all processors): 00:00:36
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 38 warnings
+    Info: Peak virtual memory: 594 megabytes
+    Info: Processing ended: Sun Mar  1 12:59:33 2026
+    Info: Elapsed time: 00:00:30
+    Info: Total CPU time (on all processors): 00:00:39
 
 
 +------------------------------------------+
