@@ -60,6 +60,13 @@ set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name DEVICE_FILTER_PIN_COUNT 1152
+set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH tb -section_id eda_simulation
+set_global_assignment -name EDA_TEST_BENCH_NAME tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME tb -section_id tb
+set_global_assignment -name EDA_TEST_BENCH_FILE ../testbench/tb.v -section_id tb
+set_global_assignment -name SDC_FILE aes_uart_top.out.sdc
 set_global_assignment -name VERILOG_FILE aes_uart_top.v
 set_global_assignment -name VERILOG_FILE ../AES_ENCRYPTION/code/AES_TOP.v
 set_global_assignment -name VERILOG_FILE ../AES_ENCRYPTION/code/encryptRound.v
@@ -81,10 +88,4 @@ set_global_assignment -name VERILOG_FILE ../AES_DECRYPTION/code/finalInvRound.v
 set_global_assignment -name VERILOG_FILE ../AES_DECRYPTION/code/decryptRound.v
 set_global_assignment -name VERILOG_FILE ../AES_DECRYPTION/code/inverseSubBytes.v
 set_global_assignment -name VERILOG_FILE ../AES_DECRYPTION/code/invMixColumns.v
-set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
-set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH tb -section_id eda_simulation
-set_global_assignment -name EDA_TEST_BENCH_NAME tb -section_id eda_simulation
-set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id tb
-set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME tb -section_id tb
-set_global_assignment -name EDA_TEST_BENCH_FILE ../testbench/tb.v -section_id tb
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

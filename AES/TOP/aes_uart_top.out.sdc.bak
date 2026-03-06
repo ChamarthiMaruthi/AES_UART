@@ -1,0 +1,158 @@
+## Generated SDC file "aes_uart_top.out.sdc"
+
+## Copyright (C) 2020  Intel Corporation. All rights reserved.
+## Your use of Intel Corporation's design tools, logic functions 
+## and other software and tools, and any partner logic 
+## functions, and any output files from any of the foregoing 
+## (including device programming or simulation files), and any 
+## associated documentation or information are expressly subject 
+## to the terms and conditions of the Intel Program License 
+## Subscription Agreement, the Intel Quartus Prime License Agreement,
+## the Intel FPGA IP License Agreement, or other applicable license
+## agreement, including, without limitation, that your use is for
+## the sole purpose of programming logic devices manufactured by
+## Intel and sold by Intel or its authorized distributors.  Please
+## refer to the applicable agreement for further details, at
+## https://fpgasoftware.intel.com/eula.
+
+
+## VENDOR  "Altera"
+## PROGRAM "Quartus Prime"
+## VERSION "Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition"
+
+## DATE    "Wed Mar  4 17:49:43 2026"
+
+##
+## DEVICE  "5CGXFC9E6F35I7"
+##
+
+
+#**************************************************************
+# Time Information
+#**************************************************************
+
+set_time_format -unit ns -decimal_places 3
+
+
+
+#**************************************************************
+# Create Clock
+#**************************************************************
+
+create_clock -name {clk_3125_tx} -period 1.000 -waveform { 0.000 0.500 } [get_ports {clk_3125_tx}]
+create_clock -name {clk_100} -period 1.000 -waveform { 0.000 0.500 } [get_ports {clk_100}]
+create_clock -name {clk_3125_rx} -period 1.000 -waveform { 0.000 0.500 } [get_ports {clk_3125_rx}]
+
+
+#**************************************************************
+# Create Generated Clock
+#**************************************************************
+
+
+
+#**************************************************************
+# Set Clock Latency
+#**************************************************************
+
+
+
+#**************************************************************
+# Set Clock Uncertainty
+#**************************************************************
+
+set_clock_uncertainty -rise_from [get_clocks {Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|rd_ptr[0]}] -rise_to [get_clocks {clk_3125_tx}]  0.050  
+set_clock_uncertainty -rise_from [get_clocks {Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|rd_ptr[0]}] -fall_to [get_clocks {clk_3125_tx}]  0.050  
+set_clock_uncertainty -rise_from [get_clocks {Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|rd_ptr[0]}] -rise_to [get_clocks {clk_100}]  0.050  
+set_clock_uncertainty -rise_from [get_clocks {Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|rd_ptr[0]}] -fall_to [get_clocks {clk_100}]  0.050  
+set_clock_uncertainty -fall_from [get_clocks {Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|rd_ptr[0]}] -rise_to [get_clocks {clk_3125_tx}]  0.050  
+set_clock_uncertainty -fall_from [get_clocks {Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|rd_ptr[0]}] -fall_to [get_clocks {clk_3125_tx}]  0.050  
+set_clock_uncertainty -fall_from [get_clocks {Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|rd_ptr[0]}] -rise_to [get_clocks {clk_100}]  0.050  
+set_clock_uncertainty -fall_from [get_clocks {Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|rd_ptr[0]}] -fall_to [get_clocks {clk_100}]  0.050  
+set_clock_uncertainty -rise_from [get_clocks {clk_3125_tx}] -rise_to [get_clocks {Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|rd_ptr[0]}]  0.050  
+set_clock_uncertainty -rise_from [get_clocks {clk_3125_tx}] -fall_to [get_clocks {Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|rd_ptr[0]}]  0.050  
+set_clock_uncertainty -rise_from [get_clocks {clk_3125_tx}] -rise_to [get_clocks {clk_3125_tx}] -setup 0.100  
+set_clock_uncertainty -rise_from [get_clocks {clk_3125_tx}] -rise_to [get_clocks {clk_3125_tx}] -hold 0.060  
+set_clock_uncertainty -rise_from [get_clocks {clk_3125_tx}] -fall_to [get_clocks {clk_3125_tx}] -setup 0.100  
+set_clock_uncertainty -rise_from [get_clocks {clk_3125_tx}] -fall_to [get_clocks {clk_3125_tx}] -hold 0.060  
+set_clock_uncertainty -rise_from [get_clocks {clk_3125_tx}] -rise_to [get_clocks {clk_100}]  0.100  
+set_clock_uncertainty -rise_from [get_clocks {clk_3125_tx}] -fall_to [get_clocks {clk_100}]  0.100  
+set_clock_uncertainty -fall_from [get_clocks {clk_3125_tx}] -rise_to [get_clocks {Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|rd_ptr[0]}]  0.050  
+set_clock_uncertainty -fall_from [get_clocks {clk_3125_tx}] -fall_to [get_clocks {Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|rd_ptr[0]}]  0.050  
+set_clock_uncertainty -fall_from [get_clocks {clk_3125_tx}] -rise_to [get_clocks {clk_3125_tx}] -setup 0.100  
+set_clock_uncertainty -fall_from [get_clocks {clk_3125_tx}] -rise_to [get_clocks {clk_3125_tx}] -hold 0.060  
+set_clock_uncertainty -fall_from [get_clocks {clk_3125_tx}] -fall_to [get_clocks {clk_3125_tx}] -setup 0.100  
+set_clock_uncertainty -fall_from [get_clocks {clk_3125_tx}] -fall_to [get_clocks {clk_3125_tx}] -hold 0.060  
+set_clock_uncertainty -fall_from [get_clocks {clk_3125_tx}] -rise_to [get_clocks {clk_100}]  0.100  
+set_clock_uncertainty -fall_from [get_clocks {clk_3125_tx}] -fall_to [get_clocks {clk_100}]  0.100  
+set_clock_uncertainty -rise_from [get_clocks {clk_3125_rx}] -rise_to [get_clocks {clk_3125_rx}] -setup 0.100  
+set_clock_uncertainty -rise_from [get_clocks {clk_3125_rx}] -rise_to [get_clocks {clk_3125_rx}] -hold 0.060  
+set_clock_uncertainty -rise_from [get_clocks {clk_3125_rx}] -fall_to [get_clocks {clk_3125_rx}] -setup 0.100  
+set_clock_uncertainty -rise_from [get_clocks {clk_3125_rx}] -fall_to [get_clocks {clk_3125_rx}] -hold 0.060  
+set_clock_uncertainty -rise_from [get_clocks {clk_3125_rx}] -rise_to [get_clocks {clk_100}]  0.100  
+set_clock_uncertainty -rise_from [get_clocks {clk_3125_rx}] -fall_to [get_clocks {clk_100}]  0.100  
+set_clock_uncertainty -fall_from [get_clocks {clk_3125_rx}] -rise_to [get_clocks {clk_3125_rx}] -setup 0.100  
+set_clock_uncertainty -fall_from [get_clocks {clk_3125_rx}] -rise_to [get_clocks {clk_3125_rx}] -hold 0.060  
+set_clock_uncertainty -fall_from [get_clocks {clk_3125_rx}] -fall_to [get_clocks {clk_3125_rx}] -setup 0.100  
+set_clock_uncertainty -fall_from [get_clocks {clk_3125_rx}] -fall_to [get_clocks {clk_3125_rx}] -hold 0.060  
+set_clock_uncertainty -fall_from [get_clocks {clk_3125_rx}] -rise_to [get_clocks {clk_100}]  0.100  
+set_clock_uncertainty -fall_from [get_clocks {clk_3125_rx}] -fall_to [get_clocks {clk_100}]  0.100  
+set_clock_uncertainty -rise_from [get_clocks {clk_100}] -rise_to [get_clocks {clk_3125_tx}]  0.100  
+set_clock_uncertainty -rise_from [get_clocks {clk_100}] -fall_to [get_clocks {clk_3125_tx}]  0.100  
+set_clock_uncertainty -rise_from [get_clocks {clk_100}] -rise_to [get_clocks {clk_100}] -setup 0.100  
+set_clock_uncertainty -rise_from [get_clocks {clk_100}] -rise_to [get_clocks {clk_100}] -hold 0.060  
+set_clock_uncertainty -rise_from [get_clocks {clk_100}] -fall_to [get_clocks {clk_100}] -setup 0.100  
+set_clock_uncertainty -rise_from [get_clocks {clk_100}] -fall_to [get_clocks {clk_100}] -hold 0.060  
+set_clock_uncertainty -fall_from [get_clocks {clk_100}] -rise_to [get_clocks {clk_3125_tx}]  0.100  
+set_clock_uncertainty -fall_from [get_clocks {clk_100}] -fall_to [get_clocks {clk_3125_tx}]  0.100  
+set_clock_uncertainty -fall_from [get_clocks {clk_100}] -rise_to [get_clocks {clk_100}] -setup 0.100  
+set_clock_uncertainty -fall_from [get_clocks {clk_100}] -rise_to [get_clocks {clk_100}] -hold 0.060  
+set_clock_uncertainty -fall_from [get_clocks {clk_100}] -fall_to [get_clocks {clk_100}] -setup 0.100  
+set_clock_uncertainty -fall_from [get_clocks {clk_100}] -fall_to [get_clocks {clk_100}] -hold 0.060  
+
+
+#**************************************************************
+# Set Input Delay
+#**************************************************************
+
+
+
+#**************************************************************
+# Set Output Delay
+#**************************************************************
+
+
+
+#**************************************************************
+# Set Clock Groups
+#**************************************************************
+
+
+
+#**************************************************************
+# Set False Path
+#**************************************************************
+
+
+
+#**************************************************************
+# Set Multicycle Path
+#**************************************************************
+
+
+
+#**************************************************************
+# Set Maximum Delay
+#**************************************************************
+
+
+
+#**************************************************************
+# Set Minimum Delay
+#**************************************************************
+
+
+
+#**************************************************************
+# Set Input Transition
+#**************************************************************
+

@@ -9,8 +9,6 @@ module tb;
     reg clk_3125_tx;
     reg clk_3125_rx;
     reg rst_n;
-    reg rst_n_slow = 1;
-    reg rst_n_fast = 1;
 
     // ==============================
     // DUT I/O
@@ -22,7 +20,6 @@ module tb;
     wire [127:0] decrypted_text;
     wire         done;
     wire         RD_RX;
-    wire         WR_RX;
 
     wire tx;
     reg rx;
@@ -31,14 +28,6 @@ module tb;
     wire done_slow;
     wire enc_done;
     wire fifo_wr_en;
-    wire fifo_wr_pulse;
-    //wire tx_active;
-    wire enc_done_toggle;
-    wire tx_start_1;
-    wire storage_done;
-    wire [4:0] byte_counter;
-    wire rx_block_ok;
-    //assign rx = tx; // UART loopback
 
     // ==============================
     // DUT
@@ -56,19 +45,8 @@ module tb;
         .tx              (tx),
         .rx              (rx),
         .enc_done       (enc_done),
-		.done_slow       (done_slow),
-        .rst_n_slow     (rst_n_slow),
-        .rst_n_fast     (rst_n_fast),
         .RD_RX          (RD_RX),
-        .WR_RX          (WR_RX),
-        .fifo_wr_en     (fifo_wr_en),
-        .fifo_wr_pulse  (fifo_wr_pulse),
-        //.tx_active      (tx_active),
-        .enc_done_toggle(enc_done_toggle),
-        .tx_start_1     (tx_start_1),
-        .storage_done   (storage_done),
-        .byte_counter   (byte_counter),
-        .rx_block_ok    (rx_block_ok)
+        .fifo_wr_en     (fifo_wr_en)
     );
 
     always @(*) begin
@@ -101,14 +79,8 @@ module tb;
         start = 0;
         plaintext = 0;
         key = 0;
-        //#20;
-        //rst_n = 0;
-        rst_n_fast = 1;
-        rst_n_slow = 1;
         #10;
-        rst_n_fast = 0;
-        //#100
-        rst_n_slow = 0;
+        rst_n = 0;
     end
 
 
@@ -148,7 +120,7 @@ module tb;
     always @(posedge clk_100) begin
         done_d <= done;
 
-        if (!rst_n) begin
+        if (rst_n) begin
             latency_cnt <= 0;
             in_flight   <= 0;
             pt_prev     <= plaintext;

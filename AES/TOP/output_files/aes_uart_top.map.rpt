@@ -1,5 +1,5 @@
 Analysis & Synthesis report for aes_uart_top
-Sun Mar  1 12:59:33 2026
+Thu Mar  5 18:44:22 2026
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -19,144 +19,149 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
  11. State Machine - |aes_uart_top|Buffer_top:u_uart_buffer|uart_rx:rx_inst|state
  12. State Machine - |aes_uart_top|Buffer_top:u_uart_buffer|uart_tx:tx_inst|state
  13. State Machine - |aes_uart_top|AES_TOP:u_aes_encrypt|fsm_state
- 14. User-Specified and Inferred Latches
- 15. Registers Removed During Synthesis
- 16. General Register Statistics
- 17. Inverted Register Statistics
- 18. Registers Added for RAM Pass-Through Logic
- 19. Multiplexer Restructuring Statistics (Restructuring Performed)
- 20. Source assignments for Buffer_top:u_uart_buffer|fifo_rx:rx_fifo_inst|altsyncram:mem_rtl_0|altsyncram_a8s1:auto_generated
- 21. Source assignments for Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|altsyncram:mem_rtl_0|altsyncram_q3n1:auto_generated
- 22. Parameter Settings for User Entity Instance: Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst
- 23. Parameter Settings for User Entity Instance: Buffer_top:u_uart_buffer|fifo_rx:rx_fifo_inst
- 24. Parameter Settings for Inferred Entity Instance: Buffer_top:u_uart_buffer|fifo_rx:rx_fifo_inst|altsyncram:mem_rtl_0
- 25. Parameter Settings for Inferred Entity Instance: Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|altsyncram:mem_rtl_0
- 26. altsyncram Parameter Settings by Entity Instance
- 27. Port Connectivity Checks: "Buffer_top:u_uart_buffer"
- 28. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[43].s3"
- 29. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[43].s2"
- 30. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[43].s1"
- 31. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[43].s0"
- 32. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[42].s3"
- 33. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[42].s2"
- 34. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[42].s1"
- 35. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[42].s0"
- 36. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[41].s3"
- 37. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[41].s2"
- 38. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[41].s1"
- 39. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[41].s0"
- 40. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[39].s3"
- 41. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[39].s2"
- 42. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[39].s1"
- 43. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[39].s0"
- 44. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[38].s3"
- 45. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[38].s2"
- 46. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[38].s1"
- 47. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[38].s0"
- 48. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[37].s3"
- 49. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[37].s2"
- 50. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[37].s1"
- 51. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[37].s0"
- 52. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[35].s3"
- 53. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[35].s2"
- 54. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[35].s1"
- 55. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[35].s0"
- 56. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[34].s3"
- 57. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[34].s2"
- 58. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[34].s1"
- 59. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[34].s0"
- 60. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[33].s3"
- 61. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[33].s2"
- 62. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[33].s1"
- 63. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[33].s0"
- 64. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[31].s3"
- 65. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[31].s2"
- 66. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[31].s1"
- 67. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[31].s0"
- 68. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[30].s3"
- 69. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[30].s2"
- 70. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[30].s1"
- 71. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[30].s0"
- 72. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[29].s3"
- 73. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[29].s2"
- 74. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[29].s1"
- 75. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[29].s0"
- 76. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[27].s3"
- 77. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[27].s2"
- 78. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[27].s1"
- 79. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[27].s0"
- 80. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[26].s3"
- 81. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[26].s2"
- 82. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[26].s1"
- 83. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[26].s0"
- 84. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[25].s3"
- 85. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[25].s2"
- 86. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[25].s1"
- 87. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[25].s0"
- 88. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[23].s3"
- 89. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[23].s2"
- 90. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[23].s1"
- 91. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[23].s0"
- 92. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[22].s3"
- 93. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[22].s2"
- 94. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[22].s1"
- 95. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[22].s0"
- 96. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[21].s3"
- 97. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[21].s2"
- 98. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[21].s1"
- 99. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[21].s0"
-100. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[19].s3"
-101. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[19].s2"
-102. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[19].s1"
-103. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[19].s0"
-104. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[18].s3"
-105. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[18].s2"
-106. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[18].s1"
-107. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[18].s0"
-108. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[17].s3"
-109. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[17].s2"
-110. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[17].s1"
-111. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[17].s0"
-112. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[15].s3"
-113. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[15].s2"
-114. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[15].s1"
-115. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[15].s0"
-116. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[14].s3"
-117. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[14].s2"
-118. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[14].s1"
-119. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[14].s0"
-120. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[13].s3"
-121. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[13].s2"
-122. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[13].s1"
-123. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[13].s0"
-124. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[11].s3"
-125. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[11].s2"
-126. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[11].s1"
-127. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[11].s0"
-128. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[10].s3"
-129. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[10].s2"
-130. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[10].s1"
-131. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[10].s0"
-132. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[9].s3"
-133. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[9].s2"
-134. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[9].s1"
-135. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[9].s0"
-136. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[7].s3"
-137. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[7].s2"
-138. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[7].s1"
-139. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[7].s0"
-140. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[6].s3"
-141. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[6].s2"
-142. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[6].s1"
-143. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[6].s0"
-144. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[5].s3"
-145. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[5].s2"
-146. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[5].s1"
-147. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[5].s0"
-148. Post-Synthesis Netlist Statistics for Top Partition
-149. Elapsed Time Per Partition
-150. Analysis & Synthesis Messages
-151. Analysis & Synthesis Suppressed Messages
+ 14. Registers Protected by Synthesis
+ 15. User-Specified and Inferred Latches
+ 16. Registers Removed During Synthesis
+ 17. General Register Statistics
+ 18. Inverted Register Statistics
+ 19. Registers Added for RAM Pass-Through Logic
+ 20. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 21. Source assignments for Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst
+ 22. Source assignments for Buffer_top:u_uart_buffer|fifo_rx:rx_fifo_inst|altsyncram:mem_rtl_0|altsyncram_nvo1:auto_generated
+ 23. Source assignments for Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|altsyncram:mem_rtl_0|altsyncram_9vo1:auto_generated
+ 24. Parameter Settings for User Entity Instance: Top-level Entity: |aes_uart_top
+ 25. Parameter Settings for User Entity Instance: Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst
+ 26. Parameter Settings for User Entity Instance: Buffer_top:u_uart_buffer|fifo_rx:rx_fifo_inst
+ 27. Parameter Settings for Inferred Entity Instance: Buffer_top:u_uart_buffer|fifo_rx:rx_fifo_inst|altsyncram:mem_rtl_0
+ 28. Parameter Settings for Inferred Entity Instance: Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|altsyncram:mem_rtl_0
+ 29. altsyncram Parameter Settings by Entity Instance
+ 30. Port Connectivity Checks: "Buffer_top:u_uart_buffer|uart_rx:rx_inst"
+ 31. Port Connectivity Checks: "Buffer_top:u_uart_buffer|uart_tx:tx_inst"
+ 32. Port Connectivity Checks: "Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst"
+ 33. Port Connectivity Checks: "Buffer_top:u_uart_buffer"
+ 34. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[43].s3"
+ 35. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[43].s2"
+ 36. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[43].s1"
+ 37. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[43].s0"
+ 38. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[42].s3"
+ 39. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[42].s2"
+ 40. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[42].s1"
+ 41. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[42].s0"
+ 42. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[41].s3"
+ 43. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[41].s2"
+ 44. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[41].s1"
+ 45. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[41].s0"
+ 46. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[39].s3"
+ 47. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[39].s2"
+ 48. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[39].s1"
+ 49. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[39].s0"
+ 50. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[38].s3"
+ 51. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[38].s2"
+ 52. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[38].s1"
+ 53. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[38].s0"
+ 54. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[37].s3"
+ 55. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[37].s2"
+ 56. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[37].s1"
+ 57. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[37].s0"
+ 58. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[35].s3"
+ 59. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[35].s2"
+ 60. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[35].s1"
+ 61. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[35].s0"
+ 62. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[34].s3"
+ 63. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[34].s2"
+ 64. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[34].s1"
+ 65. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[34].s0"
+ 66. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[33].s3"
+ 67. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[33].s2"
+ 68. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[33].s1"
+ 69. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[33].s0"
+ 70. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[31].s3"
+ 71. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[31].s2"
+ 72. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[31].s1"
+ 73. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[31].s0"
+ 74. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[30].s3"
+ 75. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[30].s2"
+ 76. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[30].s1"
+ 77. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[30].s0"
+ 78. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[29].s3"
+ 79. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[29].s2"
+ 80. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[29].s1"
+ 81. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[29].s0"
+ 82. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[27].s3"
+ 83. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[27].s2"
+ 84. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[27].s1"
+ 85. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[27].s0"
+ 86. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[26].s3"
+ 87. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[26].s2"
+ 88. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[26].s1"
+ 89. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[26].s0"
+ 90. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[25].s3"
+ 91. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[25].s2"
+ 92. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[25].s1"
+ 93. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[25].s0"
+ 94. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[23].s3"
+ 95. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[23].s2"
+ 96. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[23].s1"
+ 97. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[23].s0"
+ 98. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[22].s3"
+ 99. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[22].s2"
+100. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[22].s1"
+101. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[22].s0"
+102. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[21].s3"
+103. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[21].s2"
+104. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[21].s1"
+105. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[21].s0"
+106. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[19].s3"
+107. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[19].s2"
+108. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[19].s1"
+109. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[19].s0"
+110. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[18].s3"
+111. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[18].s2"
+112. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[18].s1"
+113. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[18].s0"
+114. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[17].s3"
+115. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[17].s2"
+116. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[17].s1"
+117. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[17].s0"
+118. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[15].s3"
+119. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[15].s2"
+120. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[15].s1"
+121. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[15].s0"
+122. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[14].s3"
+123. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[14].s2"
+124. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[14].s1"
+125. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[14].s0"
+126. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[13].s3"
+127. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[13].s2"
+128. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[13].s1"
+129. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[13].s0"
+130. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[11].s3"
+131. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[11].s2"
+132. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[11].s1"
+133. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[11].s0"
+134. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[10].s3"
+135. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[10].s2"
+136. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[10].s1"
+137. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[10].s0"
+138. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[9].s3"
+139. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[9].s2"
+140. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[9].s1"
+141. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[9].s0"
+142. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[7].s3"
+143. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[7].s2"
+144. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[7].s1"
+145. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[7].s0"
+146. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[6].s3"
+147. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[6].s2"
+148. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[6].s1"
+149. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[6].s0"
+150. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[5].s3"
+151. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[5].s2"
+152. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[5].s1"
+153. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[5].s0"
+154. Post-Synthesis Netlist Statistics for Top Partition
+155. Elapsed Time Per Partition
+156. Analysis & Synthesis Messages
 
 
 
@@ -183,16 +188,16 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Mar  1 12:59:33 2026       ;
+; Analysis & Synthesis Status     ; Successful - Thu Mar  5 18:44:22 2026       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; aes_uart_top                                ;
 ; Top-level Entity Name           ; aes_uart_top                                ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 1005                                        ;
-; Total pins                      ; 409                                         ;
+; Total registers                 ; 3675                                        ;
+; Total pins                      ; 395                                         ;
 ; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 4,096                                       ;
+; Total block memory bits         ; 2,304                                       ;
 ; Total DSP Blocks                ; 0                                           ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
@@ -317,70 +322,69 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                              ;
-+-----------------------------------------------+-----------------+-------------------------------------------------------+-------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path              ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                                    ; Library ;
-+-----------------------------------------------+-----------------+-------------------------------------------------------+-------------------------------------------------------------------------------------------------+---------+
-; aes_uart_top.v                                ; yes             ; User Verilog HDL File                                 ; /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/aes_uart_top.v                                ;         ;
-; ../AES_ENCRYPTION/code/AES_TOP.v              ; yes             ; User Verilog HDL File                                 ; /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/AES_TOP.v                     ;         ;
-; ../AES_ENCRYPTION/code/keyExpansion.v         ; yes             ; User Verilog HDL File                                 ; /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/keyExpansion.v                ;         ;
-; ../AES_ENCRYPTION/code/mixColumns.v           ; yes             ; User Verilog HDL File                                 ; /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/mixColumns.v                  ;         ;
-; ../AES_ENCRYPTION/code/sbox.v                 ; yes             ; User Verilog HDL File                                 ; /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/sbox.v                        ;         ;
-; ../AES_ENCRYPTION/code/shiftRows.v            ; yes             ; User Verilog HDL File                                 ; /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/shiftRows.v                   ;         ;
-; ../AES_ENCRYPTION/code/subBytes.v             ; yes             ; User Verilog HDL File                                 ; /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/subBytes.v                    ;         ;
-; ../UART_buffer/code/Buffer_top.v              ; yes             ; User Verilog HDL File                                 ; /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/Buffer_top.v                     ;         ;
-; ../UART_buffer/code/fifo_tx.v                 ; yes             ; User Verilog HDL File                                 ; /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/fifo_tx.v                        ;         ;
-; ../UART_buffer/code/UART_TX.v                 ; yes             ; User Verilog HDL File                                 ; /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_TX.v                        ;         ;
-; ../UART_buffer/code/UART_RX.v                 ; yes             ; User Verilog HDL File                                 ; /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_RX.v                        ;         ;
-; ../UART_buffer/code/fifo_rx.v                 ; yes             ; User Verilog HDL File                                 ; /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/fifo_rx.v                        ;         ;
-; ../AES_DECRYPTION/code/ADS_TOP.v              ; yes             ; User Verilog HDL File                                 ; /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/ADS_TOP.v                     ;         ;
-; ../AES_DECRYPTION/code/inverseShiftrows.v     ; yes             ; User Verilog HDL File                                 ; /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/inverseShiftrows.v            ;         ;
-; ../AES_DECRYPTION/code/inverseSbox.v          ; yes             ; User Verilog HDL File                                 ; /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/inverseSbox.v                 ;         ;
-; ../AES_DECRYPTION/code/inverseSubBytes.v      ; yes             ; User Verilog HDL File                                 ; /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/inverseSubBytes.v             ;         ;
-; ../AES_DECRYPTION/code/invMixColumns.v        ; yes             ; User Verilog HDL File                                 ; /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/invMixColumns.v               ;         ;
-; altsyncram.tdf                                ; yes             ; Megafunction                                          ; /home/maruthi/intelFPGA_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf                ;         ;
-; stratix_ram_block.inc                         ; yes             ; Megafunction                                          ; /home/maruthi/intelFPGA_lite/20.1/quartus/libraries/megafunctions/stratix_ram_block.inc         ;         ;
-; lpm_mux.inc                                   ; yes             ; Megafunction                                          ; /home/maruthi/intelFPGA_lite/20.1/quartus/libraries/megafunctions/lpm_mux.inc                   ;         ;
-; lpm_decode.inc                                ; yes             ; Megafunction                                          ; /home/maruthi/intelFPGA_lite/20.1/quartus/libraries/megafunctions/lpm_decode.inc                ;         ;
-; aglobal201.inc                                ; yes             ; Megafunction                                          ; /home/maruthi/intelFPGA_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                ;         ;
-; a_rdenreg.inc                                 ; yes             ; Megafunction                                          ; /home/maruthi/intelFPGA_lite/20.1/quartus/libraries/megafunctions/a_rdenreg.inc                 ;         ;
-; altrom.inc                                    ; yes             ; Megafunction                                          ; /home/maruthi/intelFPGA_lite/20.1/quartus/libraries/megafunctions/altrom.inc                    ;         ;
-; altram.inc                                    ; yes             ; Megafunction                                          ; /home/maruthi/intelFPGA_lite/20.1/quartus/libraries/megafunctions/altram.inc                    ;         ;
-; altdpram.inc                                  ; yes             ; Megafunction                                          ; /home/maruthi/intelFPGA_lite/20.1/quartus/libraries/megafunctions/altdpram.inc                  ;         ;
-; db/altsyncram_a8s1.tdf                        ; yes             ; Auto-Generated Megafunction                           ; /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/db/altsyncram_a8s1.tdf                        ;         ;
-; db/aes_uart_top.ram0_fifo_rx_46c5cb01.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/db/aes_uart_top.ram0_fifo_rx_46c5cb01.hdl.mif ;         ;
-; db/altsyncram_q3n1.tdf                        ; yes             ; Auto-Generated Megafunction                           ; /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/db/altsyncram_q3n1.tdf                        ;         ;
-+-----------------------------------------------+-----------------+-------------------------------------------------------+-------------------------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                         ;
++-------------------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path          ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                            ; Library ;
++-------------------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------+---------+
+; aes_uart_top.v                            ; yes             ; User Verilog HDL File        ; /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/aes_uart_top.v                        ;         ;
+; ../AES_ENCRYPTION/code/AES_TOP.v          ; yes             ; User Verilog HDL File        ; /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/AES_TOP.v             ;         ;
+; ../AES_ENCRYPTION/code/keyExpansion.v     ; yes             ; User Verilog HDL File        ; /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/keyExpansion.v        ;         ;
+; ../AES_ENCRYPTION/code/mixColumns.v       ; yes             ; User Verilog HDL File        ; /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/mixColumns.v          ;         ;
+; ../AES_ENCRYPTION/code/sbox.v             ; yes             ; User Verilog HDL File        ; /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/sbox.v                ;         ;
+; ../AES_ENCRYPTION/code/shiftRows.v        ; yes             ; User Verilog HDL File        ; /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/shiftRows.v           ;         ;
+; ../AES_ENCRYPTION/code/subBytes.v         ; yes             ; User Verilog HDL File        ; /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/subBytes.v            ;         ;
+; ../UART_buffer/code/Buffer_top.v          ; yes             ; User Verilog HDL File        ; /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/Buffer_top.v             ;         ;
+; ../UART_buffer/code/fifo_tx.v             ; yes             ; User Verilog HDL File        ; /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/fifo_tx.v                ;         ;
+; ../UART_buffer/code/UART_TX.v             ; yes             ; User Verilog HDL File        ; /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_TX.v                ;         ;
+; ../UART_buffer/code/UART_RX.v             ; yes             ; User Verilog HDL File        ; /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_RX.v                ;         ;
+; ../UART_buffer/code/fifo_rx.v             ; yes             ; User Verilog HDL File        ; /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/fifo_rx.v                ;         ;
+; ../AES_DECRYPTION/code/ADS_TOP.v          ; yes             ; User Verilog HDL File        ; /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/ADS_TOP.v             ;         ;
+; ../AES_DECRYPTION/code/inverseShiftrows.v ; yes             ; User Verilog HDL File        ; /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/inverseShiftrows.v    ;         ;
+; ../AES_DECRYPTION/code/inverseSbox.v      ; yes             ; User Verilog HDL File        ; /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/inverseSbox.v         ;         ;
+; ../AES_DECRYPTION/code/inverseSubBytes.v  ; yes             ; User Verilog HDL File        ; /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/inverseSubBytes.v     ;         ;
+; ../AES_DECRYPTION/code/invMixColumns.v    ; yes             ; User Verilog HDL File        ; /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/invMixColumns.v       ;         ;
+; altsyncram.tdf                            ; yes             ; Megafunction                 ; /home/maruthi/intelFPGA_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
+; stratix_ram_block.inc                     ; yes             ; Megafunction                 ; /home/maruthi/intelFPGA_lite/20.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
+; lpm_mux.inc                               ; yes             ; Megafunction                 ; /home/maruthi/intelFPGA_lite/20.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
+; lpm_decode.inc                            ; yes             ; Megafunction                 ; /home/maruthi/intelFPGA_lite/20.1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
+; aglobal201.inc                            ; yes             ; Megafunction                 ; /home/maruthi/intelFPGA_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc        ;         ;
+; a_rdenreg.inc                             ; yes             ; Megafunction                 ; /home/maruthi/intelFPGA_lite/20.1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
+; altrom.inc                                ; yes             ; Megafunction                 ; /home/maruthi/intelFPGA_lite/20.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
+; altram.inc                                ; yes             ; Megafunction                 ; /home/maruthi/intelFPGA_lite/20.1/quartus/libraries/megafunctions/altram.inc            ;         ;
+; altdpram.inc                              ; yes             ; Megafunction                 ; /home/maruthi/intelFPGA_lite/20.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; db/altsyncram_nvo1.tdf                    ; yes             ; Auto-Generated Megafunction  ; /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/db/altsyncram_nvo1.tdf                ;         ;
+; db/altsyncram_9vo1.tdf                    ; yes             ; Auto-Generated Megafunction  ; /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/db/altsyncram_9vo1.tdf                ;         ;
++-------------------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                 ;
-+---------------------------------------------+---------------+
-; Resource                                    ; Usage         ;
-+---------------------------------------------+---------------+
-; Estimate of Logic utilization (ALMs needed) ; 5581          ;
-;                                             ;               ;
-; Combinational ALUT usage for logic          ; 6621          ;
-;     -- 7 input functions                    ; 140           ;
-;     -- 6 input functions                    ; 4338          ;
-;     -- 5 input functions                    ; 696           ;
-;     -- 4 input functions                    ; 554           ;
-;     -- <=3 input functions                  ; 893           ;
-;                                             ;               ;
-; Dedicated logic registers                   ; 1005          ;
-;                                             ;               ;
-; I/O pins                                    ; 409           ;
-; Total MLAB memory bits                      ; 0             ;
-; Total block memory bits                     ; 4096          ;
-;                                             ;               ;
-; Total DSP Blocks                            ; 0             ;
-;                                             ;               ;
-; Maximum fan-out node                        ; clk_100~input ;
-; Maximum fan-out                             ; 675           ;
-; Total fan-out                               ; 39534         ;
-; Average fan-out                             ; 4.67          ;
-+---------------------------------------------+---------------+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimate of Logic utilization (ALMs needed) ; 5543        ;
+;                                             ;             ;
+; Combinational ALUT usage for logic          ; 6677        ;
+;     -- 7 input functions                    ; 178         ;
+;     -- 6 input functions                    ; 3899        ;
+;     -- 5 input functions                    ; 824         ;
+;     -- 4 input functions                    ; 491         ;
+;     -- <=3 input functions                  ; 1285        ;
+;                                             ;             ;
+; Dedicated logic registers                   ; 3675        ;
+;                                             ;             ;
+; I/O pins                                    ; 395         ;
+; Total MLAB memory bits                      ; 0           ;
+; Total block memory bits                     ; 2304        ;
+;                                             ;             ;
+; Total DSP Blocks                            ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; rst_n~input ;
+; Maximum fan-out                             ; 3620        ;
+; Total fan-out                               ; 48901       ;
+; Average fan-out                             ; 4.39        ;
++---------------------------------------------+-------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -388,9 +392,9 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                             ; Entity Name     ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |aes_uart_top                                ; 6621 (98)           ; 1005 (309)                ; 4096              ; 0          ; 409  ; 0            ; |aes_uart_top                                                                                                   ; aes_uart_top    ; work         ;
-;    |ADS_TOP:u_aes_decrypt|                   ; 4614 (1035)         ; 265 (265)                 ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|ADS_TOP:u_aes_decrypt                                                                             ; ADS_TOP         ; work         ;
-;       |invMixColumns:u_imc|                  ; 265 (265)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|ADS_TOP:u_aes_decrypt|invMixColumns:u_imc                                                         ; invMixColumns   ; work         ;
+; |aes_uart_top                                ; 6677 (59)           ; 3675 (296)                ; 2304              ; 0          ; 395  ; 0            ; |aes_uart_top                                                                                                   ; aes_uart_top    ; work         ;
+;    |ADS_TOP:u_aes_decrypt|                   ; 4664 (779)          ; 1673 (1673)               ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|ADS_TOP:u_aes_decrypt                                                                             ; ADS_TOP         ; work         ;
+;       |invMixColumns:u_imc|                  ; 302 (302)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|ADS_TOP:u_aes_decrypt|invMixColumns:u_imc                                                         ; invMixColumns   ; work         ;
 ;       |inverseSubBytes:u_isb|                ; 640 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|ADS_TOP:u_aes_decrypt|inverseSubBytes:u_isb                                                       ; inverseSubBytes ; work         ;
 ;          |inverseSbox:ISB[0].isb|            ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|ADS_TOP:u_aes_decrypt|inverseSubBytes:u_isb|inverseSbox:ISB[0].isb                                ; inverseSbox     ; work         ;
 ;          |inverseSbox:ISB[10].isb|           ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|ADS_TOP:u_aes_decrypt|inverseSubBytes:u_isb|inverseSbox:ISB[10].isb                               ; inverseSbox     ; work         ;
@@ -408,7 +412,7 @@ https://fpgasoftware.intel.com/eula.
 ;          |inverseSbox:ISB[7].isb|            ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|ADS_TOP:u_aes_decrypt|inverseSubBytes:u_isb|inverseSbox:ISB[7].isb                                ; inverseSbox     ; work         ;
 ;          |inverseSbox:ISB[8].isb|            ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|ADS_TOP:u_aes_decrypt|inverseSubBytes:u_isb|inverseSbox:ISB[8].isb                                ; inverseSbox     ; work         ;
 ;          |inverseSbox:ISB[9].isb|            ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|ADS_TOP:u_aes_decrypt|inverseSubBytes:u_isb|inverseSbox:ISB[9].isb                                ; inverseSbox     ; work         ;
-;       |keyExpansion:keyexp|                  ; 2674 (1074)         ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|ADS_TOP:u_aes_decrypt|keyExpansion:keyexp                                                         ; keyExpansion    ; work         ;
+;       |keyExpansion:keyexp|                  ; 2943 (1343)         ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|ADS_TOP:u_aes_decrypt|keyExpansion:keyexp                                                         ; keyExpansion    ; work         ;
 ;          |sbox:KEY_EXPAND[12].s0|            ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|ADS_TOP:u_aes_decrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[12].s0                                  ; sbox            ; work         ;
 ;          |sbox:KEY_EXPAND[12].s1|            ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|ADS_TOP:u_aes_decrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[12].s1                                  ; sbox            ; work         ;
 ;          |sbox:KEY_EXPAND[12].s2|            ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|ADS_TOP:u_aes_decrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[12].s2                                  ; sbox            ; work         ;
@@ -449,54 +453,57 @@ https://fpgasoftware.intel.com/eula.
 ;          |sbox:KEY_EXPAND[8].s1|             ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|ADS_TOP:u_aes_decrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[8].s1                                   ; sbox            ; work         ;
 ;          |sbox:KEY_EXPAND[8].s2|             ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|ADS_TOP:u_aes_decrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[8].s2                                   ; sbox            ; work         ;
 ;          |sbox:KEY_EXPAND[8].s3|             ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|ADS_TOP:u_aes_decrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[8].s3                                   ; sbox            ; work         ;
-;    |AES_TOP:u_aes_encrypt|                   ; 1768 (883)          ; 265 (265)                 ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|AES_TOP:u_aes_encrypt                                                                             ; AES_TOP         ; work         ;
-;       |keyExpansion:keyexp|                  ; 245 (133)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|AES_TOP:u_aes_encrypt|keyExpansion:keyexp                                                         ; keyExpansion    ; work         ;
+;    |AES_TOP:u_aes_encrypt|                   ; 1821 (802)          ; 1561 (1561)               ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|AES_TOP:u_aes_encrypt                                                                             ; AES_TOP         ; work         ;
+;       |keyExpansion:keyexp|                  ; 379 (263)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|AES_TOP:u_aes_encrypt|keyExpansion:keyexp                                                         ; keyExpansion    ; work         ;
+;          |sbox:KEY_EXPAND[40].s0|            ; 36 (36)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[40].s0                                  ; sbox            ; work         ;
 ;          |sbox:KEY_EXPAND[40].s1|            ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[40].s1                                  ; sbox            ; work         ;
 ;          |sbox:KEY_EXPAND[40].s2|            ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[40].s2                                  ; sbox            ; work         ;
-;          |sbox:KEY_EXPAND[40].s3|            ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[40].s3                                  ; sbox            ; work         ;
 ;       |subBytes:u_sb_final|                  ; 140 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|AES_TOP:u_aes_encrypt|subBytes:u_sb_final                                                         ; subBytes        ; work         ;
 ;          |sbox:SB_LOOP[0].sb_inst|           ; 35 (35)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|AES_TOP:u_aes_encrypt|subBytes:u_sb_final|sbox:SB_LOOP[0].sb_inst                                 ; sbox            ; work         ;
-;          |sbox:SB_LOOP[12].sb_inst|          ; 35 (35)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|AES_TOP:u_aes_encrypt|subBytes:u_sb_final|sbox:SB_LOOP[12].sb_inst                                ; sbox            ; work         ;
-;          |sbox:SB_LOOP[4].sb_inst|           ; 35 (35)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|AES_TOP:u_aes_encrypt|subBytes:u_sb_final|sbox:SB_LOOP[4].sb_inst                                 ; sbox            ; work         ;
-;          |sbox:SB_LOOP[8].sb_inst|           ; 35 (35)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|AES_TOP:u_aes_encrypt|subBytes:u_sb_final|sbox:SB_LOOP[8].sb_inst                                 ; sbox            ; work         ;
+;          |sbox:SB_LOOP[11].sb_inst|          ; 30 (30)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|AES_TOP:u_aes_encrypt|subBytes:u_sb_final|sbox:SB_LOOP[11].sb_inst                                ; sbox            ; work         ;
+;          |sbox:SB_LOOP[12].sb_inst|          ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|AES_TOP:u_aes_encrypt|subBytes:u_sb_final|sbox:SB_LOOP[12].sb_inst                                ; sbox            ; work         ;
+;          |sbox:SB_LOOP[2].sb_inst|           ; 30 (30)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|AES_TOP:u_aes_encrypt|subBytes:u_sb_final|sbox:SB_LOOP[2].sb_inst                                 ; sbox            ; work         ;
+;          |sbox:SB_LOOP[4].sb_inst|           ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|AES_TOP:u_aes_encrypt|subBytes:u_sb_final|sbox:SB_LOOP[4].sb_inst                                 ; sbox            ; work         ;
+;          |sbox:SB_LOOP[8].sb_inst|           ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|AES_TOP:u_aes_encrypt|subBytes:u_sb_final|sbox:SB_LOOP[8].sb_inst                                 ; sbox            ; work         ;
+;          |sbox:SB_LOOP[9].sb_inst|           ; 30 (30)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|AES_TOP:u_aes_encrypt|subBytes:u_sb_final|sbox:SB_LOOP[9].sb_inst                                 ; sbox            ; work         ;
 ;       |subBytes:u_sb|                        ; 500 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|AES_TOP:u_aes_encrypt|subBytes:u_sb                                                               ; subBytes        ; work         ;
 ;          |sbox:SB_LOOP[0].sb_inst|           ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|AES_TOP:u_aes_encrypt|subBytes:u_sb|sbox:SB_LOOP[0].sb_inst                                       ; sbox            ; work         ;
 ;          |sbox:SB_LOOP[10].sb_inst|          ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|AES_TOP:u_aes_encrypt|subBytes:u_sb|sbox:SB_LOOP[10].sb_inst                                      ; sbox            ; work         ;
-;          |sbox:SB_LOOP[11].sb_inst|          ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|AES_TOP:u_aes_encrypt|subBytes:u_sb|sbox:SB_LOOP[11].sb_inst                                      ; sbox            ; work         ;
-;          |sbox:SB_LOOP[12].sb_inst|          ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|AES_TOP:u_aes_encrypt|subBytes:u_sb|sbox:SB_LOOP[12].sb_inst                                      ; sbox            ; work         ;
+;          |sbox:SB_LOOP[11].sb_inst|          ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|AES_TOP:u_aes_encrypt|subBytes:u_sb|sbox:SB_LOOP[11].sb_inst                                      ; sbox            ; work         ;
+;          |sbox:SB_LOOP[12].sb_inst|          ; 35 (35)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|AES_TOP:u_aes_encrypt|subBytes:u_sb|sbox:SB_LOOP[12].sb_inst                                      ; sbox            ; work         ;
 ;          |sbox:SB_LOOP[13].sb_inst|          ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|AES_TOP:u_aes_encrypt|subBytes:u_sb|sbox:SB_LOOP[13].sb_inst                                      ; sbox            ; work         ;
 ;          |sbox:SB_LOOP[14].sb_inst|          ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|AES_TOP:u_aes_encrypt|subBytes:u_sb|sbox:SB_LOOP[14].sb_inst                                      ; sbox            ; work         ;
 ;          |sbox:SB_LOOP[15].sb_inst|          ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|AES_TOP:u_aes_encrypt|subBytes:u_sb|sbox:SB_LOOP[15].sb_inst                                      ; sbox            ; work         ;
 ;          |sbox:SB_LOOP[1].sb_inst|           ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|AES_TOP:u_aes_encrypt|subBytes:u_sb|sbox:SB_LOOP[1].sb_inst                                       ; sbox            ; work         ;
-;          |sbox:SB_LOOP[2].sb_inst|           ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|AES_TOP:u_aes_encrypt|subBytes:u_sb|sbox:SB_LOOP[2].sb_inst                                       ; sbox            ; work         ;
+;          |sbox:SB_LOOP[2].sb_inst|           ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|AES_TOP:u_aes_encrypt|subBytes:u_sb|sbox:SB_LOOP[2].sb_inst                                       ; sbox            ; work         ;
 ;          |sbox:SB_LOOP[3].sb_inst|           ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|AES_TOP:u_aes_encrypt|subBytes:u_sb|sbox:SB_LOOP[3].sb_inst                                       ; sbox            ; work         ;
-;          |sbox:SB_LOOP[4].sb_inst|           ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|AES_TOP:u_aes_encrypt|subBytes:u_sb|sbox:SB_LOOP[4].sb_inst                                       ; sbox            ; work         ;
+;          |sbox:SB_LOOP[4].sb_inst|           ; 35 (35)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|AES_TOP:u_aes_encrypt|subBytes:u_sb|sbox:SB_LOOP[4].sb_inst                                       ; sbox            ; work         ;
 ;          |sbox:SB_LOOP[5].sb_inst|           ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|AES_TOP:u_aes_encrypt|subBytes:u_sb|sbox:SB_LOOP[5].sb_inst                                       ; sbox            ; work         ;
 ;          |sbox:SB_LOOP[6].sb_inst|           ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|AES_TOP:u_aes_encrypt|subBytes:u_sb|sbox:SB_LOOP[6].sb_inst                                       ; sbox            ; work         ;
 ;          |sbox:SB_LOOP[7].sb_inst|           ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|AES_TOP:u_aes_encrypt|subBytes:u_sb|sbox:SB_LOOP[7].sb_inst                                       ; sbox            ; work         ;
-;          |sbox:SB_LOOP[8].sb_inst|           ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|AES_TOP:u_aes_encrypt|subBytes:u_sb|sbox:SB_LOOP[8].sb_inst                                       ; sbox            ; work         ;
-;          |sbox:SB_LOOP[9].sb_inst|           ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|AES_TOP:u_aes_encrypt|subBytes:u_sb|sbox:SB_LOOP[9].sb_inst                                       ; sbox            ; work         ;
-;    |Buffer_top:u_uart_buffer|                ; 141 (0)             ; 166 (0)                   ; 4096              ; 0          ; 0    ; 0            ; |aes_uart_top|Buffer_top:u_uart_buffer                                                                          ; Buffer_top      ; work         ;
-;       |fifo_rx:rx_fifo_inst|                 ; 37 (37)             ; 57 (57)                   ; 2048              ; 0          ; 0    ; 0            ; |aes_uart_top|Buffer_top:u_uart_buffer|fifo_rx:rx_fifo_inst                                                     ; fifo_rx         ; work         ;
+;          |sbox:SB_LOOP[8].sb_inst|           ; 35 (35)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|AES_TOP:u_aes_encrypt|subBytes:u_sb|sbox:SB_LOOP[8].sb_inst                                       ; sbox            ; work         ;
+;          |sbox:SB_LOOP[9].sb_inst|           ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|AES_TOP:u_aes_encrypt|subBytes:u_sb|sbox:SB_LOOP[9].sb_inst                                       ; sbox            ; work         ;
+;    |Buffer_top:u_uart_buffer|                ; 133 (0)             ; 145 (0)                   ; 2304              ; 0          ; 0    ; 0            ; |aes_uart_top|Buffer_top:u_uart_buffer                                                                          ; Buffer_top      ; work         ;
+;       |fifo_rx:rx_fifo_inst|                 ; 30 (30)             ; 49 (49)                   ; 2048              ; 0          ; 0    ; 0            ; |aes_uart_top|Buffer_top:u_uart_buffer|fifo_rx:rx_fifo_inst                                                     ; fifo_rx         ; work         ;
 ;          |altsyncram:mem_rtl_0|              ; 0 (0)               ; 0 (0)                     ; 2048              ; 0          ; 0    ; 0            ; |aes_uart_top|Buffer_top:u_uart_buffer|fifo_rx:rx_fifo_inst|altsyncram:mem_rtl_0                                ; altsyncram      ; work         ;
-;             |altsyncram_a8s1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 2048              ; 0          ; 0    ; 0            ; |aes_uart_top|Buffer_top:u_uart_buffer|fifo_rx:rx_fifo_inst|altsyncram:mem_rtl_0|altsyncram_a8s1:auto_generated ; altsyncram_a8s1 ; work         ;
-;       |fifo_tx:tx_fifo_inst|                 ; 48 (48)             ; 51 (51)                   ; 2048              ; 0          ; 0    ; 0            ; |aes_uart_top|Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst                                                     ; fifo_tx         ; work         ;
-;          |altsyncram:mem_rtl_0|              ; 0 (0)               ; 0 (0)                     ; 2048              ; 0          ; 0    ; 0            ; |aes_uart_top|Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|altsyncram:mem_rtl_0                                ; altsyncram      ; work         ;
-;             |altsyncram_q3n1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 2048              ; 0          ; 0    ; 0            ; |aes_uart_top|Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|altsyncram:mem_rtl_0|altsyncram_q3n1:auto_generated ; altsyncram_q3n1 ; work         ;
+;             |altsyncram_nvo1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 2048              ; 0          ; 0    ; 0            ; |aes_uart_top|Buffer_top:u_uart_buffer|fifo_rx:rx_fifo_inst|altsyncram:mem_rtl_0|altsyncram_nvo1:auto_generated ; altsyncram_nvo1 ; work         ;
+;       |fifo_tx:tx_fifo_inst|                 ; 48 (48)             ; 45 (45)                   ; 256               ; 0          ; 0    ; 0            ; |aes_uart_top|Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst                                                     ; fifo_tx         ; work         ;
+;          |altsyncram:mem_rtl_0|              ; 0 (0)               ; 0 (0)                     ; 256               ; 0          ; 0    ; 0            ; |aes_uart_top|Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|altsyncram:mem_rtl_0                                ; altsyncram      ; work         ;
+;             |altsyncram_9vo1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 256               ; 0          ; 0    ; 0            ; |aes_uart_top|Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|altsyncram:mem_rtl_0|altsyncram_9vo1:auto_generated ; altsyncram_9vo1 ; work         ;
 ;       |uart_rx:rx_inst|                      ; 30 (30)             ; 35 (35)                   ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|Buffer_top:u_uart_buffer|uart_rx:rx_inst                                                          ; uart_rx         ; work         ;
-;       |uart_tx:tx_inst|                      ; 26 (26)             ; 23 (23)                   ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|Buffer_top:u_uart_buffer|uart_tx:tx_inst                                                          ; uart_tx         ; work         ;
+;       |uart_tx:tx_inst|                      ; 25 (25)             ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|Buffer_top:u_uart_buffer|uart_tx:tx_inst                                                          ; uart_tx         ; work         ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                                                                          ;
-+--------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+-----------------------------------------------+
-; Name                                                                                                         ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF                                           ;
-+--------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+-----------------------------------------------+
-; Buffer_top:u_uart_buffer|fifo_rx:rx_fifo_inst|altsyncram:mem_rtl_0|altsyncram_a8s1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 256          ; 8            ; 256          ; 8            ; 2048 ; db/aes_uart_top.ram0_fifo_rx_46c5cb01.hdl.mif ;
-; Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|altsyncram:mem_rtl_0|altsyncram_q3n1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 256          ; 8            ; 256          ; 8            ; 2048 ; None                                          ;
-+--------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+-----------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                 ;
++--------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; Name                                                                                                         ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
++--------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; Buffer_top:u_uart_buffer|fifo_rx:rx_fifo_inst|altsyncram:mem_rtl_0|altsyncram_nvo1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 256          ; 8            ; 256          ; 8            ; 2048 ; None ;
+; Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|altsyncram:mem_rtl_0|altsyncram_9vo1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 256          ; 1            ; 256          ; 1            ; 256  ; None ;
++--------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
 
 
 Encoding Type:  One-Hot
@@ -574,6 +581,24 @@ Encoding Type:  One-Hot
 +-------------------+-------------------+-------------------+------------------+------------------+------------------+
 
 
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Protected by Synthesis                                                                                                                                        ;
++---------------------------------------------------------+------------------------------------------------------------------+--------------------------------------------+
+; Register Name                                           ; Protected by Synthesis Attribute or Preserve Register Assignment ; Not to be Touched by Netlist Optimizations ;
++---------------------------------------------------------+------------------------------------------------------------------+--------------------------------------------+
+; Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|rd_ptr[8] ; yes                                                              ; yes                                        ;
+; Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|rd_ptr[0] ; yes                                                              ; yes                                        ;
+; Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|rd_ptr[1] ; yes                                                              ; yes                                        ;
+; Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|rd_ptr[2] ; yes                                                              ; yes                                        ;
+; Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|rd_ptr[3] ; yes                                                              ; yes                                        ;
+; Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|rd_ptr[4] ; yes                                                              ; yes                                        ;
+; Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|rd_ptr[5] ; yes                                                              ; yes                                        ;
+; Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|rd_ptr[6] ; yes                                                              ; yes                                        ;
+; Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|rd_ptr[7] ; yes                                                              ; yes                                        ;
+; Total number of protected registers is 9                ;                                                                  ;                                            ;
++---------------------------------------------------------+------------------------------------------------------------------+--------------------------------------------+
+
+
 +-----------------------------------------------------------------------------------------------------------------------------------+
 ; User-Specified and Inferred Latches                                                                                               ;
 +----------------------------------------------------+-----------------------------------------------------+------------------------+
@@ -585,32 +610,35 @@ Encoding Type:  One-Hot
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+---------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                ;
-+----------------------------------------------------------+----------------------------------------+
-; Register name                                            ; Reason for Removal                     ;
-+----------------------------------------------------------+----------------------------------------+
-; fifo_wr_pulse~reg0                                       ; Stuck at GND due to stuck port data_in ;
-; sys_state~13                                             ; Lost fanout                            ;
-; sys_state~14                                             ; Lost fanout                            ;
-; sys_state~15                                             ; Lost fanout                            ;
-; ADS_TOP:u_aes_decrypt|fsm_state~9                        ; Lost fanout                            ;
-; ADS_TOP:u_aes_decrypt|fsm_state~10                       ; Lost fanout                            ;
-; Buffer_top:u_uart_buffer|uart_rx:rx_inst|state~7         ; Lost fanout                            ;
-; Buffer_top:u_uart_buffer|uart_rx:rx_inst|state~8         ; Lost fanout                            ;
-; Buffer_top:u_uart_buffer|uart_tx:tx_inst|state~8         ; Lost fanout                            ;
-; Buffer_top:u_uart_buffer|uart_tx:tx_inst|state~9         ; Lost fanout                            ;
-; Buffer_top:u_uart_buffer|uart_tx:tx_inst|state~10        ; Lost fanout                            ;
-; Buffer_top:u_uart_buffer|uart_tx:tx_inst|state~11        ; Lost fanout                            ;
-; AES_TOP:u_aes_encrypt|fsm_state~9                        ; Lost fanout                            ;
-; AES_TOP:u_aes_encrypt|fsm_state~10                       ; Lost fanout                            ;
-; AES_TOP:u_aes_encrypt|fsm_state.S_DONE                   ; Merged with AES_TOP:u_aes_encrypt|done ;
-; ADS_TOP:u_aes_decrypt|fsm_state.S_DONE                   ; Merged with ADS_TOP:u_aes_decrypt|done ;
-; Buffer_top:u_uart_buffer|fifo_rx:rx_fifo_inst|rd_ptr[8]  ; Lost fanout                            ;
-; Buffer_top:u_uart_buffer|fifo_rx:rx_fifo_inst|wr_ptr[8]  ; Lost fanout                            ;
-; Buffer_top:u_uart_buffer|uart_rx:rx_inst|byte_counter[4] ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 19                   ;                                        ;
-+----------------------------------------------------------+----------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                                                                                       ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------+
+; Register name                                                                                                                                         ; Reason for Removal                                               ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------+
+; Buffer_top:u_uart_buffer|uart_tx:tx_inst|data_reg[1..7]                                                                                               ; Stuck at GND due to stuck port data_in                           ;
+; fifo_wr_data[1..7]                                                                                                                                    ; Lost fanout                                                      ;
+; AES_TOP:u_aes_encrypt|ciphertext[1..7,9..15,17..23,25..31,33..39,41..47,49..55,57..63,65..71,73..79,81..87,89..95,97..103,105..111,113..119,121..127] ; Lost fanout                                                      ;
+; Buffer_top:u_uart_buffer|uart_tx:tx_inst|parity_bit_reg                                                                                               ; Merged with Buffer_top:u_uart_buffer|uart_tx:tx_inst|data_reg[0] ;
+; sys_state~13                                                                                                                                          ; Lost fanout                                                      ;
+; sys_state~14                                                                                                                                          ; Lost fanout                                                      ;
+; sys_state~15                                                                                                                                          ; Lost fanout                                                      ;
+; ADS_TOP:u_aes_decrypt|fsm_state~9                                                                                                                     ; Lost fanout                                                      ;
+; ADS_TOP:u_aes_decrypt|fsm_state~10                                                                                                                    ; Lost fanout                                                      ;
+; Buffer_top:u_uart_buffer|uart_rx:rx_inst|state~7                                                                                                      ; Lost fanout                                                      ;
+; Buffer_top:u_uart_buffer|uart_rx:rx_inst|state~8                                                                                                      ; Lost fanout                                                      ;
+; Buffer_top:u_uart_buffer|uart_tx:tx_inst|state~8                                                                                                      ; Lost fanout                                                      ;
+; Buffer_top:u_uart_buffer|uart_tx:tx_inst|state~9                                                                                                      ; Lost fanout                                                      ;
+; Buffer_top:u_uart_buffer|uart_tx:tx_inst|state~10                                                                                                     ; Lost fanout                                                      ;
+; Buffer_top:u_uart_buffer|uart_tx:tx_inst|state~11                                                                                                     ; Lost fanout                                                      ;
+; AES_TOP:u_aes_encrypt|fsm_state~9                                                                                                                     ; Lost fanout                                                      ;
+; AES_TOP:u_aes_encrypt|fsm_state~10                                                                                                                    ; Lost fanout                                                      ;
+; AES_TOP:u_aes_encrypt|fsm_state.S_DONE                                                                                                                ; Merged with AES_TOP:u_aes_encrypt|done                           ;
+; ADS_TOP:u_aes_decrypt|fsm_state.S_DONE                                                                                                                ; Merged with ADS_TOP:u_aes_decrypt|done                           ;
+; Buffer_top:u_uart_buffer|fifo_rx:rx_fifo_inst|rd_ptr[8]                                                                                               ; Lost fanout                                                      ;
+; Buffer_top:u_uart_buffer|fifo_rx:rx_fifo_inst|wr_ptr[8]                                                                                               ; Lost fanout                                                      ;
+; Buffer_top:u_uart_buffer|uart_rx:rx_inst|byte_counter[4]                                                                                              ; Stuck at GND due to stuck port data_in                           ;
+; Total Number of Removed Registers = 145                                                                                                               ;                                                                  ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -618,34 +646,26 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1005  ;
-; Number of registers using Synchronous Clear  ; 71    ;
+; Total registers                              ; 3675  ;
+; Number of registers using Synchronous Clear  ; 69    ;
 ; Number of registers using Synchronous Load   ; 8     ;
-; Number of registers using Asynchronous Clear ; 831   ;
+; Number of registers using Asynchronous Clear ; 3525  ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 836   ;
+; Number of registers using Clock Enable       ; 3531  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------+
-; Inverted Register Statistics                                                 ;
-+--------------------------------------------------------------------+---------+
-; Inverted Register                                                  ; Fan out ;
-+--------------------------------------------------------------------+---------+
-; Buffer_top:u_uart_buffer|uart_rx:rx_inst|bit_counter[2]            ; 3       ;
-; Buffer_top:u_uart_buffer|uart_rx:rx_inst|bit_counter[0]            ; 4       ;
-; Buffer_top:u_uart_buffer|uart_rx:rx_inst|bit_counter[1]            ; 3       ;
-; Buffer_top:u_uart_buffer|fifo_rx:rx_fifo_inst|mem_rtl_0_bypass[18] ; 1       ;
-; Buffer_top:u_uart_buffer|fifo_rx:rx_fifo_inst|mem_rtl_0_bypass[20] ; 1       ;
-; Buffer_top:u_uart_buffer|fifo_rx:rx_fifo_inst|mem_rtl_0_bypass[32] ; 1       ;
-; Buffer_top:u_uart_buffer|fifo_rx:rx_fifo_inst|mem_rtl_0_bypass[30] ; 1       ;
-; Buffer_top:u_uart_buffer|fifo_rx:rx_fifo_inst|mem_rtl_0_bypass[26] ; 1       ;
-; Buffer_top:u_uart_buffer|fifo_rx:rx_fifo_inst|mem_rtl_0_bypass[28] ; 1       ;
-; Buffer_top:u_uart_buffer|fifo_rx:rx_fifo_inst|mem_rtl_0_bypass[24] ; 1       ;
-; Buffer_top:u_uart_buffer|fifo_rx:rx_fifo_inst|mem_rtl_0_bypass[22] ; 1       ;
-; Total number of inverted registers = 11                            ;         ;
-+--------------------------------------------------------------------+---------+
++-------------------------------------------------------------------+
+; Inverted Register Statistics                                      ;
++---------------------------------------------------------+---------+
+; Inverted Register                                       ; Fan out ;
++---------------------------------------------------------+---------+
+; Buffer_top:u_uart_buffer|uart_rx:rx_inst|bit_counter[2] ; 3       ;
+; Buffer_top:u_uart_buffer|uart_rx:rx_inst|bit_counter[0] ; 4       ;
+; Buffer_top:u_uart_buffer|uart_rx:rx_inst|bit_counter[1] ; 3       ;
+; Total number of inverted registers = 3                  ;         ;
++---------------------------------------------------------+---------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------+
@@ -678,14 +698,6 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Buffer_top:u_uart_buffer|fifo_rx:rx_fifo_inst|mem_rtl_0_bypass[22] ; Buffer_top:u_uart_buffer|fifo_rx:rx_fifo_inst|mem_rtl_0 ;
 ; Buffer_top:u_uart_buffer|fifo_rx:rx_fifo_inst|mem_rtl_0_bypass[23] ; Buffer_top:u_uart_buffer|fifo_rx:rx_fifo_inst|mem_rtl_0 ;
 ; Buffer_top:u_uart_buffer|fifo_rx:rx_fifo_inst|mem_rtl_0_bypass[24] ; Buffer_top:u_uart_buffer|fifo_rx:rx_fifo_inst|mem_rtl_0 ;
-; Buffer_top:u_uart_buffer|fifo_rx:rx_fifo_inst|mem_rtl_0_bypass[25] ; Buffer_top:u_uart_buffer|fifo_rx:rx_fifo_inst|mem_rtl_0 ;
-; Buffer_top:u_uart_buffer|fifo_rx:rx_fifo_inst|mem_rtl_0_bypass[26] ; Buffer_top:u_uart_buffer|fifo_rx:rx_fifo_inst|mem_rtl_0 ;
-; Buffer_top:u_uart_buffer|fifo_rx:rx_fifo_inst|mem_rtl_0_bypass[27] ; Buffer_top:u_uart_buffer|fifo_rx:rx_fifo_inst|mem_rtl_0 ;
-; Buffer_top:u_uart_buffer|fifo_rx:rx_fifo_inst|mem_rtl_0_bypass[28] ; Buffer_top:u_uart_buffer|fifo_rx:rx_fifo_inst|mem_rtl_0 ;
-; Buffer_top:u_uart_buffer|fifo_rx:rx_fifo_inst|mem_rtl_0_bypass[29] ; Buffer_top:u_uart_buffer|fifo_rx:rx_fifo_inst|mem_rtl_0 ;
-; Buffer_top:u_uart_buffer|fifo_rx:rx_fifo_inst|mem_rtl_0_bypass[30] ; Buffer_top:u_uart_buffer|fifo_rx:rx_fifo_inst|mem_rtl_0 ;
-; Buffer_top:u_uart_buffer|fifo_rx:rx_fifo_inst|mem_rtl_0_bypass[31] ; Buffer_top:u_uart_buffer|fifo_rx:rx_fifo_inst|mem_rtl_0 ;
-; Buffer_top:u_uart_buffer|fifo_rx:rx_fifo_inst|mem_rtl_0_bypass[32] ; Buffer_top:u_uart_buffer|fifo_rx:rx_fifo_inst|mem_rtl_0 ;
 ; Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|mem_rtl_0_bypass[0]  ; Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|mem_rtl_0 ;
 ; Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|mem_rtl_0_bypass[1]  ; Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|mem_rtl_0 ;
 ; Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|mem_rtl_0_bypass[2]  ; Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|mem_rtl_0 ;
@@ -704,44 +716,54 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|mem_rtl_0_bypass[15] ; Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|mem_rtl_0 ;
 ; Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|mem_rtl_0_bypass[16] ; Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|mem_rtl_0 ;
 ; Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|mem_rtl_0_bypass[17] ; Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|mem_rtl_0 ;
-; Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|mem_rtl_0_bypass[18] ; Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|mem_rtl_0 ;
-; Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|mem_rtl_0_bypass[19] ; Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|mem_rtl_0 ;
-; Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|mem_rtl_0_bypass[20] ; Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|mem_rtl_0 ;
-; Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|mem_rtl_0_bypass[21] ; Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|mem_rtl_0 ;
-; Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|mem_rtl_0_bypass[22] ; Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|mem_rtl_0 ;
-; Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|mem_rtl_0_bypass[23] ; Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|mem_rtl_0 ;
-; Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|mem_rtl_0_bypass[24] ; Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|mem_rtl_0 ;
 +--------------------------------------------------------------------+---------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                            ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------+
-; 3:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |aes_uart_top|Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|wr_ptr[2] ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |aes_uart_top|rd_counter[4]                                           ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |aes_uart_top|Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|ft_out[7] ;
-; 4:1                ; 128 bits  ; 256 LEs       ; 256 LEs              ; 0 LEs                  ; Yes        ; |aes_uart_top|ADS_TOP:u_aes_decrypt|state[80]                         ;
-; 4:1                ; 128 bits  ; 256 LEs       ; 256 LEs              ; 0 LEs                  ; Yes        ; |aes_uart_top|AES_TOP:u_aes_encrypt|state[31]                         ;
-; 16:1               ; 8 bits    ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; Yes        ; |aes_uart_top|fifo_wr_data[7]                                         ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |aes_uart_top|AES_TOP:u_aes_encrypt|round[1]                          ;
-; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |aes_uart_top|ADS_TOP:u_aes_decrypt|round[0]                          ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |aes_uart_top|Buffer_top:u_uart_buffer|uart_tx:tx_inst|bit_counter[2] ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |aes_uart_top|Buffer_top:u_uart_buffer|uart_tx:tx_inst|clk_counter[3] ;
-; 7:1                ; 5 bits    ; 20 LEs        ; 5 LEs                ; 15 LEs                 ; Yes        ; |aes_uart_top|Buffer_top:u_uart_buffer|uart_rx:rx_inst|clk_counter[4] ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 3 LEs                ; 6 LEs                  ; Yes        ; |aes_uart_top|Buffer_top:u_uart_buffer|uart_rx:rx_inst|bit_counter[0] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |aes_uart_top|Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|rd_ptr    ;
-; 16:1               ; 128 bits  ; 1280 LEs      ; 1024 LEs             ; 256 LEs                ; No         ; |aes_uart_top|ADS_TOP:u_aes_decrypt|Mux5                              ;
-; 16:1               ; 128 bits  ; 1280 LEs      ; 1024 LEs             ; 256 LEs                ; No         ; |aes_uart_top|AES_TOP:u_aes_encrypt|Mux120                            ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |aes_uart_top|Buffer_top:u_uart_buffer|uart_rx:rx_inst|Selector4      ;
-; 7:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; No         ; |aes_uart_top|Buffer_top:u_uart_buffer|uart_tx:tx_inst|Selector12     ;
-; 13:1               ; 6 bits    ; 48 LEs        ; 30 LEs               ; 18 LEs                 ; No         ; |aes_uart_top|Selector135                                             ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------+
+; 3:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |aes_uart_top|Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|wr_ptr[6]   ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |aes_uart_top|Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|rd_ptr[7]   ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |aes_uart_top|rd_counter[0]                                             ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |aes_uart_top|Buffer_top:u_uart_buffer|fifo_rx:rx_fifo_inst|dout[2]     ;
+; 4:1                ; 128 bits  ; 256 LEs       ; 256 LEs              ; 0 LEs                  ; Yes        ; |aes_uart_top|ADS_TOP:u_aes_decrypt|state[70]                           ;
+; 4:1                ; 128 bits  ; 256 LEs       ; 256 LEs              ; 0 LEs                  ; Yes        ; |aes_uart_top|AES_TOP:u_aes_encrypt|state[0]                            ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |aes_uart_top|AES_TOP:u_aes_encrypt|round[3]                            ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |aes_uart_top|ADS_TOP:u_aes_decrypt|round[3]                            ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |aes_uart_top|Buffer_top:u_uart_buffer|uart_tx:tx_inst|bit_counter[0]   ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |aes_uart_top|Buffer_top:u_uart_buffer|uart_tx:tx_inst|clk_counter[2]   ;
+; 7:1                ; 5 bits    ; 20 LEs        ; 5 LEs                ; 15 LEs                 ; Yes        ; |aes_uart_top|Buffer_top:u_uart_buffer|uart_rx:rx_inst|clk_counter[2]   ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 3 LEs                ; 6 LEs                  ; Yes        ; |aes_uart_top|Buffer_top:u_uart_buffer|uart_rx:rx_inst|bit_counter[0]   ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |aes_uart_top|Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|rd_addr_reg ;
+; 11:1               ; 128 bits  ; 896 LEs       ; 896 LEs              ; 0 LEs                  ; No         ; |aes_uart_top|ADS_TOP:u_aes_decrypt|Mux82                               ;
+; 11:1               ; 128 bits  ; 896 LEs       ; 896 LEs              ; 0 LEs                  ; No         ; |aes_uart_top|AES_TOP:u_aes_encrypt|Mux11                               ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |aes_uart_top|Buffer_top:u_uart_buffer|uart_rx:rx_inst|Selector3        ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; No         ; |aes_uart_top|Buffer_top:u_uart_buffer|uart_tx:tx_inst|Selector12       ;
+; 13:1               ; 6 bits    ; 48 LEs        ; 30 LEs               ; 18 LEs                 ; No         ; |aes_uart_top|Selector131                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------+
+; Source assignments for Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst ;
++-------------------+-------+------+-----------------------------------+
+; Assignment        ; Value ; From ; To                                ;
++-------------------+-------+------+-----------------------------------+
+; PRESERVE_REGISTER ; on    ; -    ; rd_ptr[8]                         ;
+; PRESERVE_REGISTER ; on    ; -    ; rd_ptr[7]                         ;
+; PRESERVE_REGISTER ; on    ; -    ; rd_ptr[6]                         ;
+; PRESERVE_REGISTER ; on    ; -    ; rd_ptr[5]                         ;
+; PRESERVE_REGISTER ; on    ; -    ; rd_ptr[4]                         ;
+; PRESERVE_REGISTER ; on    ; -    ; rd_ptr[3]                         ;
+; PRESERVE_REGISTER ; on    ; -    ; rd_ptr[2]                         ;
+; PRESERVE_REGISTER ; on    ; -    ; rd_ptr[1]                         ;
+; PRESERVE_REGISTER ; on    ; -    ; rd_ptr[0]                         ;
++-------------------+-------+------+-----------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
-; Source assignments for Buffer_top:u_uart_buffer|fifo_rx:rx_fifo_inst|altsyncram:mem_rtl_0|altsyncram_a8s1:auto_generated ;
+; Source assignments for Buffer_top:u_uart_buffer|fifo_rx:rx_fifo_inst|altsyncram:mem_rtl_0|altsyncram_nvo1:auto_generated ;
 +---------------------------------+--------------------+------+------------------------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                                         ;
 +---------------------------------+--------------------+------+------------------------------------------------------------+
@@ -750,12 +772,22 @@ Note: All latches listed above may not be present at the end of synthesis due to
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
-; Source assignments for Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|altsyncram:mem_rtl_0|altsyncram_q3n1:auto_generated ;
+; Source assignments for Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|altsyncram:mem_rtl_0|altsyncram_9vo1:auto_generated ;
 +---------------------------------+--------------------+------+------------------------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                                         ;
 +---------------------------------+--------------------+------+------------------------------------------------------------+
 ; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                          ;
 +---------------------------------+--------------------+------+------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |aes_uart_top ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; loopback_test  ; 0     ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +--------------------------------------------------------------------------------------------+
@@ -783,67 +815,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 +---------------------------------------------------------------------------------------------------------------------+
 ; Parameter Settings for Inferred Entity Instance: Buffer_top:u_uart_buffer|fifo_rx:rx_fifo_inst|altsyncram:mem_rtl_0 ;
-+------------------------------------+-----------------------------------------------+--------------------------------+
-; Parameter Name                     ; Value                                         ; Type                           ;
-+------------------------------------+-----------------------------------------------+--------------------------------+
-; BYTE_SIZE_BLOCK                    ; 8                                             ; Untyped                        ;
-; AUTO_CARRY_CHAINS                  ; ON                                            ; AUTO_CARRY                     ;
-; IGNORE_CARRY_BUFFERS               ; OFF                                           ; IGNORE_CARRY                   ;
-; AUTO_CASCADE_CHAINS                ; ON                                            ; AUTO_CASCADE                   ;
-; IGNORE_CASCADE_BUFFERS             ; OFF                                           ; IGNORE_CASCADE                 ;
-; WIDTH_BYTEENA                      ; 1                                             ; Untyped                        ;
-; OPERATION_MODE                     ; DUAL_PORT                                     ; Untyped                        ;
-; WIDTH_A                            ; 8                                             ; Untyped                        ;
-; WIDTHAD_A                          ; 8                                             ; Untyped                        ;
-; NUMWORDS_A                         ; 256                                           ; Untyped                        ;
-; OUTDATA_REG_A                      ; UNREGISTERED                                  ; Untyped                        ;
-; ADDRESS_ACLR_A                     ; NONE                                          ; Untyped                        ;
-; OUTDATA_ACLR_A                     ; NONE                                          ; Untyped                        ;
-; WRCONTROL_ACLR_A                   ; NONE                                          ; Untyped                        ;
-; INDATA_ACLR_A                      ; NONE                                          ; Untyped                        ;
-; BYTEENA_ACLR_A                     ; NONE                                          ; Untyped                        ;
-; WIDTH_B                            ; 8                                             ; Untyped                        ;
-; WIDTHAD_B                          ; 8                                             ; Untyped                        ;
-; NUMWORDS_B                         ; 256                                           ; Untyped                        ;
-; INDATA_REG_B                       ; CLOCK1                                        ; Untyped                        ;
-; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                                        ; Untyped                        ;
-; RDCONTROL_REG_B                    ; CLOCK1                                        ; Untyped                        ;
-; ADDRESS_REG_B                      ; CLOCK0                                        ; Untyped                        ;
-; OUTDATA_REG_B                      ; UNREGISTERED                                  ; Untyped                        ;
-; BYTEENA_REG_B                      ; CLOCK1                                        ; Untyped                        ;
-; INDATA_ACLR_B                      ; NONE                                          ; Untyped                        ;
-; WRCONTROL_ACLR_B                   ; NONE                                          ; Untyped                        ;
-; ADDRESS_ACLR_B                     ; NONE                                          ; Untyped                        ;
-; OUTDATA_ACLR_B                     ; NONE                                          ; Untyped                        ;
-; RDCONTROL_ACLR_B                   ; NONE                                          ; Untyped                        ;
-; BYTEENA_ACLR_B                     ; NONE                                          ; Untyped                        ;
-; WIDTH_BYTEENA_A                    ; 1                                             ; Untyped                        ;
-; WIDTH_BYTEENA_B                    ; 1                                             ; Untyped                        ;
-; RAM_BLOCK_TYPE                     ; AUTO                                          ; Untyped                        ;
-; BYTE_SIZE                          ; 8                                             ; Untyped                        ;
-; READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                                      ; Untyped                        ;
-; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ                          ; Untyped                        ;
-; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ                          ; Untyped                        ;
-; INIT_FILE                          ; db/aes_uart_top.ram0_fifo_rx_46c5cb01.hdl.mif ; Untyped                        ;
-; INIT_FILE_LAYOUT                   ; PORT_A                                        ; Untyped                        ;
-; MAXIMUM_DEPTH                      ; 0                                             ; Untyped                        ;
-; CLOCK_ENABLE_INPUT_A               ; NORMAL                                        ; Untyped                        ;
-; CLOCK_ENABLE_INPUT_B               ; NORMAL                                        ; Untyped                        ;
-; CLOCK_ENABLE_OUTPUT_A              ; NORMAL                                        ; Untyped                        ;
-; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                                        ; Untyped                        ;
-; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN                               ; Untyped                        ;
-; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN                               ; Untyped                        ;
-; ENABLE_ECC                         ; FALSE                                         ; Untyped                        ;
-; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                                         ; Untyped                        ;
-; WIDTH_ECCSTATUS                    ; 3                                             ; Untyped                        ;
-; DEVICE_FAMILY                      ; Cyclone V                                     ; Untyped                        ;
-; CBXI_PARAMETER                     ; altsyncram_a8s1                               ; Untyped                        ;
-+------------------------------------+-----------------------------------------------+--------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|altsyncram:mem_rtl_0 ;
 +------------------------------------+----------------------+---------------------------------------------------------+
 ; Parameter Name                     ; Value                ; Type                                                    ;
 +------------------------------------+----------------------+---------------------------------------------------------+
@@ -880,7 +851,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                                 ;
 ; WIDTH_BYTEENA_A                    ; 1                    ; Untyped                                                 ;
 ; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                                 ;
-; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                                 ;
+; RAM_BLOCK_TYPE                     ; M9K                  ; Untyped                                                 ;
 ; BYTE_SIZE                          ; 8                    ; Untyped                                                 ;
 ; READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA             ; Untyped                                                 ;
 ; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                                 ;
@@ -898,7 +869,68 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                                 ;
 ; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                                 ;
 ; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                                                 ;
-; CBXI_PARAMETER                     ; altsyncram_q3n1      ; Untyped                                                 ;
+; CBXI_PARAMETER                     ; altsyncram_nvo1      ; Untyped                                                 ;
++------------------------------------+----------------------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|altsyncram:mem_rtl_0 ;
++------------------------------------+----------------------+---------------------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                                    ;
++------------------------------------+----------------------+---------------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                                 ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                              ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                            ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                            ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                          ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                                 ;
+; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                                                 ;
+; WIDTH_A                            ; 1                    ; Untyped                                                 ;
+; WIDTHAD_A                          ; 8                    ; Untyped                                                 ;
+; NUMWORDS_A                         ; 256                  ; Untyped                                                 ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                                 ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                                 ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                                 ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                                 ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                                 ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                                 ;
+; WIDTH_B                            ; 1                    ; Untyped                                                 ;
+; WIDTHAD_B                          ; 8                    ; Untyped                                                 ;
+; NUMWORDS_B                         ; 256                  ; Untyped                                                 ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                                 ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                                 ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                                 ;
+; ADDRESS_REG_B                      ; CLOCK0               ; Untyped                                                 ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                                 ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                                 ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                                 ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                 ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                                 ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                                 ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                 ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                                 ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Untyped                                                 ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                                 ;
+; RAM_BLOCK_TYPE                     ; M9K                  ; Untyped                                                 ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                                 ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA             ; Untyped                                                 ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                                 ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                                 ;
+; INIT_FILE                          ; UNUSED               ; Untyped                                                 ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                                 ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                                 ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped                                                 ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                                 ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                                                 ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                                 ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                                 ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                                 ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                                 ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                                 ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                                 ;
+; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                                                 ;
+; CBXI_PARAMETER                     ; altsyncram_9vo1      ; Untyped                                                 ;
 +------------------------------------+----------------------+---------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -918,20 +950,48 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- NUMWORDS_B                         ; 256                                                                ;
 ;     -- ADDRESS_REG_B                      ; CLOCK0                                                             ;
 ;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                       ;
-;     -- RAM_BLOCK_TYPE                     ; AUTO                                                               ;
+;     -- RAM_BLOCK_TYPE                     ; M9K                                                                ;
 ;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                                                           ;
 ; Entity Instance                           ; Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|altsyncram:mem_rtl_0 ;
 ;     -- OPERATION_MODE                     ; DUAL_PORT                                                          ;
-;     -- WIDTH_A                            ; 8                                                                  ;
+;     -- WIDTH_A                            ; 1                                                                  ;
 ;     -- NUMWORDS_A                         ; 256                                                                ;
 ;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                       ;
-;     -- WIDTH_B                            ; 8                                                                  ;
+;     -- WIDTH_B                            ; 1                                                                  ;
 ;     -- NUMWORDS_B                         ; 256                                                                ;
 ;     -- ADDRESS_REG_B                      ; CLOCK0                                                             ;
 ;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                       ;
-;     -- RAM_BLOCK_TYPE                     ; AUTO                                                               ;
+;     -- RAM_BLOCK_TYPE                     ; M9K                                                                ;
 ;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                                                           ;
 +-------------------------------------------+--------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Buffer_top:u_uart_buffer|uart_rx:rx_inst"                                                   ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; rx_parity    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; byte_counter ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Buffer_top:u_uart_buffer|uart_tx:tx_inst"                                                                                                       ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                        ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------+
+; ft_out ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (8 bits) it drives.  Extra input bit(s) "ft_out[7..1]" will be connected to GND. ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst"                                                                              ;
++--------+--------+----------+---------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                                                                   ;
++--------+--------+----------+---------------------------------------------------------------------------------------------------------------------------+
+; ft_out ; Output ; Warning  ; Output or bidir port (8 bits) is wider than the port expression (1 bits) it drives; bit(s) "ft_out[7..1]" have no fanouts ;
++--------+--------+----------+---------------------------------------------------------------------------------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------+
@@ -940,12 +1000,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Port        ; Type   ; Severity ; Details                                                                                                  ;
 +-------------+--------+----------+----------------------------------------------------------------------------------------------------------+
 ; parity_type ; Input  ; Info     ; Stuck at GND                                                                                             ;
-; ft_out      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
-; rd_en       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
-; tx_done     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
+; ft_empty    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
 ; tx_busy     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
 ; rx_msg      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
-; rx_parity   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
 ; rx_complete ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
 ; wr_rx       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
 ; full        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
@@ -2039,34 +2096,32 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 1005                        ;
-;     CLR               ; 44                          ;
-;     CLR SCLR          ; 3                           ;
-;     ENA               ; 35                          ;
-;     ENA CLR           ; 784                         ;
-;     ENA SCLR          ; 9                           ;
+; arriav_ff             ; 3675                        ;
+;     CLR               ; 46                          ;
+;     ENA               ; 26                          ;
+;     ENA CLR           ; 3479                        ;
+;     ENA SCLR          ; 18                          ;
 ;     ENA SCLR SLD      ; 8                           ;
-;     SCLR              ; 51                          ;
-;     plain             ; 71                          ;
-; arriav_lcell_comb     ; 6622                        ;
+;     SCLR              ; 43                          ;
+;     plain             ; 55                          ;
+; arriav_lcell_comb     ; 6677                        ;
 ;     arith             ; 34                          ;
 ;         1 data inputs ; 32                          ;
 ;         2 data inputs ; 2                           ;
-;     extend            ; 140                         ;
-;         7 data inputs ; 140                         ;
-;     normal            ; 6448                        ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 3                           ;
-;         2 data inputs ; 418                         ;
-;         3 data inputs ; 438                         ;
-;         4 data inputs ; 554                         ;
-;         5 data inputs ; 696                         ;
-;         6 data inputs ; 4338                        ;
-; boundary_port         ; 409                         ;
-; stratixv_ram_block    ; 16                          ;
+;     extend            ; 178                         ;
+;         7 data inputs ; 178                         ;
+;     normal            ; 6465                        ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 828                         ;
+;         3 data inputs ; 421                         ;
+;         4 data inputs ; 491                         ;
+;         5 data inputs ; 824                         ;
+;         6 data inputs ; 3899                        ;
+; boundary_port         ; 395                         ;
+; stratixv_ram_block    ; 9                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 33.00                       ;
-; Average LUT depth     ; 19.77                       ;
+; Max LUT depth         ; 30.00                       ;
+; Average LUT depth     ; 11.48                       ;
 +-----------------------+-----------------------------+
 
 
@@ -2075,7 +2130,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:22     ;
+; Top            ; 00:00:18     ;
 +----------------+--------------+
 
 
@@ -2085,7 +2140,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Sun Mar  1 12:59:03 2026
+    Info: Processing started: Thu Mar  5 18:43:56 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off AES -c aes_uart_top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -2131,24 +2186,23 @@ Info (12021): Found 1 design units, including 1 entities, in source file /home/m
     Info (12023): Found entity 1: inverseSubBytes File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/inverseSubBytes.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/invMixColumns.v
     Info (12023): Found entity 1: invMixColumns File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/invMixColumns.v Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at Buffer_top.v(57): created implicit net for "tx_start" File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/Buffer_top.v Line: 57
+Warning (10236): Verilog HDL Implicit Net warning at Buffer_top.v(58): created implicit net for "tx_start" File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/Buffer_top.v Line: 58
 Info (12127): Elaborating entity "aes_uart_top" for the top level hierarchy
-Critical Warning (10237): Verilog HDL warning at aes_uart_top.v(167): can't infer register for assignment in edge-triggered always construct because the clock isn't obvious. Generated combinational logic instead File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/aes_uart_top.v Line: 167
-Warning (10034): Output port "WR_RX" at aes_uart_top.v(11) has no driver File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/aes_uart_top.v Line: 11
-Info (12128): Elaborating entity "AES_TOP" for hierarchy "AES_TOP:u_aes_encrypt" File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/aes_uart_top.v Line: 70
-Info (12128): Elaborating entity "keyExpansion" for hierarchy "AES_TOP:u_aes_encrypt|keyExpansion:keyexp" File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/AES_TOP.v Line: 48
+Info (12128): Elaborating entity "AES_TOP" for hierarchy "AES_TOP:u_aes_encrypt" File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/aes_uart_top.v Line: 60
+Info (12128): Elaborating entity "keyExpansion" for hierarchy "AES_TOP:u_aes_encrypt|keyExpansion:keyexp" File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/AES_TOP.v Line: 44
 Info (12128): Elaborating entity "sbox" for hierarchy "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[4].s0" File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/keyExpansion.v Line: 64
-Info (12128): Elaborating entity "subBytes" for hierarchy "AES_TOP:u_aes_encrypt|subBytes:u_sb" File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/AES_TOP.v Line: 61
-Info (12128): Elaborating entity "shiftRows" for hierarchy "AES_TOP:u_aes_encrypt|shiftRows:u_sr" File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/AES_TOP.v Line: 62
-Info (12128): Elaborating entity "mixColumns" for hierarchy "AES_TOP:u_aes_encrypt|mixColumns:u_mc" File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/AES_TOP.v Line: 63
-Info (12128): Elaborating entity "Buffer_top" for hierarchy "Buffer_top:u_uart_buffer" File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/aes_uart_top.v Line: 296
-Warning (10036): Verilog HDL or VHDL warning at Buffer_top.v(37): object "rd_rx_d" assigned a value but never read File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/Buffer_top.v Line: 37
-Info (12128): Elaborating entity "fifo_tx" for hierarchy "Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst" File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/Buffer_top.v Line: 49
-Warning (10036): Verilog HDL or VHDL warning at fifo_tx.v(24): object "data_count" assigned a value but never read File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/fifo_tx.v Line: 24
-Warning (10230): Verilog HDL assignment warning at fifo_tx.v(24): truncated value with size 9 to match size of target (8) File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/fifo_tx.v Line: 24
-Warning (10230): Verilog HDL assignment warning at fifo_tx.v(60): truncated value with size 32 to match size of target (9) File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/fifo_tx.v Line: 60
-Warning (10230): Verilog HDL assignment warning at fifo_tx.v(70): truncated value with size 32 to match size of target (9) File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/fifo_tx.v Line: 70
-Info (12128): Elaborating entity "uart_tx" for hierarchy "Buffer_top:u_uart_buffer|uart_tx:tx_inst" File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/Buffer_top.v Line: 64
+Info (12128): Elaborating entity "subBytes" for hierarchy "AES_TOP:u_aes_encrypt|subBytes:u_sb" File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/AES_TOP.v Line: 95
+Info (12128): Elaborating entity "shiftRows" for hierarchy "AES_TOP:u_aes_encrypt|shiftRows:u_sr" File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/AES_TOP.v Line: 96
+Info (12128): Elaborating entity "mixColumns" for hierarchy "AES_TOP:u_aes_encrypt|mixColumns:u_mc" File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/AES_TOP.v Line: 97
+Info (12128): Elaborating entity "Buffer_top" for hierarchy "Buffer_top:u_uart_buffer" File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/aes_uart_top.v Line: 202
+Warning (10036): Verilog HDL or VHDL warning at Buffer_top.v(33): object "rd_rx_d" assigned a value but never read File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/Buffer_top.v Line: 33
+Info (12128): Elaborating entity "fifo_tx" for hierarchy "Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst" File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/Buffer_top.v Line: 50
+Warning (10036): Verilog HDL or VHDL warning at fifo_tx.v(23): object "wr_addr_reg" assigned a value but never read File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/fifo_tx.v Line: 23
+Warning (10230): Verilog HDL assignment warning at fifo_tx.v(63): truncated value with size 9 to match size of target (8) File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/fifo_tx.v Line: 63
+Warning (10230): Verilog HDL assignment warning at fifo_tx.v(64): truncated value with size 32 to match size of target (9) File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/fifo_tx.v Line: 64
+Warning (10230): Verilog HDL assignment warning at fifo_tx.v(73): truncated value with size 9 to match size of target (8) File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/fifo_tx.v Line: 73
+Warning (10230): Verilog HDL assignment warning at fifo_tx.v(74): truncated value with size 32 to match size of target (9) File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/fifo_tx.v Line: 74
+Info (12128): Elaborating entity "uart_tx" for hierarchy "Buffer_top:u_uart_buffer|uart_tx:tx_inst" File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/Buffer_top.v Line: 65
 Warning (10230): Verilog HDL assignment warning at UART_TX.v(72): truncated value with size 32 to match size of target (4) File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_TX.v Line: 72
 Warning (10230): Verilog HDL assignment warning at UART_TX.v(83): truncated value with size 32 to match size of target (3) File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_TX.v Line: 83
 Warning (10230): Verilog HDL assignment warning at UART_TX.v(87): truncated value with size 32 to match size of target (4) File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_TX.v Line: 87
@@ -2156,27 +2210,22 @@ Warning (10230): Verilog HDL assignment warning at UART_TX.v(100): truncated val
 Warning (10230): Verilog HDL assignment warning at UART_TX.v(109): truncated value with size 32 to match size of target (4) File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_TX.v Line: 109
 Warning (10240): Verilog HDL Always Construct warning at UART_TX.v(133): inferring latch(es) for variable "tx", which holds its previous value in one or more paths through the always construct File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_TX.v Line: 133
 Info (10041): Inferred latch for "tx" at UART_TX.v(133) File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_TX.v Line: 133
-Info (12128): Elaborating entity "uart_rx" for hierarchy "Buffer_top:u_uart_buffer|uart_rx:rx_inst" File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/Buffer_top.v Line: 75
+Info (12128): Elaborating entity "uart_rx" for hierarchy "Buffer_top:u_uart_buffer|uart_rx:rx_inst" File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/Buffer_top.v Line: 76
 Warning (10036): Verilog HDL or VHDL warning at UART_RX.v(42): object "rx_start" assigned a value but never read File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_RX.v Line: 42
 Warning (10230): Verilog HDL assignment warning at UART_RX.v(79): truncated value with size 32 to match size of target (5) File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_RX.v Line: 79
 Warning (10230): Verilog HDL assignment warning at UART_RX.v(94): truncated value with size 32 to match size of target (3) File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_RX.v Line: 94
 Warning (10230): Verilog HDL assignment warning at UART_RX.v(97): truncated value with size 32 to match size of target (5) File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_RX.v Line: 97
 Warning (10230): Verilog HDL assignment warning at UART_RX.v(109): truncated value with size 32 to match size of target (5) File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_RX.v Line: 109
 Warning (10230): Verilog HDL assignment warning at UART_RX.v(132): truncated value with size 32 to match size of target (5) File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_RX.v Line: 132
-Info (12128): Elaborating entity "fifo_rx" for hierarchy "Buffer_top:u_uart_buffer|fifo_rx:rx_fifo_inst" File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/Buffer_top.v Line: 88
-Warning (10036): Verilog HDL or VHDL warning at fifo_rx.v(17): object "wr_ptr_1" assigned a value but never read File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/fifo_rx.v Line: 17
-Warning (10036): Verilog HDL or VHDL warning at fifo_rx.v(34): object "wr_valid" assigned a value but never read File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/fifo_rx.v Line: 34
-Warning (10036): Verilog HDL or VHDL warning at fifo_rx.v(35): object "rd_valid" assigned a value but never read File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/fifo_rx.v Line: 35
-Warning (10036): Verilog HDL or VHDL warning at fifo_rx.v(57): object "rx_block_ok_d" assigned a value but never read File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/fifo_rx.v Line: 57
-Warning (10230): Verilog HDL assignment warning at fifo_rx.v(28): truncated value with size 32 to match size of target (9) File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/fifo_rx.v Line: 28
-Warning (10230): Verilog HDL assignment warning at fifo_rx.v(45): truncated value with size 32 to match size of target (9) File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/fifo_rx.v Line: 45
-Warning (10230): Verilog HDL assignment warning at fifo_rx.v(51): truncated value with size 32 to match size of target (9) File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/fifo_rx.v Line: 51
-Info (12128): Elaborating entity "ADS_TOP" for hierarchy "ADS_TOP:u_aes_decrypt" File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/aes_uart_top.v Line: 434
-Info (12128): Elaborating entity "inverseShiftRows" for hierarchy "ADS_TOP:u_aes_decrypt|inverseShiftRows:u_isr" File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/ADS_TOP.v Line: 77
-Info (12128): Elaborating entity "inverseSubBytes" for hierarchy "ADS_TOP:u_aes_decrypt|inverseSubBytes:u_isb" File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/ADS_TOP.v Line: 81
+Info (12128): Elaborating entity "fifo_rx" for hierarchy "Buffer_top:u_uart_buffer|fifo_rx:rx_fifo_inst" File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/Buffer_top.v Line: 89
+Warning (10036): Verilog HDL or VHDL warning at fifo_rx.v(19): object "wr_addr_reg" assigned a value but never read File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/fifo_rx.v Line: 19
+Warning (10230): Verilog HDL assignment warning at fifo_rx.v(49): truncated value with size 32 to match size of target (9) File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/fifo_rx.v Line: 49
+Warning (10230): Verilog HDL assignment warning at fifo_rx.v(56): truncated value with size 32 to match size of target (9) File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/fifo_rx.v Line: 56
+Info (12128): Elaborating entity "ADS_TOP" for hierarchy "ADS_TOP:u_aes_decrypt" File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/aes_uart_top.v Line: 312
+Info (12128): Elaborating entity "inverseShiftRows" for hierarchy "ADS_TOP:u_aes_decrypt|inverseShiftRows:u_isr" File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/ADS_TOP.v Line: 112
+Info (12128): Elaborating entity "inverseSubBytes" for hierarchy "ADS_TOP:u_aes_decrypt|inverseSubBytes:u_isb" File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/ADS_TOP.v Line: 116
 Info (12128): Elaborating entity "inverseSbox" for hierarchy "ADS_TOP:u_aes_decrypt|inverseSubBytes:u_isb|inverseSbox:ISB[0].isb" File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/inverseSubBytes.v Line: 14
-Info (12128): Elaborating entity "invMixColumns" for hierarchy "ADS_TOP:u_aes_decrypt|invMixColumns:u_imc" File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/ADS_TOP.v Line: 87
-Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "/home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/db/aes_uart_top.ram0_fifo_rx_46c5cb01.hdl.mif" contains "don't care" values -- overwriting them with 0s
+Info (12128): Elaborating entity "invMixColumns" for hierarchy "ADS_TOP:u_aes_decrypt|invMixColumns:u_imc" File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/ADS_TOP.v Line: 122
 Warning (276020): Inferred RAM node "Buffer_top:u_uart_buffer|fifo_rx:rx_fifo_inst|mem_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
 Warning (276020): Inferred RAM node "Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|mem_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
 Info (276014): Found 80 instances of uninferred RAM logic
@@ -2276,14 +2325,14 @@ Info (19000): Inferred 2 megafunctions from design logic
         Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
         Info (286033): Parameter INDATA_ACLR_A set to NONE
         Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
-        Info (286033): Parameter INIT_FILE set to db/aes_uart_top.ram0_fifo_rx_46c5cb01.hdl.mif
+        Info (286033): Parameter RAM_BLOCK_TYPE set to M9K
         Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
     Info (276029): Inferred altsyncram megafunction from the following design logic: "Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|mem_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
-        Info (286033): Parameter WIDTH_A set to 8
+        Info (286033): Parameter WIDTH_A set to 1
         Info (286033): Parameter WIDTHAD_A set to 8
         Info (286033): Parameter NUMWORDS_A set to 256
-        Info (286033): Parameter WIDTH_B set to 8
+        Info (286033): Parameter WIDTH_B set to 1
         Info (286033): Parameter WIDTHAD_B set to 8
         Info (286033): Parameter NUMWORDS_B set to 256
         Info (286033): Parameter ADDRESS_ACLR_A set to NONE
@@ -2293,6 +2342,7 @@ Info (19000): Inferred 2 megafunctions from design logic
         Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
         Info (286033): Parameter INDATA_ACLR_A set to NONE
         Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter RAM_BLOCK_TYPE set to M9K
         Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
 Info (12130): Elaborated megafunction instantiation "Buffer_top:u_uart_buffer|fifo_rx:rx_fifo_inst|altsyncram:mem_rtl_0"
 Info (12133): Instantiated megafunction "Buffer_top:u_uart_buffer|fifo_rx:rx_fifo_inst|altsyncram:mem_rtl_0" with the following parameter:
@@ -2310,17 +2360,18 @@ Info (12133): Instantiated megafunction "Buffer_top:u_uart_buffer|fifo_rx:rx_fif
     Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
     Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
-    Info (12134): Parameter "INIT_FILE" = "db/aes_uart_top.ram0_fifo_rx_46c5cb01.hdl.mif"
+    Info (12134): Parameter "RAM_BLOCK_TYPE" = "M9K"
     Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_a8s1.tdf
-    Info (12023): Found entity 1: altsyncram_a8s1 File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/db/altsyncram_a8s1.tdf Line: 28
+Warning (287001): Assertion warning: Device family Cyclone V does not have M9K blocks -- using available memory blocks File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/db/altsyncram_nvo1.tdf Line: 282
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_nvo1.tdf
+    Info (12023): Found entity 1: altsyncram_nvo1 File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/db/altsyncram_nvo1.tdf Line: 28
 Info (12130): Elaborated megafunction instantiation "Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|altsyncram:mem_rtl_0"
 Info (12133): Instantiated megafunction "Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|altsyncram:mem_rtl_0" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
-    Info (12134): Parameter "WIDTH_A" = "8"
+    Info (12134): Parameter "WIDTH_A" = "1"
     Info (12134): Parameter "WIDTHAD_A" = "8"
     Info (12134): Parameter "NUMWORDS_A" = "256"
-    Info (12134): Parameter "WIDTH_B" = "8"
+    Info (12134): Parameter "WIDTH_B" = "1"
     Info (12134): Parameter "WIDTHAD_B" = "8"
     Info (12134): Parameter "NUMWORDS_B" = "256"
     Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
@@ -2330,36 +2381,25 @@ Info (12133): Instantiated megafunction "Buffer_top:u_uart_buffer|fifo_tx:tx_fif
     Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
     Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+    Info (12134): Parameter "RAM_BLOCK_TYPE" = "M9K"
     Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_q3n1.tdf
-    Info (12023): Found entity 1: altsyncram_q3n1 File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/db/altsyncram_q3n1.tdf Line: 28
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "WR_RX" is stuck at GND File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/aes_uart_top.v Line: 11
-    Warning (13410): Pin "fifo_wr_pulse" is stuck at GND File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/aes_uart_top.v Line: 31
-    Warning (13410): Pin "byte_counter[4]" is stuck at GND File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/aes_uart_top.v Line: 36
+Warning (287001): Assertion warning: Device family Cyclone V does not have M9K blocks -- using available memory blocks File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/db/altsyncram_9vo1.tdf Line: 79
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_9vo1.tdf
+    Info (12023): Found entity 1: altsyncram_9vo1 File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/db/altsyncram_9vo1.tdf Line: 28
+Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 15 registers lost all their fanouts during netlist optimizations.
-Info (144001): Generated suppressed messages file /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/output_files/aes_uart_top.map.smsg
+Info (17049): 134 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "rx" File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/aes_uart_top.v Line: 23
-Info (21057): Implemented 7684 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 264 input pins
-    Info (21059): Implemented 145 output pins
-    Info (21061): Implemented 7259 logic cells
-    Info (21064): Implemented 16 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 38 warnings
-    Info: Peak virtual memory: 594 megabytes
-    Info: Processing ended: Sun Mar  1 12:59:33 2026
-    Info: Elapsed time: 00:00:30
-    Info: Total CPU time (on all processors): 00:00:39
-
-
-+------------------------------------------+
-; Analysis & Synthesis Suppressed Messages ;
-+------------------------------------------+
-The suppressed messages can be found in /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/output_files/aes_uart_top.map.smsg.
+Info (21057): Implemented 10036 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 262 input pins
+    Info (21059): Implemented 133 output pins
+    Info (21061): Implemented 9632 logic cells
+    Info (21064): Implemented 9 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 28 warnings
+    Info: Peak virtual memory: 611 megabytes
+    Info: Processing ended: Thu Mar  5 18:44:22 2026
+    Info: Elapsed time: 00:00:26
+    Info: Total CPU time (on all processors): 00:00:34
 
 

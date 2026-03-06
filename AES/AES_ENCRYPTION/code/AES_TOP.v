@@ -34,20 +34,54 @@ module AES_TOP (
     // -----------------------------------------------------------
     // Key expansion (combinational)
     // -----------------------------------------------------------
-    wire [1407:0] round_keys;
-    wire [127:0]  round_key;
+    wire [1407:0] round_keys_comb;
+    reg [127:0]  round_key;
+    reg  [127:0]  round_keys[0:10];
+
+    keyExpansion keyexp (
+        .key      (key),
+        .fullkeys (round_keys_comb)
+    );
+
+    always @(posedge clk or posedge rst_n) begin
+        if (rst_n) begin
+            round_keys[0]  <= 0;
+            round_keys[1]  <= 0;
+            round_keys[2]  <= 0;
+            round_keys[3]  <= 0;
+            round_keys[4]  <= 0;
+            round_keys[5]  <= 0;
+            round_keys[6]  <= 0;
+            round_keys[7]  <= 0;
+            round_keys[8]  <= 0;
+            round_keys[9]  <= 0;
+            round_keys[10] <= 0;
+        end
+        else if (start) begin
+            round_keys[0]  <= round_keys_comb[127:0];
+            round_keys[1]  <= round_keys_comb[255:128];
+            round_keys[2]  <= round_keys_comb[383:256];
+            round_keys[3]  <= round_keys_comb[511:384];
+            round_keys[4]  <= round_keys_comb[639:512];
+            round_keys[5]  <= round_keys_comb[767:640];
+            round_keys[6]  <= round_keys_comb[895:768];
+            round_keys[7]  <= round_keys_comb[1023:896];
+            round_keys[8]  <= round_keys_comb[1151:1024];
+            round_keys[9]  <= round_keys_comb[1279:1152];
+            round_keys[10] <= round_keys_comb[1407:1280];
+        end
+    end
 	 
-	 initial begin
+	initial begin
 		ciphertext = 0;
 		done       = 0;
 	 end
 
-    keyExpansion keyexp (
-        .key      (key),
-        .fullkeys (round_keys)
-    );
+    //assign round_key = round_keys[round];
 
-    assign round_key = round_keys[round*128 +: 128];
+    always @(*) begin
+        round_key <= round_keys[round];
+    end
 
     // -----------------------------------------------------------
     // AES datapath (purely combinational)
@@ -68,11 +102,11 @@ module AES_TOP (
     // -----------------------------------------------------------
     // FSM + sequential control
     // -----------------------------------------------------------
-    always @(posedge clk or negedge rst_n) begin
+    always @(posedge clk or posedge rst_n) begin
         //$display("At time %t, round=%0d, start=%b state=%032h, Round key=%032h", $time, round, start, state, round_key);
         //$display("time: %t, Round key: %032h, sbout: %032h", $time, round_key, sb_out);
         //$display("time: %t, srout: %032h, mcout: %032h", $time, sr_out, mc_out);    
-        if (!rst_n) begin
+        if (rst_n) begin
 				$display("time : %0t | Entered reset block | Encryption", $time);
             fsm_state <= S_IDLE;
             state     <= 128'd0;
@@ -101,7 +135,7 @@ module AES_TOP (
                 // ------------------------------------------------
                 S_LOAD: begin
                     //$display("time: %t, LOAD: AddRoundKey(0), round %0d, state=%032h, Round Key=%032h, mc_out=%032h", $time, round, state, round_key, mc_out);
-                    state <= plaintext ^ round_keys[127:0]; // AddRoundKey(0)
+                    state <= plaintext ^ round_key; // AddRoundKey(0)
                     round <= 4'd1;
                     fsm_state <= S_ROUND;
                 end
