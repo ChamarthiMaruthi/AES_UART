@@ -19,7 +19,7 @@ module fifo_tx #(
 
     // --- Pointers (with extra bit for full/empty detection) ---
     reg [ADDR_WIDTH:0] wr_ptr;
-    reg [ADDR_WIDTH:0] rd_ptr /* synthesis keep */;
+    reg [ADDR_WIDTH:0] rd_ptr;
     reg [ADDR_WIDTH-1:0] wr_addr_reg;
     reg [ADDR_WIDTH-1:0] rd_addr_reg;
     //wire [ADDR_WIDTH-1:0] data_count = wr_ptr - rd_ptr; // Number of items in FIFO
