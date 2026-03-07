@@ -32,7 +32,7 @@ module Buffer_top(
 //wire tx_start;
 reg rd_rx_d;
 // Corrected FIFO Instance
-wire ft_out;
+wire [7:0] ft_out;
 wire rd_en;
 wire [4:0] byte_counter;
 wire rx_parity;

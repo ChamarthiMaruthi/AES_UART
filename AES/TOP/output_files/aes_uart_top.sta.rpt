@@ -1,5 +1,5 @@
 Timing Analyzer report for aes_uart_top
-Fri Mar  6 16:21:12 2026
+Sat Mar  7 15:56:40 2026
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -101,22 +101,22 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 12          ;
 ;                            ;             ;
-; Average used               ; 4.25        ;
+; Average used               ; 4.17        ;
 ; Maximum used               ; 12          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  30.7%      ;
-;     Processor 3            ;  30.6%      ;
-;     Processor 4            ;  30.6%      ;
-;     Processor 5            ;  29.1%      ;
-;     Processor 6            ;  29.1%      ;
-;     Processor 7            ;  29.1%      ;
-;     Processor 8            ;  29.1%      ;
-;     Processor 9            ;  29.1%      ;
-;     Processor 10           ;  29.1%      ;
-;     Processor 11           ;  29.1%      ;
-;     Processor 12           ;  29.1%      ;
+;     Processor 2            ;  29.9%      ;
+;     Processor 3            ;  29.9%      ;
+;     Processor 4            ;  29.8%      ;
+;     Processor 5            ;  28.4%      ;
+;     Processor 6            ;  28.4%      ;
+;     Processor 7            ;  28.4%      ;
+;     Processor 8            ;  28.4%      ;
+;     Processor 9            ;  28.4%      ;
+;     Processor 10           ;  28.4%      ;
+;     Processor 11           ;  28.4%      ;
+;     Processor 12           ;  28.4%      ;
 +----------------------------+-------------+
 
 
@@ -125,7 +125,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------+--------------------------+
 ; SDC File Path        ; Status ; Read at                  ;
 +----------------------+--------+--------------------------+
-; aes_uart_top.out.sdc ; OK     ; Fri Mar  6 16:21:03 2026 ;
+; aes_uart_top.out.sdc ; OK     ; Sat Mar  7 15:56:30 2026 ;
 +----------------------+--------+--------------------------+
 
 
@@ -2279,7 +2279,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Fri Mar  6 16:21:01 2026
+    Info: Processing started: Sat Mar  7 15:56:27 2026
 Info: Command: quartus_sta AES -c aes_uart_top
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -2420,9 +2420,9 @@ Info (332114): Report Metastability: Found 3 synchronizer chains.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 1203 megabytes
-    Info: Processing ended: Fri Mar  6 16:21:12 2026
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:44
+    Info: Peak virtual memory: 1204 megabytes
+    Info: Processing ended: Sat Mar  7 15:56:40 2026
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:46
 
 

@@ -53,7 +53,7 @@
                 if (state == S_IDLE && tx_start && !ft_empty) begin
 						  rd_en   <= 1'b1;
                     state <= S_START;
-						  //$display("time:%0t | UART_TX | Moving to s_start state. rd_en asserted | ft_out:%0h", $time, ft_out);
+						  $display("time:%0t | UART_TX | Moving to s_start state. rd_en asserted | ft_out:%0h", $time, ft_out);
                 end
             end
             
@@ -114,7 +114,7 @@
             end
 
             S_DONE: begin
-                //$display("time:%0t, Transmission done in UART_TX module.", $time);
+                $display("time:%0t, Transmission done in UART_TX module.", $time);
                 state <= S_IDLE;
                 tx_busy <= 0;
 					 rd_en <= 0;

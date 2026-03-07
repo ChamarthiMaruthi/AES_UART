@@ -125,7 +125,7 @@ module AES_TOP (
                 S_IDLE: begin
 						  //ciphertext <= 128'd0;
                     if (start) begin
-                        $display("time: %t, IDLE:Starting encryption | encryption | plaintext:%0h", $time, plaintext);
+                        //$display("time: %t, IDLE:Starting encryption | encryption | plaintext:%0h", $time, plaintext);
                         fsm_state <= S_LOAD;
                     end
                 end
@@ -171,7 +171,7 @@ module AES_TOP (
                 // DONE
                 // ------------------------------------------------
                 S_DONE: begin
-                    $display("time: %t, Inside DONE state, ciphertext=%032h, round=%0d, done:%b", $time, state, round, done);
+                    //$display("time: %t, Inside DONE state, ciphertext=%032h, round=%0d, done:%b", $time, state, round, done);
 						  ciphertext <= state;
                     //done      <= 1'b1;
                     fsm_state<= S_IDLE;

@@ -70,7 +70,7 @@ module fifo_tx #(
             if (rd_en && !ft_empty) begin
                     //$display("time:%0t | FIFO_TX Read | rd_ptr:%d | ft_out:%0h | ft_ready:%b", $time, rd_ptr, ft_out, ft_ready);
                     //ft_out <= mem[rd_ptr[ADDR_WIDTH-1:0]];
-                    rd_addr_reg <= rd_ptr[ADDR_WIDTH:0];
+                    rd_addr_reg <= rd_ptr[ADDR_WIDTH-1:0];
                     rd_ptr <= rd_ptr + 1;
             end
 

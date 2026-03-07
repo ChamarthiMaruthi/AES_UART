@@ -147,7 +147,7 @@ module ADS_TOP (
                 // ------------------------------------------------
                 S_IDLE: begin
                     if (start) begin
-                        $display("time: %t, IDLE:Starting decryption, ciphertext=%032h, key=%032h,", $time, ciphertext, key);
+                        //$display("time: %t, IDLE:Starting decryption, ciphertext=%032h, key=%032h,", $time, ciphertext, key);
                         round     <= 4'd10;
                         fsm_state <= S_LOAD;
                     end
@@ -157,7 +157,7 @@ module ADS_TOP (
                 // LOAD: initial AddRoundKey (round 10)
                 // ------------------------------------------------
                 S_LOAD: begin
-                    $display("time: %t, LOAD: AddRoundKey(10), state=%032h,round_key : %032h", $time, state, round_key);
+                    //$display("time: %t, LOAD: AddRoundKey(10), state=%032h,round_key : %032h", $time, state, round_key);
                     state <= ciphertext ^ round_key;
                     //round <= 4'd9;
                     round <= round - 1'b1;
@@ -168,7 +168,7 @@ module ADS_TOP (
                 // ROUNDS 9..1
                 // ------------------------------------------------
                 S_ROUND: begin
-                    $display("time: %t, INV ROUND %0d, state=%032h, round_key : %032h", $time, round, state, round_key);
+                    //$display("time: %t, INV ROUND %0d, state=%032h, round_key : %032h", $time, round, state, round_key);
                     state <= imc_out; 
                     if (round == 4'd1) begin
                         fsm_state <= S_FINAL;
@@ -182,7 +182,7 @@ module ADS_TOP (
                 // FINAL ROUND (round 0)
                 // ------------------------------------------------
                 S_FINAL: begin
-                    $display("time: %t, FINAL INV ROUND, state=%032h, isb_out=%032h, round_kkey : %032h", $time, state, isr_out, round_key);
+                    //$display("time: %t, FINAL INV ROUND, state=%032h, isb_out=%032h, round_kkey : %032h", $time, state, isr_out, round_key);
                     state     <= imc_in;
                     plaintext <= imc_in;
                     round     <= 4'd0;
@@ -194,7 +194,7 @@ module ADS_TOP (
                 // DONE
                 // ------------------------------------------------
                 S_DONE: begin
-                    $display("time: %t, DONE, plaintext=%032h, imc_in=%032h, round_key=%032h", $time, state, imc_in, round_key);
+                    //$display("time: %t, DONE, plaintext=%032h, imc_in=%032h, round_key=%032h", $time, state, imc_in, round_key);
                     //done      <= 1'b1;
 						  //plaintext <= state;
                     fsm_state<= S_IDLE;

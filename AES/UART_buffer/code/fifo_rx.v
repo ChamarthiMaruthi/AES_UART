@@ -21,9 +21,9 @@ module fifo_rx #(
 		wr_ptr = 0;
 		rd_ptr = 0;
 		dout   = 0;
-		/*for (i = 0; i<32; i=i+1) begin
+		for (i = 0; i<32; i=i+1) begin
 			mem[i] = 0;
-		end*/
+		end
 	 end
      
     /*always @(*) begin
