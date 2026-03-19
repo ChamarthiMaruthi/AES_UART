@@ -173,6 +173,27 @@ module aes_uart_top #( parameter loopback_test = 0)
         end
     end
 
+    reg [3:0] sent_cnt;
+    reg tx_start;
+    always @(posedge clk_3125_tx or posedge rst_n) begin
+    if (rst_n) begin
+        tx_start <= 1'b0;
+        sent_cnt <= 4'd0;
+    end else begin
+        if (tx_start_1) begin
+        tx_start <= 1'b1;
+        sent_cnt <= 4'd0;
+        $display("Time:%0t | tx_start is high.", $time);
+        end else if (tx_start && tx_done) begin
+        if (sent_cnt == 4'd15) begin
+            tx_start <= 1'b0;
+            $display("Time:%0t | tx_start is low.", $time);
+        end
+        sent_cnt <= sent_cnt + 1'b1;
+        end
+    end
+    end
+
     Buffer_top u_uart_buffer (
         .clk_3125_tx (clk_3125_tx),
         .clk_3125_rx (clk_3125_rx),
@@ -180,7 +201,7 @@ module aes_uart_top #( parameter loopback_test = 0)
 
         // TX side
         .parity_type (1'b0),
-        //.tx_start    (tx_start), 
+        .tx_start    (tx_start), 
         .ft_data     (fifo_wr_data),
         .wr_en       (fifo_wr_en_hold),
         .ft_full     (fifo_full),
@@ -239,12 +260,14 @@ module aes_uart_top #( parameter loopback_test = 0)
         end
     end
 
-    reg rd_rx_1;
+    reg dout_valid;
     always @(posedge clk_3125_rx or posedge rst_n) begin
         if (rst_n) begin
-            rd_rx_1 <= 1'b0;
-        end else begin
-            rd_rx_1 <= RD_RX;
+            dout_valid <= 1'b0;
+        end else if (RD_RX && !empty)begin
+            dout_valid <= 1'b1;
+        end else begin 
+            dout_valid <= 1'b0;
         end
     end
 
@@ -253,7 +276,7 @@ module aes_uart_top #( parameter loopback_test = 0)
             rx_byte_cnt <= 4'd0;
             rx_block    <= 128'd0;
             //dec_block_ready <= 1'b0;
-        end else if (rd_rx_1) begin
+        end else if (dout_valid) begin
             if (rx_byte_cnt == 4'd15) begin
                 rx_block[127 - rx_byte_cnt*8 -: 8] <= dout;
                 rx_byte_cnt <= 0;
@@ -270,7 +293,7 @@ module aes_uart_top #( parameter loopback_test = 0)
     always @(posedge clk_3125_rx or posedge rst_n) begin
         if (rst_n) begin
             dec_block_ready <= 1'b0;
-        end else if (rd_rx_1 && rx_byte_cnt == 4'd15) begin
+        end else if (dout_valid && rx_byte_cnt == 4'd15) begin
             dec_block_ready <= 1'b1;
             $display("time:%0t | dec_block_ready is asserted | rx_block : %0h", $time, rx_block[127-rx_byte_cnt*8 -:8]);
         end else begin

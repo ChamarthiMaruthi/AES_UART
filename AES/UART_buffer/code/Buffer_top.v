@@ -5,7 +5,7 @@ module Buffer_top(
 	 input        reset,
     // ===== TX Management Ports =====
     input        parity_type,    // Parity type for UART TX
-    //input        tx_start,       // Start UART TX transmission (writes to FIFO)
+    input        tx_start,       // Start UART TX transmission (writes to FIFO)
     input  [7:0] ft_data,           // Data to transmit
     output       tx,        // UART TX output line
     output       tx_done,       // UART TX completion flag
@@ -30,7 +30,7 @@ module Buffer_top(
 );
 
 //wire tx_start;
-reg rd_rx_d;
+//reg rd_rx_d;
 // Corrected FIFO Instance
 wire [7:0] ft_out;
 wire rd_en;
@@ -48,7 +48,6 @@ fifo_tx tx_fifo_inst (
     .ft_empty(ft_empty),
     .ft_ready(ft_ready) // Not used in this design, but can be connected if needed
 );
-
 
 
 // Corrected UART TX Instance
@@ -88,7 +87,7 @@ fifo_rx rx_fifo_inst (
     .rx_block_ok (rx_block_ok) // Connect the block ready signal to the FIFO
 );
 
-assign tx_start = ft_ready; // Start UART transmission when FIFO is ready (not full)
+/*assign tx_start = ft_ready; // Start UART transmission when FIFO is ready (not full)
 
 always @(posedge clk_3125_rx or posedge reset) begin
     if (reset) begin
@@ -97,6 +96,6 @@ always @(posedge clk_3125_rx or posedge reset) begin
         rd_rx_d <= rd_rx;
     end
 end
-
+*/
 
 endmodule

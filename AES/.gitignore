@@ -1,0 +1,71 @@
+# =========================
+# Quartus Prime
+# =========================
+db/
+incremental_db/
+output_files/
+*.qdb
+*.qpg
+*.qws
+*.smsg
+*.summary
+*.rpt
+
+# Quartus generated IP / cache
+qdb/
+cdb/
+*.cmp
+*.qip
+
+# =========================
+# ModelSim / QuestaSim
+# =========================
+simulation/
+work/
+modelsim.ini
+transcript
+vsim.wlf
+*.wlf
+
+# compiled libraries
+*_lib/
+gate_work/
+rtl_work/
+
+# =========================
+# Temporary / lock files
+# =========================
+*.flock
+*.log
+*.bak
+*.tmp
+
+# =========================
+# OS / Editor junk
+# =========================
+*~
+*.swp
+*.swo
+.DS_Store
+
+# =========================
+# Archives (optional)
+# =========================
+*.zip
+*.tar
+*.gz
+
+# =========================
+# DO NOT IGNORE (important)
+# =========================
+# Keep these files tracked:
+!*.v
+!*.sv
+!*.vhd
+!*.vh
+!*.svh
+!*.qsf
+!*.qpf
+!*.sdc
+!*.tcl
+!README.md
