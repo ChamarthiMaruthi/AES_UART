@@ -183,11 +183,11 @@ module aes_uart_top #( parameter loopback_test = 0)
         if (tx_start_1) begin
         tx_start <= 1'b1;
         sent_cnt <= 4'd0;
-        $display("Time:%0t | tx_start is high.", $time);
+        //$display("Time:%0t | tx_start is high.", $time);
         end else if (tx_start && tx_done) begin
         if (sent_cnt == 4'd15) begin
             tx_start <= 1'b0;
-            $display("Time:%0t | tx_start is low.", $time);
+            //$display("Time:%0t | tx_start is low.", $time);
         end
         sent_cnt <= sent_cnt + 1'b1;
         end
@@ -249,13 +249,13 @@ module aes_uart_top #( parameter loopback_test = 0)
             RD_RX <= 1'b0;
         end else if (rx_block_ready) begin
                 RD_RX <= 1'b1;
-                rd_counter <= rd_counter + 1'b1;
-                $display("time:%0t | RD_RX is asserted", $time);
-        end else if (rd_counter == 5'd16) begin
+                //rd_counter <= rd_counter + 1'b1;
+                //$display("time:%0t | RD_RX is asserted", $time);
+        end else if (rd_counter == 5'd15) begin
                 RD_RX <= 1'b0;
                 rd_counter <= 5'd0;
                 //$display("time: %0t | RD_RX is de-asserted", $time);
-        end else if ((RD_RX == 1'b1) && (rd_counter !== 5'd16))begin
+        end else if ((RD_RX == 1'b1) && (rd_counter !== 5'd15))begin
                 rd_counter <= rd_counter + 1'b1; 
         end
     end
@@ -280,11 +280,11 @@ module aes_uart_top #( parameter loopback_test = 0)
             if (rx_byte_cnt == 4'd15) begin
                 rx_block[127 - rx_byte_cnt*8 -: 8] <= dout;
                 rx_byte_cnt <= 0;
-                $display("time:%0t | rx_byte_cnt is made zero and dec_block_ready is asserted. dout : %0h", $time, dout);
+                //$display("time:%0t | rx_byte_cnt is made zero and dec_block_ready is asserted. dout : %0h", $time, dout);
             end else begin
                 rx_block[127 - rx_byte_cnt*8 -: 8] <= dout;
                 rx_byte_cnt <= rx_byte_cnt + 1'b1;
-                $display("time:%0t | rx_byte_cnt : %0d | dout : %0h", $time, rx_byte_cnt, dout);
+                //$display("time:%0t | rx_byte_cnt : %0d | dout : %0h", $time, rx_byte_cnt, dout);
             end
         end
     end
@@ -295,7 +295,7 @@ module aes_uart_top #( parameter loopback_test = 0)
             dec_block_ready <= 1'b0;
         end else if (dout_valid && rx_byte_cnt == 4'd15) begin
             dec_block_ready <= 1'b1;
-            $display("time:%0t | dec_block_ready is asserted | rx_block : %0h", $time, rx_block[127-rx_byte_cnt*8 -:8]);
+            //$display("time:%0t | dec_block_ready is asserted | rx_block : %0h", $time, rx_block[127-rx_byte_cnt*8 -:8]);
         end else begin
             dec_block_ready <= 1'b0;
             //$display("$time:%0t | dec_block_ready is de-asserted | rx_byte_cnt : %d", $time, rx_byte_cnt);
@@ -390,7 +390,7 @@ module aes_uart_top #( parameter loopback_test = 0)
 
                 ST_RX_WAIT: begin
                     if (dec_block_ready_fast) begin
-								$display("time:%0t | RX_wait state " , $time);
+								//$display("time:%0t | RX_wait state " , $time);
                         sys_state <= ST_DEC_START;
                     end
                 end

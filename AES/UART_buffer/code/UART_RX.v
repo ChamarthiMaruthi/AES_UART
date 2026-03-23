@@ -120,11 +120,11 @@ case(state)
 							rx_complete <= 1'b1;
 							rx_parity <= sampled_parity;
                             byte_counter <= byte_counter + 1'b1;
-                            $display("Time: %t | UART_RX | S_STOP  -> Sampling Stop Bit. Waited %d cycles. rx_msg value: %0h. FRAME COMPLETE.byte_counter: %0d", $time, clk_counter + 1, data_shift_reg, byte_counter);
+                            //$display("Time: %t | UART_RX | S_STOP  -> Sampling Stop Bit. Waited %d cycles. rx_msg value: %0h. FRAME COMPLETE.byte_counter: %0d", $time, clk_counter + 1, data_shift_reg, byte_counter);
                             if(byte_counter == 15) begin
                                 byte_counter <= 0; // Reset byte counter after receiving a full block of 16 bytes
                                 rx_block_ok <= 1'b1; // Signal that a full block has been received
-                                $display("Time: %t | UART_RX | Received 16 bytes. Byte counter reset. rx_block_ok asserted. byte_counter: %0d", $time, byte_counter);
+                                //$display("Time: %t | UART_RX | Received 16 bytes. Byte counter reset. rx_block_ok asserted. byte_counter: %0d", $time, byte_counter);
                             end
 						end
 						state <= S_IDLE;

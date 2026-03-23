@@ -129,7 +129,7 @@ module ADS_TOP (
         //$display("time: %t, Round key: %032h, sbout: %032h", $time, round_key, sb_out);
         //$display("time: %t, srout: %032h, mcout: %032h", $time, sr_out, mc_out);    
         if (rst_n) begin
-				$display("time:%0t, Entered reset block | Decryption | state=%032h", $time, state);
+				//$display("time:%0t, Entered reset block | Decryption | state=%032h", $time, state);
             fsm_state <= S_IDLE;
             state     <= 128'd0;
             round     <= 4'd0;

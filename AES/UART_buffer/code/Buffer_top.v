@@ -12,7 +12,6 @@ module Buffer_top(
 	 output       tx_busy,
 	 output       ft_full,
 	 output       ft_empty,
-     output       ft_ready,
 	 input        wr_en,
 	 
 	 

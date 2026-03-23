@@ -1,5 +1,5 @@
 Analysis & Synthesis report for aes_uart_top
-Thu Mar 19 22:07:09 2026
+Sat Mar 21 10:09:18 2026
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -34,130 +34,131 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
  26. Parameter Settings for Inferred Entity Instance: Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|altsyncram:mem_rtl_0
  27. altsyncram Parameter Settings by Entity Instance
  28. Port Connectivity Checks: "Buffer_top:u_uart_buffer|uart_rx:rx_inst"
- 29. Port Connectivity Checks: "Buffer_top:u_uart_buffer"
- 30. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[43].s3"
- 31. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[43].s2"
- 32. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[43].s1"
- 33. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[43].s0"
- 34. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[42].s3"
- 35. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[42].s2"
- 36. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[42].s1"
- 37. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[42].s0"
- 38. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[41].s3"
- 39. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[41].s2"
- 40. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[41].s1"
- 41. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[41].s0"
- 42. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[39].s3"
- 43. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[39].s2"
- 44. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[39].s1"
- 45. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[39].s0"
- 46. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[38].s3"
- 47. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[38].s2"
- 48. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[38].s1"
- 49. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[38].s0"
- 50. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[37].s3"
- 51. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[37].s2"
- 52. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[37].s1"
- 53. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[37].s0"
- 54. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[35].s3"
- 55. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[35].s2"
- 56. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[35].s1"
- 57. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[35].s0"
- 58. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[34].s3"
- 59. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[34].s2"
- 60. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[34].s1"
- 61. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[34].s0"
- 62. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[33].s3"
- 63. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[33].s2"
- 64. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[33].s1"
- 65. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[33].s0"
- 66. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[31].s3"
- 67. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[31].s2"
- 68. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[31].s1"
- 69. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[31].s0"
- 70. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[30].s3"
- 71. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[30].s2"
- 72. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[30].s1"
- 73. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[30].s0"
- 74. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[29].s3"
- 75. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[29].s2"
- 76. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[29].s1"
- 77. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[29].s0"
- 78. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[27].s3"
- 79. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[27].s2"
- 80. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[27].s1"
- 81. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[27].s0"
- 82. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[26].s3"
- 83. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[26].s2"
- 84. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[26].s1"
- 85. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[26].s0"
- 86. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[25].s3"
- 87. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[25].s2"
- 88. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[25].s1"
- 89. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[25].s0"
- 90. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[23].s3"
- 91. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[23].s2"
- 92. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[23].s1"
- 93. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[23].s0"
- 94. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[22].s3"
- 95. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[22].s2"
- 96. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[22].s1"
- 97. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[22].s0"
- 98. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[21].s3"
- 99. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[21].s2"
-100. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[21].s1"
-101. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[21].s0"
-102. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[19].s3"
-103. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[19].s2"
-104. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[19].s1"
-105. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[19].s0"
-106. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[18].s3"
-107. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[18].s2"
-108. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[18].s1"
-109. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[18].s0"
-110. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[17].s3"
-111. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[17].s2"
-112. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[17].s1"
-113. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[17].s0"
-114. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[15].s3"
-115. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[15].s2"
-116. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[15].s1"
-117. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[15].s0"
-118. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[14].s3"
-119. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[14].s2"
-120. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[14].s1"
-121. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[14].s0"
-122. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[13].s3"
-123. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[13].s2"
-124. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[13].s1"
-125. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[13].s0"
-126. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[11].s3"
-127. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[11].s2"
-128. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[11].s1"
-129. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[11].s0"
-130. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[10].s3"
-131. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[10].s2"
-132. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[10].s1"
-133. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[10].s0"
-134. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[9].s3"
-135. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[9].s2"
-136. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[9].s1"
-137. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[9].s0"
-138. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[7].s3"
-139. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[7].s2"
-140. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[7].s1"
-141. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[7].s0"
-142. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[6].s3"
-143. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[6].s2"
-144. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[6].s1"
-145. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[6].s0"
-146. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[5].s3"
-147. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[5].s2"
-148. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[5].s1"
-149. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[5].s0"
-150. Post-Synthesis Netlist Statistics for Top Partition
-151. Elapsed Time Per Partition
-152. Analysis & Synthesis Messages
+ 29. Port Connectivity Checks: "Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst"
+ 30. Port Connectivity Checks: "Buffer_top:u_uart_buffer"
+ 31. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[43].s3"
+ 32. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[43].s2"
+ 33. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[43].s1"
+ 34. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[43].s0"
+ 35. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[42].s3"
+ 36. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[42].s2"
+ 37. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[42].s1"
+ 38. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[42].s0"
+ 39. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[41].s3"
+ 40. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[41].s2"
+ 41. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[41].s1"
+ 42. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[41].s0"
+ 43. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[39].s3"
+ 44. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[39].s2"
+ 45. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[39].s1"
+ 46. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[39].s0"
+ 47. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[38].s3"
+ 48. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[38].s2"
+ 49. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[38].s1"
+ 50. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[38].s0"
+ 51. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[37].s3"
+ 52. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[37].s2"
+ 53. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[37].s1"
+ 54. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[37].s0"
+ 55. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[35].s3"
+ 56. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[35].s2"
+ 57. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[35].s1"
+ 58. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[35].s0"
+ 59. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[34].s3"
+ 60. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[34].s2"
+ 61. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[34].s1"
+ 62. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[34].s0"
+ 63. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[33].s3"
+ 64. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[33].s2"
+ 65. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[33].s1"
+ 66. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[33].s0"
+ 67. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[31].s3"
+ 68. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[31].s2"
+ 69. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[31].s1"
+ 70. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[31].s0"
+ 71. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[30].s3"
+ 72. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[30].s2"
+ 73. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[30].s1"
+ 74. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[30].s0"
+ 75. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[29].s3"
+ 76. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[29].s2"
+ 77. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[29].s1"
+ 78. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[29].s0"
+ 79. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[27].s3"
+ 80. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[27].s2"
+ 81. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[27].s1"
+ 82. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[27].s0"
+ 83. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[26].s3"
+ 84. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[26].s2"
+ 85. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[26].s1"
+ 86. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[26].s0"
+ 87. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[25].s3"
+ 88. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[25].s2"
+ 89. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[25].s1"
+ 90. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[25].s0"
+ 91. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[23].s3"
+ 92. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[23].s2"
+ 93. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[23].s1"
+ 94. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[23].s0"
+ 95. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[22].s3"
+ 96. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[22].s2"
+ 97. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[22].s1"
+ 98. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[22].s0"
+ 99. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[21].s3"
+100. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[21].s2"
+101. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[21].s1"
+102. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[21].s0"
+103. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[19].s3"
+104. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[19].s2"
+105. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[19].s1"
+106. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[19].s0"
+107. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[18].s3"
+108. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[18].s2"
+109. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[18].s1"
+110. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[18].s0"
+111. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[17].s3"
+112. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[17].s2"
+113. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[17].s1"
+114. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[17].s0"
+115. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[15].s3"
+116. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[15].s2"
+117. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[15].s1"
+118. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[15].s0"
+119. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[14].s3"
+120. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[14].s2"
+121. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[14].s1"
+122. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[14].s0"
+123. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[13].s3"
+124. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[13].s2"
+125. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[13].s1"
+126. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[13].s0"
+127. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[11].s3"
+128. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[11].s2"
+129. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[11].s1"
+130. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[11].s0"
+131. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[10].s3"
+132. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[10].s2"
+133. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[10].s1"
+134. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[10].s0"
+135. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[9].s3"
+136. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[9].s2"
+137. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[9].s1"
+138. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[9].s0"
+139. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[7].s3"
+140. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[7].s2"
+141. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[7].s1"
+142. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[7].s0"
+143. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[6].s3"
+144. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[6].s2"
+145. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[6].s1"
+146. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[6].s0"
+147. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[5].s3"
+148. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[5].s2"
+149. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[5].s1"
+150. Port Connectivity Checks: "AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[5].s0"
+151. Post-Synthesis Netlist Statistics for Top Partition
+152. Elapsed Time Per Partition
+153. Analysis & Synthesis Messages
 
 
 
@@ -184,13 +185,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Mar 19 22:07:09 2026       ;
+; Analysis & Synthesis Status     ; Successful - Sat Mar 21 10:09:18 2026       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; aes_uart_top                                ;
 ; Top-level Entity Name           ; aes_uart_top                                ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 3831                                        ;
+; Total registers                 ; 3830                                        ;
 ; Total pins                      ; 395                                         ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 4,096                                       ;
@@ -362,14 +363,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------------+
 ; Estimate of Logic utilization (ALMs needed) ; 5650        ;
 ;                                             ;             ;
-; Combinational ALUT usage for logic          ; 6791        ;
+; Combinational ALUT usage for logic          ; 6789        ;
 ;     -- 7 input functions                    ; 180         ;
 ;     -- 6 input functions                    ; 3969        ;
 ;     -- 5 input functions                    ; 841         ;
-;     -- 4 input functions                    ; 499         ;
-;     -- <=3 input functions                  ; 1302        ;
+;     -- 4 input functions                    ; 498         ;
+;     -- <=3 input functions                  ; 1301        ;
 ;                                             ;             ;
-; Dedicated logic registers                   ; 3831        ;
+; Dedicated logic registers                   ; 3830        ;
 ;                                             ;             ;
 ; I/O pins                                    ; 395         ;
 ; Total MLAB memory bits                      ; 0           ;
@@ -378,8 +379,8 @@ https://fpgasoftware.intel.com/eula.
 ; Total DSP Blocks                            ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; rst_n~input ;
-; Maximum fan-out                             ; 3752        ;
-; Total fan-out                               ; 50182       ;
+; Maximum fan-out                             ; 3751        ;
+; Total fan-out                               ; 50174       ;
 ; Average fan-out                             ; 4.39        ;
 +---------------------------------------------+-------------+
 
@@ -389,7 +390,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                             ; Entity Name     ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |aes_uart_top                                ; 6791 (101)          ; 3831 (308)                ; 4096              ; 0          ; 395  ; 0            ; |aes_uart_top                                                                                                   ; aes_uart_top    ; work         ;
+; |aes_uart_top                                ; 6789 (99)           ; 3830 (307)                ; 4096              ; 0          ; 395  ; 0            ; |aes_uart_top                                                                                                   ;                 ;              ;
 ;    |ADS_TOP:u_aes_decrypt|                   ; 4667 (779)          ; 1673 (1673)               ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|ADS_TOP:u_aes_decrypt                                                                             ; ADS_TOP         ; work         ;
 ;       |invMixColumns:u_imc|                  ; 302 (302)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|ADS_TOP:u_aes_decrypt|invMixColumns:u_imc                                                         ; invMixColumns   ; work         ;
 ;       |inverseSubBytes:u_isb|                ; 640 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|ADS_TOP:u_aes_decrypt|inverseSubBytes:u_isb                                                       ; inverseSubBytes ; work         ;
@@ -607,8 +608,9 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; AES_TOP:u_aes_encrypt|fsm_state~10                       ; Lost fanout                            ;
 ; AES_TOP:u_aes_encrypt|fsm_state.S_DONE                   ; Merged with AES_TOP:u_aes_encrypt|done ;
 ; ADS_TOP:u_aes_decrypt|fsm_state.S_DONE                   ; Merged with ADS_TOP:u_aes_decrypt|done ;
+; rd_counter[4]                                            ; Stuck at GND due to stuck port data_in ;
 ; Buffer_top:u_uart_buffer|uart_rx:rx_inst|byte_counter[4] ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 16                   ;                                        ;
+; Total Number of Removed Registers = 17                   ;                                        ;
 +----------------------------------------------------------+----------------------------------------+
 
 
@@ -617,7 +619,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 3831  ;
+; Total registers                              ; 3830  ;
 ; Number of registers using Synchronous Clear  ; 78    ;
 ; Number of registers using Synchronous Load   ; 8     ;
 ; Number of registers using Asynchronous Clear ; 3649  ;
@@ -721,8 +723,8 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; 3:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |aes_uart_top|Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|wr_ptr[7]   ;
 ; 3:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |aes_uart_top|Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|rd_ptr[4]   ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |aes_uart_top|sent_cnt[1]                                               ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |aes_uart_top|rd_counter[0]                                             ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |aes_uart_top|Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|ft_out[6]   ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |aes_uart_top|rd_counter[4]                                             ;
 ; 4:1                ; 128 bits  ; 256 LEs       ; 256 LEs              ; 0 LEs                  ; Yes        ; |aes_uart_top|ADS_TOP:u_aes_decrypt|state[57]                           ;
 ; 4:1                ; 128 bits  ; 256 LEs       ; 256 LEs              ; 0 LEs                  ; Yes        ; |aes_uart_top|AES_TOP:u_aes_encrypt|state[53]                           ;
 ; 16:1               ; 8 bits    ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; Yes        ; |aes_uart_top|fifo_wr_data[5]                                           ;
@@ -955,20 +957,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Buffer_top:u_uart_buffer"                                                                                       ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                                                  ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; parity_type ; Input  ; Info     ; Stuck at GND                                                                                             ;
-; ft_empty    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
-; tx_busy     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
-; rx_msg      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
-; rx_complete ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
-; wr_rx       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
-; full        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
-; ft_ready    ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst"                                          ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; ft_ready ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Buffer_top:u_uart_buffer"                                                                  ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                             ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; parity_type ; Input  ; Info     ; Stuck at GND                                                                        ;
+; ft_empty    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; tx_busy     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; rx_msg      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; rx_complete ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; wr_rx       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; full        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------+
@@ -2056,25 +2066,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 3831                        ;
+; arriav_ff             ; 3830                        ;
 ;     CLR               ; 46                          ;
 ;     ENA               ; 35                          ;
 ;     ENA CLR           ; 3603                        ;
 ;     ENA SCLR          ; 18                          ;
 ;     SCLR              ; 52                          ;
 ;     SCLR SLD          ; 8                           ;
-;     plain             ; 69                          ;
-; arriav_lcell_comb     ; 6791                        ;
+;     plain             ; 68                          ;
+; arriav_lcell_comb     ; 6789                        ;
 ;     arith             ; 36                          ;
 ;         1 data inputs ; 34                          ;
 ;         2 data inputs ; 2                           ;
 ;     extend            ; 180                         ;
 ;         7 data inputs ; 180                         ;
-;     normal            ; 6575                        ;
+;     normal            ; 6573                        ;
 ;         1 data inputs ; 2                           ;
-;         2 data inputs ; 842                         ;
+;         2 data inputs ; 841                         ;
 ;         3 data inputs ; 422                         ;
-;         4 data inputs ; 499                         ;
+;         4 data inputs ; 498                         ;
 ;         5 data inputs ; 841                         ;
 ;         6 data inputs ; 3969                        ;
 ; boundary_port         ; 395                         ;
@@ -2090,7 +2100,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:13     ;
+; Top            ; 00:00:12     ;
 +----------------+--------------+
 
 
@@ -2100,7 +2110,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Thu Mar 19 22:06:48 2026
+    Info: Processing started: Sat Mar 21 10:08:59 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off AES -c aes_uart_top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -2146,6 +2156,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file /home/m
     Info (12023): Found entity 1: inverseSubBytes File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/inverseSubBytes.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/invMixColumns.v
     Info (12023): Found entity 1: invMixColumns File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/invMixColumns.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at Buffer_top.v(48): created implicit net for "ft_ready" File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/Buffer_top.v Line: 48
 Info (12127): Elaborating entity "aes_uart_top" for the top level hierarchy
 Info (12128): Elaborating entity "AES_TOP" for hierarchy "AES_TOP:u_aes_encrypt" File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/aes_uart_top.v Line: 60
 Info (12128): Elaborating entity "keyExpansion" for hierarchy "AES_TOP:u_aes_encrypt|keyExpansion:keyexp" File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/AES_TOP.v Line: 44
@@ -2154,12 +2165,12 @@ Info (12128): Elaborating entity "subBytes" for hierarchy "AES_TOP:u_aes_encrypt
 Info (12128): Elaborating entity "shiftRows" for hierarchy "AES_TOP:u_aes_encrypt|shiftRows:u_sr" File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/AES_TOP.v Line: 96
 Info (12128): Elaborating entity "mixColumns" for hierarchy "AES_TOP:u_aes_encrypt|mixColumns:u_mc" File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/AES_TOP.v Line: 97
 Info (12128): Elaborating entity "Buffer_top" for hierarchy "Buffer_top:u_uart_buffer" File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/aes_uart_top.v Line: 223
-Info (12128): Elaborating entity "fifo_tx" for hierarchy "Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst" File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/Buffer_top.v Line: 50
+Info (12128): Elaborating entity "fifo_tx" for hierarchy "Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst" File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/Buffer_top.v Line: 49
 Warning (10036): Verilog HDL or VHDL warning at fifo_tx.v(23): object "wr_addr_reg" assigned a value but never read File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/fifo_tx.v Line: 23
 Warning (10230): Verilog HDL assignment warning at fifo_tx.v(63): truncated value with size 9 to match size of target (8) File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/fifo_tx.v Line: 63
 Warning (10230): Verilog HDL assignment warning at fifo_tx.v(64): truncated value with size 32 to match size of target (9) File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/fifo_tx.v Line: 64
 Warning (10230): Verilog HDL assignment warning at fifo_tx.v(74): truncated value with size 32 to match size of target (9) File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/fifo_tx.v Line: 74
-Info (12128): Elaborating entity "uart_tx" for hierarchy "Buffer_top:u_uart_buffer|uart_tx:tx_inst" File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/Buffer_top.v Line: 64
+Info (12128): Elaborating entity "uart_tx" for hierarchy "Buffer_top:u_uart_buffer|uart_tx:tx_inst" File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/Buffer_top.v Line: 63
 Warning (10230): Verilog HDL assignment warning at UART_TX.v(72): truncated value with size 32 to match size of target (4) File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_TX.v Line: 72
 Warning (10230): Verilog HDL assignment warning at UART_TX.v(83): truncated value with size 32 to match size of target (3) File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_TX.v Line: 83
 Warning (10230): Verilog HDL assignment warning at UART_TX.v(87): truncated value with size 32 to match size of target (4) File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_TX.v Line: 87
@@ -2167,14 +2178,14 @@ Warning (10230): Verilog HDL assignment warning at UART_TX.v(100): truncated val
 Warning (10230): Verilog HDL assignment warning at UART_TX.v(109): truncated value with size 32 to match size of target (4) File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_TX.v Line: 109
 Warning (10240): Verilog HDL Always Construct warning at UART_TX.v(133): inferring latch(es) for variable "tx", which holds its previous value in one or more paths through the always construct File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_TX.v Line: 133
 Info (10041): Inferred latch for "tx" at UART_TX.v(133) File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_TX.v Line: 133
-Info (12128): Elaborating entity "uart_rx" for hierarchy "Buffer_top:u_uart_buffer|uart_rx:rx_inst" File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/Buffer_top.v Line: 75
+Info (12128): Elaborating entity "uart_rx" for hierarchy "Buffer_top:u_uart_buffer|uart_rx:rx_inst" File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/Buffer_top.v Line: 74
 Warning (10036): Verilog HDL or VHDL warning at UART_RX.v(42): object "rx_start" assigned a value but never read File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_RX.v Line: 42
 Warning (10230): Verilog HDL assignment warning at UART_RX.v(79): truncated value with size 32 to match size of target (5) File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_RX.v Line: 79
 Warning (10230): Verilog HDL assignment warning at UART_RX.v(94): truncated value with size 32 to match size of target (3) File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_RX.v Line: 94
 Warning (10230): Verilog HDL assignment warning at UART_RX.v(97): truncated value with size 32 to match size of target (5) File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_RX.v Line: 97
 Warning (10230): Verilog HDL assignment warning at UART_RX.v(109): truncated value with size 32 to match size of target (5) File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_RX.v Line: 109
 Warning (10230): Verilog HDL assignment warning at UART_RX.v(132): truncated value with size 32 to match size of target (5) File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_RX.v Line: 132
-Info (12128): Elaborating entity "fifo_rx" for hierarchy "Buffer_top:u_uart_buffer|fifo_rx:rx_fifo_inst" File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/Buffer_top.v Line: 88
+Info (12128): Elaborating entity "fifo_rx" for hierarchy "Buffer_top:u_uart_buffer|fifo_rx:rx_fifo_inst" File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/Buffer_top.v Line: 87
 Warning (10036): Verilog HDL or VHDL warning at fifo_rx.v(19): object "wr_addr_reg" assigned a value but never read File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/fifo_rx.v Line: 19
 Warning (10230): Verilog HDL assignment warning at fifo_rx.v(49): truncated value with size 32 to match size of target (9) File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/fifo_rx.v Line: 49
 Warning (10230): Verilog HDL assignment warning at fifo_rx.v(56): truncated value with size 32 to match size of target (9) File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/fifo_rx.v Line: 56
@@ -2346,20 +2357,19 @@ Info (12133): Instantiated megafunction "Buffer_top:u_uart_buffer|fifo_tx:tx_fif
 Warning (287001): Assertion warning: Device family Cyclone V does not have M9K blocks -- using available memory blocks File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/db/altsyncram_nvo1.tdf Line: 282
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_nvo1.tdf
     Info (12023): Found entity 1: altsyncram_nvo1 File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/db/altsyncram_nvo1.tdf Line: 28
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 13 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 10266 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 10264 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 262 input pins
     Info (21059): Implemented 133 output pins
-    Info (21061): Implemented 9855 logic cells
+    Info (21061): Implemented 9853 logic cells
     Info (21064): Implemented 16 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 26 warnings
-    Info: Peak virtual memory: 602 megabytes
-    Info: Processing ended: Thu Mar 19 22:07:09 2026
-    Info: Elapsed time: 00:00:21
-    Info: Total CPU time (on all processors): 00:00:30
+    Info: Peak virtual memory: 615 megabytes
+    Info: Processing ended: Sat Mar 21 10:09:18 2026
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:27
 
 

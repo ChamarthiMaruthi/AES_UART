@@ -1,220 +1,56 @@
-# do aes_uart_top_run_msim_rtl_verilog.do
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
+# do aes_uart_top_run_msim_gate_verilog.do
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
 # }
-# vlib rtl_work
-# vmap work rtl_work
+# vlib gate_work
+# vmap work gate_work
 # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
-# vmap work rtl_work 
+# vmap work gate_work 
 # Copying /home/maruthi/intelFPGA_lite/20.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/aes_uart_top.v}
+# vlog -vlog01compat -work work +incdir+. {aes_uart_top.vo}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:20:24 on Mar 19,2026
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/aes_uart_top.v 
+# Start time: 23:31:18 on Mar 21,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+." aes_uart_top.vo 
 # -- Compiling module aes_uart_top
 # 
 # Top level modules:
 # 	aes_uart_top
-# End time: 22:20:24 on Mar 19,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/AES_TOP.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:20:24 on Mar 19,2026
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/AES_TOP.v 
-# -- Compiling module AES_TOP
-# 
-# Top level modules:
-# 	AES_TOP
-# End time: 22:20:24 on Mar 19,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/keyExpansion.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:20:24 on Mar 19,2026
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/keyExpansion.v 
-# -- Compiling module keyExpansion
-# 
-# Top level modules:
-# 	keyExpansion
-# End time: 22:20:24 on Mar 19,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/mixColumns.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:20:24 on Mar 19,2026
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/mixColumns.v 
-# -- Compiling module mixColumns
-# 
-# Top level modules:
-# 	mixColumns
-# End time: 22:20:24 on Mar 19,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/sbox.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:20:24 on Mar 19,2026
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/sbox.v 
-# -- Compiling module sbox
-# 
-# Top level modules:
-# 	sbox
-# End time: 22:20:24 on Mar 19,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/shiftRows.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:20:24 on Mar 19,2026
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/shiftRows.v 
-# -- Compiling module shiftRows
-# 
-# Top level modules:
-# 	shiftRows
-# End time: 22:20:24 on Mar 19,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/subBytes.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:20:24 on Mar 19,2026
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/subBytes.v 
-# -- Compiling module subBytes
-# 
-# Top level modules:
-# 	subBytes
-# End time: 22:20:24 on Mar 19,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/Buffer_top.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:20:24 on Mar 19,2026
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/Buffer_top.v 
-# -- Compiling module Buffer_top
-# 
-# Top level modules:
-# 	Buffer_top
-# End time: 22:20:24 on Mar 19,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/fifo_tx.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:20:24 on Mar 19,2026
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/fifo_tx.v 
-# -- Compiling module fifo_tx
-# 
-# Top level modules:
-# 	fifo_tx
-# End time: 22:20:24 on Mar 19,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_TX.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:20:24 on Mar 19,2026
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_TX.v 
-# -- Compiling module uart_tx
-# 
-# Top level modules:
-# 	uart_tx
-# End time: 22:20:24 on Mar 19,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_RX.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:20:24 on Mar 19,2026
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_RX.v 
-# -- Compiling module uart_rx
-# 
-# Top level modules:
-# 	uart_rx
-# End time: 22:20:24 on Mar 19,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/fifo_rx.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:20:24 on Mar 19,2026
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/fifo_rx.v 
-# -- Compiling module fifo_rx
-# 
-# Top level modules:
-# 	fifo_rx
-# End time: 22:20:24 on Mar 19,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/ADS_TOP.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:20:24 on Mar 19,2026
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/ADS_TOP.v 
-# -- Compiling module ADS_TOP
-# 
-# Top level modules:
-# 	ADS_TOP
-# End time: 22:20:24 on Mar 19,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/inverseShiftrows.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:20:25 on Mar 19,2026
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/inverseShiftrows.v 
-# -- Compiling module inverseShiftRows
-# 
-# Top level modules:
-# 	inverseShiftRows
-# End time: 22:20:25 on Mar 19,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/inverseSbox.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:20:25 on Mar 19,2026
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/inverseSbox.v 
-# -- Compiling module inverseSbox
-# 
-# Top level modules:
-# 	inverseSbox
-# End time: 22:20:25 on Mar 19,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/inverseSubBytes.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:20:25 on Mar 19,2026
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/inverseSubBytes.v 
-# -- Compiling module inverseSubBytes
-# 
-# Top level modules:
-# 	inverseSubBytes
-# End time: 22:20:25 on Mar 19,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/invMixColumns.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:20:25 on Mar 19,2026
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/invMixColumns.v 
-# -- Compiling module invMixColumns
-# 
-# Top level modules:
-# 	invMixColumns
-# End time: 22:20:25 on Mar 19,2026, Elapsed time: 0:00:00
+# End time: 23:31:19 on Mar 21,2026, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/../testbench {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/../testbench/tb.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:20:25 on Mar 19,2026
+# Start time: 23:31:19 on Mar 21,2026
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/../testbench" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/../testbench/tb.v 
 # -- Compiling module tb
 # 
 # Top level modules:
 # 	tb
-# End time: 22:20:25 on Mar 19,2026, Elapsed time: 0:00:00
+# End time: 23:31:19 on Mar 21,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb 
-# Start time: 22:20:25 on Mar 19,2026
+# vsim -t 1ps -L altera_ver -L altera_lnsim_ver -L cyclonev_ver -L lpm_ver -L sgate_ver -L cyclonev_hssi_ver -L altera_mf_ver -L cyclonev_pcie_hip_ver -L gate_work -L work -voptargs="+acc"  tb
+# vsim -t 1ps -L altera_ver -L altera_lnsim_ver -L cyclonev_ver -L lpm_ver -L sgate_ver -L cyclonev_hssi_ver -L altera_mf_ver -L cyclonev_pcie_hip_ver -L gate_work -L work -voptargs=""+acc"" tb 
+# Start time: 23:31:19 on Mar 21,2026
 # Loading work.tb
 # Loading work.aes_uart_top
-# Loading work.AES_TOP
-# Loading work.keyExpansion
-# Loading work.subBytes
-# Loading work.shiftRows
-# Loading work.mixColumns
-# Loading work.Buffer_top
-# Loading work.fifo_tx
-# Loading work.uart_tx
-# Loading work.uart_rx
-# Loading work.fifo_rx
-# Loading work.ADS_TOP
-# Loading work.inverseShiftRows
-# Loading work.inverseSubBytes
-# Loading work.invMixColumns
-# Loading work.sbox
-# Loading work.inverseSbox
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'u_uart_buffer'.  Expected 22, found 21.
-#    Time: 0 ps  Iteration: 0  Instance: /tb/dut/u_uart_buffer File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/aes_uart_top.v Line: 197
-# ** Warning: (vsim-3722) /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/aes_uart_top.v(197): [TFMPC] - Missing connection for port 'ft_ready'.
+# Loading cyclonev_ver.cyclonev_io_obuf
+# Loading cyclonev_ver.cyclonev_io_ibuf
+# Loading cyclonev_ver.cyclonev_clkena
+# Loading cyclonev_ver.cyclonev_lcell_comb
+# Loading altera_ver.dffeas
+# Loading cyclonev_ver.cyclonev_ram_block
+# Loading sv_std.std
+# Loading altera_lnsim_ver.generic_m10k
+# Loading altera_lnsim_ver.altera_lnsim_functions
+# Loading altera_lnsim_ver.common_28nm_ram_block
+# Loading altera_lnsim_ver.common_28nm_ram_register
+# Loading altera_lnsim_ver.common_28nm_ram_pulse_generator
+# Loading altera_ver.PRIM_GDFF_LOW
+# ** Warning: Design size of 72445 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
 # 
 # add wave *
 # view structure
@@ -222,830 +58,58 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# time : 0 | Entered reset block | Encryption
-# time:0, Entered reset block | Decryption | state=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 # time: 10000 | in_flight : 0 | latency_cnt : 0
-# Time:1280000 | tx_start is high.
-# time:2240000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:x
-# Time:             51680000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 58. FRAME COMPLETE.byte_counter: 0
-# time:51840000, Transmission done in UART_TX module.
-# time:52160000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:58
-# Time:            101600000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: e2. FRAME COMPLETE.byte_counter: 1
-# time:101760000, Transmission done in UART_TX module.
-# time:102080000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:e2
-# Time:            151520000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: fc. FRAME COMPLETE.byte_counter: 2
-# time:151680000, Transmission done in UART_TX module.
-# time:152000000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:fc
-# Time:            201440000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: ce. FRAME COMPLETE.byte_counter: 3
-# time:201600000, Transmission done in UART_TX module.
-# time:201920000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:ce
-# Time:            251360000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: fa. FRAME COMPLETE.byte_counter: 4
-# time:251520000, Transmission done in UART_TX module.
-# time:251840000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:fa
-# Time:            301280000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 7e. FRAME COMPLETE.byte_counter: 5
-# time:301440000, Transmission done in UART_TX module.
-# time:301760000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:7e
-# Time:            351200000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 30. FRAME COMPLETE.byte_counter: 6
-# time:351360000, Transmission done in UART_TX module.
-# time:351680000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:30
-# Time:            401120000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 61. FRAME COMPLETE.byte_counter: 7
-# time:401280000, Transmission done in UART_TX module.
-# time:401600000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:61
-# Time:            451040000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 36. FRAME COMPLETE.byte_counter: 8
-# time:451200000, Transmission done in UART_TX module.
-# time:451520000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:36
-# Time:            500960000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 7f. FRAME COMPLETE.byte_counter: 9
-# time:501120000, Transmission done in UART_TX module.
-# time:501440000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:7f
-# Time:            550880000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 1d. FRAME COMPLETE.byte_counter: 10
-# time:551040000, Transmission done in UART_TX module.
-# time:551360000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:1d
-# Time:            600800000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 57. FRAME COMPLETE.byte_counter: 11
-# time:600960000, Transmission done in UART_TX module.
-# time:601280000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:57
-# Time:            650720000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: a4. FRAME COMPLETE.byte_counter: 12
-# time:650880000, Transmission done in UART_TX module.
-# time:651200000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:a4
-# Time:            700640000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: e7. FRAME COMPLETE.byte_counter: 13
-# time:700800000, Transmission done in UART_TX module.
-# time:701120000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:e7
-# Time:            750560000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 45. FRAME COMPLETE.byte_counter: 14
-# time:750720000, Transmission done in UART_TX module.
-# time:751040000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:45
-# Time:800320000 | tx_start is low.
-# Time:            800480000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 5a. FRAME COMPLETE.byte_counter: 15
-# Time:            800480000 | UART_RX | Received 16 bytes. Byte counter reset. rx_block_ok asserted. byte_counter: 15
-# time:800640000, Transmission done in UART_TX module.
-# time:801120000 | RD_RX is asserted
-# time:801760000 | rx_byte_cnt : 0 | dout : 58
-# time:802080000 | rx_byte_cnt : 1 | dout : e2
-# time:802400000 | rx_byte_cnt : 2 | dout : fc
-# time:802720000 | rx_byte_cnt : 3 | dout : ce
-# time:803040000 | rx_byte_cnt : 4 | dout : fa
-# time:803360000 | rx_byte_cnt : 5 | dout : 7e
-# time:803680000 | rx_byte_cnt : 6 | dout : 30
-# time:804000000 | rx_byte_cnt : 7 | dout : 61
-# time:804320000 | rx_byte_cnt : 8 | dout : 36
-# time:804640000 | rx_byte_cnt : 9 | dout : 7f
-# time:804960000 | rx_byte_cnt : 10 | dout : 1d
-# time:805280000 | rx_byte_cnt : 11 | dout : 57
-# time:805600000 | rx_byte_cnt : 12 | dout : a4
-# time:805920000 | rx_byte_cnt : 13 | dout : e7
-# time:806240000 | rx_byte_cnt : 14 | dout : 45
-# time:806560000 | rx_byte_cnt is made zero and dec_block_ready is asserted. dout : 5a
-# time:806560000 | dec_block_ready is asserted | rx_block : 0
-# time:806590000 | RX_wait state 
 # time : 806750000 | in_flight is made zero | Entered done handshake block. pt=00000000000000000000000000000001
 # ❌ LATENCY ERROR exp=80670 got=80673
 # S.No: 1 PASS
 # Time:806750000 | Plaintext  : 00000000000000000000000000000001
 # Time:806750000 |  Expected   : 00000000000000000000000000000001
 # time: 806760000 | in_flight : 0 | latency_cnt : 80673
-# Time:808000000 | tx_start is high.
-# time:808960000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:5a
-# Time:            858400000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 3. FRAME COMPLETE.byte_counter: 0
-# time:858560000, Transmission done in UART_TX module.
-# time:858880000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:3
-# Time:            908320000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 88. FRAME COMPLETE.byte_counter: 1
-# time:908480000, Transmission done in UART_TX module.
-# time:908800000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:88
-# Time:            958240000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: da. FRAME COMPLETE.byte_counter: 2
-# time:958400000, Transmission done in UART_TX module.
-# time:958720000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:da
-# Time:           1008160000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: ce. FRAME COMPLETE.byte_counter: 3
-# time:1008320000, Transmission done in UART_TX module.
-# time:1008640000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:ce
-# Time:           1058080000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 60. FRAME COMPLETE.byte_counter: 4
-# time:1058240000, Transmission done in UART_TX module.
-# time:1058560000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:60
-# Time:           1108000000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: b6. FRAME COMPLETE.byte_counter: 5
-# time:1108160000, Transmission done in UART_TX module.
-# time:1108480000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:b6
-# Time:           1157920000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: a3. FRAME COMPLETE.byte_counter: 6
-# time:1158080000, Transmission done in UART_TX module.
-# time:1158400000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:a3
-# Time:           1207840000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 92. FRAME COMPLETE.byte_counter: 7
-# time:1208000000, Transmission done in UART_TX module.
-# time:1208320000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:92
-# Time:           1257760000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: f3. FRAME COMPLETE.byte_counter: 8
-# time:1257920000, Transmission done in UART_TX module.
-# time:1258240000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:f3
-# Time:           1307680000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 28. FRAME COMPLETE.byte_counter: 9
-# time:1307840000, Transmission done in UART_TX module.
-# time:1308160000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:28
-# Time:           1357600000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: c2. FRAME COMPLETE.byte_counter: 10
-# time:1357760000, Transmission done in UART_TX module.
-# time:1358080000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:c2
-# Time:           1407520000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: b9. FRAME COMPLETE.byte_counter: 11
-# time:1407680000, Transmission done in UART_TX module.
-# time:1408000000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:b9
-# Time:           1457440000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 71. FRAME COMPLETE.byte_counter: 12
-# time:1457600000, Transmission done in UART_TX module.
-# time:1457920000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:71
-# Time:           1507360000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: b2. FRAME COMPLETE.byte_counter: 13
-# time:1507520000, Transmission done in UART_TX module.
-# time:1507840000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:b2
-# Time:           1557280000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: fe. FRAME COMPLETE.byte_counter: 14
-# time:1557440000, Transmission done in UART_TX module.
-# time:1557760000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:fe
-# Time:1607040000 | tx_start is low.
-# Time:           1607200000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 78. FRAME COMPLETE.byte_counter: 15
-# Time:           1607200000 | UART_RX | Received 16 bytes. Byte counter reset. rx_block_ok asserted. byte_counter: 15
-# time:1607360000, Transmission done in UART_TX module.
-# time:1607840000 | RD_RX is asserted
-# time:1608480000 | rx_byte_cnt : 0 | dout : 3
-# time:1608800000 | rx_byte_cnt : 1 | dout : 88
-# time:1609120000 | rx_byte_cnt : 2 | dout : da
-# time:1609440000 | rx_byte_cnt : 3 | dout : ce
-# time:1609760000 | rx_byte_cnt : 4 | dout : 60
-# time:1610080000 | rx_byte_cnt : 5 | dout : b6
-# time:1610400000 | rx_byte_cnt : 6 | dout : a3
-# time:1610720000 | rx_byte_cnt : 7 | dout : 92
-# time:1611040000 | rx_byte_cnt : 8 | dout : f3
-# time:1611360000 | rx_byte_cnt : 9 | dout : 28
-# time:1611680000 | rx_byte_cnt : 10 | dout : c2
-# time:1612000000 | rx_byte_cnt : 11 | dout : b9
-# time:1612320000 | rx_byte_cnt : 12 | dout : 71
-# time:1612640000 | rx_byte_cnt : 13 | dout : b2
-# time:1612960000 | rx_byte_cnt : 14 | dout : fe
-# time:1613280000 | rx_byte_cnt is made zero and dec_block_ready is asserted. dout : 78
-# time:1613280000 | dec_block_ready is asserted | rx_block : 5a
-# time:1613310000 | RX_wait state 
 # time : 1613470000 | in_flight is made zero | Entered done handshake block. pt=00000000000000000000000000000002
 # S.No: 2 PASS
 # Time:1613470000 | Plaintext  : 00000000000000000000000000000002
 # Time:1613470000 |  Expected   : 00000000000000000000000000000002
 # time: 1613480000 | in_flight : 0 | latency_cnt : 80670
-# Time:1614720000 | tx_start is high.
-# time:1615680000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:78
-# Time:           1665120000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: f7. FRAME COMPLETE.byte_counter: 0
-# time:1665280000, Transmission done in UART_TX module.
-# time:1665600000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:f7
-# Time:           1715040000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 95. FRAME COMPLETE.byte_counter: 1
-# time:1715200000, Transmission done in UART_TX module.
-# time:1715520000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:95
-# Time:           1764960000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: aa. FRAME COMPLETE.byte_counter: 2
-# time:1765120000, Transmission done in UART_TX module.
-# time:1765440000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:aa
-# Time:           1814880000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: ab. FRAME COMPLETE.byte_counter: 3
-# time:1815040000, Transmission done in UART_TX module.
-# time:1815360000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:ab
-# Time:           1864800000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 49. FRAME COMPLETE.byte_counter: 4
-# time:1864960000, Transmission done in UART_TX module.
-# time:1865280000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:49
-# Time:           1914720000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 4b. FRAME COMPLETE.byte_counter: 5
-# time:1914880000, Transmission done in UART_TX module.
-# time:1915200000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:4b
-# Time:           1964640000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 59. FRAME COMPLETE.byte_counter: 6
-# time:1964800000, Transmission done in UART_TX module.
-# time:1965120000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:59
-# Time:           2014560000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 23. FRAME COMPLETE.byte_counter: 7
-# time:2014720000, Transmission done in UART_TX module.
-# time:2015040000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:23
-# Time:           2064480000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: f7. FRAME COMPLETE.byte_counter: 8
-# time:2064640000, Transmission done in UART_TX module.
-# time:2064960000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:f7
-# Time:           2114400000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: fd. FRAME COMPLETE.byte_counter: 9
-# time:2114560000, Transmission done in UART_TX module.
-# time:2114880000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:fd
-# Time:           2164320000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 89. FRAME COMPLETE.byte_counter: 10
-# time:2164480000, Transmission done in UART_TX module.
-# time:2164800000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:89
-# Time:           2214240000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: ff. FRAME COMPLETE.byte_counter: 11
-# time:2214400000, Transmission done in UART_TX module.
-# time:2214720000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:ff
-# Time:           2264160000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 94. FRAME COMPLETE.byte_counter: 12
-# time:2264320000, Transmission done in UART_TX module.
-# time:2264640000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:94
-# Time:           2314080000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 8b. FRAME COMPLETE.byte_counter: 13
-# time:2314240000, Transmission done in UART_TX module.
-# time:2314560000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:8b
-# Time:           2364000000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: c1. FRAME COMPLETE.byte_counter: 14
-# time:2364160000, Transmission done in UART_TX module.
-# time:2364480000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:c1
-# Time:2413760000 | tx_start is low.
-# Time:           2413920000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: e0. FRAME COMPLETE.byte_counter: 15
-# Time:           2413920000 | UART_RX | Received 16 bytes. Byte counter reset. rx_block_ok asserted. byte_counter: 15
-# time:2414080000, Transmission done in UART_TX module.
-# time:2414560000 | RD_RX is asserted
-# time:2415200000 | rx_byte_cnt : 0 | dout : f7
-# time:2415520000 | rx_byte_cnt : 1 | dout : 95
-# time:2415840000 | rx_byte_cnt : 2 | dout : aa
-# time:2416160000 | rx_byte_cnt : 3 | dout : ab
-# time:2416480000 | rx_byte_cnt : 4 | dout : 49
-# time:2416800000 | rx_byte_cnt : 5 | dout : 4b
-# time:2417120000 | rx_byte_cnt : 6 | dout : 59
-# time:2417440000 | rx_byte_cnt : 7 | dout : 23
-# time:2417760000 | rx_byte_cnt : 8 | dout : f7
-# time:2418080000 | rx_byte_cnt : 9 | dout : fd
-# time:2418400000 | rx_byte_cnt : 10 | dout : 89
-# time:2418720000 | rx_byte_cnt : 11 | dout : ff
-# time:2419040000 | rx_byte_cnt : 12 | dout : 94
-# time:2419360000 | rx_byte_cnt : 13 | dout : 8b
-# time:2419680000 | rx_byte_cnt : 14 | dout : c1
-# time:2420000000 | rx_byte_cnt is made zero and dec_block_ready is asserted. dout : e0
-# time:2420000000 | dec_block_ready is asserted | rx_block : 78
-# time:2420030000 | RX_wait state 
 # time : 2420190000 | in_flight is made zero | Entered done handshake block. pt=00000000000000000000000000000003
 # S.No: 3 PASS
 # Time:2420190000 | Plaintext  : 00000000000000000000000000000003
 # Time:2420190000 |  Expected   : 00000000000000000000000000000003
 # time: 2420200000 | in_flight : 0 | latency_cnt : 80670
-# Time:2421440000 | tx_start is high.
-# time:2422400000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:e0
-# Time:           2471840000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 20. FRAME COMPLETE.byte_counter: 0
-# time:2472000000, Transmission done in UART_TX module.
-# time:2472320000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:20
-# Time:           2521760000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 2. FRAME COMPLETE.byte_counter: 1
-# time:2521920000, Transmission done in UART_TX module.
-# time:2522240000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:2
-# Time:           2571680000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 11. FRAME COMPLETE.byte_counter: 2
-# time:2571840000, Transmission done in UART_TX module.
-# time:2572160000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:11
-# Time:           2621600000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 21. FRAME COMPLETE.byte_counter: 3
-# time:2621760000, Transmission done in UART_TX module.
-# time:2622080000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:21
-# Time:           2671520000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 4e. FRAME COMPLETE.byte_counter: 4
-# time:2671680000, Transmission done in UART_TX module.
-# time:2672000000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:4e
-# Time:           2721440000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 73. FRAME COMPLETE.byte_counter: 5
-# time:2721600000, Transmission done in UART_TX module.
-# time:2721920000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:73
-# Time:           2771360000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 94. FRAME COMPLETE.byte_counter: 6
-# time:2771520000, Transmission done in UART_TX module.
-# time:2771840000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:94
-# Time:           2821280000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: da. FRAME COMPLETE.byte_counter: 7
-# time:2821440000, Transmission done in UART_TX module.
-# time:2821760000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:da
-# Time:           2871200000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 20. FRAME COMPLETE.byte_counter: 8
-# time:2871360000, Transmission done in UART_TX module.
-# time:2871680000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:20
-# Time:           2921120000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 89. FRAME COMPLETE.byte_counter: 9
-# time:2921280000, Transmission done in UART_TX module.
-# time:2921600000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:89
-# Time:           2971040000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: b6. FRAME COMPLETE.byte_counter: 10
-# time:2971200000, Transmission done in UART_TX module.
-# time:2971520000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:b6
-# Time:           3020960000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: ac. FRAME COMPLETE.byte_counter: 11
-# time:3021120000, Transmission done in UART_TX module.
-# time:3021440000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:ac
-# Time:           3070880000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: d0. FRAME COMPLETE.byte_counter: 12
-# time:3071040000, Transmission done in UART_TX module.
-# time:3071360000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:d0
-# Time:           3120800000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 93. FRAME COMPLETE.byte_counter: 13
-# time:3120960000, Transmission done in UART_TX module.
-# time:3121280000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:93
-# Time:           3170720000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: ab. FRAME COMPLETE.byte_counter: 14
-# time:3170880000, Transmission done in UART_TX module.
-# time:3171200000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:ab
-# Time:3220480000 | tx_start is low.
-# Time:           3220640000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: e0. FRAME COMPLETE.byte_counter: 15
-# Time:           3220640000 | UART_RX | Received 16 bytes. Byte counter reset. rx_block_ok asserted. byte_counter: 15
-# time:3220800000, Transmission done in UART_TX module.
-# time:3221280000 | RD_RX is asserted
-# time:3221920000 | rx_byte_cnt : 0 | dout : 20
-# time:3222240000 | rx_byte_cnt : 1 | dout : 2
-# time:3222560000 | rx_byte_cnt : 2 | dout : 11
-# time:3222880000 | rx_byte_cnt : 3 | dout : 21
-# time:3223200000 | rx_byte_cnt : 4 | dout : 4e
-# time:3223520000 | rx_byte_cnt : 5 | dout : 73
-# time:3223840000 | rx_byte_cnt : 6 | dout : 94
-# time:3224160000 | rx_byte_cnt : 7 | dout : da
-# time:3224480000 | rx_byte_cnt : 8 | dout : 20
-# time:3224800000 | rx_byte_cnt : 9 | dout : 89
-# time:3225120000 | rx_byte_cnt : 10 | dout : b6
-# time:3225440000 | rx_byte_cnt : 11 | dout : ac
-# time:3225760000 | rx_byte_cnt : 12 | dout : d0
-# time:3226080000 | rx_byte_cnt : 13 | dout : 93
-# time:3226400000 | rx_byte_cnt : 14 | dout : ab
-# time:3226720000 | rx_byte_cnt is made zero and dec_block_ready is asserted. dout : e0
-# time:3226720000 | dec_block_ready is asserted | rx_block : e0
-# time:3226750000 | RX_wait state 
 # time : 3226910000 | in_flight is made zero | Entered done handshake block. pt=00000000000000000000000000000004
 # S.No: 4 PASS
 # Time:3226910000 | Plaintext  : 00000000000000000000000000000004
 # Time:3226910000 |  Expected   : 00000000000000000000000000000004
 # time: 3226920000 | in_flight : 0 | latency_cnt : 80670
-# Time:3228160000 | tx_start is high.
-# time:3229120000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:e0
-# Time:           3278560000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: c9. FRAME COMPLETE.byte_counter: 0
-# time:3278720000, Transmission done in UART_TX module.
-# time:3279040000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:c9
-# Time:           3328480000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 4d. FRAME COMPLETE.byte_counter: 1
-# time:3328640000, Transmission done in UART_TX module.
-# time:3328960000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:4d
-# Time:           3378400000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: a2. FRAME COMPLETE.byte_counter: 2
-# time:3378560000, Transmission done in UART_TX module.
-# time:3378880000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:a2
-# Time:           3428320000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 19. FRAME COMPLETE.byte_counter: 3
-# time:3428480000, Transmission done in UART_TX module.
-# time:3428800000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:19
-# Time:           3478240000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 11. FRAME COMPLETE.byte_counter: 4
-# time:3478400000, Transmission done in UART_TX module.
-# time:3478720000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:11
-# Time:           3528160000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 8e. FRAME COMPLETE.byte_counter: 5
-# time:3528320000, Transmission done in UART_TX module.
-# time:3528640000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:8e
-# Time:           3578080000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 29. FRAME COMPLETE.byte_counter: 6
-# time:3578240000, Transmission done in UART_TX module.
-# time:3578560000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:29
-# Time:           3628000000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 7d. FRAME COMPLETE.byte_counter: 7
-# time:3628160000, Transmission done in UART_TX module.
-# time:3628480000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:7d
-# Time:           3677920000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 7b. FRAME COMPLETE.byte_counter: 8
-# time:3678080000, Transmission done in UART_TX module.
-# time:3678400000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:7b
-# Time:           3727840000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 7e. FRAME COMPLETE.byte_counter: 9
-# time:3728000000, Transmission done in UART_TX module.
-# time:3728320000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:7e
-# Time:           3777760000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: bc. FRAME COMPLETE.byte_counter: 10
-# time:3777920000, Transmission done in UART_TX module.
-# time:3778240000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:bc
-# Time:           3827680000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: bc. FRAME COMPLETE.byte_counter: 11
-# time:3827840000, Transmission done in UART_TX module.
-# time:3828160000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:bc
-# Time:           3877600000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: c9. FRAME COMPLETE.byte_counter: 12
-# time:3877760000, Transmission done in UART_TX module.
-# time:3878080000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:c9
-# Time:           3927520000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: c3. FRAME COMPLETE.byte_counter: 13
-# time:3927680000, Transmission done in UART_TX module.
-# time:3928000000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:c3
-# Time:           3977440000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 88. FRAME COMPLETE.byte_counter: 14
-# time:3977600000, Transmission done in UART_TX module.
-# time:3977920000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:88
-# Time:4027200000 | tx_start is low.
-# Time:           4027360000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: f2. FRAME COMPLETE.byte_counter: 15
-# Time:           4027360000 | UART_RX | Received 16 bytes. Byte counter reset. rx_block_ok asserted. byte_counter: 15
-# time:4027520000, Transmission done in UART_TX module.
-# time:4028000000 | RD_RX is asserted
-# time:4028640000 | rx_byte_cnt : 0 | dout : c9
-# time:4028960000 | rx_byte_cnt : 1 | dout : 4d
-# time:4029280000 | rx_byte_cnt : 2 | dout : a2
-# time:4029600000 | rx_byte_cnt : 3 | dout : 19
-# time:4029920000 | rx_byte_cnt : 4 | dout : 11
-# time:4030240000 | rx_byte_cnt : 5 | dout : 8e
-# time:4030560000 | rx_byte_cnt : 6 | dout : 29
-# time:4030880000 | rx_byte_cnt : 7 | dout : 7d
-# time:4031200000 | rx_byte_cnt : 8 | dout : 7b
-# time:4031520000 | rx_byte_cnt : 9 | dout : 7e
-# time:4031840000 | rx_byte_cnt : 10 | dout : bc
-# time:4032160000 | rx_byte_cnt : 11 | dout : bc
-# time:4032480000 | rx_byte_cnt : 12 | dout : c9
-# time:4032800000 | rx_byte_cnt : 13 | dout : c3
-# time:4033120000 | rx_byte_cnt : 14 | dout : 88
-# time:4033440000 | rx_byte_cnt is made zero and dec_block_ready is asserted. dout : f2
-# time:4033440000 | dec_block_ready is asserted | rx_block : e0
-# time:4033470000 | RX_wait state 
 # time : 4033630000 | in_flight is made zero | Entered done handshake block. pt=00000000000000000000000000000005
 # S.No: 5 PASS
 # Time:4033630000 | Plaintext  : 00000000000000000000000000000005
 # Time:4033630000 |  Expected   : 00000000000000000000000000000005
 # time: 4033640000 | in_flight : 0 | latency_cnt : 80670
-# Time:4034880000 | tx_start is high.
-# time:4035840000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:f2
-# Time:           4085280000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 8a. FRAME COMPLETE.byte_counter: 0
-# time:4085440000, Transmission done in UART_TX module.
-# time:4085760000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:8a
-# Time:           4135200000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: de. FRAME COMPLETE.byte_counter: 1
-# time:4135360000, Transmission done in UART_TX module.
-# time:4135680000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:de
-# Time:           4185120000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 7d. FRAME COMPLETE.byte_counter: 2
-# time:4185280000, Transmission done in UART_TX module.
-# time:4185600000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:7d
-# Time:           4235040000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 85. FRAME COMPLETE.byte_counter: 3
-# time:4235200000, Transmission done in UART_TX module.
-# time:4235520000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:85
-# Time:           4284960000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: a8. FRAME COMPLETE.byte_counter: 4
-# time:4285120000, Transmission done in UART_TX module.
-# time:4285440000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:a8
-# Time:           4334880000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: ee. FRAME COMPLETE.byte_counter: 5
-# time:4335040000, Transmission done in UART_TX module.
-# time:4335360000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:ee
-# Time:           4384800000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 35. FRAME COMPLETE.byte_counter: 6
-# time:4384960000, Transmission done in UART_TX module.
-# time:4385280000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:35
-# Time:           4434720000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 61. FRAME COMPLETE.byte_counter: 7
-# time:4434880000, Transmission done in UART_TX module.
-# time:4435200000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:61
-# Time:           4484640000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 6f. FRAME COMPLETE.byte_counter: 8
-# time:4484800000, Transmission done in UART_TX module.
-# time:4485120000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:6f
-# Time:           4534560000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 71. FRAME COMPLETE.byte_counter: 9
-# time:4534720000, Transmission done in UART_TX module.
-# time:4535040000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:71
-# Time:           4584480000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 24. FRAME COMPLETE.byte_counter: 10
-# time:4584640000, Transmission done in UART_TX module.
-# time:4584960000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:24
-# Time:           4634400000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: a9. FRAME COMPLETE.byte_counter: 11
-# time:4634560000, Transmission done in UART_TX module.
-# time:4634880000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:a9
-# Time:           4684320000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: d5. FRAME COMPLETE.byte_counter: 12
-# time:4684480000, Transmission done in UART_TX module.
-# time:4684800000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:d5
-# Time:           4734240000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 27. FRAME COMPLETE.byte_counter: 13
-# time:4734400000, Transmission done in UART_TX module.
-# time:4734720000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:27
-# Time:           4784160000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 2. FRAME COMPLETE.byte_counter: 14
-# time:4784320000, Transmission done in UART_TX module.
-# time:4784640000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:2
-# Time:4833920000 | tx_start is low.
-# Time:           4834080000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 91. FRAME COMPLETE.byte_counter: 15
-# Time:           4834080000 | UART_RX | Received 16 bytes. Byte counter reset. rx_block_ok asserted. byte_counter: 15
-# time:4834240000, Transmission done in UART_TX module.
-# time:4834720000 | RD_RX is asserted
-# time:4835360000 | rx_byte_cnt : 0 | dout : 8a
-# time:4835680000 | rx_byte_cnt : 1 | dout : de
-# time:4836000000 | rx_byte_cnt : 2 | dout : 7d
-# time:4836320000 | rx_byte_cnt : 3 | dout : 85
-# time:4836640000 | rx_byte_cnt : 4 | dout : a8
-# time:4836960000 | rx_byte_cnt : 5 | dout : ee
-# time:4837280000 | rx_byte_cnt : 6 | dout : 35
-# time:4837600000 | rx_byte_cnt : 7 | dout : 61
-# time:4837920000 | rx_byte_cnt : 8 | dout : 6f
-# time:4838240000 | rx_byte_cnt : 9 | dout : 71
-# time:4838560000 | rx_byte_cnt : 10 | dout : 24
-# time:4838880000 | rx_byte_cnt : 11 | dout : a9
-# time:4839200000 | rx_byte_cnt : 12 | dout : d5
-# time:4839520000 | rx_byte_cnt : 13 | dout : 27
-# time:4839840000 | rx_byte_cnt : 14 | dout : 2
-# time:4840160000 | rx_byte_cnt is made zero and dec_block_ready is asserted. dout : 91
-# time:4840160000 | dec_block_ready is asserted | rx_block : f2
-# time:4840190000 | RX_wait state 
 # time : 4840350000 | in_flight is made zero | Entered done handshake block. pt=00000000000000000000000000000006
 # S.No: 6 PASS
 # Time:4840350000 | Plaintext  : 00000000000000000000000000000006
 # Time:4840350000 |  Expected   : 00000000000000000000000000000006
 # time: 4840360000 | in_flight : 0 | latency_cnt : 80670
-# Time:4841600000 | tx_start is high.
-# time:4842560000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:91
-# Time:           4892000000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 95. FRAME COMPLETE.byte_counter: 0
-# time:4892160000, Transmission done in UART_TX module.
-# time:4892480000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:95
-# Time:           4941920000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: b8. FRAME COMPLETE.byte_counter: 1
-# time:4942080000, Transmission done in UART_TX module.
-# time:4942400000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:b8
-# Time:           4991840000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 4d. FRAME COMPLETE.byte_counter: 2
-# time:4992000000, Transmission done in UART_TX module.
-# time:4992320000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:4d
-# Time:           5041760000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 1b. FRAME COMPLETE.byte_counter: 3
-# time:5041920000, Transmission done in UART_TX module.
-# time:5042240000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:1b
-# Time:           5091680000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 96. FRAME COMPLETE.byte_counter: 4
-# time:5091840000, Transmission done in UART_TX module.
-# time:5092160000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:96
-# Time:           5141600000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: c6. FRAME COMPLETE.byte_counter: 5
-# time:5141760000, Transmission done in UART_TX module.
-# time:5142080000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:c6
-# Time:           5191520000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 90. FRAME COMPLETE.byte_counter: 6
-# time:5191680000, Transmission done in UART_TX module.
-# time:5192000000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:90
-# Time:           5241440000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: ff. FRAME COMPLETE.byte_counter: 7
-# time:5241600000, Transmission done in UART_TX module.
-# time:5241920000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:ff
-# Time:           5291360000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 2f. FRAME COMPLETE.byte_counter: 8
-# time:5291520000, Transmission done in UART_TX module.
-# time:5291840000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:2f
-# Time:           5341280000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 2d. FRAME COMPLETE.byte_counter: 9
-# time:5341440000, Transmission done in UART_TX module.
-# time:5341760000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:2d
-# Time:           5391200000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: e3. FRAME COMPLETE.byte_counter: 10
-# time:5391360000, Transmission done in UART_TX module.
-# time:5391680000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:e3
-# Time:           5441120000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: b. FRAME COMPLETE.byte_counter: 11
-# time:5441280000, Transmission done in UART_TX module.
-# time:5441600000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:b
-# Time:           5491040000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: f2. FRAME COMPLETE.byte_counter: 12
-# time:5491200000, Transmission done in UART_TX module.
-# time:5491520000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:f2
-# Time:           5540960000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: ec. FRAME COMPLETE.byte_counter: 13
-# time:5541120000, Transmission done in UART_TX module.
-# time:5541440000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:ec
-# Time:           5590880000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 89. FRAME COMPLETE.byte_counter: 14
-# time:5591040000, Transmission done in UART_TX module.
-# time:5591360000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:89
-# Time:5640640000 | tx_start is low.
-# Time:           5640800000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: e0. FRAME COMPLETE.byte_counter: 15
-# Time:           5640800000 | UART_RX | Received 16 bytes. Byte counter reset. rx_block_ok asserted. byte_counter: 15
-# time:5640960000, Transmission done in UART_TX module.
-# time:5641440000 | RD_RX is asserted
-# time:5642080000 | rx_byte_cnt : 0 | dout : 95
-# time:5642400000 | rx_byte_cnt : 1 | dout : b8
-# time:5642720000 | rx_byte_cnt : 2 | dout : 4d
-# time:5643040000 | rx_byte_cnt : 3 | dout : 1b
-# time:5643360000 | rx_byte_cnt : 4 | dout : 96
-# time:5643680000 | rx_byte_cnt : 5 | dout : c6
-# time:5644000000 | rx_byte_cnt : 6 | dout : 90
-# time:5644320000 | rx_byte_cnt : 7 | dout : ff
-# time:5644640000 | rx_byte_cnt : 8 | dout : 2f
-# time:5644960000 | rx_byte_cnt : 9 | dout : 2d
-# time:5645280000 | rx_byte_cnt : 10 | dout : e3
-# time:5645600000 | rx_byte_cnt : 11 | dout : b
-# time:5645920000 | rx_byte_cnt : 12 | dout : f2
-# time:5646240000 | rx_byte_cnt : 13 | dout : ec
-# time:5646560000 | rx_byte_cnt : 14 | dout : 89
-# time:5646880000 | rx_byte_cnt is made zero and dec_block_ready is asserted. dout : e0
-# time:5646880000 | dec_block_ready is asserted | rx_block : 91
-# time:5646910000 | RX_wait state 
 # time : 5647070000 | in_flight is made zero | Entered done handshake block. pt=00000000000000000000000000000007
 # S.No: 7 PASS
 # Time:5647070000 | Plaintext  : 00000000000000000000000000000007
 # Time:5647070000 |  Expected   : 00000000000000000000000000000007
 # time: 5647080000 | in_flight : 0 | latency_cnt : 80670
-# Time:5648320000 | tx_start is high.
-# time:5649280000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:e0
-# Time:           5698720000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 2. FRAME COMPLETE.byte_counter: 0
-# time:5698880000, Transmission done in UART_TX module.
-# time:5699200000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:2
-# Time:           5748640000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 53. FRAME COMPLETE.byte_counter: 1
-# time:5748800000, Transmission done in UART_TX module.
-# time:5749120000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:53
-# Time:           5798560000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 78. FRAME COMPLETE.byte_counter: 2
-# time:5798720000, Transmission done in UART_TX module.
-# time:5799040000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:78
-# Time:           5848480000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 6e. FRAME COMPLETE.byte_counter: 3
-# time:5848640000, Transmission done in UART_TX module.
-# time:5848960000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:6e
-# Time:           5898400000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 12. FRAME COMPLETE.byte_counter: 4
-# time:5898560000, Transmission done in UART_TX module.
-# time:5898880000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:12
-# Time:           5948320000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 65. FRAME COMPLETE.byte_counter: 5
-# time:5948480000, Transmission done in UART_TX module.
-# time:5948800000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:65
-# Time:           5998240000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 4. FRAME COMPLETE.byte_counter: 6
-# time:5998400000, Transmission done in UART_TX module.
-# time:5998720000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:4
-# Time:           6048160000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: f0. FRAME COMPLETE.byte_counter: 7
-# time:6048320000, Transmission done in UART_TX module.
-# time:6048640000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:f0
-# Time:           6098080000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: da. FRAME COMPLETE.byte_counter: 8
-# time:6098240000, Transmission done in UART_TX module.
-# time:6098560000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:da
-# Time:           6148000000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: b9. FRAME COMPLETE.byte_counter: 9
-# time:6148160000, Transmission done in UART_TX module.
-# time:6148480000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:b9
-# Time:           6197920000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: c. FRAME COMPLETE.byte_counter: 10
-# time:6198080000, Transmission done in UART_TX module.
-# time:6198400000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:c
-# Time:           6247840000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 48. FRAME COMPLETE.byte_counter: 11
-# time:6248000000, Transmission done in UART_TX module.
-# time:6248320000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:48
-# Time:           6297760000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: a3. FRAME COMPLETE.byte_counter: 12
-# time:6297920000, Transmission done in UART_TX module.
-# time:6298240000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:a3
-# Time:           6347680000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 3. FRAME COMPLETE.byte_counter: 13
-# time:6347840000, Transmission done in UART_TX module.
-# time:6348160000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:3
-# Time:           6397600000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 21. FRAME COMPLETE.byte_counter: 14
-# time:6397760000, Transmission done in UART_TX module.
-# time:6398080000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:21
-# Time:6447360000 | tx_start is low.
-# Time:           6447520000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: de. FRAME COMPLETE.byte_counter: 15
-# Time:           6447520000 | UART_RX | Received 16 bytes. Byte counter reset. rx_block_ok asserted. byte_counter: 15
-# time:6447680000, Transmission done in UART_TX module.
-# time:6448160000 | RD_RX is asserted
-# time:6448800000 | rx_byte_cnt : 0 | dout : 2
-# time:6449120000 | rx_byte_cnt : 1 | dout : 53
-# time:6449440000 | rx_byte_cnt : 2 | dout : 78
-# time:6449760000 | rx_byte_cnt : 3 | dout : 6e
-# time:6450080000 | rx_byte_cnt : 4 | dout : 12
-# time:6450400000 | rx_byte_cnt : 5 | dout : 65
-# time:6450720000 | rx_byte_cnt : 6 | dout : 4
-# time:6451040000 | rx_byte_cnt : 7 | dout : f0
-# time:6451360000 | rx_byte_cnt : 8 | dout : da
-# time:6451680000 | rx_byte_cnt : 9 | dout : b9
-# time:6452000000 | rx_byte_cnt : 10 | dout : c
-# time:6452320000 | rx_byte_cnt : 11 | dout : 48
-# time:6452640000 | rx_byte_cnt : 12 | dout : a3
-# time:6452960000 | rx_byte_cnt : 13 | dout : 3
-# time:6453280000 | rx_byte_cnt : 14 | dout : 21
-# time:6453600000 | rx_byte_cnt is made zero and dec_block_ready is asserted. dout : de
-# time:6453600000 | dec_block_ready is asserted | rx_block : e0
-# time:6453630000 | RX_wait state 
 # time : 6453790000 | in_flight is made zero | Entered done handshake block. pt=00000000000000000000000000000008
 # S.No: 8 PASS
 # Time:6453790000 | Plaintext  : 00000000000000000000000000000008
 # Time:6453790000 |  Expected   : 00000000000000000000000000000008
 # time: 6453800000 | in_flight : 0 | latency_cnt : 80670
-# Time:6455040000 | tx_start is high.
-# time:6456000000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:de
-# Time:           6505440000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 33. FRAME COMPLETE.byte_counter: 0
-# time:6505600000, Transmission done in UART_TX module.
-# time:6505920000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:33
-# Time:           6555360000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 45. FRAME COMPLETE.byte_counter: 1
-# time:6555520000, Transmission done in UART_TX module.
-# time:6555840000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:45
-# Time:           6605280000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: e6. FRAME COMPLETE.byte_counter: 2
-# time:6605440000, Transmission done in UART_TX module.
-# time:6605760000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:e6
-# Time:           6655200000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: b0. FRAME COMPLETE.byte_counter: 3
-# time:6655360000, Transmission done in UART_TX module.
-# time:6655680000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:b0
-# Time:           6705120000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 46. FRAME COMPLETE.byte_counter: 4
-# time:6705280000, Transmission done in UART_TX module.
-# time:6705600000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:46
-# Time:           6755040000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 1e. FRAME COMPLETE.byte_counter: 5
-# time:6755200000, Transmission done in UART_TX module.
-# time:6755520000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:1e
-# Time:           6804960000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 7c. FRAME COMPLETE.byte_counter: 6
-# time:6805120000, Transmission done in UART_TX module.
-# time:6805440000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:7c
-# Time:           6854880000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 9e. FRAME COMPLETE.byte_counter: 7
-# time:6855040000, Transmission done in UART_TX module.
-# time:6855360000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:9e
-# Time:           6904800000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 6c. FRAME COMPLETE.byte_counter: 8
-# time:6904960000, Transmission done in UART_TX module.
-# time:6905280000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:6c
-# Time:           6954720000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 6b. FRAME COMPLETE.byte_counter: 9
-# time:6954880000, Transmission done in UART_TX module.
-# time:6955200000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:6b
-# Time:           7004640000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 7a. FRAME COMPLETE.byte_counter: 10
-# time:7004800000, Transmission done in UART_TX module.
-# time:7005120000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:7a
-# Time:           7054560000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: fe. FRAME COMPLETE.byte_counter: 11
-# time:7054720000, Transmission done in UART_TX module.
-# time:7055040000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:fe
-# Time:           7104480000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: dd. FRAME COMPLETE.byte_counter: 12
-# time:7104640000, Transmission done in UART_TX module.
-# time:7104960000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:dd
-# Time:           7154400000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: e8. FRAME COMPLETE.byte_counter: 13
-# time:7154560000, Transmission done in UART_TX module.
-# time:7154880000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:e8
-# Time:           7204320000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 3f. FRAME COMPLETE.byte_counter: 14
-# time:7204480000, Transmission done in UART_TX module.
-# time:7204800000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:3f
-# Time:7254080000 | tx_start is low.
-# Time:           7254240000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 40. FRAME COMPLETE.byte_counter: 15
-# Time:           7254240000 | UART_RX | Received 16 bytes. Byte counter reset. rx_block_ok asserted. byte_counter: 15
-# time:7254400000, Transmission done in UART_TX module.
-# time:7254880000 | RD_RX is asserted
-# time:7255520000 | rx_byte_cnt : 0 | dout : 33
-# time:7255840000 | rx_byte_cnt : 1 | dout : 45
-# time:7256160000 | rx_byte_cnt : 2 | dout : e6
-# time:7256480000 | rx_byte_cnt : 3 | dout : b0
-# time:7256800000 | rx_byte_cnt : 4 | dout : 46
-# time:7257120000 | rx_byte_cnt : 5 | dout : 1e
-# time:7257440000 | rx_byte_cnt : 6 | dout : 7c
-# time:7257760000 | rx_byte_cnt : 7 | dout : 9e
-# time:7258080000 | rx_byte_cnt : 8 | dout : 6c
-# time:7258400000 | rx_byte_cnt : 9 | dout : 6b
-# time:7258720000 | rx_byte_cnt : 10 | dout : 7a
-# time:7259040000 | rx_byte_cnt : 11 | dout : fe
-# time:7259360000 | rx_byte_cnt : 12 | dout : dd
-# time:7259680000 | rx_byte_cnt : 13 | dout : e8
-# time:7260000000 | rx_byte_cnt : 14 | dout : 3f
-# time:7260320000 | rx_byte_cnt is made zero and dec_block_ready is asserted. dout : 40
-# time:7260320000 | dec_block_ready is asserted | rx_block : de
-# time:7260350000 | RX_wait state 
 # time : 7260510000 | in_flight is made zero | Entered done handshake block. pt=00000000000000000000000000000009
 # S.No: 9 PASS
 # Time:7260510000 | Plaintext  : 00000000000000000000000000000009
 # Time:7260510000 |  Expected   : 00000000000000000000000000000009
 # time: 7260520000 | in_flight : 0 | latency_cnt : 80670
-# Time:7261760000 | tx_start is high.
-# time:7262720000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:40
-# Time:           7312160000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 39. FRAME COMPLETE.byte_counter: 0
-# time:7312320000, Transmission done in UART_TX module.
-# time:7312640000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:39
-# Time:           7362080000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 25. FRAME COMPLETE.byte_counter: 1
-# time:7362240000, Transmission done in UART_TX module.
-# time:7362560000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:25
-# Time:           7412000000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 84. FRAME COMPLETE.byte_counter: 2
-# time:7412160000, Transmission done in UART_TX module.
-# time:7412480000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:84
-# Time:           7461920000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 1d. FRAME COMPLETE.byte_counter: 3
-# time:7462080000, Transmission done in UART_TX module.
-# time:7462400000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:1d
-# Time:           7511840000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 2. FRAME COMPLETE.byte_counter: 4
-# time:7512000000, Transmission done in UART_TX module.
-# time:7512320000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:2
-# Time:           7561760000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: dc. FRAME COMPLETE.byte_counter: 5
-# time:7561920000, Transmission done in UART_TX module.
-# time:7562240000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:dc
-# Time:           7611680000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 9. FRAME COMPLETE.byte_counter: 6
-# time:7611840000, Transmission done in UART_TX module.
-# time:7612160000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:9
-# Time:           7661600000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: fb. FRAME COMPLETE.byte_counter: 7
-# time:7661760000, Transmission done in UART_TX module.
-# time:7662080000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:fb
-# Time:           7711520000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: dc. FRAME COMPLETE.byte_counter: 8
-# time:7711680000, Transmission done in UART_TX module.
-# time:7712000000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:dc
-# Time:           7761440000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 11. FRAME COMPLETE.byte_counter: 9
-# time:7761600000, Transmission done in UART_TX module.
-# time:7761920000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:11
-# Time:           7811360000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 85. FRAME COMPLETE.byte_counter: 10
-# time:7811520000, Transmission done in UART_TX module.
-# time:7811840000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:85
-# Time:           7861280000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 97. FRAME COMPLETE.byte_counter: 11
-# time:7861440000, Transmission done in UART_TX module.
-# time:7861760000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:97
-# Time:           7911200000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 19. FRAME COMPLETE.byte_counter: 12
-# time:7911360000, Transmission done in UART_TX module.
-# time:7911680000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:19
-# Time:           7961120000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 6a. FRAME COMPLETE.byte_counter: 13
-# time:7961280000, Transmission done in UART_TX module.
-# time:7961600000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:6a
-# Time:           8011040000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: b. FRAME COMPLETE.byte_counter: 14
-# time:8011200000, Transmission done in UART_TX module.
-# time:8011520000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:b
-# Time:8060800000 | tx_start is low.
-# Time:           8060960000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 32. FRAME COMPLETE.byte_counter: 15
-# Time:           8060960000 | UART_RX | Received 16 bytes. Byte counter reset. rx_block_ok asserted. byte_counter: 15
-# time:8061120000, Transmission done in UART_TX module.
-# time:8061600000 | RD_RX is asserted
-# time:8062240000 | rx_byte_cnt : 0 | dout : 39
-# time:8062560000 | rx_byte_cnt : 1 | dout : 25
-# time:8062880000 | rx_byte_cnt : 2 | dout : 84
-# time:8063200000 | rx_byte_cnt : 3 | dout : 1d
-# time:8063520000 | rx_byte_cnt : 4 | dout : 2
-# time:8063840000 | rx_byte_cnt : 5 | dout : dc
-# time:8064160000 | rx_byte_cnt : 6 | dout : 9
-# time:8064480000 | rx_byte_cnt : 7 | dout : fb
-# time:8064800000 | rx_byte_cnt : 8 | dout : dc
-# time:8065120000 | rx_byte_cnt : 9 | dout : 11
-# time:8065440000 | rx_byte_cnt : 10 | dout : 85
-# time:8065760000 | rx_byte_cnt : 11 | dout : 97
-# time:8066080000 | rx_byte_cnt : 12 | dout : 19
-# time:8066400000 | rx_byte_cnt : 13 | dout : 6a
-# time:8066720000 | rx_byte_cnt : 14 | dout : b
-# time:8067040000 | rx_byte_cnt is made zero and dec_block_ready is asserted. dout : 32
-# time:8067040000 | dec_block_ready is asserted | rx_block : 40
-# time:8067070000 | RX_wait state 
 # time : 8067230000 | in_flight is made zero | Entered done handshake block. pt=3243f6a8885a308d313198a2e0370734
 # S.No: 10 PASS
 # Time:8067230000 | Plaintext  : 3243f6a8885a308d313198a2e0370734
 # Time:8067230000 |  Expected   : 3243f6a8885a308d313198a2e0370734
 # time: 8067240000 | in_flight : 0 | latency_cnt : 80670
-# Time:8068480000 | tx_start is high.
-# time:8069440000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:32
-# Time:           8118880000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: f5. FRAME COMPLETE.byte_counter: 0
-# time:8119040000, Transmission done in UART_TX module.
-# time:8119360000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:f5
-# Time:           8168800000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: d3. FRAME COMPLETE.byte_counter: 1
-# time:8168960000, Transmission done in UART_TX module.
-# time:8169280000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:d3
-# Time:           8218720000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: d5. FRAME COMPLETE.byte_counter: 2
-# time:8218880000, Transmission done in UART_TX module.
-# time:8219200000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:d5
-# Time:           8268640000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 85. FRAME COMPLETE.byte_counter: 3
-# time:8268800000, Transmission done in UART_TX module.
-# time:8269120000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:85
-# Time:           8318560000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 3. FRAME COMPLETE.byte_counter: 4
-# time:8318720000, Transmission done in UART_TX module.
-# time:8319040000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:3
-# Time:           8368480000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: b9. FRAME COMPLETE.byte_counter: 5
-# time:8368640000, Transmission done in UART_TX module.
-# time:8368960000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:b9
-# Time:           8418400000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 69. FRAME COMPLETE.byte_counter: 6
-# time:8418560000, Transmission done in UART_TX module.
-# time:8418880000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:69
-# Time:           8468320000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 9d. FRAME COMPLETE.byte_counter: 7
-# time:8468480000, Transmission done in UART_TX module.
-# time:8468800000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:9d
-# Time:           8518240000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: e7. FRAME COMPLETE.byte_counter: 8
-# time:8518400000, Transmission done in UART_TX module.
-# time:8518720000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:e7
-# Time:           8568160000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 85. FRAME COMPLETE.byte_counter: 9
-# time:8568320000, Transmission done in UART_TX module.
-# time:8568640000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:85
-# Time:           8618080000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 89. FRAME COMPLETE.byte_counter: 10
-# time:8618240000, Transmission done in UART_TX module.
-# time:8618560000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:89
-# Time:           8668000000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 5a. FRAME COMPLETE.byte_counter: 11
-# time:8668160000, Transmission done in UART_TX module.
-# time:8668480000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:5a
-# Time:           8717920000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: 96. FRAME COMPLETE.byte_counter: 12
-# time:8718080000, Transmission done in UART_TX module.
-# time:8718400000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:96
-# Time:           8767840000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: fd. FRAME COMPLETE.byte_counter: 13
-# time:8768000000, Transmission done in UART_TX module.
-# time:8768320000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:fd
-# Time:           8817760000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: ba. FRAME COMPLETE.byte_counter: 14
-# time:8817920000, Transmission done in UART_TX module.
-# time:8818240000 | UART_TX | Moving to s_start state. rd_en asserted | ft_out:ba
-# Time:8867520000 | tx_start is low.
-# Time:           8867680000 | UART_RX | S_STOP  -> Sampling Stop Bit. Waited         21 cycles. rx_msg value: af. FRAME COMPLETE.byte_counter: 15
-# Time:           8867680000 | UART_RX | Received 16 bytes. Byte counter reset. rx_block_ok asserted. byte_counter: 15
-# time:8867840000, Transmission done in UART_TX module.
-# time:8868320000 | RD_RX is asserted
-# time:8868960000 | rx_byte_cnt : 0 | dout : f5
-# time:8869280000 | rx_byte_cnt : 1 | dout : d3
-# time:8869600000 | rx_byte_cnt : 2 | dout : d5
-# time:8869920000 | rx_byte_cnt : 3 | dout : 85
-# time:8870240000 | rx_byte_cnt : 4 | dout : 3
-# time:8870560000 | rx_byte_cnt : 5 | dout : b9
-# time:8870880000 | rx_byte_cnt : 6 | dout : 69
-# time:8871200000 | rx_byte_cnt : 7 | dout : 9d
-# time:8871520000 | rx_byte_cnt : 8 | dout : e7
-# time:8871840000 | rx_byte_cnt : 9 | dout : 85
-# time:8872160000 | rx_byte_cnt : 10 | dout : 89
-# time:8872480000 | rx_byte_cnt : 11 | dout : 5a
-# time:8872800000 | rx_byte_cnt : 12 | dout : 96
-# time:8873120000 | rx_byte_cnt : 13 | dout : fd
-# time:8873440000 | rx_byte_cnt : 14 | dout : ba
-# time:8873760000 | rx_byte_cnt is made zero and dec_block_ready is asserted. dout : af
-# time:8873760000 | dec_block_ready is asserted | rx_block : 32
-# time:8873790000 | RX_wait state 
 # time : 8873950000 | in_flight is made zero | Entered done handshake block. pt=ae2d8a571e03ac9c9eb76fac45af8e51
 # S.No: 11 PASS
 # Time:8873950000 | Plaintext  : ae2d8a571e03ac9c9eb76fac45af8e51
@@ -1062,5 +126,8 @@
 #    Time: 8873950 ns  Iteration: 1  Instance: /tb
 # 1
 # Break in Module tb at /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/../testbench/tb.v line 287
-# End time: 22:29:11 on Mar 19,2026, Elapsed time: 0:08:46
-# Errors: 0, Warnings: 2
+vcd file aes_uart_top.vcd
+vcd add -r /*
+vcd flush
+# End time: 00:01:50 on Mar 22,2026, Elapsed time: 0:30:31
+# Errors: 0, Warnings: 1
