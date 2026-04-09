@@ -7,9 +7,9 @@ output_files/
 *.qdb
 *.qpg
 *.qws
-*.smsg
-*.summary
-*.rpt
+!*.smsg
+!*.summary
+!*.rpt
 
 # Quartus generated IP / cache
 qdb/
