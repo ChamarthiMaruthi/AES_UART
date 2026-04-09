@@ -1,134 +1,112 @@
-## Generated SDC file "aes_uart_top.out.sdc"
-
-## Copyright (C) 2020  Intel Corporation. All rights reserved.
-## Your use of Intel Corporation's design tools, logic functions 
-## and other software and tools, and any partner logic 
-## functions, and any output files from any of the foregoing 
-## (including device programming or simulation files), and any 
-## associated documentation or information are expressly subject 
-## to the terms and conditions of the Intel Program License 
-## Subscription Agreement, the Intel Quartus Prime License Agreement,
-## the Intel FPGA IP License Agreement, or other applicable license
-## agreement, including, without limitation, that your use is for
-## the sole purpose of programming logic devices manufactured by
-## Intel and sold by Intel or its authorized distributors.  Please
-## refer to the applicable agreement for further details, at
-## https://fpgasoftware.intel.com/eula.
-
-
-## VENDOR  "Altera"
-## PROGRAM "Quartus Prime"
-## VERSION "Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition"
-
-## DATE    "Thu Mar  5 12:24:50 2026"
-
-##
-## DEVICE  "5CGXFC9E6F35I7"
-##
-
-
 set_time_format -unit ns -decimal_places 3
 
-
 #**************************************************************
-# Create Clock
-# FIX #1: Corrected clock periods to match actual frequencies
-#   clk_100     = 100 MHz  -> period = 10.000 ns
-#   clk_3125_tx = 3.125 MHz -> period = 320.000 ns
-#   clk_3125_rx = 3.125 MHz -> period = 320.000 ns
+# 1. CREATE CLOCKS
 #**************************************************************
 
-create_clock -name {clk_100}     -period 10.000  -waveform { 0.000 5.000   } [get_ports {clk_100}]
-create_clock -name {clk_3125_tx} -period 320.000 -waveform { 0.000 160.000 } [get_ports {clk_3125_tx}]
-create_clock -name {clk_3125_rx} -period 320.000 -waveform { 0.000 160.000 } [get_ports {clk_3125_rx}]
+create_clock -name clk_100 \
+    -period 10.000 \
+    -waveform {0.000 5.000} \
+    [get_ports clk_100]
 
+create_clock -name clk_3125_tx \
+    -period 40.000 \
+    -waveform {0.000 20.000} \
+    [get_ports clk_3125_tx]
 
-#**************************************************************
-# Create Generated Clock
-# (Add here if any clocks are derived from clk_100 via logic dividers)
-#**************************************************************
-
-
-
-#**************************************************************
-# Set Clock Uncertainty
-# (Retaining existing values - these are reasonable)
-#**************************************************************
-
-set_clock_uncertainty -rise_from [get_clocks {clk_3125_rx}] -rise_to [get_clocks {clk_3125_rx}] -setup 0.100
-set_clock_uncertainty -rise_from [get_clocks {clk_3125_rx}] -rise_to [get_clocks {clk_3125_rx}] -hold  0.060
-set_clock_uncertainty -rise_from [get_clocks {clk_3125_rx}] -fall_to [get_clocks {clk_3125_rx}] -setup 0.100
-set_clock_uncertainty -rise_from [get_clocks {clk_3125_rx}] -fall_to [get_clocks {clk_3125_rx}] -hold  0.060
-set_clock_uncertainty -fall_from [get_clocks {clk_3125_rx}] -rise_to [get_clocks {clk_3125_rx}] -setup 0.100
-set_clock_uncertainty -fall_from [get_clocks {clk_3125_rx}] -rise_to [get_clocks {clk_3125_rx}] -hold  0.060
-set_clock_uncertainty -fall_from [get_clocks {clk_3125_rx}] -fall_to [get_clocks {clk_3125_rx}] -setup 0.100
-set_clock_uncertainty -fall_from [get_clocks {clk_3125_rx}] -fall_to [get_clocks {clk_3125_rx}] -hold  0.060
-
-set_clock_uncertainty -rise_from [get_clocks {clk_100}] -rise_to [get_clocks {clk_100}] -setup 0.100
-set_clock_uncertainty -rise_from [get_clocks {clk_100}] -rise_to [get_clocks {clk_100}] -hold  0.060
-set_clock_uncertainty -rise_from [get_clocks {clk_100}] -fall_to [get_clocks {clk_100}] -setup 0.100
-set_clock_uncertainty -rise_from [get_clocks {clk_100}] -fall_to [get_clocks {clk_100}] -hold  0.060
-set_clock_uncertainty -fall_from [get_clocks {clk_100}] -rise_to [get_clocks {clk_100}] -setup 0.100
-set_clock_uncertainty -fall_from [get_clocks {clk_100}] -rise_to [get_clocks {clk_100}] -hold  0.060
-set_clock_uncertainty -fall_from [get_clocks {clk_100}] -fall_to [get_clocks {clk_100}] -setup 0.100
-set_clock_uncertainty -fall_from [get_clocks {clk_100}] -fall_to [get_clocks {clk_100}] -hold  0.060
-
-set_clock_uncertainty -rise_from [get_clocks {clk_3125_tx}] -rise_to [get_clocks {clk_3125_tx}] -setup 0.100
-set_clock_uncertainty -rise_from [get_clocks {clk_3125_tx}] -rise_to [get_clocks {clk_3125_tx}] -hold  0.060
-set_clock_uncertainty -rise_from [get_clocks {clk_3125_tx}] -fall_to [get_clocks {clk_3125_tx}] -setup 0.100
-set_clock_uncertainty -rise_from [get_clocks {clk_3125_tx}] -fall_to [get_clocks {clk_3125_tx}] -hold  0.060
-set_clock_uncertainty -fall_from [get_clocks {clk_3125_tx}] -rise_to [get_clocks {clk_3125_tx}] -setup 0.100
-set_clock_uncertainty -fall_from [get_clocks {clk_3125_tx}] -rise_to [get_clocks {clk_3125_tx}] -hold  0.060
-set_clock_uncertainty -fall_from [get_clocks {clk_3125_tx}] -fall_to [get_clocks {clk_3125_tx}] -setup 0.100
-set_clock_uncertainty -fall_from [get_clocks {clk_3125_tx}] -fall_to [get_clocks {clk_3125_tx}] -hold  0.060
+create_clock -name clk_3125_rx \
+    -period 40.000 \
+    -waveform {0.000 20.000} \
+    [get_ports clk_3125_rx]
 
 
 #**************************************************************
-# Set Clock Groups
-# FIX #2: Declare all 3 clocks as asynchronous to each other
-# This eliminates false cross-domain setup/hold violations
+# 2. CLOCK UNCERTAINTY (VERY IMPORTANT)
+# Models jitter + skew (makes timing realistic)
 #**************************************************************
+
+# Setup uncertainty
+set_clock_uncertainty -setup 0.20 -from [get_clocks clk_100] -to [get_clocks clk_100]
+set_clock_uncertainty -setup 0.50 -from [get_clocks clk_3125_tx] -to [get_clocks clk_3125_tx]
+set_clock_uncertainty -setup 0.50 -from [get_clocks clk_3125_rx] -to [get_clocks clk_3125_rx]
+
+# Hold uncertainty
+set_clock_uncertainty -hold 0.05 -from [get_clocks clk_100] -to [get_clocks clk_100]
+set_clock_uncertainty -hold 0.10 -from [get_clocks clk_3125_tx] -to [get_clocks clk_3125_tx]
+set_clock_uncertainty -hold 0.10 -from [get_clocks clk_3125_rx] -to [get_clocks clk_3125_rx]
+
+
+#**************************************************************
+# 3. CLOCK GROUPING (USE CAREFULLY)
+#**************************************************************
+
+# ONLY keep this IF clocks are truly asynchronous (external sources)
+# If clk_3125_* are derived from clk_100, REMOVE THIS SECTION
 
 set_clock_groups -asynchronous \
-    -group { clk_100     } \
-    -group { clk_3125_tx } \
-    -group { clk_3125_rx }
+    -group {clk_100} \
+    -group {clk_3125_tx} \
+    -group {clk_3125_rx}
 
 
 #**************************************************************
-# Set False Path
-# FIX #3: Async resets, I/O pins, or any other static paths
+# 4. RESET & STATIC PATHS
 #**************************************************************
 
-## Example: If rst_n is asynchronous (driven from a button, not synchronized)
-## set_false_path -from [get_ports {rst_n}]
+# Async reset (very likely in your design)
+set_false_path -from [get_ports rst_n]
 
-## Example: If there are output/input ports that don't need timing
-## set_false_path -to   [get_ports {led[*]}]
-## set_false_path -from [get_ports {sw[*]}]
-
-
-#**************************************************************
-# Set Multicycle Path
-# FIX #4: AES round logic takes more than 1 cycle combinationally
-# If AES state machine holds inputs stable for N cycles, declare it:
-#**************************************************************
-
-## Example: AES datapath combinational logic is too deep for 10ns
-## If the AES FSM holds state for 2 cycles before sampling:
-## set_multicycle_path -from [get_registers {*u_aes*}] \
-##                    -to   [get_registers {*u_aes*}] \
-##                    -setup 2
-## set_multicycle_path -from [get_registers {*u_aes*}] \
-##                    -to   [get_registers {*u_aes*}] \
-##                    -hold 1
+# Optional: ignore debug I/O if timing not critical
+# set_false_path -to   [get_ports {led[*]}]
+# set_false_path -from [get_ports {sw[*]}]
 
 
 #**************************************************************
-# Set Input/Output Delay (Optional - add if needed for I/O timing)
+# 5. INPUT / OUTPUT DELAYS (ESSENTIAL FOR REAL DESIGN)
 #**************************************************************
 
-## set_input_delay  -clock {clk_100} -max 2.000 [get_ports {plaintext[*]}]
-## set_input_delay  -clock {clk_100} -min 0.500 [get_ports {plaintext[*]}]
-## set_output_delay -clock {clk_100} -max 2.000 [get_ports {ciphertext[*]}]
-## set_output_delay -clock {clk_100} -min 0.500 [get_ports {ciphertext[*]}]
+# These are assumptions — adjust based on board/system
+
+# Inputs to FPGA
+set_input_delay  -clock clk_100 -max 2.0 [get_ports {plaintext[*]}]
+set_input_delay  -clock clk_100 -min 0.5 [get_ports {plaintext[*]}]
+
+# Outputs from FPGA
+set_output_delay -clock clk_100 -max 2.0 [get_ports {ciphertext[*]}]
+set_output_delay -clock clk_100 -min 0.5 [get_ports {ciphertext[*]}]
+
+
+#**************************************************************
+# 6. MULTICYCLE PATH (ONLY IF ARCHITECTURE SUPPORTS IT)
+#**************************************************************
+
+# ⚠️ ENABLE ONLY if AES is multi-cycle by design
+# set_multicycle_path 2 -setup \
+#     -from [get_registers *aes*] \
+#     -to   [get_registers *aes*]
+
+# set_multicycle_path 1 -hold \
+#     -from [get_registers *aes*] \
+#     -to   [get_registers *aes*]
+
+
+#**************************************************************
+# 7. GENERATED CLOCKS (IF USING CLOCK DIVIDERS / PLL)
+#**************************************************************
+
+# ⚠️ ADD ONLY if clk_3125_* are internally generated
+
+# Example:
+# create_generated_clock -name clk_25_tx \
+#     -source [get_ports clk_100] \
+#     -divide_by 4 \
+#     [get_pins <divider_output>]
+
+
+#**************************************************************
+# 8. OPTIONAL: MINIMIZE CDC RISK (ADVANCED)
+#**************************************************************
+
+# If using synchronizers:
+# set_false_path -from [get_registers *sync_ff1*] \
+#                -to   [get_registers *sync_ff2*]

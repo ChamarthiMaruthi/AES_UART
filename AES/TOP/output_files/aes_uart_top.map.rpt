@@ -1,5 +1,5 @@
 Analysis & Synthesis report for aes_uart_top
-Sat Mar 21 10:09:18 2026
+Thu Apr  9 19:12:18 2026
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -185,13 +185,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sat Mar 21 10:09:18 2026       ;
+; Analysis & Synthesis Status     ; Successful - Thu Apr  9 19:12:18 2026       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; aes_uart_top                                ;
 ; Top-level Entity Name           ; aes_uart_top                                ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 3830                                        ;
+; Total registers                 ; 3832                                        ;
 ; Total pins                      ; 395                                         ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 4,096                                       ;
@@ -300,16 +300,16 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 12          ;
 ;                            ;             ;
-; Average used               ; 1.00        ;
+; Average used               ; 1.01        ;
 ; Maximum used               ; 12          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processor 3            ;   0.0%      ;
-;     Processor 4            ;   0.0%      ;
-;     Processor 5            ;   0.0%      ;
-;     Processor 6            ;   0.0%      ;
+;     Processor 2            ;   0.1%      ;
+;     Processor 3            ;   0.1%      ;
+;     Processor 4            ;   0.1%      ;
+;     Processor 5            ;   0.1%      ;
+;     Processor 6            ;   0.1%      ;
 ;     Processor 7            ;   0.0%      ;
 ;     Processor 8            ;   0.0%      ;
 ;     Processor 9            ;   0.0%      ;
@@ -361,16 +361,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 5650        ;
+; Estimate of Logic utilization (ALMs needed) ; 5645        ;
 ;                                             ;             ;
-; Combinational ALUT usage for logic          ; 6789        ;
+; Combinational ALUT usage for logic          ; 6784        ;
 ;     -- 7 input functions                    ; 180         ;
-;     -- 6 input functions                    ; 3969        ;
-;     -- 5 input functions                    ; 841         ;
-;     -- 4 input functions                    ; 498         ;
-;     -- <=3 input functions                  ; 1301        ;
+;     -- 6 input functions                    ; 3961        ;
+;     -- 5 input functions                    ; 844         ;
+;     -- 4 input functions                    ; 499         ;
+;     -- <=3 input functions                  ; 1300        ;
 ;                                             ;             ;
-; Dedicated logic registers                   ; 3830        ;
+; Dedicated logic registers                   ; 3832        ;
 ;                                             ;             ;
 ; I/O pins                                    ; 395         ;
 ; Total MLAB memory bits                      ; 0           ;
@@ -379,8 +379,8 @@ https://fpgasoftware.intel.com/eula.
 ; Total DSP Blocks                            ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; rst_n~input ;
-; Maximum fan-out                             ; 3751        ;
-; Total fan-out                               ; 50174       ;
+; Maximum fan-out                             ; 3753        ;
+; Total fan-out                               ; 50149       ;
 ; Average fan-out                             ; 4.39        ;
 +---------------------------------------------+-------------+
 
@@ -390,8 +390,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                             ; Entity Name     ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |aes_uart_top                                ; 6789 (99)           ; 3830 (307)                ; 4096              ; 0          ; 395  ; 0            ; |aes_uart_top                                                                                                   ;                 ;              ;
-;    |ADS_TOP:u_aes_decrypt|                   ; 4667 (779)          ; 1673 (1673)               ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|ADS_TOP:u_aes_decrypt                                                                             ; ADS_TOP         ; work         ;
+; |aes_uart_top                                ; 6784 (99)           ; 3832 (307)                ; 4096              ; 0          ; 395  ; 0            ; |aes_uart_top                                                                                                   ;                 ;              ;
+;    |ADS_TOP:u_aes_decrypt|                   ; 4667 (779)          ; 1674 (1674)               ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|ADS_TOP:u_aes_decrypt                                                                             ; ADS_TOP         ; work         ;
 ;       |invMixColumns:u_imc|                  ; 302 (302)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|ADS_TOP:u_aes_decrypt|invMixColumns:u_imc                                                         ; invMixColumns   ; work         ;
 ;       |inverseSubBytes:u_isb|                ; 640 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|ADS_TOP:u_aes_decrypt|inverseSubBytes:u_isb                                                       ; inverseSubBytes ; work         ;
 ;          |inverseSbox:ISB[0].isb|            ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|ADS_TOP:u_aes_decrypt|inverseSubBytes:u_isb|inverseSbox:ISB[0].isb                                ; inverseSbox     ; work         ;
@@ -451,7 +451,7 @@ https://fpgasoftware.intel.com/eula.
 ;          |sbox:KEY_EXPAND[8].s1|             ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|ADS_TOP:u_aes_decrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[8].s1                                   ; sbox            ; work         ;
 ;          |sbox:KEY_EXPAND[8].s2|             ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|ADS_TOP:u_aes_decrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[8].s2                                   ; sbox            ; work         ;
 ;          |sbox:KEY_EXPAND[8].s3|             ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|ADS_TOP:u_aes_decrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[8].s3                                   ; sbox            ; work         ;
-;    |AES_TOP:u_aes_encrypt|                   ; 1876 (802)          ; 1673 (1673)               ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|AES_TOP:u_aes_encrypt                                                                             ; AES_TOP         ; work         ;
+;    |AES_TOP:u_aes_encrypt|                   ; 1876 (802)          ; 1674 (1674)               ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|AES_TOP:u_aes_encrypt                                                                             ; AES_TOP         ; work         ;
 ;       |keyExpansion:keyexp|                  ; 434 (286)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|AES_TOP:u_aes_encrypt|keyExpansion:keyexp                                                         ; keyExpansion    ; work         ;
 ;          |sbox:KEY_EXPAND[40].s0|            ; 36 (36)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[40].s0                                  ; sbox            ; work         ;
 ;          |sbox:KEY_EXPAND[40].s1|            ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|AES_TOP:u_aes_encrypt|keyExpansion:keyexp|sbox:KEY_EXPAND[40].s1                                  ; sbox            ; work         ;
@@ -479,14 +479,14 @@ https://fpgasoftware.intel.com/eula.
 ;          |sbox:SB_LOOP[7].sb_inst|           ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|AES_TOP:u_aes_encrypt|subBytes:u_sb|sbox:SB_LOOP[7].sb_inst                                       ; sbox            ; work         ;
 ;          |sbox:SB_LOOP[8].sb_inst|           ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|AES_TOP:u_aes_encrypt|subBytes:u_sb|sbox:SB_LOOP[8].sb_inst                                       ; sbox            ; work         ;
 ;          |sbox:SB_LOOP[9].sb_inst|           ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|AES_TOP:u_aes_encrypt|subBytes:u_sb|sbox:SB_LOOP[9].sb_inst                                       ; sbox            ; work         ;
-;    |Buffer_top:u_uart_buffer|                ; 147 (0)             ; 177 (0)                   ; 4096              ; 0          ; 0    ; 0            ; |aes_uart_top|Buffer_top:u_uart_buffer                                                                          ; Buffer_top      ; work         ;
+;    |Buffer_top:u_uart_buffer|                ; 142 (0)             ; 177 (0)                   ; 4096              ; 0          ; 0    ; 0            ; |aes_uart_top|Buffer_top:u_uart_buffer                                                                          ; Buffer_top      ; work         ;
 ;       |fifo_rx:rx_fifo_inst|                 ; 42 (42)             ; 59 (59)                   ; 2048              ; 0          ; 0    ; 0            ; |aes_uart_top|Buffer_top:u_uart_buffer|fifo_rx:rx_fifo_inst                                                     ; fifo_rx         ; work         ;
 ;          |altsyncram:mem_rtl_0|              ; 0 (0)               ; 0 (0)                     ; 2048              ; 0          ; 0    ; 0            ; |aes_uart_top|Buffer_top:u_uart_buffer|fifo_rx:rx_fifo_inst|altsyncram:mem_rtl_0                                ; altsyncram      ; work         ;
 ;             |altsyncram_74u1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 2048              ; 0          ; 0    ; 0            ; |aes_uart_top|Buffer_top:u_uart_buffer|fifo_rx:rx_fifo_inst|altsyncram:mem_rtl_0|altsyncram_74u1:auto_generated ; altsyncram_74u1 ; work         ;
 ;       |fifo_tx:tx_fifo_inst|                 ; 48 (48)             ; 59 (59)                   ; 2048              ; 0          ; 0    ; 0            ; |aes_uart_top|Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst                                                     ; fifo_tx         ; work         ;
 ;          |altsyncram:mem_rtl_0|              ; 0 (0)               ; 0 (0)                     ; 2048              ; 0          ; 0    ; 0            ; |aes_uart_top|Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|altsyncram:mem_rtl_0                                ; altsyncram      ; work         ;
 ;             |altsyncram_nvo1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 2048              ; 0          ; 0    ; 0            ; |aes_uart_top|Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|altsyncram:mem_rtl_0|altsyncram_nvo1:auto_generated ; altsyncram_nvo1 ; work         ;
-;       |uart_rx:rx_inst|                      ; 30 (30)             ; 35 (35)                   ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|Buffer_top:u_uart_buffer|uart_rx:rx_inst                                                          ; uart_rx         ; work         ;
+;       |uart_rx:rx_inst|                      ; 25 (25)             ; 35 (35)                   ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|Buffer_top:u_uart_buffer|uart_rx:rx_inst                                                          ; uart_rx         ; work         ;
 ;       |uart_tx:tx_inst|                      ; 27 (27)             ; 24 (24)                   ; 0                 ; 0          ; 0    ; 0            ; |aes_uart_top|Buffer_top:u_uart_buffer|uart_tx:tx_inst                                                          ; uart_tx         ; work         ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -606,11 +606,9 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Buffer_top:u_uart_buffer|uart_tx:tx_inst|state~11        ; Lost fanout                            ;
 ; AES_TOP:u_aes_encrypt|fsm_state~9                        ; Lost fanout                            ;
 ; AES_TOP:u_aes_encrypt|fsm_state~10                       ; Lost fanout                            ;
-; AES_TOP:u_aes_encrypt|fsm_state.S_DONE                   ; Merged with AES_TOP:u_aes_encrypt|done ;
-; ADS_TOP:u_aes_decrypt|fsm_state.S_DONE                   ; Merged with ADS_TOP:u_aes_decrypt|done ;
 ; rd_counter[4]                                            ; Stuck at GND due to stuck port data_in ;
 ; Buffer_top:u_uart_buffer|uart_rx:rx_inst|byte_counter[4] ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 17                   ;                                        ;
+; Total Number of Removed Registers = 15                   ;                                        ;
 +----------------------------------------------------------+----------------------------------------+
 
 
@@ -619,12 +617,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 3830  ;
+; Total registers                              ; 3832  ;
 ; Number of registers using Synchronous Clear  ; 78    ;
 ; Number of registers using Synchronous Load   ; 8     ;
-; Number of registers using Asynchronous Clear ; 3649  ;
+; Number of registers using Asynchronous Clear ; 3651  ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 3656  ;
+; Number of registers using Clock Enable       ; 3655  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -729,15 +727,14 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; 4:1                ; 128 bits  ; 256 LEs       ; 256 LEs              ; 0 LEs                  ; Yes        ; |aes_uart_top|AES_TOP:u_aes_encrypt|state[53]                           ;
 ; 16:1               ; 8 bits    ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; Yes        ; |aes_uart_top|fifo_wr_data[5]                                           ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |aes_uart_top|AES_TOP:u_aes_encrypt|round[3]                            ;
-; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |aes_uart_top|ADS_TOP:u_aes_decrypt|round[1]                            ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |aes_uart_top|ADS_TOP:u_aes_decrypt|round[2]                            ;
 ; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |aes_uart_top|Buffer_top:u_uart_buffer|uart_tx:tx_inst|bit_counter[0]   ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |aes_uart_top|Buffer_top:u_uart_buffer|uart_tx:tx_inst|clk_counter[3]   ;
-; 7:1                ; 5 bits    ; 20 LEs        ; 5 LEs                ; 15 LEs                 ; Yes        ; |aes_uart_top|Buffer_top:u_uart_buffer|uart_rx:rx_inst|clk_counter[3]   ;
+; 6:1                ; 5 bits    ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |aes_uart_top|Buffer_top:u_uart_buffer|uart_rx:rx_inst|clk_counter[3]   ;
 ; 5:1                ; 3 bits    ; 9 LEs         ; 3 LEs                ; 6 LEs                  ; Yes        ; |aes_uart_top|Buffer_top:u_uart_buffer|uart_rx:rx_inst|bit_counter[0]   ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |aes_uart_top|Buffer_top:u_uart_buffer|fifo_tx:tx_fifo_inst|rd_addr_reg ;
-; 11:1               ; 128 bits  ; 896 LEs       ; 896 LEs              ; 0 LEs                  ; No         ; |aes_uart_top|ADS_TOP:u_aes_decrypt|Mux16                               ;
+; 11:1               ; 128 bits  ; 896 LEs       ; 896 LEs              ; 0 LEs                  ; No         ; |aes_uart_top|ADS_TOP:u_aes_decrypt|Mux124                              ;
 ; 11:1               ; 128 bits  ; 896 LEs       ; 896 LEs              ; 0 LEs                  ; No         ; |aes_uart_top|AES_TOP:u_aes_encrypt|Mux15                               ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |aes_uart_top|Buffer_top:u_uart_buffer|uart_rx:rx_inst|Selector4        ;
 ; 7:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; No         ; |aes_uart_top|Buffer_top:u_uart_buffer|uart_tx:tx_inst|Selector12       ;
 ; 13:1               ; 6 bits    ; 48 LEs        ; 30 LEs               ; 18 LEs                 ; No         ; |aes_uart_top|Selector135                                               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------+
@@ -2066,27 +2063,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 3830                        ;
-;     CLR               ; 46                          ;
+; arriav_ff             ; 3832                        ;
+;     CLR               ; 49                          ;
 ;     ENA               ; 35                          ;
-;     ENA CLR           ; 3603                        ;
+;     ENA CLR           ; 3602                        ;
 ;     ENA SCLR          ; 18                          ;
 ;     SCLR              ; 52                          ;
 ;     SCLR SLD          ; 8                           ;
 ;     plain             ; 68                          ;
-; arriav_lcell_comb     ; 6789                        ;
+; arriav_lcell_comb     ; 6784                        ;
 ;     arith             ; 36                          ;
 ;         1 data inputs ; 34                          ;
 ;         2 data inputs ; 2                           ;
 ;     extend            ; 180                         ;
 ;         7 data inputs ; 180                         ;
-;     normal            ; 6573                        ;
-;         1 data inputs ; 2                           ;
+;     normal            ; 6568                        ;
+;         1 data inputs ; 1                           ;
 ;         2 data inputs ; 841                         ;
 ;         3 data inputs ; 422                         ;
-;         4 data inputs ; 498                         ;
-;         5 data inputs ; 841                         ;
-;         6 data inputs ; 3969                        ;
+;         4 data inputs ; 499                         ;
+;         5 data inputs ; 844                         ;
+;         6 data inputs ; 3961                        ;
 ; boundary_port         ; 395                         ;
 ; stratixv_ram_block    ; 16                          ;
 ;                       ;                             ;
@@ -2100,7 +2097,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:12     ;
+; Top            ; 00:00:13     ;
 +----------------+--------------+
 
 
@@ -2110,7 +2107,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Sat Mar 21 10:08:59 2026
+    Info: Processing started: Thu Apr  9 19:11:56 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off AES -c aes_uart_top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -2180,11 +2177,14 @@ Warning (10240): Verilog HDL Always Construct warning at UART_TX.v(133): inferri
 Info (10041): Inferred latch for "tx" at UART_TX.v(133) File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_TX.v Line: 133
 Info (12128): Elaborating entity "uart_rx" for hierarchy "Buffer_top:u_uart_buffer|uart_rx:rx_inst" File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/Buffer_top.v Line: 74
 Warning (10036): Verilog HDL or VHDL warning at UART_RX.v(42): object "rx_start" assigned a value but never read File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_RX.v Line: 42
-Warning (10230): Verilog HDL assignment warning at UART_RX.v(79): truncated value with size 32 to match size of target (5) File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_RX.v Line: 79
-Warning (10230): Verilog HDL assignment warning at UART_RX.v(94): truncated value with size 32 to match size of target (3) File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_RX.v Line: 94
-Warning (10230): Verilog HDL assignment warning at UART_RX.v(97): truncated value with size 32 to match size of target (5) File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_RX.v Line: 97
-Warning (10230): Verilog HDL assignment warning at UART_RX.v(109): truncated value with size 32 to match size of target (5) File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_RX.v Line: 109
-Warning (10230): Verilog HDL assignment warning at UART_RX.v(132): truncated value with size 32 to match size of target (5) File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_RX.v Line: 132
+Warning (10230): Verilog HDL assignment warning at UART_RX.v(72): truncated value with size 32 to match size of target (5) File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_RX.v Line: 72
+Warning (10230): Verilog HDL assignment warning at UART_RX.v(85): truncated value with size 32 to match size of target (5) File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_RX.v Line: 85
+Warning (10230): Verilog HDL assignment warning at UART_RX.v(93): truncated value with size 32 to match size of target (5) File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_RX.v Line: 93
+Warning (10230): Verilog HDL assignment warning at UART_RX.v(101): truncated value with size 32 to match size of target (3) File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_RX.v Line: 101
+Warning (10230): Verilog HDL assignment warning at UART_RX.v(104): truncated value with size 32 to match size of target (5) File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_RX.v Line: 104
+Warning (10230): Verilog HDL assignment warning at UART_RX.v(111): truncated value with size 32 to match size of target (5) File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_RX.v Line: 111
+Warning (10230): Verilog HDL assignment warning at UART_RX.v(117): truncated value with size 32 to match size of target (5) File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_RX.v Line: 117
+Warning (10230): Verilog HDL assignment warning at UART_RX.v(140): truncated value with size 32 to match size of target (5) File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_RX.v Line: 140
 Info (12128): Elaborating entity "fifo_rx" for hierarchy "Buffer_top:u_uart_buffer|fifo_rx:rx_fifo_inst" File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/Buffer_top.v Line: 87
 Warning (10036): Verilog HDL or VHDL warning at fifo_rx.v(19): object "wr_addr_reg" assigned a value but never read File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/fifo_rx.v Line: 19
 Warning (10230): Verilog HDL assignment warning at fifo_rx.v(49): truncated value with size 32 to match size of target (9) File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/fifo_rx.v Line: 49
@@ -2361,15 +2361,15 @@ Info (286030): Timing-Driven Synthesis is running
 Info (17049): 13 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 10264 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 10261 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 262 input pins
     Info (21059): Implemented 133 output pins
-    Info (21061): Implemented 9853 logic cells
+    Info (21061): Implemented 9850 logic cells
     Info (21064): Implemented 16 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 26 warnings
-    Info: Peak virtual memory: 615 megabytes
-    Info: Processing ended: Sat Mar 21 10:09:18 2026
-    Info: Elapsed time: 00:00:19
-    Info: Total CPU time (on all processors): 00:00:27
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 29 warnings
+    Info: Peak virtual memory: 614 megabytes
+    Info: Processing ended: Thu Apr  9 19:12:18 2026
+    Info: Elapsed time: 00:00:22
+    Info: Total CPU time (on all processors): 00:00:31
 
 

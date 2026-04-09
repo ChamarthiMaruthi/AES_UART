@@ -54,6 +54,14 @@ module tb;
     end
 
     // ==============================
+    // VCD dump for Power Analyzer
+    // ==============================
+    initial begin
+        $dumpfile("post_fit_gls.vcd");
+        $dumpvars(0, dut);          // dump full DUT hierarchy
+    end
+
+    // ==============================
     // Clock generation
     // ==============================
     initial begin
@@ -63,12 +71,12 @@ module tb;
 
     initial begin
         clk_3125_tx = 1;
-        forever #160 clk_3125_tx = ~clk_3125_tx;
+        forever #20 clk_3125_tx = ~clk_3125_tx;
     end
 
     initial begin
         clk_3125_rx = 0;
-        forever #160 clk_3125_rx = ~clk_3125_rx;
+        forever #20 clk_3125_rx = ~clk_3125_rx;
     end
 
     // ==============================

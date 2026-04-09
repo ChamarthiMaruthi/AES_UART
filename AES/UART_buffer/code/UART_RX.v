@@ -65,27 +65,34 @@ case(state)
             S_START: begin
 						  //$display("time:%0t, Inside start state of UART_RX", $time);
                     if (clk_counter == 6) begin
+                        //clk_counter <= 0;
+                        //bit_counter <= 7; // Prepare to receive MSB first
+						if(rx == 0)begin
+							rx_start <= rx;
+                            clk_counter <= clk_counter + 1; // Move to the next cycle to sample the first data bit
+                            //state <= S_DATA;
+						end else begin
+							clk_counter <= 0;
+							state <= S_IDLE;
+						end
+								//$display("Time: %t | S_START -> Sampling Start Bit. Waited %d cycles. rx value: %b", $time, clk_counter + 1, rx);
+                    end else if (clk_counter == FINAL_CYCLE) begin
+                        state <= S_DATA;
                         clk_counter <= 0;
                         bit_counter <= 7; // Prepare to receive MSB first
-								if(rx == 0)begin
-								rx_start <= rx;
-                        state <= S_DATA;
-								end else begin
-								clk_counter <= 0;
-								state <= S_IDLE;
-								end
-								//$display("Time: %t | S_START -> Sampling Start Bit. Waited %d cycles. rx value: %b", $time, clk_counter + 1, rx);
+                        $display("Time: %t | S_START -> Start Bit Validated. Moving to S_DATA. rx value: %b", $time, rx);
                     end else begin
                         clk_counter <= clk_counter + 1;
                     end
             end
             
             S_DATA: begin
-					 //$display("time:%0t, Inside data state of UART_RX", $time);
-                if (clk_counter == FINAL_CYCLE) begin
+                if (clk_counter == 6) begin
                     // On the last clock tick, sample the RX line for the data bit.
 						  data_shift_reg <= {data_shift_reg[6:0],rx};
+                          clk_counter <= clk_counter + 1;
                     //data_shift_reg[bit_counter] <= rx;
+                end else if (clk_counter == FINAL_CYCLE) begin
                     clk_counter <= 0;
 						  //$display("Time: %t | S_DATA  -> Sampling data bit[%d]. Waited %d cycles. rx value: %b", $time, bit_counter, clk_counter + 1, rx);
                     if (bit_counter == 0) begin // Finished with the LSB
@@ -99,19 +106,20 @@ case(state)
             end
 
             S_PARITY: begin
-                if (clk_counter == FINAL_CYCLE) begin
+                if (clk_counter == 6) begin
                     sampled_parity <= rx; // Sample the parity bit
+                    clk_counter <= clk_counter + 1;
+                end else if (clk_counter == FINAL_CYCLE) begin
                     clk_counter <= 0;
                     state <= S_STOP;
-                    //wr_rx <= 1; // Signal to write to FIFO when parity bit is sampled
-						//$display("Time: %t | S_PARITY-> Sampling Parity Bit. Waited %d cycles. rx value: %b", $time, clk_counter + 1, rx);
+						  //$display("Time: %t | S_PARITY-> Sampling Parity Bit. Waited %d cycles. rx value: %b", $time, clk_counter + 1, rx);
                 end else begin
                     clk_counter <= clk_counter + 1;
                 end
             end
 
             S_STOP : begin
-					if (clk_counter == 20) begin
+					if (clk_counter == FINAL_CYCLE) begin
                         //wr_rx <= 1; // Signal to write to FIFO after stop bit is sampled
 						clk_counter <= 0;
 						if(rx == 1'b1) begin

@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Sat Mar 21 10:09:18 2026
+Analysis & Synthesis Status : Successful - Thu Apr  9 19:12:18 2026
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : aes_uart_top
 Top-level Entity Name : aes_uart_top
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 3830
+Total registers : 3832
 Total pins : 395
 Total virtual pins : 0
 Total block memory bits : 4,096
