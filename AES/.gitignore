@@ -26,6 +26,7 @@ modelsim.ini
 transcript
 vsim.wlf
 *.wlf
+*.vcd
 
 # compiled libraries
 *_lib/
