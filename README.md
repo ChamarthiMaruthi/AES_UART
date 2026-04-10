@@ -12,7 +12,7 @@ This project implements a complete AES-128 cryptographic system that encrypts pl
 - **UART Communication**: Integrated UART transmitter and receiver for serial data transmission
 - **Multi-Clock Domain Design**: 
   - 100 MHz for AES operations
-  - 3.125 MHz for UART TX and RX
+  - 25 MHz for UART TX and RX
 - **Clock Domain Crossing (CDC)**: Safe synchronization between different clock domains
 - **Complete Data Flow**: Encrypt → Transmit → Receive → Decrypt pipeline
 - **Loopback Testing**: Built-in UART loopback capability for verification
