@@ -196,6 +196,6 @@ Contributions are welcome! Please feel free to submit pull requests or open issu
 ---
 
 **Project Status**: Active Development  
-**Last Updated**: January 2026
+**Last Updated**: 9th April 2026
 
 For questions or support, please open an issue on GitHub.
