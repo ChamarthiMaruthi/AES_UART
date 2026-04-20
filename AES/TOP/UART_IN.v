@@ -1,6 +1,7 @@
 // module declaration
 module uart_in(
     input clk,
+    input rst,
     input in,
     output reg [7:0] in_msg,
     output reg in_parity,
@@ -52,130 +53,144 @@ always @(posedge clk) begin
 end
 
 always @(posedge clk) begin
-in_complete <= 0;
-wr_in <= 0;
-in_block_ok <= 0;
 
-case(state)
+    if (rst) begin
+        state <= S_IDLE;
+        clk_counter <= 0;
+        bit_counter <= 7;
+        data_shift_reg <= 0;
+        byte_counter <= 0;
+        in_start <= 0;
+        sampled_parity <= 0;
+        computed_parity <= 0;
+        parity_err <= 0;
+    end else begin
 
-				S_IDLE : begin
-					 //$display("time:%0t, Inside idle state of UART_in", $time);
-                     parity_err <= 0; // Clear parity error at the start of a new reception
-					 if (in_s2 == 0) begin
-                        in_block_ok <= 0; // Clear block complete signal when a new start bit is detected
-                        wr_in <= 0;
-						state <= S_START;
-                        $display("Time: %t | UART_in | S_IDLE  -> Detected Start Bit.", $time);
-					 end
-					 else begin
-						state <= S_IDLE;
-                        //$display("Time: %t | UART_in | S_IDLE  -> Waiting for Start Bit. in value: %b", $time, in_s2);
-					 end
-				end
-					
-            S_START: begin
-						  //$display("time:%0t, Inside start state of UART_in", $time);
-                    if (clk_counter == 6) begin
-                        //clk_counter <= 0;
-                        //bit_counter <= 7; // Prepare to receive MSB first
-						if(in_s2 == 0)begin
-							in_start <= in_s2; // Sample the start bit at the middle of the bit period
-                            clk_counter <= clk_counter + 1; // Move to the next cycle to sample the first data bit
-                            //state <= S_DATA;
-						end else begin
-							clk_counter <= 0;
-							state <= S_IDLE;
-						end
-								//$display("Time: %t | S_START -> Sampling Start Bit. Waited %d cycles.  value: %b", $time, clk_counter + 1, in);
-                    end else if (clk_counter == FINAL_CYCLE) begin
-                        state <= S_DATA;
-                        clk_counter <= 0;
-                        bit_counter <= 7; // Prepare to receive MSB first
-                        //$display("Time: %t | S_START -> Start Bit Validated. Moving to S_DATA. in value: %b", $time, in_s2);
-                    end else begin
-                        clk_counter <= clk_counter + 1;
-                    end
-            end
-            
-            S_DATA: begin
-                if (clk_counter == 6) begin
-                    // On the last clock tick, sample the input line for the data bit.
-						  data_shift_reg <= {data_shift_reg[6:0],in_s2};
-                          clk_counter <= clk_counter + 1;
-                    //data_shift_reg[bit_counter] <= in;
-                end else if (clk_counter == FINAL_CYCLE) begin
-                    clk_counter <= 0;
-						  //$display("Time: %t | S_DATA  -> Sampling data bit[%d]. Waited %d cycles. in value: %b", $time, bit_counter, clk_counter + 1, in_s2);
-                    if (bit_counter == 0) begin // Finished with the LSB
-                        computed_parity <= ^data_shift_reg; // Compute parity bit (even parity)
-                        $display("Time: %t | S_DATA -> Received byte: %0h. Computed parity: %b", $time, data_shift_reg, computed_parity);
-                        state <= S_PARITY;
-                    end else begin
-                        bit_counter <= bit_counter - 1;
-                    end
-                end else begin
-                    clk_counter <= clk_counter + 1;
-                end
-            end
+        in_complete <= 0;
+        wr_in <= 0;
+        in_block_ok <= 0;
 
-            S_PARITY: begin
-                if (clk_counter == 6) begin
-                    sampled_parity <= in_s2; // Sample the parity bit
-                    clk_counter <= clk_counter + 1;
-                end else if (clk_counter == 7) begin
-                    // Check parity error
-                    if (sampled_parity !== computed_parity) begin
-                        parity_err <= 1'b1;
-                    end else begin
-                        parity_err <= 1'b0;
-                    end
-                    clk_counter <= clk_counter + 1; // Move to the next cycle to sample the stop bit
-                end else if (clk_counter == FINAL_CYCLE) begin
-                    clk_counter <= 0;
-                    state <= S_STOP;
-					$display("Time: %t | S_PARITY-> Sampling Parity Bit. Waited %d cycles. in value: %b, byte_counter: %d, computed_parity: %b, sampled_parity: %b, parity_err: %b", $time, clk_counter + 1, in_s2, byte_counter, computed_parity, sampled_parity, parity_err);
-                end else begin
-                    clk_counter <= clk_counter + 1;
-                end
-            end
+        case(state)
 
-            S_STOP : begin
-					if (clk_counter == FINAL_CYCLE) begin
-                        //wr_in <= 1; // Signal to write to FIFO after stop bit is sampled
-						clk_counter <= 0;
-						if(in_s2 == 1'b1 && (parity_err == 1'b0)) begin
-							in_msg[7:0] <= data_shift_reg[7:0];
-                            in_block_ok <= 1'b1; // Signal that a full block has been received
-                            wr_in <= 1'b1;
-							in_complete <= 1'b1;
-							in_parity <= sampled_parity;
-                            byte_counter <= byte_counter + 1'b1;
-                            //$display("Time: %t | UART_in | S_STOP  -> Sampling Stop Bit. Waited %d cycles. in_msg value: %0h. FRAME COMPLETE.byte_counter: %0d", $time, clk_counter + 1, data_shift_reg, byte_counter);
-                            if(byte_counter == 15) begin
-                                byte_counter <= 0; // Reset byte counter after receiving a full block of 16 bytes
-                                //in_block_ok <= 1'b1; // Signal that a full block has been received
-                                //$display("Time: %t | UART_in | Received 16 bytes. Byte counter reset. in_block_ok asserted. byte_counter: %0d", $time, byte_counter);
+                        S_IDLE : begin
+                            //$display("time:%0t, Inside idle state of UART_in", $time);
+                            parity_err <= 0; // Clear parity error at the start of a new reception
+                            if (in_s2 == 0) begin
+                                in_block_ok <= 0; // Clear block complete signal when a new start bit is detected
+                                wr_in <= 0;
+                                state <= S_START;
+                                //$display("Time: %t | UART_in | S_IDLE  -> Detected Start Bit.", $time);
+                            end
+                            else begin
+                                state <= S_IDLE;
+                                //$display("Time: %t | UART_in | S_IDLE  -> Waiting for Start Bit. in value: %b", $time, in_s2);
                             end
                         end
-                        if (in_s2 == 0) begin
-                            state <= S_START;
-                            clk_counter <= 1;
-                            bit_counter <= 7;
-                            parity_err  <= 0;
+                            
+                    S_START: begin
+                                //$display("time:%0t, Inside start state of UART_in", $time);
+                            if (clk_counter == 6) begin
+                                //clk_counter <= 0;
+                                //bit_counter <= 7; // Prepare to receive MSB first
+                                if(in_s2 == 0)begin
+                                    in_start <= in_s2; // Sample the start bit at the middle of the bit period
+                                    clk_counter <= clk_counter + 1; // Move to the next cycle to sample the first data bit
+                                    //state <= S_DATA;
+                                end else begin
+                                    clk_counter <= 0;
+                                    state <= S_IDLE;
+                                end
+                                        //$display("Time: %t | S_START -> Sampling Start Bit. Waited %d cycles.  value: %b", $time, clk_counter + 1, in);
+                            end else if (clk_counter == FINAL_CYCLE) begin
+                                state <= S_DATA;
+                                clk_counter <= 0;
+                                bit_counter <= 7; // Prepare to receive MSB first
+                                //$display("Time: %t | S_START -> Start Bit Validated. Moving to S_DATA. in value: %b", $time, in_s2);
+                            end else begin
+                                clk_counter <= clk_counter + 1;
+                            end
+                    end
+                    
+                    S_DATA: begin
+                        if (clk_counter == 6) begin
+                            // On the last clock tick, sample the input line for the data bit.
+                                data_shift_reg <= {data_shift_reg[6:0],in_s2};
+                                clk_counter <= clk_counter + 1;
+                            //data_shift_reg[bit_counter] <= in;
+                        end else if (clk_counter == FINAL_CYCLE) begin
+                            clk_counter <= 0;
+                                //$display("Time: %t | S_DATA  -> Sampling data bit[%d]. Waited %d cycles. in value: %b", $time, bit_counter, clk_counter + 1, in_s2);
+                            if (bit_counter == 0) begin // Finished with the LSB
+                                computed_parity <= ^data_shift_reg; // Compute parity bit (even parity)
+                                //$display("Time: %t | S_DATA -> Received byte: %0h. Computed parity: %b", $time, data_shift_reg, computed_parity);
+                                state <= S_PARITY;
+                            end else begin
+                                bit_counter <= bit_counter - 1;
+                            end
                         end else begin
-						    state <= S_IDLE;
+                            clk_counter <= clk_counter + 1;
                         end
-                    end else begin
-                        clk_counter <= clk_counter + 1;
-				    end
+                    end
+
+                    S_PARITY: begin
+                        if (clk_counter == 6) begin
+                            sampled_parity <= in_s2; // Sample the parity bit
+                            clk_counter <= clk_counter + 1;
+                        end else if (clk_counter == 7) begin
+                            // Check parity error
+                            if (sampled_parity !== computed_parity) begin
+                                parity_err <= 1'b1;
+                            end else begin
+                                parity_err <= 1'b0;
+                            end
+                            clk_counter <= clk_counter + 1; // Move to the next cycle to sample the stop bit
+                        end else if (clk_counter == FINAL_CYCLE) begin
+                            clk_counter <= 0;
+                            state <= S_STOP;
+                            //$display("Time: %t | S_PARITY-> Sampling Parity Bit. Waited %d cycles. in value: %b, byte_counter: %d, computed_parity: %b, sampled_parity: %b, parity_err: %b", $time, clk_counter + 1, in_s2, byte_counter, computed_parity, sampled_parity, parity_err);
+                        end else begin
+                            clk_counter <= clk_counter + 1;
+                        end
+                    end
+
+                    S_STOP : begin
+                            if (clk_counter == FINAL_CYCLE) begin
+                                //wr_in <= 1; // Signal to write to FIFO after stop bit is sampled
+                                clk_counter <= 0;
+                                if(in_s2 == 1'b1 && (parity_err == 1'b0)) begin
+                                    in_msg[7:0] <= data_shift_reg[7:0];
+                                    in_block_ok <= 1'b1; // Signal that a full block has been received
+                                    wr_in <= 1'b1;
+                                    in_complete <= 1'b1;
+                                    in_parity <= sampled_parity;
+                                    byte_counter <= byte_counter + 1'b1;
+                                    //$display("Time: %t | UART_in | S_STOP  -> Sampling Stop Bit. Waited %d cycles. in_msg value: %0h. FRAME COMPLETE.byte_counter: %0d", $time, clk_counter + 1, data_shift_reg, byte_counter);
+                                    if(byte_counter == 15) begin
+                                        byte_counter <= 0; // Reset byte counter after receiving a full block of 16 bytes
+                                        //in_block_ok <= 1'b1; // Signal that a full block has been received
+                                        //$display("Time: %t | UART_in | Received 16 bytes. Byte counter reset. in_block_ok asserted. byte_counter: %0d", $time, byte_counter);
+                                    end
+                                end
+                                if (in_s2 == 0) begin
+                                    state <= S_START;
+                                    clk_counter <= 1;
+                                    bit_counter <= 7;
+                                    parity_err  <= 0;
+                                end else begin
+                                    state <= S_IDLE;
+                                end
+                            end else begin
+                                clk_counter <= clk_counter + 1;
+                            end
 
 
-			end
+                    end
 
-            default:
-                state <= S_IDLE;
-        endcase
+                    default:
+                        state <= S_IDLE;
+                endcase
     end
+end
 
 endmodule
 

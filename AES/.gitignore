@@ -12,19 +12,19 @@ output_files/
 !*.rpt
 
 # Quartus generated IP / cache
-qdb/
-cdb/
+*qdb/
+*cdb/
 *.cmp
 *.qip
 
 # =========================
 # ModelSim / QuestaSim
 # =========================
-simulation/
-work/
-modelsim.ini
-transcript
-vsim.wlf
+*simulation/
+*work/
+*modelsim.ini
+*transcript
+*vsim.wlf
 *.wlf
 *.vcd
 

@@ -25,6 +25,7 @@ module tb;
     wire rx;
     reg  in;
     wire [7:0] input_data;
+    wire out;
 
     // CDC //
     wire done_slow;
@@ -48,6 +49,7 @@ module tb;
         .rx              (rx),
         .in              (in),
         .input_data      (input_data),
+        .out             (out),
         .enc_done       (enc_done),
         .RD_RX          (RD_RX),
         .fifo_wr_en     (fifo_wr_en),
@@ -157,6 +159,54 @@ module tb;
         end
     endtask
 
+
+    // ============================================================
+    // DRIVER for UART output monitoring                        
+    // ============================================================
+
+    // Storage for received result
+    reg [127:0] received_text;
+    reg [7:0]   rcv_byte;
+
+    // ============================================================
+    // RECEIVER TASK — reads one byte from 'out' at clk_100 rate
+    // Mirror of send_byte but sampling instead of driving
+    // ============================================================
+    task recv_byte(output [7:0] data);
+        integer i;
+        begin
+            // Wait for start bit (falling edge on 'out')
+            @(negedge out);
+
+            // Wait to center of start bit (7 cycles in)
+            repeat(7) @(posedge clk_100);
+
+            // Sample 8 data bits, one per bit period
+            for (i = 7; i >= 0; i = i - 1) begin
+                repeat(14) @(posedge clk_100);
+                data[i] = out;   // LSB first
+            end
+
+            // Skip parity and stop bit
+            repeat(14) @(posedge clk_100); // parity
+            repeat(14) @(posedge clk_100); // stop
+        end
+    endtask
+
+    // ============================================================
+    // RECEIVER TASK — collect 16 bytes into a 128-bit result
+    // ============================================================
+    task recv_result(output [127:0] result);
+        integer i;
+        reg [7:0] b;
+        begin
+            for (i = 0; i < 16; i = i + 1) begin
+                recv_byte(b);
+                result[127 - i*8 -: 8] = b;
+            end
+        end
+    endtask
+
     // ============================================================
     // SCOREBOARD
     // ============================================================
@@ -224,21 +274,21 @@ module tb;
 
     always@(posedge clk_100) begin
         if(done /*&& in_flight*/) begin
-            if(decrypted_text === plaintext) begin
+            if(received_text === plaintext) begin
                 pass_count <= pass_count + 1;
                 //$display("PASS | ct=%h | latency=%0d",ciphertext, latency_cnt);
                 $display("S.No: %0d PASS", i);
                 //$display("  Ciphertext : %h", ciphertext);
-                $display("Time:%0t | Plaintext  : %h", $time, decrypted_text);
+                $display("Time:%0t | Plaintext  : %h", $time, received_text);
                 $display("Time:%0t |  Expected   : %h", $time, plaintext);
             end 
-            if(decrypted_text !== plaintext) begin
+            if(received_text !== plaintext) begin
                 fail_count <= fail_count + 1;
                 //$display("time : %0t | FAIL | fail_count=%0d | Expected: %h | Got: %h", $time, fail_count, expected_ciphertext, ciphertext);
                 $display("S.No: %0d FAIL", i);
                 //$display("  Ciphertext : %h", ciphertext);
                 $display("Time:%0t | Expected   : %h", $time, plaintext);
-                $display("Time:%0t | Got     : %h", $time, decrypted_text);
+                $display("Time:%0t | Got     : %h", $time, received_text);
             end
         end
     end
@@ -319,7 +369,12 @@ module tb;
         start = 0;*/
         // Wait for system completion
         for (i = 1; i <= 11; i = i + 1) begin
+            fork
             send_key_and_data(golden_plaintext[i], (i>=10) ? key_vec[1] : key_vec[0]);
+            begin
+                recv_result(received_text);
+            end
+            join
             wait(done);
             plaintext = golden_plaintext[i];
             @(posedge clk_100);

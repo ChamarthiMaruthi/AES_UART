@@ -25,7 +25,7 @@ module aes_uart_top #( parameter loopback_test = 1)
     // ========================================================
     input wire  in,
     output wire [7:0] input_data,
-	 
+	output wire out,
 	 // CDC
 	 output wire enc_done,
 	 output reg  fifo_wr_en,
@@ -50,7 +50,8 @@ module aes_uart_top #( parameter loopback_test = 1)
     localparam ST_RX_WAIT     = 8;
     localparam ST_DEC_START   = 9;
     localparam ST_DEC_WAIT    = 10;
-    localparam ST_DONE        = 11;
+    localparam ST_SEND_RESULT = 11;
+    localparam ST_DONE        = 12;
 
     reg [3:0] sys_state;
 
@@ -62,6 +63,7 @@ module aes_uart_top #( parameter loopback_test = 1)
 
     uart_in u_uart_in (
     .clk(clk_100),
+    .rst(rst),
     .in(in),
     .in_msg(input_data),
     .in_parity(parity),
@@ -381,6 +383,25 @@ module aes_uart_top #( parameter loopback_test = 1)
         .done       (dec_done)
     );
 
+    // After ADS_TOP signals:
+    //wire [127:0] decrypted_text;  // now internal wire, not port
+    reg  [3:0]   out_byte_idx = 0;
+    reg          send     = 0;
+    reg          send_start = 0;
+    reg  [7:0]   out_data_reg = 0;
+    wire         send_busy;
+    wire         send_done;
+
+    uart_out u_uart_out (
+        .clk        (clk_100),
+        .rst        (rst),
+        .send_start  (send_start),
+        .out        (out_data_reg),
+        .send       (out),
+        .send_busy  (send_busy),
+        .send_done  (send_done)
+    );
+
 
     // ============================================================
     // System FSM
@@ -400,14 +421,14 @@ module aes_uart_top #( parameter loopback_test = 1)
 
                 ST_IDLE: begin
                     if (data_valid) begin
-                        $display("time:%0t | Received first byte: %h", $time, input_data);
+                        //$display("time:%0t | Received first byte: %h", $time, input_data);
                         if (input_data == 8'h01) begin
-                            $display("time:%0t | Received command to start receiving key", $time);
+                            //$display("time:%0t | Received command to start receiving key", $time);
                             sys_state <= ST_RECV_KEY;
                             byte_idx <= 0;
                         end
                         else if (input_data == 8'h02) begin
-                            $display("time:%0t | Received command to start receiving data", $time); 
+                            //$display("time:%0t | Received command to start receiving data", $time); 
                             sys_state <= ST_RECV_PT;
                             byte_idx <= 0;
                         end
@@ -417,7 +438,7 @@ module aes_uart_top #( parameter loopback_test = 1)
 
                 ST_RECV_KEY: begin
                     if (data_valid) begin
-                        $display("time:%0t | Receiving key byte: %h", $time, input_data);
+                        //$display("time:%0t | Receiving key byte: %h", $time, input_data);
                         key_reg[127 - byte_idx*8 -: 8] <= input_data;
 
                         if (byte_idx == 15) begin
@@ -431,7 +452,7 @@ module aes_uart_top #( parameter loopback_test = 1)
 
                 ST_RECV_PT: begin
                     if (data_valid) begin
-                        $display("time:%0t | Receiving plaintext byte: %h, byte_idx: %d", $time, input_data, byte_idx);
+                        //$display("time:%0t | Receiving plaintext byte: %h, byte_idx: %d", $time, input_data, byte_idx);
                         plaintext_reg[127 - byte_idx*8 -: 8] <= input_data;
 
                         if (byte_idx == 15) begin
@@ -444,7 +465,7 @@ module aes_uart_top #( parameter loopback_test = 1)
                 end
 
                 ST_ENC_START: begin
-					$display("time:%0t | Entered start encryption state " , $time);
+					//$display("time:%0t | Entered start encryption state " , $time);
                     enc_start <= 1'b1;
                     sys_state <= ST_ENC_WAIT;
                 end
@@ -489,7 +510,24 @@ module aes_uart_top #( parameter loopback_test = 1)
                 ST_DEC_WAIT: begin
                     if (dec_done) begin
 								//$display("time:%0t | Decryption done state", $time);
-                        sys_state <= ST_DONE;
+                        sys_state <= ST_SEND_RESULT;
+                        out_byte_idx <= 0;
+                    end
+                end
+
+                ST_SEND_RESULT: begin
+                    if (!send_busy && !send_start) begin
+                        out_data_reg <= decrypted_text[127 - out_byte_idx*8 -: 8];
+                        send_start     <= 1'b1;
+                    end else begin
+                        send_start <= 1'b0;
+                        if (send_done) begin
+                            if (out_byte_idx == 15) begin
+                                sys_state <= ST_DONE;
+                            end else begin
+                                out_byte_idx <= out_byte_idx + 1;
+                            end
+                        end
                     end
                 end
 
