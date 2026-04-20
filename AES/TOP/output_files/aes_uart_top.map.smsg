@@ -1,1 +1,0 @@
-Warning (10268): Verilog HDL information at ADS_TOP.v(49): always construct contains both blocking and non-blocking assignments File: /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/ADS_TOP.v Line: 49
