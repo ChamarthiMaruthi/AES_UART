@@ -16,7 +16,7 @@ module Buffer_top(
 	 
 	 
     // ===== UART RX Management Ports =====
-    input        rx,             // UART RX input line
+    output        rx,             // UART RX input line
     output [7:0] rx_msg,    // Data read from RX FIFO
 	output       rx_complete,
     output       rx_block_ok, // Signal that a full block of 16 bytes has been received
@@ -64,7 +64,7 @@ uart_tx tx_inst (
 // ===== UART RX Instance =====
 uart_rx rx_inst (
     .clk_3125_rx (clk_3125_rx),
-    .rx          (rx),
+    .rx          (tx),
     .rx_msg      (rx_msg),
     .rx_parity   (rx_parity),
     .rx_complete (rx_complete),

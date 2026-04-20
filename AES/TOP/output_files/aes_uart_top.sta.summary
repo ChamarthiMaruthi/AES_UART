@@ -3,147 +3,147 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1100mV 100C Model Setup 'clk_100'
-Slack : 1.312
-TNS   : 0.000
-
-Type  : Slow 1100mV 100C Model Setup 'clk_3125_tx'
-Slack : 32.031
+Slack : 0.630
 TNS   : 0.000
 
 Type  : Slow 1100mV 100C Model Setup 'clk_3125_rx'
-Slack : 33.583
+Slack : 33.345
+TNS   : 0.000
+
+Type  : Slow 1100mV 100C Model Setup 'clk_3125_tx'
+Slack : 33.933
 TNS   : 0.000
 
 Type  : Slow 1100mV 100C Model Hold 'clk_100'
-Slack : 0.050
+Slack : 0.127
 TNS   : 0.000
 
 Type  : Slow 1100mV 100C Model Hold 'clk_3125_rx'
-Slack : 0.350
+Slack : 0.319
 TNS   : 0.000
 
 Type  : Slow 1100mV 100C Model Hold 'clk_3125_tx'
-Slack : 0.356
+Slack : 0.351
 TNS   : 0.000
 
 Type  : Slow 1100mV 100C Model Minimum Pulse Width 'clk_100'
-Slack : 4.291
-TNS   : 0.000
-
-Type  : Slow 1100mV 100C Model Minimum Pulse Width 'clk_3125_tx'
-Slack : 18.609
+Slack : 4.277
 TNS   : 0.000
 
 Type  : Slow 1100mV 100C Model Minimum Pulse Width 'clk_3125_rx'
-Slack : 18.611
+Slack : 18.614
+TNS   : 0.000
+
+Type  : Slow 1100mV 100C Model Minimum Pulse Width 'clk_3125_tx'
+Slack : 18.621
 TNS   : 0.000
 
 Type  : Slow 1100mV -40C Model Setup 'clk_100'
-Slack : 1.246
-TNS   : 0.000
-
-Type  : Slow 1100mV -40C Model Setup 'clk_3125_tx'
-Slack : 32.139
+Slack : 0.664
 TNS   : 0.000
 
 Type  : Slow 1100mV -40C Model Setup 'clk_3125_rx'
-Slack : 33.782
+Slack : 33.675
+TNS   : 0.000
+
+Type  : Slow 1100mV -40C Model Setup 'clk_3125_tx'
+Slack : 34.012
 TNS   : 0.000
 
 Type  : Slow 1100mV -40C Model Hold 'clk_3125_rx'
-Slack : 0.328
+Slack : 0.306
 TNS   : 0.000
 
 Type  : Slow 1100mV -40C Model Hold 'clk_3125_tx'
-Slack : 0.341
+Slack : 0.334
 TNS   : 0.000
 
 Type  : Slow 1100mV -40C Model Hold 'clk_100'
-Slack : 0.343
+Slack : 0.351
 TNS   : 0.000
 
 Type  : Slow 1100mV -40C Model Minimum Pulse Width 'clk_100'
-Slack : 4.170
+Slack : 4.152
+TNS   : 0.000
+
+Type  : Slow 1100mV -40C Model Minimum Pulse Width 'clk_3125_rx'
+Slack : 18.537
 TNS   : 0.000
 
 Type  : Slow 1100mV -40C Model Minimum Pulse Width 'clk_3125_tx'
 Slack : 18.549
 TNS   : 0.000
 
-Type  : Slow 1100mV -40C Model Minimum Pulse Width 'clk_3125_rx'
-Slack : 18.558
-TNS   : 0.000
-
 Type  : Fast 1100mV 100C Model Setup 'clk_100'
-Slack : 3.832
-TNS   : 0.000
-
-Type  : Fast 1100mV 100C Model Setup 'clk_3125_tx'
-Slack : 35.256
+Slack : 3.885
 TNS   : 0.000
 
 Type  : Fast 1100mV 100C Model Setup 'clk_3125_rx'
-Slack : 36.230
+Slack : 35.830
 TNS   : 0.000
 
-Type  : Fast 1100mV 100C Model Hold 'clk_100'
-Slack : 0.178
+Type  : Fast 1100mV 100C Model Setup 'clk_3125_tx'
+Slack : 36.372
 TNS   : 0.000
 
 Type  : Fast 1100mV 100C Model Hold 'clk_3125_rx'
-Slack : 0.179
+Slack : 0.171
+TNS   : 0.000
+
+Type  : Fast 1100mV 100C Model Hold 'clk_100'
+Slack : 0.177
 TNS   : 0.000
 
 Type  : Fast 1100mV 100C Model Hold 'clk_3125_tx'
-Slack : 0.180
+Slack : 0.181
 TNS   : 0.000
 
 Type  : Fast 1100mV 100C Model Minimum Pulse Width 'clk_100'
-Slack : 4.420
+Slack : 4.421
 TNS   : 0.000
 
 Type  : Fast 1100mV 100C Model Minimum Pulse Width 'clk_3125_tx'
-Slack : 18.818
+Slack : 18.817
 TNS   : 0.000
 
 Type  : Fast 1100mV 100C Model Minimum Pulse Width 'clk_3125_rx'
-Slack : 18.823
+Slack : 18.820
 TNS   : 0.000
 
 Type  : Fast 1100mV -40C Model Setup 'clk_100'
-Slack : 4.558
-TNS   : 0.000
-
-Type  : Fast 1100mV -40C Model Setup 'clk_3125_tx'
-Slack : 35.951
+Slack : 4.563
 TNS   : 0.000
 
 Type  : Fast 1100mV -40C Model Setup 'clk_3125_rx'
-Slack : 36.819
+Slack : 36.550
+TNS   : 0.000
+
+Type  : Fast 1100mV -40C Model Setup 'clk_3125_tx'
+Slack : 36.914
 TNS   : 0.000
 
 Type  : Fast 1100mV -40C Model Hold 'clk_3125_rx'
-Slack : 0.109
+Slack : 0.148
 TNS   : 0.000
 
 Type  : Fast 1100mV -40C Model Hold 'clk_100'
-Slack : 0.147
+Slack : 0.164
 TNS   : 0.000
 
 Type  : Fast 1100mV -40C Model Hold 'clk_3125_tx'
-Slack : 0.157
+Slack : 0.165
 TNS   : 0.000
 
 Type  : Fast 1100mV -40C Model Minimum Pulse Width 'clk_100'
-Slack : 4.423
+Slack : 4.428
 TNS   : 0.000
 
 Type  : Fast 1100mV -40C Model Minimum Pulse Width 'clk_3125_tx'
-Slack : 18.801
+Slack : 18.799
 TNS   : 0.000
 
 Type  : Fast 1100mV -40C Model Minimum Pulse Width 'clk_3125_rx'
-Slack : 18.804
+Slack : 18.802
 TNS   : 0.000
 
 ------------------------------------------------------------

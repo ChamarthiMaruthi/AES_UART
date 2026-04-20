@@ -10,23 +10,23 @@ z2
 cModel Technology
 Z0 d/home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/simulation/modelsim
 vADS_TOP
-Z1 !s110 1775729343
+Z1 !s110 1776666223
 !i10b 1
-!s100 LjMo[03UNOUH>DAm>KLQS2
+!s100 9k6Pa@T3Vz[`cczW1;:ek0
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IEV98kCXJT7OGTRf]<al1B0
+I5h@D=bcaZlHg6LO`Z@Q0e3
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1773987995
+w1776493061
 8/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/ADS_TOP.v
 F/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/ADS_TOP.v
-!i122 12
-L0 7 205
+!i122 13
+L0 7 252
 Z4 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z5 !s108 1775729343.000000
+Z5 !s108 1776666223.000000
 !s107 /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/ADS_TOP.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code|/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/ADS_TOP.v|
 !i113 1
@@ -35,66 +35,66 @@ Z7 !s92 -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quart
 Z8 tCvgOpt 0
 n@a@d@s_@t@o@p
 vAES_TOP
-Z9 !s110 1775729342
+R1
 !i10b 1
-!s100 GW]kIlbabX1D=1^I=0UDE0
+!s100 UVQAkQET7X<OAZU>5iChd1
 R2
-IJ=eF1HhLSg<5N6Wnm62La1
+I9mBldZeoz_nN;_TE<5dnQ2
 R3
 R0
-w1773987985
+w1776492962
 8/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/AES_TOP.v
 F/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/AES_TOP.v
-!i122 1
-L0 7 182
+!i122 2
+L0 7 227
 R4
 r1
 !s85 0
 31
-Z10 !s108 1775729342.000000
+Z9 !s108 1776666222.000000
 !s107 /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/AES_TOP.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code|/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/AES_TOP.v|
 !i113 1
 R6
-Z11 !s92 -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code
+Z10 !s92 -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code
 R8
 n@a@e@s_@t@o@p
 vaes_uart_top
-R9
+Z11 !s110 1776666222
 !i10b 1
-!s100 JjNG`0^Ahz7_nm^5OfaLl0
+!s100 GoZRaU9FGKR42I[@oWFK:2
 R2
-IAiS^KYT1@@mP48bQa^HzU2
+IGjLbme0QMa=RDm;=_^=Sh3
 R3
 R0
-w1773987970
+w1776628638
 8/home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/aes_uart_top.v
 F/home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/aes_uart_top.v
-!i122 0
-L0 1 422
+!i122 1
+L0 1 507
 R4
 r1
 !s85 0
 31
-R10
+R9
 !s107 /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/aes_uart_top.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP|/home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/aes_uart_top.v|
 !i113 1
 R6
-!s92 -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP
+Z12 !s92 -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP
 R8
 vBuffer_top
 R1
 !i10b 1
-!s100 2CPFeonIiJcbH5>`7`S_21
+!s100 fWK]WCeUR8BkJjn3d<36K0
 R2
-IzP5cR7;3kzoZi1D68lCNY2
+I<J<?`B>i^?j95Q??ZaY^<3
 R3
 R0
-w1773985048
+w1776423378
 8/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/Buffer_top.v
 F/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/Buffer_top.v
-!i122 7
+!i122 8
 L0 2 99
 R4
 r1
@@ -105,7 +105,7 @@ R5
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code|/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/Buffer_top.v|
 !i113 1
 R6
-Z12 !s92 -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code
+Z13 !s92 -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code
 R8
 n@buffer_top
 vfifo_rx
@@ -116,10 +116,10 @@ R2
 I?Do`[KfYh6=OaJWP9fgkc2
 R3
 R0
-Z13 w1773933713
+Z14 w1773933713
 8/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/fifo_rx.v
 F/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/fifo_rx.v
-!i122 11
+!i122 12
 L0 1 80
 R4
 r1
@@ -130,7 +130,7 @@ R5
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code|/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/fifo_rx.v|
 !i113 1
 R6
-R12
+R13
 R8
 vfifo_tx
 R1
@@ -140,10 +140,10 @@ R2
 IR>JmGG;aRfl75UX9[^T^W2
 R3
 R0
-R13
+R14
 8/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/fifo_tx.v
 F/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/fifo_tx.v
-!i122 8
+!i122 9
 L0 1 82
 R4
 r1
@@ -154,7 +154,7 @@ R5
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code|/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/fifo_tx.v|
 !i113 1
 R6
-R12
+R13
 R8
 vinverseSbox
 R1
@@ -167,7 +167,7 @@ R0
 w1766572259
 8/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/inverseSbox.v
 F/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/inverseSbox.v
-!i122 14
+!i122 15
 L0 2 75
 R4
 r1
@@ -192,7 +192,7 @@ R0
 w1768080813
 8/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/inverseShiftrows.v
 F/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/inverseShiftrows.v
-!i122 13
+!i122 14
 L0 1 45
 R4
 r1
@@ -217,7 +217,7 @@ R0
 w1766603487
 8/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/inverseSubBytes.v
 F/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/inverseSubBytes.v
-!i122 15
+!i122 16
 L0 2 17
 R4
 r1
@@ -242,7 +242,7 @@ R0
 w1768029134
 8/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/invMixColumns.v
 F/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/invMixColumns.v
-!i122 16
+!i122 17
 L0 1 72
 R4
 r1
@@ -257,32 +257,32 @@ R7
 R8
 ninv@mix@columns
 vkeyExpansion
-R9
+R1
 !i10b 1
-!s100 LEnMQCDo_5hnkMHc@fj6C1
+!s100 [V87U2eQFT7zTa=>bN@K[1
 R2
-IbfB@YfL>lTD22H[PdDlNf2
+IHOPCNn8ZLC39J7iIYGX6a2
 R3
 R0
-w1767542664
+w1776164764
 8/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/keyExpansion.v
 F/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/keyExpansion.v
-!i122 2
-L0 1 93
+!i122 3
+L0 1 121
 R4
 r1
 !s85 0
 31
-R10
+R5
 !s107 /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/keyExpansion.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code|/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/keyExpansion.v|
 !i113 1
 R6
-R11
+R10
 R8
 nkey@expansion
 vmixColumns
-R9
+R1
 !i10b 1
 !s100 ?2NChSIaW?ABmaiI8]8LP0
 R2
@@ -292,18 +292,18 @@ R0
 w1772636551
 8/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/mixColumns.v
 F/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/mixColumns.v
-!i122 3
+!i122 4
 L0 1 57
 R4
 r1
 !s85 0
 31
-R10
+R5
 !s107 /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/mixColumns.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code|/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/mixColumns.v|
 !i113 1
 R6
-R11
+R10
 R8
 nmix@columns
 vsbox
@@ -317,18 +317,18 @@ R0
 w1765803301
 8/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/sbox.v
 F/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/sbox.v
-!i122 4
+!i122 5
 L0 3 75
 R4
 r1
 !s85 0
 31
-R10
+R5
 !s107 /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/sbox.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code|/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/sbox.v|
 !i113 1
 R6
-R11
+R10
 R8
 vshiftRows
 R1
@@ -341,7 +341,7 @@ R0
 w1766237091
 8/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/shiftRows.v
 F/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/shiftRows.v
-!i122 5
+!i122 6
 L0 1 38
 R4
 r1
@@ -352,7 +352,7 @@ R5
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code|/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/shiftRows.v|
 !i113 1
 R6
-R11
+R10
 R8
 nshift@rows
 vsubBytes
@@ -366,7 +366,7 @@ R0
 w1766250718
 8/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/subBytes.v
 F/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/subBytes.v
-!i122 6
+!i122 7
 L0 2 19
 R4
 r1
@@ -377,22 +377,22 @@ R5
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code|/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/subBytes.v|
 !i113 1
 R6
-R11
+R10
 R8
 nsub@bytes
 vtb
 R1
 !i10b 1
-!s100 ZBoVMT8>=M[PSOGC6@6=?1
+!s100 0HHG7eGCRgAHf;1HKhNDO2
 R2
-I>9KYkeg[Zbk885fR:4NfI3
+I=OooAeeRi47WD_4P`6<OU2
 R3
 R0
-w1775728673
+w1776632508
 8/home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/../testbench/tb.v
 F/home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/../testbench/tb.v
-!i122 17
-L0 3 299
+!i122 18
+L0 3 348
 R4
 r1
 !s85 0
@@ -404,18 +404,42 @@ R5
 R6
 !s92 -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/../testbench
 R8
+vuart_in
+R11
+!i10b 1
+!s100 7mV`<04H9SHS^gFS4gMLj2
+R2
+I9DF^0h2_ik9^;U3M48C7G3
+R3
+R0
+w1776628364
+8/home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/UART_IN.v
+F/home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/UART_IN.v
+!i122 0
+L0 2 179
+R4
+r1
+!s85 0
+31
+R9
+!s107 /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/UART_IN.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP|/home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/UART_IN.v|
+!i113 1
+R6
+R12
+R8
 vuart_rx
 R1
 !i10b 1
-!s100 Q1[P^<>1RMo9c[@dJZm<g1
+!s100 C;5[ZSFnPVm7Xnma8XnF53
 R2
-IW7[[_NK?Ng<R6gbWRLJ8K0
+Ia4d8jXEVWKM7XT_>6z1Gf3
 R3
 R0
-w1775729302
+w1776152828
 8/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_RX.v
 F/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_RX.v
-!i122 10
+!i122 11
 L0 2 150
 R4
 r1
@@ -426,21 +450,21 @@ R5
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code|/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_RX.v|
 !i113 1
 R6
-R12
+R13
 R8
 vuart_tx
 R1
 !i10b 1
-!s100 6YGJ8;Na3@L35g<[A5ljg1
+!s100 [I7XUl?0z8D`4eA1zWljV1
 R2
-IjTNDg98:S;Qa8bWni=QW`1
+IOXW5<cUU3XneeLIVl;YlP0
 R3
 R0
-w1773988217
+w1775984395
 8/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_TX.v
 F/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_TX.v
-!i122 9
-L0 2 164
+!i122 10
+L0 2 171
 R4
 r1
 !s85 0
@@ -450,5 +474,5 @@ R5
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code|/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_TX.v|
 !i113 1
 R6
-R12
+R13
 R8

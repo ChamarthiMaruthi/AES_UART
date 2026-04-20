@@ -35,15 +35,47 @@ module AES_TOP (
     // Key expansion (combinational)
     // -----------------------------------------------------------
     wire [1407:0] round_keys_comb;
-    reg [127:0]  round_key;
+    wire [127:0]  round_key_seq;
     reg  [127:0]  round_keys[0:10];
+    wire  [3:0]   key_round;
+    wire           valid;
+    reg  [3:0]   round_key_sel=4'd0;
 
     keyExpansion keyexp (
-        .key      (key),
-        .fullkeys (round_keys_comb)
+        .clk      (clk),
+        .rst_n    (rst_n),
+        .start    (start),
+        .key_in   (key),
+        .round_key (round_key_seq),
+        .round    (key_round),
+        .valid    (valid)
+        //.fullkeys (round_keys_comb)
     );
-
     always @(posedge clk or posedge rst_n) begin
+        if (rst_n) begin
+            round_keys[0]  <= 0;
+            round_keys[1]  <= 0;
+            round_keys[2]  <= 0;
+            round_keys[3]  <= 0;
+            round_keys[4]  <= 0;
+            round_keys[5]  <= 0;
+            round_keys[6]  <= 0;
+            round_keys[7]  <= 0;
+            round_keys[8]  <= 0;
+            round_keys[9]  <= 0;
+            round_keys[10] <= 0;
+        end else if (valid) begin
+            if (round_key_sel <= 4'd10) begin
+                round_keys[round_key_sel] <= round_key_seq;
+                round_key_sel <= round_key_sel + 1'b1;
+                if (round_key_sel == 4'd10) begin
+                    round_key_sel <= 4'd0; // Reset selector after storing all round keys
+                end
+            end
+            //$display("time: %t, KeyExpansion: Generated round key for round %0d: %032h", $time, round_key_sel, round_key_seq);
+        end
+    end
+    /*always @(posedge clk or posedge rst_n) begin
         if (rst_n) begin
             round_keys[0]  <= 0;
             round_keys[1]  <= 0;
@@ -70,17 +102,30 @@ module AES_TOP (
             round_keys[9]  <= round_keys_comb[1279:1152];
             round_keys[10] <= round_keys_comb[1407:1280];
         end
-    end
+    end*/
 	 
-	initial begin
+	/*initial begin
 		ciphertext = 0;
 		done       = 0;
-	 end
+	 end*/
 
     //assign round_key = round_keys[round];
 
-    always @(*) begin
-        round_key <= round_keys[round];
+    /*always @(*) begin
+        round_key_seq <= round_keys[round];
+    end*/
+
+    reg key_done;
+    always @(posedge clk or posedge rst_n) begin
+        if (rst_n) begin
+            key_done <= 0;
+        end 
+        else if (valid && key_round == 10) begin
+            key_done <= 1;   // all keys ready
+        end
+        else begin
+            key_done <= 0;
+        end
     end
 
     // -----------------------------------------------------------
@@ -124,7 +169,7 @@ module AES_TOP (
                 // ------------------------------------------------
                 S_IDLE: begin
 						  //ciphertext <= 128'd0;
-                    if (start) begin
+                    if (key_done) begin
                         //$display("time: %t, IDLE:Starting encryption | encryption | plaintext:%0h", $time, plaintext);
                         fsm_state <= S_LOAD;
                     end
@@ -135,7 +180,7 @@ module AES_TOP (
                 // ------------------------------------------------
                 S_LOAD: begin
                     //$display("time: %t, LOAD: AddRoundKey(0), round %0d, state=%032h, Round Key=%032h, mc_out=%032h", $time, round, state, round_key, mc_out);
-                    state <= plaintext ^ round_key; // AddRoundKey(0)
+                    state <= plaintext ^ round_keys[round]; // AddRoundKey(0)
                     round <= 4'd1;
                     fsm_state <= S_ROUND;
                 end
@@ -144,8 +189,8 @@ module AES_TOP (
                 // ROUNDS 1..9
                 // ------------------------------------------------
                 S_ROUND: begin
-                    //$display("time: %t, ROUND %0d, state=%032h, Round key=%032h, mc_out=%032h", $time, round, state, round_key, mc_out);
-                    state <= mc_out ^ round_key;   // full round
+                    //$display("time: %t, ROUND %0d, state=%032h, Round key=%032h, sr_out=%032h, mc_out=%032h", $time, round, state, round_key, sr_out, mc_out);
+                    state <= mc_out ^ round_keys[round];   // full round
                     if (round == 9) begin
                         fsm_state <= S_FINAL;
                         round <= 4'd10;
@@ -160,7 +205,7 @@ module AES_TOP (
                 // ------------------------------------------------
                 S_FINAL: begin
                     //$display("time: %t, FINAL ROUND, Round %0d, state=%032h, Round key=%032h, sr final=%032h", $time, round, state, round_key, sr_final);
-                    state      <= sr_final ^ round_key; // no MixColumns
+                    state      <= sr_final ^ round_keys[round]; // no MixColumns
                     //ciphertext <= sr_final ^ round_key;
                     round      <= 4'd10;
                     fsm_state  <= S_DONE;
@@ -171,7 +216,7 @@ module AES_TOP (
                 // DONE
                 // ------------------------------------------------
                 S_DONE: begin
-                    //$display("time: %t, Inside DONE state, ciphertext=%032h, round=%0d, done:%b", $time, state, round, done);
+                    $display("time: %t, Inside DONE state, ciphertext=%032h, round=%0d, done:%b", $time, state, round, done);
 						  ciphertext <= state;
                     //done      <= 1'b1;
                     fsm_state<= S_IDLE;

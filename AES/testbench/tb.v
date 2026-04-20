@@ -8,7 +8,7 @@ module tb;
     reg clk_100;
     reg clk_3125_tx;
     reg clk_3125_rx;
-    reg rst_n;
+    reg rst;
 
     // ==============================
     // DUT I/O
@@ -22,13 +22,15 @@ module tb;
     wire         RD_RX;
 
     wire tx;
-    reg rx;
+    wire rx;
+    reg  in;
+    wire [7:0] input_data;
 
     // CDC //
     wire done_slow;
     wire enc_done;
     wire fifo_wr_en;
-
+    wire enc_done_toggle;
     // ==============================
     // DUT
     // ==============================
@@ -36,23 +38,25 @@ module tb;
         .clk_100        (clk_100),
         .clk_3125_tx    (clk_3125_tx),
         .clk_3125_rx    (clk_3125_rx),
-        .rst_n          (rst_n),
+        .rst            (rst),
         .start          (start),
-        .plaintext      (plaintext),
-        .key            (key),
+        //.plaintext      (plaintext),
+        //.key            (key),
         .decrypted_text (decrypted_text),
         .done            (done),
         .tx              (tx),
         .rx              (rx),
+        .in              (in),
+        .input_data      (input_data),
         .enc_done       (enc_done),
         .RD_RX          (RD_RX),
-        .fifo_wr_en     (fifo_wr_en)
+        .fifo_wr_en     (fifo_wr_en),
+        .enc_done_toggle (enc_done_toggle)
     );
 
-    always @(*) begin
+    /*always @(*) begin
         rx = tx;
-    end
-
+    end*/
     // ==============================
     // VCD dump for Power Analyzer
     // ==============================
@@ -65,7 +69,7 @@ module tb;
     // Clock generation
     // ==============================
     initial begin
-        clk_100 = 1;
+        clk_100 = 0;
         forever #5 clk_100 = ~clk_100;
     end
 
@@ -83,19 +87,20 @@ module tb;
     // Reset
     // ==============================
     initial begin
-        rst_n = 1;
+        in  = 1; // Idle state of UART line is high
+        rst = 1;
         start = 0;
         plaintext = 0;
         key = 0;
         #10;
-        rst_n = 0;
+        rst = 0;
     end
 
 
     // ============================================================
     // DRIVER
     // ============================================================
-    task aes_send_block(input [127:0] pt, input [127:0] k);
+    /*task aes_send_block(input [127:0] pt, input [127:0] k);
     begin
         //@(posedge clk);
         plaintext <= pt;
@@ -105,6 +110,51 @@ module tb;
         @(posedge clk_100);
         start     <= 1'b0;
     end
+    endtask*/
+
+    //==============================================================
+    // DRIVER for UART input
+    //==============================================================
+    parameter BIT_PERIOD = 140; // 10ns*14 (100 MHz)
+    reg parity;
+
+    task send_byte(input [0:7] data);
+        integer i;
+
+        begin
+            parity = ^data; // Compute parity bit (even parity)
+
+            in = 1; @(posedge clk_100); //reset time
+
+            in = 0; //#(BIT_PERIOD);  // start bit
+            repeat(14) @(posedge clk_100); // wait for start bit to be sampled
+
+            for (i = 0; i < 8; i = i + 1) begin
+                in = data[i]; //#(BIT_PERIOD); // LSB first
+                repeat(14) @(posedge clk_100); // wait for data bit to be sampled
+            end
+
+            in = parity; //#(BIT_PERIOD); // parity bit (not used, set to 1)
+            repeat(14) @(posedge clk_100); // wait for parity bit to be sampled
+
+            in = 1; //#(BIT_PERIOD); // stop bit\
+            repeat(14) @(posedge clk_100); // wait for stop bit to be sampled
+        end
+    endtask
+
+    task send_key_and_data(input [127:0] pt, input [127:0] k);
+        integer i;
+        begin
+            // Send KEY command
+            send_byte(8'h01);
+            for (i = 0; i < 16; i = i + 1)
+                send_byte(k[127 - i*8 -: 8]);
+
+            // Send PLAINTEXT command
+            send_byte(8'h02);
+            for (i = 0; i < 16; i = i + 1)
+                send_byte(pt[127 - i*8 -: 8]);
+        end
     endtask
 
     // ============================================================
@@ -128,7 +178,7 @@ module tb;
     always @(posedge clk_100) begin
         done_d <= done;
 
-        if (rst_n) begin
+        if (rst) begin
             latency_cnt <= 0;
             in_flight   <= 0;
             pt_prev     <= plaintext;
@@ -163,7 +213,7 @@ module tb;
             end
 
             // ciphertext must not change before done
-            if (!rst_n && in_flight && !done && plaintext !== pt_prev) begin
+            if (!rst && in_flight && !done && plaintext !== pt_prev) begin
                 $display("❌ ERROR: ciphertext changed before done @ %0t", $time);
                 fail_count <= fail_count + 1;
             end
@@ -173,7 +223,7 @@ module tb;
     end
 
     always@(posedge clk_100) begin
-        if(done && in_flight) begin
+        if(done /*&& in_flight*/) begin
             if(decrypted_text === plaintext) begin
                 pass_count <= pass_count + 1;
                 //$display("PASS | ct=%h | latency=%0d",ciphertext, latency_cnt);
@@ -249,11 +299,11 @@ module tb;
         end
     end*/
 
-    // ==============================
+    // ============================== 
     // Test Sequence
     // ==============================
     initial begin
-        //wait(rst_n == 1);
+        wait(rst == 0);
 
         //@(posedge clk_100);
         //plaintext = 128'h00000000000000000000000000000000;
@@ -267,10 +317,9 @@ module tb;
         start = 1;
         @(posedge clk_100);
         start = 0;*/
-
         // Wait for system completion
         for (i = 1; i <= 11; i = i + 1) begin
-            aes_send_block(golden_plaintext[i], (i>=10) ? key_vec[1] : key_vec[0]);
+            send_key_and_data(golden_plaintext[i], (i>=10) ? key_vec[1] : key_vec[0]);
             wait(done);
             plaintext = golden_plaintext[i];
             @(posedge clk_100);
@@ -281,7 +330,7 @@ module tb;
         // ========================================================
         $display("----------------------------------");
         $display("AES DECRYPTION TEST SUMMARY");
-        $display("PASS        : %0d", pass_count+1);
+        $display("PASS        : %0d", pass_count);
         $display("FAIL        : %0d", fail_count);
         $display("LATENCY ERR : %0d", latency_err);
         $display("LATENCY REF : %0d", latency_ref);

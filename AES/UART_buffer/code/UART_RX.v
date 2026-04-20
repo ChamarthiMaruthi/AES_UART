@@ -80,7 +80,7 @@ case(state)
                         state <= S_DATA;
                         clk_counter <= 0;
                         bit_counter <= 7; // Prepare to receive MSB first
-                        $display("Time: %t | S_START -> Start Bit Validated. Moving to S_DATA. rx value: %b", $time, rx);
+                        //$display("Time: %t | S_START -> Start Bit Validated. Moving to S_DATA. rx value: %b", $time, rx);
                     end else begin
                         clk_counter <= clk_counter + 1;
                     end

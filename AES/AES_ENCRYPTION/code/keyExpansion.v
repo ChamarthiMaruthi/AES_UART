@@ -1,22 +1,52 @@
 module keyExpansion (
-    input  [127:0] key,
-    output [1407:0] fullkeys
+    input  wire         clk,
+    input  wire         rst_n,       // active LOW
+    input  wire         start,
+
+    input  wire [127:0] key_in,
+
+    output reg  [127:0] round_key,
+    output reg  [3:0]   round,
+    output reg          valid
 );
 
     // ------------------------------------------------------------
-    // AES-128 parameters
+    // Internal registers
     // ------------------------------------------------------------
-    localparam Nk = 4;   // key words
-    localparam Nr = 10;  // rounds
-    localparam Nb = 4;   // block words
+    reg [127:0] key_reg;
+    reg [1407:0] fullkeys; // 11 round keys * 128 bits each = 1408 bits
+    reg running;
+
+    // Split into words
+    wire [31:0] w0 = key_reg[127:96];
+    wire [31:0] w1 = key_reg[95:64];
+    wire [31:0] w2 = key_reg[63:32];
+    wire [31:0] w3 = key_reg[31:0];
 
     // ------------------------------------------------------------
-    // Rcon table (only MSB byte is non-zero)
+    // RotWord
+    // ------------------------------------------------------------
+    wire [31:0] rot_w3 = {w3[23:0], w3[31:24]};
+
+    // ------------------------------------------------------------
+    // SubWord using S-box module (4 instances)
+    // ------------------------------------------------------------
+    wire [7:0] s0, s1, s2, s3;
+
+    sbox u0 (.a(rot_w3[31:24]), .sbout(s0));
+    sbox u1 (.a(rot_w3[23:16]), .sbout(s1));
+    sbox u2 (.a(rot_w3[15:8]),  .sbout(s2));
+    sbox u3 (.a(rot_w3[7:0]),   .sbout(s3));
+
+    wire [31:0] subword = {s0, s1, s2, s3};
+
+    // ------------------------------------------------------------
+    // Rcon
     // ------------------------------------------------------------
     function [31:0] rcon;
-        input [3:0] i;
+        input [3:0] r;
         begin
-            case (i)
+            case (r)
                 4'd1:  rcon = 32'h01000000;
                 4'd2:  rcon = 32'h02000000;
                 4'd3:  rcon = 32'h04000000;
@@ -33,61 +63,59 @@ module keyExpansion (
     endfunction
 
     // ------------------------------------------------------------
-    // Word array: 44 × 32-bit words
+    // Next key computation (combinational for ONE round)
     // ------------------------------------------------------------
-    wire [31:0] w [0:Nb*(Nr+1)-1];
+    wire [31:0] temp = subword ^ rcon(round);
 
-    // Initial key words
-    assign w[0] = key[127:96];
-    assign w[1] = key[95:64];
-    assign w[2] = key[63:32];
-    assign w[3] = key[31:0];
+    wire [31:0] new_w0 = w0 ^ temp;
+    wire [31:0] new_w1 = w1 ^ new_w0;
+    wire [31:0] new_w2 = w2 ^ new_w1;
+    wire [31:0] new_w3 = w3 ^ new_w2;
+
+    wire [127:0] next_key = {new_w0, new_w1, new_w2, new_w3};
 
     // ------------------------------------------------------------
-    // Generate remaining words
+    // Sequential control
     // ------------------------------------------------------------
-    genvar i;
-    generate
-        for (i = Nk; i < Nb*(Nr+1); i = i + 1) begin : KEY_EXPAND
-            wire [31:0] temp;
-            wire [31:0] rotword;
-            wire [31:0] subword;
-
-            assign temp = w[i-1];
-
-            // RotWord
-            assign rotword = {temp[23:0], temp[31:24]};
-
-            // SubWord using shared S-box
-            wire [7:0] sb0, sb1, sb2, sb3;
-
-            sbox s0 (.a(rotword[31:24]), .sbout(sb0));
-            sbox s1 (.a(rotword[23:16]), .sbout(sb1));
-            sbox s2 (.a(rotword[15:8 ]), .sbout(sb2));
-            sbox s3 (.a(rotword[7 :0 ]), .sbout(sb3));
-
-            assign subword = {sb0, sb1, sb2, sb3};
-
-            // Key schedule rule
-            assign w[i] = (i % Nk == 0) ?
-                          (w[i-Nk] ^ subword ^ rcon(i/Nk)) :
-                          (w[i-Nk] ^ temp);
+    always @(posedge clk or posedge rst_n) begin
+        if (rst_n) begin
+            key_reg   <= 0;
+            fullkeys  <= 0;
+            round     <= 0;
+            running   <= 0;
+            valid     <= 0;
+            round_key <= 0;
         end
-    endgenerate
+        else begin
+            valid <= 0;
 
-    // ------------------------------------------------------------
-    // Pack round keys: round 0 → round 10
-    // ------------------------------------------------------------
-    genvar r;
-    generate
-        for (r = 0; r <= Nr; r = r + 1) begin : PACK_KEYS
-            assign fullkeys[128*r +: 128] = {
-                w[4*r + 0],
-                w[4*r + 1],
-                w[4*r + 2],
-                w[4*r + 3]
-            };
+            // Start condition
+            if (start && !running) begin
+                key_reg <= key_in;
+                fullkeys[128*0 +: 128]   <= key_in;
+                round     <= 1;
+                running   <= 1;
+
+                round_key <= key_in;  // round 0 key
+                valid     <= 1;
+            end
+
+            // Generate next keys
+            else if (running) begin
+                key_reg <= next_key;
+                fullkeys[128*round +: 128]   <= next_key;
+                round_key <= next_key;
+                valid     <= 1;
+
+                if (round == 10) begin
+                    running <= 0;
+                    round   <= 0;
+                end
+                else begin
+                    round <= round + 1;
+                end
+            end
         end
-    endgenerate
+    end
 
 endmodule

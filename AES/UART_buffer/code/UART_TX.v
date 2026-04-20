@@ -51,6 +51,7 @@
 					 tx_busy     <= 0;
 					 //rd_en       <= 1'b1;
                 if (state == S_IDLE && tx_start && !ft_empty) begin
+                    tx <= 1;
 						  rd_en   <= 1'b1;
                     state <= S_START;
 						  //$display("time:%0t | UART_TX | Moving to s_start state. rd_en asserted | ft_out:%0h", $time, ft_out);
@@ -59,6 +60,7 @@
             
             S_START: begin
 					 //$display("time:%0t, Entered start state. rd_en deasserted", $time);
+                     tx <= 0;
 					 rd_en <= 1'b0;
 					 tx_busy <= 1'b1;
 					 data_reg <= ft_out;
@@ -75,6 +77,8 @@
             end
 
             S_DATA: begin
+
+                tx <= data_reg[bit_counter];
                 if (clk_counter == FINAL_CYCLE) begin
                     clk_counter <= 0;
                     if (bit_counter == 0) begin
@@ -93,6 +97,7 @@
             
             S_PARITY: begin
 					 //$display("time:%0t, Inside parity state of UART_TX. parity:%b", $time, parity_bit_reg);
+                tx <= parity_bit_reg;
                 if (clk_counter == FINAL_CYCLE) begin
                     clk_counter <= 0;
                     state <= S_STOP;
@@ -102,6 +107,7 @@
             end
 
             S_STOP: begin
+                tx <= 1;
                 if (clk_counter == FINAL_CYCLE) begin
                     clk_counter <= 0;
                     state <= S_DONE;
@@ -115,6 +121,7 @@
 
             S_DONE: begin
                 //$display("time:%0t, Transmission done in UART_TX module.", $time);
+                tx <= 1;
                 state <= S_IDLE;
                 tx_busy <= 0;
 					 rd_en <= 0;
@@ -129,7 +136,7 @@
     // COMBINATIONAL BLOCK: Handles the outputs.
     // This part reacts instantly to changes in state or inputs.
     //----------------------------------------------------------------------
-    always @(*) begin
+    /*always @(*) begin
         case(state)
             S_IDLE: begin
                 if (tx_start && !ft_empty) begin
@@ -158,7 +165,7 @@
             default:
                 tx = 1;
         endcase
-    end
+    end*/
 
 	//////////////////DO NOT MAKE ANY CHANGES BELOW THIS LINE//////////////////
 

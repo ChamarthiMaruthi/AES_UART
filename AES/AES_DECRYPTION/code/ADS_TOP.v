@@ -37,19 +37,53 @@ module ADS_TOP (
 	 end
 
     // -----------------------------------------------------------
-    // Key expansion (combinational)
+    // Key expansion (sequential)
     // -----------------------------------------------------------
     wire [1407:0] round_keys_comb;
     reg [127:0]  round_key;
+    wire [127:0]  round_key_seq;
     reg  [127:0]  round_keys[0:10];
+    wire  [3:0]   key_round;
+    wire           valid;
+    reg   [3:0]   round_key_sel = 0;
 
     keyExpansion keyexp (
-        .key      (key),
-        .fullkeys (round_keys_comb)
+        .clk      (clk),
+        .rst_n    (rst_n),
+        .start    (start),
+        .key_in   (key),
+        .round_key (round_key_seq),
+        .round    (key_round),
+        .valid    (valid)
+        //.fullkeys (round_keys_comb)
     );
 
-
     always @(posedge clk or posedge rst_n) begin
+        if (rst_n) begin
+            round_keys[0]  <= 0;
+            round_keys[1]  <= 0;
+            round_keys[2]  <= 0;
+            round_keys[3]  <= 0;
+            round_keys[4]  <= 0;
+            round_keys[5]  <= 0;
+            round_keys[6]  <= 0;
+            round_keys[7]  <= 0;
+            round_keys[8]  <= 0;
+            round_keys[9]  <= 0;
+            round_keys[10] <= 0;
+        end else if (valid) begin
+            if (round_key_sel <= 4'd10) begin
+                round_keys[round_key_sel] <= round_key_seq;
+                round_key_sel <= round_key_sel + 1'b1;
+                if (round_key_sel == 4'd10) begin
+                    round_key_sel <= 4'd0; // Reset selector after storing all round keys
+                end
+            end
+            //$display("time: %t, KeyExpansion: Generated round key for round %0d: %032h", $time, round_key_sel, round_key_seq);
+        end
+    end
+
+    /*always @(posedge clk or posedge rst_n) begin
         if (rst_n) begin
             round_keys[0]  <= 0;
             round_keys[1]  <= 0;
@@ -76,10 +110,23 @@ module ADS_TOP (
             round_keys[9]  <= round_keys_comb[1279:1152];
             round_keys[10] <= round_keys_comb[1407:1280];
         end
-    end
+    end*/
 	 
     always @(*) begin
         round_key <= round_keys[round];
+    end
+
+    reg key_done;
+    always @(posedge clk or posedge rst_n) begin
+        if (rst_n) begin
+            key_done <= 0;
+        end 
+        else if (valid && key_round == 10) begin
+            key_done <= 1;   // all keys ready
+        end
+        else begin
+            key_done <= 0;
+        end
     end
     //assign round_key = round_keys[round*128 +: 128];
 
@@ -146,8 +193,8 @@ module ADS_TOP (
                 // IDLE
                 // ------------------------------------------------
                 S_IDLE: begin
-                    if (start) begin
-                        //$display("time: %t, IDLE:Starting decryption, ciphertext=%032h, key=%032h,", $time, ciphertext, key);
+                    if (key_done) begin
+                        //$display("time: %t, IDLE:Starting decryption, ciphertext=%032h, key=%032h, round=%0d", $time, ciphertext, key, round);
                         round     <= 4'd10;
                         fsm_state <= S_LOAD;
                     end
@@ -157,7 +204,7 @@ module ADS_TOP (
                 // LOAD: initial AddRoundKey (round 10)
                 // ------------------------------------------------
                 S_LOAD: begin
-                    //$display("time: %t, LOAD: AddRoundKey(10), state=%032h,round_key : %032h", $time, state, round_key);
+                    //$display("time: %t, LOAD: AddRoundKey(10), state=%032h,round_key : %032h, round=%0d", $time, state, round_key, round);
                     state <= ciphertext ^ round_key;
                     //round <= 4'd9;
                     round <= round - 1'b1;
@@ -194,7 +241,7 @@ module ADS_TOP (
                 // DONE
                 // ------------------------------------------------
                 S_DONE: begin
-                    //$display("time: %t, DONE, plaintext=%032h, imc_in=%032h, round_key=%032h", $time, state, imc_in, round_key);
+                    $display("time: %t, DONE, plaintext=%032h, imc_in=%032h, round_key=%032h", $time, state, imc_in, round_key);
                     //done      <= 1'b1;
 						  //plaintext <= state;
                     fsm_state<= S_IDLE;

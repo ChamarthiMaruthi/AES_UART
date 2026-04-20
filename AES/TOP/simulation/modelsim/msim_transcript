@@ -1,56 +1,228 @@
-# do aes_uart_top_run_msim_gate_verilog.do
-# if {[file exists gate_work]} {
-# 	vdel -lib gate_work -all
+# do aes_uart_top_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
 # }
-# vlib gate_work
-# vmap work gate_work
+# vlib rtl_work
+# vmap work rtl_work
 # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
-# vmap work gate_work 
+# vmap work rtl_work 
 # Copying /home/maruthi/intelFPGA_lite/20.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+. {aes_uart_top.vo}
+# vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/UART_IN.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:25:22 on Apr 09,2026
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+." aes_uart_top.vo 
+# Start time: 11:53:42 on Apr 20,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/UART_IN.v 
+# -- Compiling module uart_in
+# 
+# Top level modules:
+# 	uart_in
+# End time: 11:53:42 on Apr 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/aes_uart_top.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:53:42 on Apr 20,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/aes_uart_top.v 
 # -- Compiling module aes_uart_top
 # 
 # Top level modules:
 # 	aes_uart_top
-# End time: 16:25:23 on Apr 09,2026, Elapsed time: 0:00:01
+# End time: 11:53:42 on Apr 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/AES_TOP.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:53:42 on Apr 20,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/AES_TOP.v 
+# -- Compiling module AES_TOP
+# 
+# Top level modules:
+# 	AES_TOP
+# End time: 11:53:43 on Apr 20,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/keyExpansion.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:53:43 on Apr 20,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/keyExpansion.v 
+# -- Compiling module keyExpansion
+# 
+# Top level modules:
+# 	keyExpansion
+# End time: 11:53:43 on Apr 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/mixColumns.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:53:43 on Apr 20,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/mixColumns.v 
+# -- Compiling module mixColumns
+# 
+# Top level modules:
+# 	mixColumns
+# End time: 11:53:43 on Apr 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/sbox.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:53:43 on Apr 20,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/sbox.v 
+# -- Compiling module sbox
+# 
+# Top level modules:
+# 	sbox
+# End time: 11:53:43 on Apr 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/shiftRows.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:53:43 on Apr 20,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/shiftRows.v 
+# -- Compiling module shiftRows
+# 
+# Top level modules:
+# 	shiftRows
+# End time: 11:53:43 on Apr 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/subBytes.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:53:43 on Apr 20,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_ENCRYPTION/code/subBytes.v 
+# -- Compiling module subBytes
+# 
+# Top level modules:
+# 	subBytes
+# End time: 11:53:43 on Apr 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/Buffer_top.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:53:43 on Apr 20,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/Buffer_top.v 
+# -- Compiling module Buffer_top
+# 
+# Top level modules:
+# 	Buffer_top
+# End time: 11:53:43 on Apr 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/fifo_tx.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:53:43 on Apr 20,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/fifo_tx.v 
+# -- Compiling module fifo_tx
+# 
+# Top level modules:
+# 	fifo_tx
+# End time: 11:53:43 on Apr 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_TX.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:53:43 on Apr 20,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_TX.v 
+# -- Compiling module uart_tx
+# 
+# Top level modules:
+# 	uart_tx
+# End time: 11:53:43 on Apr 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_RX.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:53:43 on Apr 20,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/UART_RX.v 
+# -- Compiling module uart_rx
+# 
+# Top level modules:
+# 	uart_rx
+# End time: 11:53:43 on Apr 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/fifo_rx.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:53:43 on Apr 20,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/UART_buffer/code/fifo_rx.v 
+# -- Compiling module fifo_rx
+# 
+# Top level modules:
+# 	fifo_rx
+# End time: 11:53:43 on Apr 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/ADS_TOP.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:53:43 on Apr 20,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/ADS_TOP.v 
+# -- Compiling module ADS_TOP
+# 
+# Top level modules:
+# 	ADS_TOP
+# End time: 11:53:43 on Apr 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/inverseShiftrows.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:53:43 on Apr 20,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/inverseShiftrows.v 
+# -- Compiling module inverseShiftRows
+# 
+# Top level modules:
+# 	inverseShiftRows
+# End time: 11:53:43 on Apr 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/inverseSbox.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:53:43 on Apr 20,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/inverseSbox.v 
+# -- Compiling module inverseSbox
+# 
+# Top level modules:
+# 	inverseSbox
+# End time: 11:53:43 on Apr 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/inverseSubBytes.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:53:43 on Apr 20,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/inverseSubBytes.v 
+# -- Compiling module inverseSubBytes
+# 
+# Top level modules:
+# 	inverseSubBytes
+# End time: 11:53:43 on Apr 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/invMixColumns.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:53:43 on Apr 20,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/AES_DECRYPTION/code/invMixColumns.v 
+# -- Compiling module invMixColumns
+# 
+# Top level modules:
+# 	invMixColumns
+# End time: 11:53:43 on Apr 20,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -vlog01compat -work work +incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/../testbench {/home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/../testbench/tb.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:25:23 on Apr 09,2026
+# Start time: 11:53:43 on Apr 20,2026
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/../testbench" /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/../testbench/tb.v 
 # -- Compiling module tb
 # 
 # Top level modules:
 # 	tb
-# End time: 16:25:23 on Apr 09,2026, Elapsed time: 0:00:00
+# End time: 11:53:43 on Apr 20,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vsim -t 1ps -L altera_ver -L altera_lnsim_ver -L cyclonev_ver -L lpm_ver -L sgate_ver -L cyclonev_hssi_ver -L altera_mf_ver -L cyclonev_pcie_hip_ver -L gate_work -L work -voptargs="+acc"  tb
-# vsim -t 1ps -L altera_ver -L altera_lnsim_ver -L cyclonev_ver -L lpm_ver -L sgate_ver -L cyclonev_hssi_ver -L altera_mf_ver -L cyclonev_pcie_hip_ver -L gate_work -L work -voptargs=""+acc"" tb 
-# Start time: 16:25:23 on Apr 09,2026
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb 
+# Start time: 11:53:43 on Apr 20,2026
 # Loading work.tb
 # Loading work.aes_uart_top
-# Loading cyclonev_ver.cyclonev_io_obuf
-# Loading cyclonev_ver.cyclonev_io_ibuf
-# Loading cyclonev_ver.cyclonev_clkena
-# Loading cyclonev_ver.cyclonev_lcell_comb
-# Loading altera_ver.dffeas
-# Loading cyclonev_ver.cyclonev_ram_block
-# Loading sv_std.std
-# Loading altera_lnsim_ver.generic_m10k
-# Loading altera_lnsim_ver.altera_lnsim_functions
-# Loading altera_lnsim_ver.common_28nm_ram_block
-# Loading altera_lnsim_ver.common_28nm_ram_register
-# Loading altera_lnsim_ver.common_28nm_ram_pulse_generator
-# Loading altera_ver.PRIM_GDFF_LOW
-# ** Warning: Design size of 72329 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
-# Expect performance to be adversely affected.
+# Loading work.uart_in
+# Loading work.AES_TOP
+# Loading work.keyExpansion
+# Loading work.sbox
+# Loading work.subBytes
+# Loading work.shiftRows
+# Loading work.mixColumns
+# Loading work.Buffer_top
+# Loading work.fifo_tx
+# Loading work.uart_tx
+# Loading work.uart_rx
+# Loading work.fifo_rx
+# Loading work.ADS_TOP
+# Loading work.inverseShiftRows
+# Loading work.inverseSubBytes
+# Loading work.invMixColumns
+# Loading work.inverseSbox
 # 
 # add wave *
 # view structure
@@ -58,83 +230,1601 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# time: 10000 | in_flight : 0 | latency_cnt : 0
-# time : 201910000 | in_flight is made zero | Entered done handshake block. pt=00000000000000000000000000000001
-# ❌ LATENCY ERROR exp=80670 got=20189
+# Time:                45000 | UART_in | S_IDLE  -> Detected Start Bit.
+# Time:              1305000 | S_DATA -> Received byte: 1. Computed parity: 0
+# Time:              1445000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  0, computed_parity: 1, sampled_parity: 1, parity_err: 0
+# Time:              1595000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1595000 | Received first byte: 01
+# time:1595000 | Received command to start receiving key
+# Time:              2855000 | S_DATA -> Received byte: 0. Computed parity: 1
+# Time:              2995000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  1, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:              3145000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:3145000 | Receiving key byte: 00
+# Time:              4405000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:              4545000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  2, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:              4695000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:4695000 | Receiving key byte: 00
+# Time:              5955000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:              6095000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  3, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:              6245000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:6245000 | Receiving key byte: 00
+# Time:              7505000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:              7645000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  4, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:              7795000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:7795000 | Receiving key byte: 00
+# Time:              9055000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:              9195000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  5, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:              9345000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:9345000 | Receiving key byte: 00
+# Time:             10605000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:             10745000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  6, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:             10895000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:10895000 | Receiving key byte: 00
+# Time:             12155000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:             12295000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  7, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:             12445000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:12445000 | Receiving key byte: 00
+# Time:             13705000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:             13845000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  8, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:             13995000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:13995000 | Receiving key byte: 00
+# Time:             15255000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:             15395000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  9, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:             15545000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:15545000 | Receiving key byte: 00
+# Time:             16805000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:             16945000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 10, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:             17095000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:17095000 | Receiving key byte: 00
+# Time:             18355000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:             18495000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 11, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:             18645000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:18645000 | Receiving key byte: 00
+# Time:             19905000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:             20045000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 12, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:             20195000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:20195000 | Receiving key byte: 00
+# Time:             21455000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:             21595000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 13, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:             21745000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:21745000 | Receiving key byte: 00
+# Time:             23005000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:             23145000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 14, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:             23295000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:23295000 | Receiving key byte: 00
+# Time:             24555000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:             24695000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 15, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:             24845000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:24845000 | Receiving key byte: 00
+# Time:             26105000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:             26245000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  0, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:             26395000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:26395000 | Receiving key byte: 00
+# Time:             27655000 | S_DATA -> Received byte: 2. Computed parity: 0
+# Time:             27795000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  1, computed_parity: 1, sampled_parity: 1, parity_err: 0
+# Time:             27945000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:27945000 | Received first byte: 02
+# time:27945000 | Received command to start receiving data
+# Time:             29205000 | S_DATA -> Received byte: 0. Computed parity: 1
+# Time:             29345000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  2, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:             29495000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:29495000 | Receiving plaintext byte: 00, byte_idx:  0
+# Time:             30755000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:             30895000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  3, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:             31045000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:31045000 | Receiving plaintext byte: 00, byte_idx:  1
+# Time:             32305000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:             32445000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  4, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:             32595000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:32595000 | Receiving plaintext byte: 00, byte_idx:  2
+# Time:             33855000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:             33995000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  5, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:             34145000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:34145000 | Receiving plaintext byte: 00, byte_idx:  3
+# Time:             35405000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:             35545000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  6, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:             35695000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:35695000 | Receiving plaintext byte: 00, byte_idx:  4
+# Time:             36955000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:             37095000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  7, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:             37245000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:37245000 | Receiving plaintext byte: 00, byte_idx:  5
+# Time:             38505000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:             38645000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  8, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:             38795000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:38795000 | Receiving plaintext byte: 00, byte_idx:  6
+# Time:             40055000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:             40195000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  9, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:             40345000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:40345000 | Receiving plaintext byte: 00, byte_idx:  7
+# Time:             41605000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:             41745000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 10, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:             41895000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:41895000 | Receiving plaintext byte: 00, byte_idx:  8
+# Time:             43155000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:             43295000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 11, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:             43445000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:43445000 | Receiving plaintext byte: 00, byte_idx:  9
+# Time:             44705000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:             44845000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 12, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:             44995000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:44995000 | Receiving plaintext byte: 00, byte_idx: 10
+# Time:             46255000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:             46395000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 13, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:             46545000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:46545000 | Receiving plaintext byte: 00, byte_idx: 11
+# Time:             47805000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:             47945000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 14, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:             48095000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:48095000 | Receiving plaintext byte: 00, byte_idx: 12
+# Time:             49355000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:             49495000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 15, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:             49645000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:49645000 | Receiving plaintext byte: 00, byte_idx: 13
+# Time:             50905000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:             51045000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  0, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:             51195000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:51195000 | Receiving plaintext byte: 00, byte_idx: 14
+# Time:             52455000 | S_DATA -> Received byte: 1. Computed parity: 0
+# Time:             52595000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  1, computed_parity: 1, sampled_parity: 1, parity_err: 0
+# time:52745000 | Receiving plaintext byte: 01, byte_idx: 15
+# time:52755000 | Entered start encryption state 
+# time:             52995000, Inside DONE state, ciphertext=58e2fccefa7e3061367f1d57a4e7455a, round=10, done:1
+# time:            154095000, DONE, plaintext=00000000000000000000000000000001, imc_in=52525252525252525252520952525252, round_key=00000000000000000000000000000000
 # S.No: 1 PASS
-# Time:201910000 | Plaintext  : 00000000000000000000000000000001
-# Time:201910000 |  Expected   : 00000000000000000000000000000001
-# time: 201920000 | in_flight : 0 | latency_cnt : 20189
-# time : 403830000 | in_flight is made zero | Entered done handshake block. pt=00000000000000000000000000000002
-# ❌ LATENCY ERROR exp=80670 got=20190
+# Time:154115000 | Plaintext  : 00000000000000000000000000000001
+# Time:154115000 |  Expected   : 00000000000000000000000000000001
+# Time:            154155000 | UART_in | S_IDLE  -> Detected Start Bit.
+# Time:            155415000 | S_DATA -> Received byte: 1. Computed parity: 1
+# Time:            155555000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  2, computed_parity: 1, sampled_parity: 1, parity_err: 0
+# Time:            155705000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:155705000 | Received first byte: 01
+# time:155705000 | Received command to start receiving key
+# Time:            156965000 | S_DATA -> Received byte: 0. Computed parity: 1
+# Time:            157105000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  3, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            157255000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:157255000 | Receiving key byte: 00
+# Time:            158515000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            158655000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  4, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            158805000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:158805000 | Receiving key byte: 00
+# Time:            160065000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            160205000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  5, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            160355000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:160355000 | Receiving key byte: 00
+# Time:            161615000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            161755000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  6, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            161905000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:161905000 | Receiving key byte: 00
+# Time:            163165000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            163305000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  7, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            163455000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:163455000 | Receiving key byte: 00
+# Time:            164715000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            164855000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  8, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            165005000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:165005000 | Receiving key byte: 00
+# Time:            166265000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            166405000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  9, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            166555000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:166555000 | Receiving key byte: 00
+# Time:            167815000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            167955000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 10, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            168105000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:168105000 | Receiving key byte: 00
+# Time:            169365000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            169505000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 11, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            169655000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:169655000 | Receiving key byte: 00
+# Time:            170915000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            171055000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 12, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            171205000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:171205000 | Receiving key byte: 00
+# Time:            172465000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            172605000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 13, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            172755000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:172755000 | Receiving key byte: 00
+# Time:            174015000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            174155000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 14, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            174305000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:174305000 | Receiving key byte: 00
+# Time:            175565000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            175705000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 15, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            175855000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:175855000 | Receiving key byte: 00
+# Time:            177115000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            177255000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  0, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            177405000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:177405000 | Receiving key byte: 00
+# Time:            178665000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            178805000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  1, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            178955000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:178955000 | Receiving key byte: 00
+# Time:            180215000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            180355000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  2, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            180505000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:180505000 | Receiving key byte: 00
+# Time:            181765000 | S_DATA -> Received byte: 2. Computed parity: 0
+# Time:            181905000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  3, computed_parity: 1, sampled_parity: 1, parity_err: 0
+# Time:            182055000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:182055000 | Received first byte: 02
+# time:182055000 | Received command to start receiving data
+# Time:            183315000 | S_DATA -> Received byte: 0. Computed parity: 1
+# Time:            183455000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  4, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            183605000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:183605000 | Receiving plaintext byte: 00, byte_idx:  0
+# Time:            184865000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            185005000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  5, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            185155000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:185155000 | Receiving plaintext byte: 00, byte_idx:  1
+# Time:            186415000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            186555000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  6, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            186705000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:186705000 | Receiving plaintext byte: 00, byte_idx:  2
+# Time:            187965000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            188105000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  7, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            188255000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:188255000 | Receiving plaintext byte: 00, byte_idx:  3
+# Time:            189515000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            189655000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  8, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            189805000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:189805000 | Receiving plaintext byte: 00, byte_idx:  4
+# Time:            191065000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            191205000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  9, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            191355000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:191355000 | Receiving plaintext byte: 00, byte_idx:  5
+# Time:            192615000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            192755000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 10, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            192905000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:192905000 | Receiving plaintext byte: 00, byte_idx:  6
+# Time:            194165000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            194305000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 11, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            194455000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:194455000 | Receiving plaintext byte: 00, byte_idx:  7
+# Time:            195715000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            195855000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 12, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            196005000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:196005000 | Receiving plaintext byte: 00, byte_idx:  8
+# Time:            197265000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            197405000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 13, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            197555000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:197555000 | Receiving plaintext byte: 00, byte_idx:  9
+# Time:            198815000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            198955000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 14, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            199105000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:199105000 | Receiving plaintext byte: 00, byte_idx: 10
+# Time:            200365000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            200505000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 15, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            200655000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:200655000 | Receiving plaintext byte: 00, byte_idx: 11
+# Time:            201915000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            202055000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  0, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            202205000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:202205000 | Receiving plaintext byte: 00, byte_idx: 12
+# Time:            203465000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            203605000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  1, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            203755000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:203755000 | Receiving plaintext byte: 00, byte_idx: 13
+# Time:            205015000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            205155000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  2, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            205305000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:205305000 | Receiving plaintext byte: 00, byte_idx: 14
+# Time:            206565000 | S_DATA -> Received byte: 2. Computed parity: 0
+# Time:            206705000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  3, computed_parity: 1, sampled_parity: 1, parity_err: 0
+# time:206855000 | Receiving plaintext byte: 02, byte_idx: 15
+# time:206865000 | Entered start encryption state 
+# time:            207105000, Inside DONE state, ciphertext=0388dace60b6a392f328c2b971b2fe78, round=10, done:1
+# time:            308215000, DONE, plaintext=00000000000000000000000000000002, imc_in=52525252525252525252526a52525252, round_key=00000000000000000000000000000000
 # S.No: 2 PASS
-# Time:403830000 | Plaintext  : 00000000000000000000000000000002
-# Time:403830000 |  Expected   : 00000000000000000000000000000002
-# time: 403840000 | in_flight : 0 | latency_cnt : 20190
-# time : 605750000 | in_flight is made zero | Entered done handshake block. pt=00000000000000000000000000000003
-# ❌ LATENCY ERROR exp=80670 got=20190
+# Time:308235000 | Plaintext  : 00000000000000000000000000000002
+# Time:308235000 |  Expected   : 00000000000000000000000000000002
+# Time:            308275000 | UART_in | S_IDLE  -> Detected Start Bit.
+# Time:            309535000 | S_DATA -> Received byte: 1. Computed parity: 1
+# Time:            309675000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  4, computed_parity: 1, sampled_parity: 1, parity_err: 0
+# Time:            309825000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:309825000 | Received first byte: 01
+# time:309825000 | Received command to start receiving key
+# Time:            311085000 | S_DATA -> Received byte: 0. Computed parity: 1
+# Time:            311225000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  5, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            311375000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:311375000 | Receiving key byte: 00
+# Time:            312635000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            312775000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  6, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            312925000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:312925000 | Receiving key byte: 00
+# Time:            314185000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            314325000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  7, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            314475000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:314475000 | Receiving key byte: 00
+# Time:            315735000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            315875000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  8, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            316025000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:316025000 | Receiving key byte: 00
+# Time:            317285000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            317425000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  9, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            317575000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:317575000 | Receiving key byte: 00
+# Time:            318835000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            318975000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 10, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            319125000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:319125000 | Receiving key byte: 00
+# Time:            320385000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            320525000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 11, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            320675000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:320675000 | Receiving key byte: 00
+# Time:            321935000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            322075000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 12, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            322225000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:322225000 | Receiving key byte: 00
+# Time:            323485000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            323625000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 13, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            323775000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:323775000 | Receiving key byte: 00
+# Time:            325035000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            325175000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 14, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            325325000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:325325000 | Receiving key byte: 00
+# Time:            326585000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            326725000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 15, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            326875000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:326875000 | Receiving key byte: 00
+# Time:            328135000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            328275000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  0, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            328425000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:328425000 | Receiving key byte: 00
+# Time:            329685000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            329825000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  1, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            329975000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:329975000 | Receiving key byte: 00
+# Time:            331235000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            331375000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  2, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            331525000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:331525000 | Receiving key byte: 00
+# Time:            332785000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            332925000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  3, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            333075000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:333075000 | Receiving key byte: 00
+# Time:            334335000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            334475000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  4, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            334625000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:334625000 | Receiving key byte: 00
+# Time:            335885000 | S_DATA -> Received byte: 2. Computed parity: 0
+# Time:            336025000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  5, computed_parity: 1, sampled_parity: 1, parity_err: 0
+# Time:            336175000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:336175000 | Received first byte: 02
+# time:336175000 | Received command to start receiving data
+# Time:            337435000 | S_DATA -> Received byte: 0. Computed parity: 1
+# Time:            337575000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  6, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            337725000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:337725000 | Receiving plaintext byte: 00, byte_idx:  0
+# Time:            338985000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            339125000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  7, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            339275000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:339275000 | Receiving plaintext byte: 00, byte_idx:  1
+# Time:            340535000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            340675000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  8, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            340825000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:340825000 | Receiving plaintext byte: 00, byte_idx:  2
+# Time:            342085000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            342225000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  9, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            342375000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:342375000 | Receiving plaintext byte: 00, byte_idx:  3
+# Time:            343635000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            343775000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 10, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            343925000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:343925000 | Receiving plaintext byte: 00, byte_idx:  4
+# Time:            345185000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            345325000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 11, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            345475000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:345475000 | Receiving plaintext byte: 00, byte_idx:  5
+# Time:            346735000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            346875000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 12, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            347025000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:347025000 | Receiving plaintext byte: 00, byte_idx:  6
+# Time:            348285000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            348425000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 13, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            348575000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:348575000 | Receiving plaintext byte: 00, byte_idx:  7
+# Time:            349835000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            349975000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 14, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            350125000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:350125000 | Receiving plaintext byte: 00, byte_idx:  8
+# Time:            351385000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            351525000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 15, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            351675000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:351675000 | Receiving plaintext byte: 00, byte_idx:  9
+# Time:            352935000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            353075000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  0, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            353225000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:353225000 | Receiving plaintext byte: 00, byte_idx: 10
+# Time:            354485000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            354625000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  1, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            354775000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:354775000 | Receiving plaintext byte: 00, byte_idx: 11
+# Time:            356035000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            356175000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  2, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            356325000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:356325000 | Receiving plaintext byte: 00, byte_idx: 12
+# Time:            357585000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            357725000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  3, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            357875000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:357875000 | Receiving plaintext byte: 00, byte_idx: 13
+# Time:            359135000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            359275000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  4, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            359425000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:359425000 | Receiving plaintext byte: 00, byte_idx: 14
+# Time:            360685000 | S_DATA -> Received byte: 3. Computed parity: 0
+# Time:            360825000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  5, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# time:360975000 | Receiving plaintext byte: 03, byte_idx: 15
+# time:360985000 | Entered start encryption state 
+# time:            361225000, Inside DONE state, ciphertext=f795aaab494b5923f7fd89ff948bc1e0, round=10, done:1
+# time:            462335000, DONE, plaintext=00000000000000000000000000000003, imc_in=5252525252525252525252d552525252, round_key=00000000000000000000000000000000
 # S.No: 3 PASS
-# Time:605750000 | Plaintext  : 00000000000000000000000000000003
-# Time:605750000 |  Expected   : 00000000000000000000000000000003
-# time: 605760000 | in_flight : 0 | latency_cnt : 20190
-# time : 807670000 | in_flight is made zero | Entered done handshake block. pt=00000000000000000000000000000004
-# ❌ LATENCY ERROR exp=80670 got=20190
+# Time:462355000 | Plaintext  : 00000000000000000000000000000003
+# Time:462355000 |  Expected   : 00000000000000000000000000000003
+# Time:            462395000 | UART_in | S_IDLE  -> Detected Start Bit.
+# Time:            463655000 | S_DATA -> Received byte: 1. Computed parity: 0
+# Time:            463795000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  6, computed_parity: 1, sampled_parity: 1, parity_err: 0
+# Time:            463945000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:463945000 | Received first byte: 01
+# time:463945000 | Received command to start receiving key
+# Time:            465205000 | S_DATA -> Received byte: 0. Computed parity: 1
+# Time:            465345000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  7, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            465495000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:465495000 | Receiving key byte: 00
+# Time:            466755000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            466895000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  8, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            467045000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:467045000 | Receiving key byte: 00
+# Time:            468305000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            468445000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  9, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            468595000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:468595000 | Receiving key byte: 00
+# Time:            469855000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            469995000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 10, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            470145000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:470145000 | Receiving key byte: 00
+# Time:            471405000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            471545000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 11, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            471695000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:471695000 | Receiving key byte: 00
+# Time:            472955000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            473095000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 12, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            473245000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:473245000 | Receiving key byte: 00
+# Time:            474505000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            474645000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 13, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            474795000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:474795000 | Receiving key byte: 00
+# Time:            476055000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            476195000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 14, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            476345000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:476345000 | Receiving key byte: 00
+# Time:            477605000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            477745000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 15, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            477895000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:477895000 | Receiving key byte: 00
+# Time:            479155000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            479295000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  0, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            479445000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:479445000 | Receiving key byte: 00
+# Time:            480705000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            480845000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  1, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            480995000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:480995000 | Receiving key byte: 00
+# Time:            482255000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            482395000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  2, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            482545000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:482545000 | Receiving key byte: 00
+# Time:            483805000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            483945000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  3, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            484095000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:484095000 | Receiving key byte: 00
+# Time:            485355000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            485495000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  4, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            485645000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:485645000 | Receiving key byte: 00
+# Time:            486905000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            487045000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  5, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            487195000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:487195000 | Receiving key byte: 00
+# Time:            488455000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            488595000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  6, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            488745000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:488745000 | Receiving key byte: 00
+# Time:            490005000 | S_DATA -> Received byte: 2. Computed parity: 0
+# Time:            490145000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  7, computed_parity: 1, sampled_parity: 1, parity_err: 0
+# Time:            490295000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:490295000 | Received first byte: 02
+# time:490295000 | Received command to start receiving data
+# Time:            491555000 | S_DATA -> Received byte: 0. Computed parity: 1
+# Time:            491695000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  8, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            491845000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:491845000 | Receiving plaintext byte: 00, byte_idx:  0
+# Time:            493105000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            493245000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  9, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            493395000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:493395000 | Receiving plaintext byte: 00, byte_idx:  1
+# Time:            494655000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            494795000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 10, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            494945000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:494945000 | Receiving plaintext byte: 00, byte_idx:  2
+# Time:            496205000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            496345000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 11, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            496495000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:496495000 | Receiving plaintext byte: 00, byte_idx:  3
+# Time:            497755000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            497895000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 12, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            498045000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:498045000 | Receiving plaintext byte: 00, byte_idx:  4
+# Time:            499305000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            499445000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 13, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            499595000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:499595000 | Receiving plaintext byte: 00, byte_idx:  5
+# Time:            500855000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            500995000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 14, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            501145000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:501145000 | Receiving plaintext byte: 00, byte_idx:  6
+# Time:            502405000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            502545000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 15, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            502695000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:502695000 | Receiving plaintext byte: 00, byte_idx:  7
+# Time:            503955000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            504095000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  0, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            504245000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:504245000 | Receiving plaintext byte: 00, byte_idx:  8
+# Time:            505505000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            505645000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  1, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            505795000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:505795000 | Receiving plaintext byte: 00, byte_idx:  9
+# Time:            507055000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            507195000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  2, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            507345000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:507345000 | Receiving plaintext byte: 00, byte_idx: 10
+# Time:            508605000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            508745000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  3, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            508895000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:508895000 | Receiving plaintext byte: 00, byte_idx: 11
+# Time:            510155000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            510295000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  4, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            510445000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:510445000 | Receiving plaintext byte: 00, byte_idx: 12
+# Time:            511705000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            511845000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  5, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            511995000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:511995000 | Receiving plaintext byte: 00, byte_idx: 13
+# Time:            513255000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            513395000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  6, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            513545000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:513545000 | Receiving plaintext byte: 00, byte_idx: 14
+# Time:            514805000 | S_DATA -> Received byte: 4. Computed parity: 0
+# Time:            514945000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  7, computed_parity: 1, sampled_parity: 1, parity_err: 0
+# time:515095000 | Receiving plaintext byte: 04, byte_idx: 15
+# time:515105000 | Entered start encryption state 
+# time:            515345000, Inside DONE state, ciphertext=200211214e7394da2089b6acd093abe0, round=10, done:1
+# time:            616455000, DONE, plaintext=00000000000000000000000000000004, imc_in=52525252525252525252523052525252, round_key=00000000000000000000000000000000
 # S.No: 4 PASS
-# Time:807670000 | Plaintext  : 00000000000000000000000000000004
-# Time:807670000 |  Expected   : 00000000000000000000000000000004
-# time: 807680000 | in_flight : 0 | latency_cnt : 20190
-# time : 1009590000 | in_flight is made zero | Entered done handshake block. pt=00000000000000000000000000000005
-# ❌ LATENCY ERROR exp=80670 got=20190
+# Time:616475000 | Plaintext  : 00000000000000000000000000000004
+# Time:616475000 |  Expected   : 00000000000000000000000000000004
+# Time:            616515000 | UART_in | S_IDLE  -> Detected Start Bit.
+# Time:            617775000 | S_DATA -> Received byte: 1. Computed parity: 1
+# Time:            617915000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  8, computed_parity: 1, sampled_parity: 1, parity_err: 0
+# Time:            618065000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:618065000 | Received first byte: 01
+# time:618065000 | Received command to start receiving key
+# Time:            619325000 | S_DATA -> Received byte: 0. Computed parity: 1
+# Time:            619465000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  9, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            619615000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:619615000 | Receiving key byte: 00
+# Time:            620875000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            621015000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 10, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            621165000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:621165000 | Receiving key byte: 00
+# Time:            622425000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            622565000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 11, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            622715000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:622715000 | Receiving key byte: 00
+# Time:            623975000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            624115000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 12, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            624265000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:624265000 | Receiving key byte: 00
+# Time:            625525000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            625665000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 13, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            625815000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:625815000 | Receiving key byte: 00
+# Time:            627075000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            627215000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 14, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            627365000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:627365000 | Receiving key byte: 00
+# Time:            628625000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            628765000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 15, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            628915000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:628915000 | Receiving key byte: 00
+# Time:            630175000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            630315000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  0, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            630465000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:630465000 | Receiving key byte: 00
+# Time:            631725000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            631865000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  1, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            632015000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:632015000 | Receiving key byte: 00
+# Time:            633275000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            633415000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  2, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            633565000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:633565000 | Receiving key byte: 00
+# Time:            634825000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            634965000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  3, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            635115000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:635115000 | Receiving key byte: 00
+# Time:            636375000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            636515000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  4, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            636665000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:636665000 | Receiving key byte: 00
+# Time:            637925000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            638065000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  5, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            638215000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:638215000 | Receiving key byte: 00
+# Time:            639475000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            639615000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  6, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            639765000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:639765000 | Receiving key byte: 00
+# Time:            641025000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            641165000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  7, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            641315000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:641315000 | Receiving key byte: 00
+# Time:            642575000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            642715000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  8, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            642865000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:642865000 | Receiving key byte: 00
+# Time:            644125000 | S_DATA -> Received byte: 2. Computed parity: 0
+# Time:            644265000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  9, computed_parity: 1, sampled_parity: 1, parity_err: 0
+# Time:            644415000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:644415000 | Received first byte: 02
+# time:644415000 | Received command to start receiving data
+# Time:            645675000 | S_DATA -> Received byte: 0. Computed parity: 1
+# Time:            645815000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 10, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            645965000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:645965000 | Receiving plaintext byte: 00, byte_idx:  0
+# Time:            647225000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            647365000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 11, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            647515000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:647515000 | Receiving plaintext byte: 00, byte_idx:  1
+# Time:            648775000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            648915000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 12, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            649065000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:649065000 | Receiving plaintext byte: 00, byte_idx:  2
+# Time:            650325000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            650465000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 13, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            650615000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:650615000 | Receiving plaintext byte: 00, byte_idx:  3
+# Time:            651875000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            652015000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 14, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            652165000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:652165000 | Receiving plaintext byte: 00, byte_idx:  4
+# Time:            653425000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            653565000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 15, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            653715000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:653715000 | Receiving plaintext byte: 00, byte_idx:  5
+# Time:            654975000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            655115000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  0, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            655265000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:655265000 | Receiving plaintext byte: 00, byte_idx:  6
+# Time:            656525000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            656665000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  1, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            656815000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:656815000 | Receiving plaintext byte: 00, byte_idx:  7
+# Time:            658075000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            658215000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  2, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            658365000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:658365000 | Receiving plaintext byte: 00, byte_idx:  8
+# Time:            659625000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            659765000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  3, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            659915000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:659915000 | Receiving plaintext byte: 00, byte_idx:  9
+# Time:            661175000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            661315000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  4, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            661465000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:661465000 | Receiving plaintext byte: 00, byte_idx: 10
+# Time:            662725000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            662865000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  5, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            663015000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:663015000 | Receiving plaintext byte: 00, byte_idx: 11
+# Time:            664275000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            664415000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  6, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            664565000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:664565000 | Receiving plaintext byte: 00, byte_idx: 12
+# Time:            665825000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            665965000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  7, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            666115000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:666115000 | Receiving plaintext byte: 00, byte_idx: 13
+# Time:            667375000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            667515000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  8, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            667665000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:667665000 | Receiving plaintext byte: 00, byte_idx: 14
+# Time:            668925000 | S_DATA -> Received byte: 5. Computed parity: 0
+# Time:            669065000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  9, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# time:669215000 | Receiving plaintext byte: 05, byte_idx: 15
+# time:669225000 | Entered start encryption state 
+# time:            669465000, Inside DONE state, ciphertext=c94da219118e297d7b7ebcbcc9c388f2, round=10, done:1
+# time:            770575000, DONE, plaintext=00000000000000000000000000000005, imc_in=52525252525252525252523652525252, round_key=00000000000000000000000000000000
 # S.No: 5 PASS
-# Time:1009590000 | Plaintext  : 00000000000000000000000000000005
-# Time:1009590000 |  Expected   : 00000000000000000000000000000005
-# time: 1009600000 | in_flight : 0 | latency_cnt : 20190
-# time : 1211510000 | in_flight is made zero | Entered done handshake block. pt=00000000000000000000000000000006
-# ❌ LATENCY ERROR exp=80670 got=20190
+# Time:770595000 | Plaintext  : 00000000000000000000000000000005
+# Time:770595000 |  Expected   : 00000000000000000000000000000005
+# Time:            770635000 | UART_in | S_IDLE  -> Detected Start Bit.
+# Time:            771895000 | S_DATA -> Received byte: 1. Computed parity: 0
+# Time:            772035000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 10, computed_parity: 1, sampled_parity: 1, parity_err: 0
+# Time:            772185000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:772185000 | Received first byte: 01
+# time:772185000 | Received command to start receiving key
+# Time:            773445000 | S_DATA -> Received byte: 0. Computed parity: 1
+# Time:            773585000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 11, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            773735000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:773735000 | Receiving key byte: 00
+# Time:            774995000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            775135000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 12, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            775285000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:775285000 | Receiving key byte: 00
+# Time:            776545000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            776685000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 13, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            776835000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:776835000 | Receiving key byte: 00
+# Time:            778095000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            778235000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 14, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            778385000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:778385000 | Receiving key byte: 00
+# Time:            779645000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            779785000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 15, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            779935000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:779935000 | Receiving key byte: 00
+# Time:            781195000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            781335000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  0, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            781485000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:781485000 | Receiving key byte: 00
+# Time:            782745000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            782885000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  1, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            783035000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:783035000 | Receiving key byte: 00
+# Time:            784295000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            784435000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  2, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            784585000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:784585000 | Receiving key byte: 00
+# Time:            785845000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            785985000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  3, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            786135000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:786135000 | Receiving key byte: 00
+# Time:            787395000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            787535000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  4, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            787685000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:787685000 | Receiving key byte: 00
+# Time:            788945000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            789085000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  5, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            789235000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:789235000 | Receiving key byte: 00
+# Time:            790495000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            790635000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  6, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            790785000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:790785000 | Receiving key byte: 00
+# Time:            792045000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            792185000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  7, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            792335000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:792335000 | Receiving key byte: 00
+# Time:            793595000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            793735000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  8, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            793885000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:793885000 | Receiving key byte: 00
+# Time:            795145000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            795285000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  9, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            795435000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:795435000 | Receiving key byte: 00
+# Time:            796695000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            796835000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 10, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            796985000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:796985000 | Receiving key byte: 00
+# Time:            798245000 | S_DATA -> Received byte: 2. Computed parity: 0
+# Time:            798385000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 11, computed_parity: 1, sampled_parity: 1, parity_err: 0
+# Time:            798535000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:798535000 | Received first byte: 02
+# time:798535000 | Received command to start receiving data
+# Time:            799795000 | S_DATA -> Received byte: 0. Computed parity: 1
+# Time:            799935000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 12, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            800085000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:800085000 | Receiving plaintext byte: 00, byte_idx:  0
+# Time:            801345000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            801485000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 13, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            801635000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:801635000 | Receiving plaintext byte: 00, byte_idx:  1
+# Time:            802895000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            803035000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 14, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            803185000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:803185000 | Receiving plaintext byte: 00, byte_idx:  2
+# Time:            804445000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            804585000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 15, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            804735000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:804735000 | Receiving plaintext byte: 00, byte_idx:  3
+# Time:            805995000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            806135000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  0, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            806285000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:806285000 | Receiving plaintext byte: 00, byte_idx:  4
+# Time:            807545000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            807685000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  1, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            807835000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:807835000 | Receiving plaintext byte: 00, byte_idx:  5
+# Time:            809095000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            809235000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  2, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            809385000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:809385000 | Receiving plaintext byte: 00, byte_idx:  6
+# Time:            810645000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            810785000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  3, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            810935000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:810935000 | Receiving plaintext byte: 00, byte_idx:  7
+# Time:            812195000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            812335000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  4, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            812485000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:812485000 | Receiving plaintext byte: 00, byte_idx:  8
+# Time:            813745000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            813885000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  5, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            814035000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:814035000 | Receiving plaintext byte: 00, byte_idx:  9
+# Time:            815295000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            815435000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  6, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            815585000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:815585000 | Receiving plaintext byte: 00, byte_idx: 10
+# Time:            816845000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            816985000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  7, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            817135000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:817135000 | Receiving plaintext byte: 00, byte_idx: 11
+# Time:            818395000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            818535000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  8, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            818685000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:818685000 | Receiving plaintext byte: 00, byte_idx: 12
+# Time:            819945000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            820085000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  9, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            820235000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:820235000 | Receiving plaintext byte: 00, byte_idx: 13
+# Time:            821495000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            821635000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 10, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            821785000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:821785000 | Receiving plaintext byte: 00, byte_idx: 14
+# Time:            823045000 | S_DATA -> Received byte: 6. Computed parity: 0
+# Time:            823185000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 11, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# time:823335000 | Receiving plaintext byte: 06, byte_idx: 15
+# time:823345000 | Entered start encryption state 
+# time:            823585000, Inside DONE state, ciphertext=8ade7d85a8ee35616f7124a9d5270291, round=10, done:1
+# time:            924695000, DONE, plaintext=00000000000000000000000000000006, imc_in=5252525252525252525252a552525252, round_key=00000000000000000000000000000000
 # S.No: 6 PASS
-# Time:1211510000 | Plaintext  : 00000000000000000000000000000006
-# Time:1211510000 |  Expected   : 00000000000000000000000000000006
-# time: 1211520000 | in_flight : 0 | latency_cnt : 20190
-# time : 1413430000 | in_flight is made zero | Entered done handshake block. pt=00000000000000000000000000000007
-# ❌ LATENCY ERROR exp=80670 got=20190
+# Time:924715000 | Plaintext  : 00000000000000000000000000000006
+# Time:924715000 |  Expected   : 00000000000000000000000000000006
+# Time:            924755000 | UART_in | S_IDLE  -> Detected Start Bit.
+# Time:            926015000 | S_DATA -> Received byte: 1. Computed parity: 0
+# Time:            926155000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 12, computed_parity: 1, sampled_parity: 1, parity_err: 0
+# Time:            926305000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:926305000 | Received first byte: 01
+# time:926305000 | Received command to start receiving key
+# Time:            927565000 | S_DATA -> Received byte: 0. Computed parity: 1
+# Time:            927705000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 13, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            927855000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:927855000 | Receiving key byte: 00
+# Time:            929115000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            929255000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 14, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            929405000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:929405000 | Receiving key byte: 00
+# Time:            930665000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            930805000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 15, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            930955000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:930955000 | Receiving key byte: 00
+# Time:            932215000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            932355000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  0, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            932505000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:932505000 | Receiving key byte: 00
+# Time:            933765000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            933905000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  1, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            934055000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:934055000 | Receiving key byte: 00
+# Time:            935315000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            935455000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  2, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            935605000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:935605000 | Receiving key byte: 00
+# Time:            936865000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            937005000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  3, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            937155000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:937155000 | Receiving key byte: 00
+# Time:            938415000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            938555000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  4, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            938705000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:938705000 | Receiving key byte: 00
+# Time:            939965000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            940105000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  5, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            940255000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:940255000 | Receiving key byte: 00
+# Time:            941515000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            941655000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  6, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            941805000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:941805000 | Receiving key byte: 00
+# Time:            943065000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            943205000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  7, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            943355000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:943355000 | Receiving key byte: 00
+# Time:            944615000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            944755000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  8, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            944905000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:944905000 | Receiving key byte: 00
+# Time:            946165000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            946305000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  9, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            946455000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:946455000 | Receiving key byte: 00
+# Time:            947715000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            947855000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 10, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            948005000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:948005000 | Receiving key byte: 00
+# Time:            949265000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            949405000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 11, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            949555000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:949555000 | Receiving key byte: 00
+# Time:            950815000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            950955000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 12, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            951105000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:951105000 | Receiving key byte: 00
+# Time:            952365000 | S_DATA -> Received byte: 2. Computed parity: 0
+# Time:            952505000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 13, computed_parity: 1, sampled_parity: 1, parity_err: 0
+# Time:            952655000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:952655000 | Received first byte: 02
+# time:952655000 | Received command to start receiving data
+# Time:            953915000 | S_DATA -> Received byte: 0. Computed parity: 1
+# Time:            954055000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 14, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            954205000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:954205000 | Receiving plaintext byte: 00, byte_idx:  0
+# Time:            955465000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            955605000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 15, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            955755000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:955755000 | Receiving plaintext byte: 00, byte_idx:  1
+# Time:            957015000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            957155000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  0, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            957305000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:957305000 | Receiving plaintext byte: 00, byte_idx:  2
+# Time:            958565000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            958705000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  1, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            958855000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:958855000 | Receiving plaintext byte: 00, byte_idx:  3
+# Time:            960115000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            960255000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  2, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            960405000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:960405000 | Receiving plaintext byte: 00, byte_idx:  4
+# Time:            961665000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            961805000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  3, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            961955000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:961955000 | Receiving plaintext byte: 00, byte_idx:  5
+# Time:            963215000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            963355000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  4, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            963505000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:963505000 | Receiving plaintext byte: 00, byte_idx:  6
+# Time:            964765000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            964905000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  5, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            965055000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:965055000 | Receiving plaintext byte: 00, byte_idx:  7
+# Time:            966315000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            966455000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  6, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            966605000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:966605000 | Receiving plaintext byte: 00, byte_idx:  8
+# Time:            967865000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            968005000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  7, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            968155000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:968155000 | Receiving plaintext byte: 00, byte_idx:  9
+# Time:            969415000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            969555000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  8, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            969705000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:969705000 | Receiving plaintext byte: 00, byte_idx: 10
+# Time:            970965000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            971105000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  9, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            971255000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:971255000 | Receiving plaintext byte: 00, byte_idx: 11
+# Time:            972515000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            972655000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 10, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            972805000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:972805000 | Receiving plaintext byte: 00, byte_idx: 12
+# Time:            974065000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            974205000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 11, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            974355000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:974355000 | Receiving plaintext byte: 00, byte_idx: 13
+# Time:            975615000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:            975755000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 12, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:            975905000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:975905000 | Receiving plaintext byte: 00, byte_idx: 14
+# Time:            977165000 | S_DATA -> Received byte: 7. Computed parity: 0
+# Time:            977305000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 13, computed_parity: 1, sampled_parity: 1, parity_err: 0
+# time:977455000 | Receiving plaintext byte: 07, byte_idx: 15
+# time:977465000 | Entered start encryption state 
+# time:            977705000, Inside DONE state, ciphertext=95b84d1b96c690ff2f2de30bf2ec89e0, round=10, done:1
+# time:           1078815000, DONE, plaintext=00000000000000000000000000000007, imc_in=52525252525252525252523852525252, round_key=00000000000000000000000000000000
 # S.No: 7 PASS
-# Time:1413430000 | Plaintext  : 00000000000000000000000000000007
-# Time:1413430000 |  Expected   : 00000000000000000000000000000007
-# time: 1413440000 | in_flight : 0 | latency_cnt : 20190
-# time : 1615350000 | in_flight is made zero | Entered done handshake block. pt=00000000000000000000000000000008
-# ❌ LATENCY ERROR exp=80670 got=20190
+# Time:1078835000 | Plaintext  : 00000000000000000000000000000007
+# Time:1078835000 |  Expected   : 00000000000000000000000000000007
+# Time:           1078875000 | UART_in | S_IDLE  -> Detected Start Bit.
+# Time:           1080135000 | S_DATA -> Received byte: 1. Computed parity: 1
+# Time:           1080275000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 14, computed_parity: 1, sampled_parity: 1, parity_err: 0
+# Time:           1080425000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1080425000 | Received first byte: 01
+# time:1080425000 | Received command to start receiving key
+# Time:           1081685000 | S_DATA -> Received byte: 0. Computed parity: 1
+# Time:           1081825000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 15, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1081975000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1081975000 | Receiving key byte: 00
+# Time:           1083235000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:           1083375000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  0, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1083525000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1083525000 | Receiving key byte: 00
+# Time:           1084785000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:           1084925000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  1, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1085075000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1085075000 | Receiving key byte: 00
+# Time:           1086335000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:           1086475000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  2, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1086625000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1086625000 | Receiving key byte: 00
+# Time:           1087885000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:           1088025000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  3, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1088175000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1088175000 | Receiving key byte: 00
+# Time:           1089435000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:           1089575000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  4, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1089725000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1089725000 | Receiving key byte: 00
+# Time:           1090985000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:           1091125000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  5, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1091275000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1091275000 | Receiving key byte: 00
+# Time:           1092535000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:           1092675000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  6, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1092825000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1092825000 | Receiving key byte: 00
+# Time:           1094085000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:           1094225000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  7, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1094375000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1094375000 | Receiving key byte: 00
+# Time:           1095635000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:           1095775000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  8, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1095925000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1095925000 | Receiving key byte: 00
+# Time:           1097185000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:           1097325000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  9, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1097475000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1097475000 | Receiving key byte: 00
+# Time:           1098735000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:           1098875000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 10, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1099025000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1099025000 | Receiving key byte: 00
+# Time:           1100285000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:           1100425000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 11, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1100575000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1100575000 | Receiving key byte: 00
+# Time:           1101835000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:           1101975000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 12, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1102125000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1102125000 | Receiving key byte: 00
+# Time:           1103385000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:           1103525000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 13, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1103675000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1103675000 | Receiving key byte: 00
+# Time:           1104935000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:           1105075000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 14, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1105225000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1105225000 | Receiving key byte: 00
+# Time:           1106485000 | S_DATA -> Received byte: 2. Computed parity: 0
+# Time:           1106625000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 15, computed_parity: 1, sampled_parity: 1, parity_err: 0
+# Time:           1106775000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1106775000 | Received first byte: 02
+# time:1106775000 | Received command to start receiving data
+# Time:           1108035000 | S_DATA -> Received byte: 0. Computed parity: 1
+# Time:           1108175000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  0, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1108325000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1108325000 | Receiving plaintext byte: 00, byte_idx:  0
+# Time:           1109585000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:           1109725000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  1, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1109875000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1109875000 | Receiving plaintext byte: 00, byte_idx:  1
+# Time:           1111135000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:           1111275000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  2, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1111425000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1111425000 | Receiving plaintext byte: 00, byte_idx:  2
+# Time:           1112685000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:           1112825000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  3, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1112975000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1112975000 | Receiving plaintext byte: 00, byte_idx:  3
+# Time:           1114235000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:           1114375000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  4, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1114525000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1114525000 | Receiving plaintext byte: 00, byte_idx:  4
+# Time:           1115785000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:           1115925000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  5, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1116075000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1116075000 | Receiving plaintext byte: 00, byte_idx:  5
+# Time:           1117335000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:           1117475000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  6, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1117625000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1117625000 | Receiving plaintext byte: 00, byte_idx:  6
+# Time:           1118885000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:           1119025000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  7, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1119175000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1119175000 | Receiving plaintext byte: 00, byte_idx:  7
+# Time:           1120435000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:           1120575000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  8, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1120725000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1120725000 | Receiving plaintext byte: 00, byte_idx:  8
+# Time:           1121985000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:           1122125000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  9, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1122275000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1122275000 | Receiving plaintext byte: 00, byte_idx:  9
+# Time:           1123535000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:           1123675000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 10, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1123825000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1123825000 | Receiving plaintext byte: 00, byte_idx: 10
+# Time:           1125085000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:           1125225000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 11, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1125375000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1125375000 | Receiving plaintext byte: 00, byte_idx: 11
+# Time:           1126635000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:           1126775000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 12, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1126925000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1126925000 | Receiving plaintext byte: 00, byte_idx: 12
+# Time:           1128185000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:           1128325000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 13, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1128475000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1128475000 | Receiving plaintext byte: 00, byte_idx: 13
+# Time:           1129735000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:           1129875000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 14, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1130025000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1130025000 | Receiving plaintext byte: 00, byte_idx: 14
+# Time:           1131285000 | S_DATA -> Received byte: 8. Computed parity: 0
+# Time:           1131425000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 15, computed_parity: 1, sampled_parity: 1, parity_err: 0
+# time:1131575000 | Receiving plaintext byte: 08, byte_idx: 15
+# time:1131585000 | Entered start encryption state 
+# time:           1131825000, Inside DONE state, ciphertext=0253786e126504f0dab90c48a30321de, round=10, done:1
+# time:           1232935000, DONE, plaintext=00000000000000000000000000000008, imc_in=5252525252525252525252bf52525252, round_key=00000000000000000000000000000000
 # S.No: 8 PASS
-# Time:1615350000 | Plaintext  : 00000000000000000000000000000008
-# Time:1615350000 |  Expected   : 00000000000000000000000000000008
-# time: 1615360000 | in_flight : 0 | latency_cnt : 20190
-# time : 1817270000 | in_flight is made zero | Entered done handshake block. pt=00000000000000000000000000000009
-# ❌ LATENCY ERROR exp=80670 got=20190
+# Time:1232955000 | Plaintext  : 00000000000000000000000000000008
+# Time:1232955000 |  Expected   : 00000000000000000000000000000008
+# Time:           1232995000 | UART_in | S_IDLE  -> Detected Start Bit.
+# Time:           1234255000 | S_DATA -> Received byte: 1. Computed parity: 1
+# Time:           1234395000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  0, computed_parity: 1, sampled_parity: 1, parity_err: 0
+# Time:           1234545000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1234545000 | Received first byte: 01
+# time:1234545000 | Received command to start receiving key
+# Time:           1235805000 | S_DATA -> Received byte: 0. Computed parity: 1
+# Time:           1235945000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  1, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1236095000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1236095000 | Receiving key byte: 00
+# Time:           1237355000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:           1237495000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  2, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1237645000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1237645000 | Receiving key byte: 00
+# Time:           1238905000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:           1239045000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  3, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1239195000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1239195000 | Receiving key byte: 00
+# Time:           1240455000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:           1240595000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  4, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1240745000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1240745000 | Receiving key byte: 00
+# Time:           1242005000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:           1242145000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  5, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1242295000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1242295000 | Receiving key byte: 00
+# Time:           1243555000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:           1243695000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  6, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1243845000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1243845000 | Receiving key byte: 00
+# Time:           1245105000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:           1245245000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  7, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1245395000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1245395000 | Receiving key byte: 00
+# Time:           1246655000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:           1246795000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  8, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1246945000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1246945000 | Receiving key byte: 00
+# Time:           1248205000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:           1248345000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  9, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1248495000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1248495000 | Receiving key byte: 00
+# Time:           1249755000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:           1249895000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 10, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1250045000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1250045000 | Receiving key byte: 00
+# Time:           1251305000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:           1251445000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 11, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1251595000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1251595000 | Receiving key byte: 00
+# Time:           1252855000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:           1252995000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 12, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1253145000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1253145000 | Receiving key byte: 00
+# Time:           1254405000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:           1254545000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 13, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1254695000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1254695000 | Receiving key byte: 00
+# Time:           1255955000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:           1256095000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 14, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1256245000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1256245000 | Receiving key byte: 00
+# Time:           1257505000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:           1257645000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 15, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1257795000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1257795000 | Receiving key byte: 00
+# Time:           1259055000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:           1259195000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  0, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1259345000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1259345000 | Receiving key byte: 00
+# Time:           1260605000 | S_DATA -> Received byte: 2. Computed parity: 0
+# Time:           1260745000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  1, computed_parity: 1, sampled_parity: 1, parity_err: 0
+# Time:           1260895000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1260895000 | Received first byte: 02
+# time:1260895000 | Received command to start receiving data
+# Time:           1262155000 | S_DATA -> Received byte: 0. Computed parity: 1
+# Time:           1262295000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  2, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1262445000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1262445000 | Receiving plaintext byte: 00, byte_idx:  0
+# Time:           1263705000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:           1263845000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  3, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1263995000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1263995000 | Receiving plaintext byte: 00, byte_idx:  1
+# Time:           1265255000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:           1265395000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  4, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1265545000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1265545000 | Receiving plaintext byte: 00, byte_idx:  2
+# Time:           1266805000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:           1266945000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  5, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1267095000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1267095000 | Receiving plaintext byte: 00, byte_idx:  3
+# Time:           1268355000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:           1268495000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  6, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1268645000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1268645000 | Receiving plaintext byte: 00, byte_idx:  4
+# Time:           1269905000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:           1270045000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  7, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1270195000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1270195000 | Receiving plaintext byte: 00, byte_idx:  5
+# Time:           1271455000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:           1271595000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  8, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1271745000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1271745000 | Receiving plaintext byte: 00, byte_idx:  6
+# Time:           1273005000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:           1273145000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  9, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1273295000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1273295000 | Receiving plaintext byte: 00, byte_idx:  7
+# Time:           1274555000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:           1274695000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 10, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1274845000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1274845000 | Receiving plaintext byte: 00, byte_idx:  8
+# Time:           1276105000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:           1276245000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 11, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1276395000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1276395000 | Receiving plaintext byte: 00, byte_idx:  9
+# Time:           1277655000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:           1277795000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 12, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1277945000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1277945000 | Receiving plaintext byte: 00, byte_idx: 10
+# Time:           1279205000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:           1279345000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 13, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1279495000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1279495000 | Receiving plaintext byte: 00, byte_idx: 11
+# Time:           1280755000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:           1280895000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 14, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1281045000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1281045000 | Receiving plaintext byte: 00, byte_idx: 12
+# Time:           1282305000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:           1282445000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 15, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1282595000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1282595000 | Receiving plaintext byte: 00, byte_idx: 13
+# Time:           1283855000 | S_DATA -> Received byte: 0. Computed parity: 0
+# Time:           1283995000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  0, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1284145000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1284145000 | Receiving plaintext byte: 00, byte_idx: 14
+# Time:           1285405000 | S_DATA -> Received byte: 9. Computed parity: 0
+# Time:           1285545000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  1, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# time:1285695000 | Receiving plaintext byte: 09, byte_idx: 15
+# time:1285705000 | Entered start encryption state 
+# time:           1285945000, Inside DONE state, ciphertext=3345e6b0461e7c9e6c6b7afedde83f40, round=10, done:1
+# time:           1387055000, DONE, plaintext=00000000000000000000000000000009, imc_in=52525252525252525252524052525252, round_key=00000000000000000000000000000000
 # S.No: 9 PASS
-# Time:1817270000 | Plaintext  : 00000000000000000000000000000009
-# Time:1817270000 |  Expected   : 00000000000000000000000000000009
-# time: 1817280000 | in_flight : 0 | latency_cnt : 20190
-# time : 2019190000 | in_flight is made zero | Entered done handshake block. pt=3243f6a8885a308d313198a2e0370734
-# ❌ LATENCY ERROR exp=80670 got=20190
+# Time:1387075000 | Plaintext  : 00000000000000000000000000000009
+# Time:1387075000 |  Expected   : 00000000000000000000000000000009
+# Time:           1387115000 | UART_in | S_IDLE  -> Detected Start Bit.
+# Time:           1388375000 | S_DATA -> Received byte: 1. Computed parity: 0
+# Time:           1388515000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  2, computed_parity: 1, sampled_parity: 1, parity_err: 0
+# Time:           1388665000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1388665000 | Received first byte: 01
+# time:1388665000 | Received command to start receiving key
+# Time:           1389925000 | S_DATA -> Received byte: 2b. Computed parity: 1
+# Time:           1390065000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  3, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1390215000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1390215000 | Receiving key byte: 2b
+# Time:           1391475000 | S_DATA -> Received byte: 7e. Computed parity: 0
+# Time:           1391615000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  4, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1391765000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1391765000 | Receiving key byte: 7e
+# Time:           1393025000 | S_DATA -> Received byte: 15. Computed parity: 0
+# Time:           1393165000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  5, computed_parity: 1, sampled_parity: 1, parity_err: 0
+# Time:           1393315000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1393315000 | Receiving key byte: 15
+# Time:           1394575000 | S_DATA -> Received byte: 16. Computed parity: 1
+# Time:           1394715000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  6, computed_parity: 1, sampled_parity: 1, parity_err: 0
+# Time:           1394865000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1394865000 | Receiving key byte: 16
+# Time:           1396125000 | S_DATA -> Received byte: 28. Computed parity: 1
+# Time:           1396265000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  7, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1396415000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1396415000 | Receiving key byte: 28
+# Time:           1397675000 | S_DATA -> Received byte: ae. Computed parity: 0
+# Time:           1397815000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  8, computed_parity: 1, sampled_parity: 1, parity_err: 0
+# Time:           1397965000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1397965000 | Receiving key byte: ae
+# Time:           1399225000 | S_DATA -> Received byte: d2. Computed parity: 1
+# Time:           1399365000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  9, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1399515000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1399515000 | Receiving key byte: d2
+# Time:           1400775000 | S_DATA -> Received byte: a6. Computed parity: 0
+# Time:           1400915000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 10, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1401065000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1401065000 | Receiving key byte: a6
+# Time:           1402325000 | S_DATA -> Received byte: ab. Computed parity: 0
+# Time:           1402465000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 11, computed_parity: 1, sampled_parity: 1, parity_err: 0
+# Time:           1402615000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1402615000 | Receiving key byte: ab
+# Time:           1403875000 | S_DATA -> Received byte: f7. Computed parity: 1
+# Time:           1404015000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 12, computed_parity: 1, sampled_parity: 1, parity_err: 0
+# Time:           1404165000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1404165000 | Receiving key byte: f7
+# Time:           1405425000 | S_DATA -> Received byte: 15. Computed parity: 1
+# Time:           1405565000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 13, computed_parity: 1, sampled_parity: 1, parity_err: 0
+# Time:           1405715000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1405715000 | Receiving key byte: 15
+# Time:           1406975000 | S_DATA -> Received byte: 88. Computed parity: 1
+# Time:           1407115000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 14, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1407265000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1407265000 | Receiving key byte: 88
+# Time:           1408525000 | S_DATA -> Received byte: 9. Computed parity: 0
+# Time:           1408665000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 15, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1408815000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1408815000 | Receiving key byte: 09
+# Time:           1410075000 | S_DATA -> Received byte: cf. Computed parity: 0
+# Time:           1410215000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  0, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1410365000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1410365000 | Receiving key byte: cf
+# Time:           1411625000 | S_DATA -> Received byte: 4f. Computed parity: 0
+# Time:           1411765000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  1, computed_parity: 1, sampled_parity: 1, parity_err: 0
+# Time:           1411915000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1411915000 | Receiving key byte: 4f
+# Time:           1413175000 | S_DATA -> Received byte: 3c. Computed parity: 1
+# Time:           1413315000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  2, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1413465000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1413465000 | Receiving key byte: 3c
+# Time:           1414725000 | S_DATA -> Received byte: 2. Computed parity: 0
+# Time:           1414865000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  3, computed_parity: 1, sampled_parity: 1, parity_err: 0
+# Time:           1415015000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1415015000 | Received first byte: 02
+# time:1415015000 | Received command to start receiving data
+# Time:           1416275000 | S_DATA -> Received byte: 32. Computed parity: 1
+# Time:           1416415000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  4, computed_parity: 1, sampled_parity: 1, parity_err: 0
+# Time:           1416565000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1416565000 | Receiving plaintext byte: 32, byte_idx:  0
+# Time:           1417825000 | S_DATA -> Received byte: 43. Computed parity: 1
+# Time:           1417965000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  5, computed_parity: 1, sampled_parity: 1, parity_err: 0
+# Time:           1418115000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1418115000 | Receiving plaintext byte: 43, byte_idx:  1
+# Time:           1419375000 | S_DATA -> Received byte: f6. Computed parity: 1
+# Time:           1419515000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  6, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1419665000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1419665000 | Receiving plaintext byte: f6, byte_idx:  2
+# Time:           1420925000 | S_DATA -> Received byte: a8. Computed parity: 0
+# Time:           1421065000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  7, computed_parity: 1, sampled_parity: 1, parity_err: 0
+# Time:           1421215000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1421215000 | Receiving plaintext byte: a8, byte_idx:  3
+# Time:           1422475000 | S_DATA -> Received byte: 88. Computed parity: 1
+# Time:           1422615000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  8, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1422765000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1422765000 | Receiving plaintext byte: 88, byte_idx:  4
+# Time:           1424025000 | S_DATA -> Received byte: 5a. Computed parity: 0
+# Time:           1424165000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  9, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1424315000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1424315000 | Receiving plaintext byte: 5a, byte_idx:  5
+# Time:           1425575000 | S_DATA -> Received byte: 30. Computed parity: 0
+# Time:           1425715000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 10, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1425865000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1425865000 | Receiving plaintext byte: 30, byte_idx:  6
+# Time:           1427125000 | S_DATA -> Received byte: 8d. Computed parity: 0
+# Time:           1427265000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 11, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1427415000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1427415000 | Receiving plaintext byte: 8d, byte_idx:  7
+# Time:           1428675000 | S_DATA -> Received byte: 31. Computed parity: 0
+# Time:           1428815000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 12, computed_parity: 1, sampled_parity: 1, parity_err: 0
+# Time:           1428965000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1428965000 | Receiving plaintext byte: 31, byte_idx:  8
+# Time:           1430225000 | S_DATA -> Received byte: 31. Computed parity: 1
+# Time:           1430365000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 13, computed_parity: 1, sampled_parity: 1, parity_err: 0
+# Time:           1430515000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1430515000 | Receiving plaintext byte: 31, byte_idx:  9
+# Time:           1431775000 | S_DATA -> Received byte: 98. Computed parity: 1
+# Time:           1431915000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 14, computed_parity: 1, sampled_parity: 1, parity_err: 0
+# Time:           1432065000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1432065000 | Receiving plaintext byte: 98, byte_idx: 10
+# Time:           1433325000 | S_DATA -> Received byte: a2. Computed parity: 1
+# Time:           1433465000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 15, computed_parity: 1, sampled_parity: 1, parity_err: 0
+# Time:           1433615000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1433615000 | Receiving plaintext byte: a2, byte_idx: 11
+# Time:           1434875000 | S_DATA -> Received byte: e0. Computed parity: 1
+# Time:           1435015000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  0, computed_parity: 1, sampled_parity: 1, parity_err: 0
+# Time:           1435165000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1435165000 | Receiving plaintext byte: e0, byte_idx: 12
+# Time:           1436425000 | S_DATA -> Received byte: 37. Computed parity: 1
+# Time:           1436565000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  1, computed_parity: 1, sampled_parity: 1, parity_err: 0
+# Time:           1436715000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1436715000 | Receiving plaintext byte: 37, byte_idx: 13
+# Time:           1437975000 | S_DATA -> Received byte: 7. Computed parity: 1
+# Time:           1438115000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  2, computed_parity: 1, sampled_parity: 1, parity_err: 0
+# Time:           1438265000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1438265000 | Receiving plaintext byte: 07, byte_idx: 14
+# Time:           1439525000 | S_DATA -> Received byte: 34. Computed parity: 1
+# Time:           1439665000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  3, computed_parity: 1, sampled_parity: 1, parity_err: 0
+# time:1439815000 | Receiving plaintext byte: 34, byte_idx: 15
+# time:1439825000 | Entered start encryption state 
+# time:           1440065000, Inside DONE state, ciphertext=3925841d02dc09fbdc118597196a0b32, round=10, done:1
+# time:           1541175000, DONE, plaintext=3243f6a8885a308d313198a2e0370734, imc_in=8accf7a2bfcaeabc85b1c3a0a9e14753, round_key=2b7e151628aed2a6abf7158809cf4f3c
 # S.No: 10 PASS
-# Time:2019190000 | Plaintext  : 3243f6a8885a308d313198a2e0370734
-# Time:2019190000 |  Expected   : 3243f6a8885a308d313198a2e0370734
-# time: 2019200000 | in_flight : 0 | latency_cnt : 20190
-# time : 2221110000 | in_flight is made zero | Entered done handshake block. pt=ae2d8a571e03ac9c9eb76fac45af8e51
-# ❌ LATENCY ERROR exp=80670 got=20190
+# Time:1541195000 | Plaintext  : 3243f6a8885a308d313198a2e0370734
+# Time:1541195000 |  Expected   : 3243f6a8885a308d313198a2e0370734
+# Time:           1541235000 | UART_in | S_IDLE  -> Detected Start Bit.
+# Time:           1542495000 | S_DATA -> Received byte: 1. Computed parity: 1
+# Time:           1542635000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  4, computed_parity: 1, sampled_parity: 1, parity_err: 0
+# Time:           1542785000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1542785000 | Received first byte: 01
+# time:1542785000 | Received command to start receiving key
+# Time:           1544045000 | S_DATA -> Received byte: 2b. Computed parity: 1
+# Time:           1544185000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  5, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1544335000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1544335000 | Receiving key byte: 2b
+# Time:           1545595000 | S_DATA -> Received byte: 7e. Computed parity: 0
+# Time:           1545735000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  6, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1545885000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1545885000 | Receiving key byte: 7e
+# Time:           1547145000 | S_DATA -> Received byte: 15. Computed parity: 0
+# Time:           1547285000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  7, computed_parity: 1, sampled_parity: 1, parity_err: 0
+# Time:           1547435000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1547435000 | Receiving key byte: 15
+# Time:           1548695000 | S_DATA -> Received byte: 16. Computed parity: 1
+# Time:           1548835000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  8, computed_parity: 1, sampled_parity: 1, parity_err: 0
+# Time:           1548985000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1548985000 | Receiving key byte: 16
+# Time:           1550245000 | S_DATA -> Received byte: 28. Computed parity: 1
+# Time:           1550385000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  9, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1550535000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1550535000 | Receiving key byte: 28
+# Time:           1551795000 | S_DATA -> Received byte: ae. Computed parity: 0
+# Time:           1551935000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 10, computed_parity: 1, sampled_parity: 1, parity_err: 0
+# Time:           1552085000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1552085000 | Receiving key byte: ae
+# Time:           1553345000 | S_DATA -> Received byte: d2. Computed parity: 1
+# Time:           1553485000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 11, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1553635000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1553635000 | Receiving key byte: d2
+# Time:           1554895000 | S_DATA -> Received byte: a6. Computed parity: 0
+# Time:           1555035000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 12, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1555185000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1555185000 | Receiving key byte: a6
+# Time:           1556445000 | S_DATA -> Received byte: ab. Computed parity: 0
+# Time:           1556585000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 13, computed_parity: 1, sampled_parity: 1, parity_err: 0
+# Time:           1556735000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1556735000 | Receiving key byte: ab
+# Time:           1557995000 | S_DATA -> Received byte: f7. Computed parity: 1
+# Time:           1558135000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 14, computed_parity: 1, sampled_parity: 1, parity_err: 0
+# Time:           1558285000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1558285000 | Receiving key byte: f7
+# Time:           1559545000 | S_DATA -> Received byte: 15. Computed parity: 1
+# Time:           1559685000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 15, computed_parity: 1, sampled_parity: 1, parity_err: 0
+# Time:           1559835000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1559835000 | Receiving key byte: 15
+# Time:           1561095000 | S_DATA -> Received byte: 88. Computed parity: 1
+# Time:           1561235000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  0, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1561385000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1561385000 | Receiving key byte: 88
+# Time:           1562645000 | S_DATA -> Received byte: 9. Computed parity: 0
+# Time:           1562785000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  1, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1562935000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1562935000 | Receiving key byte: 09
+# Time:           1564195000 | S_DATA -> Received byte: cf. Computed parity: 0
+# Time:           1564335000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  2, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1564485000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1564485000 | Receiving key byte: cf
+# Time:           1565745000 | S_DATA -> Received byte: 4f. Computed parity: 0
+# Time:           1565885000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  3, computed_parity: 1, sampled_parity: 1, parity_err: 0
+# Time:           1566035000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1566035000 | Receiving key byte: 4f
+# Time:           1567295000 | S_DATA -> Received byte: 3c. Computed parity: 1
+# Time:           1567435000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  4, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1567585000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1567585000 | Receiving key byte: 3c
+# Time:           1568845000 | S_DATA -> Received byte: 2. Computed parity: 0
+# Time:           1568985000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  5, computed_parity: 1, sampled_parity: 1, parity_err: 0
+# Time:           1569135000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1569135000 | Received first byte: 02
+# time:1569135000 | Received command to start receiving data
+# Time:           1570395000 | S_DATA -> Received byte: ae. Computed parity: 1
+# Time:           1570535000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  6, computed_parity: 1, sampled_parity: 1, parity_err: 0
+# Time:           1570685000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1570685000 | Receiving plaintext byte: ae, byte_idx:  0
+# Time:           1571945000 | S_DATA -> Received byte: 2d. Computed parity: 1
+# Time:           1572085000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  7, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1572235000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1572235000 | Receiving plaintext byte: 2d, byte_idx:  1
+# Time:           1573495000 | S_DATA -> Received byte: 8a. Computed parity: 0
+# Time:           1573635000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  8, computed_parity: 1, sampled_parity: 1, parity_err: 0
+# Time:           1573785000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1573785000 | Receiving plaintext byte: 8a, byte_idx:  2
+# Time:           1575045000 | S_DATA -> Received byte: 57. Computed parity: 1
+# Time:           1575185000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  9, computed_parity: 1, sampled_parity: 1, parity_err: 0
+# Time:           1575335000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1575335000 | Receiving plaintext byte: 57, byte_idx:  3
+# Time:           1576595000 | S_DATA -> Received byte: 1e. Computed parity: 1
+# Time:           1576735000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 10, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1576885000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1576885000 | Receiving plaintext byte: 1e, byte_idx:  4
+# Time:           1578145000 | S_DATA -> Received byte: 3. Computed parity: 0
+# Time:           1578285000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 11, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1578435000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1578435000 | Receiving plaintext byte: 03, byte_idx:  5
+# Time:           1579695000 | S_DATA -> Received byte: ac. Computed parity: 0
+# Time:           1579835000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 12, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1579985000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1579985000 | Receiving plaintext byte: ac, byte_idx:  6
+# Time:           1581245000 | S_DATA -> Received byte: 9c. Computed parity: 0
+# Time:           1581385000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 13, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1581535000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1581535000 | Receiving plaintext byte: 9c, byte_idx:  7
+# Time:           1582795000 | S_DATA -> Received byte: 9e. Computed parity: 0
+# Time:           1582935000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 14, computed_parity: 1, sampled_parity: 1, parity_err: 0
+# Time:           1583085000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1583085000 | Receiving plaintext byte: 9e, byte_idx:  8
+# Time:           1584345000 | S_DATA -> Received byte: b7. Computed parity: 1
+# Time:           1584485000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter: 15, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1584635000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1584635000 | Receiving plaintext byte: b7, byte_idx:  9
+# Time:           1585895000 | S_DATA -> Received byte: 6f. Computed parity: 0
+# Time:           1586035000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  0, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1586185000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1586185000 | Receiving plaintext byte: 6f, byte_idx: 10
+# Time:           1587445000 | S_DATA -> Received byte: ac. Computed parity: 0
+# Time:           1587585000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  1, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1587735000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1587735000 | Receiving plaintext byte: ac, byte_idx: 11
+# Time:           1588995000 | S_DATA -> Received byte: 45. Computed parity: 0
+# Time:           1589135000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  2, computed_parity: 1, sampled_parity: 1, parity_err: 0
+# Time:           1589285000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1589285000 | Receiving plaintext byte: 45, byte_idx: 12
+# Time:           1590545000 | S_DATA -> Received byte: af. Computed parity: 1
+# Time:           1590685000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  3, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1590835000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1590835000 | Receiving plaintext byte: af, byte_idx: 13
+# Time:           1592095000 | S_DATA -> Received byte: 8e. Computed parity: 0
+# Time:           1592235000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  4, computed_parity: 0, sampled_parity: 0, parity_err: 0
+# Time:           1592385000 | UART_in | S_IDLE  -> Detected Start Bit.
+# time:1592385000 | Receiving plaintext byte: 8e, byte_idx: 14
+# Time:           1593645000 | S_DATA -> Received byte: 51. Computed parity: 0
+# Time:           1593785000 | S_PARITY-> Sampling Parity Bit. Waited         14 cycles. in value: 1, byte_counter:  5, computed_parity: 1, sampled_parity: 1, parity_err: 0
+# time:1593935000 | Receiving plaintext byte: 51, byte_idx: 15
+# time:1593945000 | Entered start encryption state 
+# time:           1594185000, Inside DONE state, ciphertext=f5d3d58503b9699de785895a96fdbaaf, round=10, done:1
+# time:           1695295000, DONE, plaintext=ae2d8a571e03ac9c9eb76fac45af8e51, imc_in=9565130ac154340c7422daf861efe5e6, round_key=2b7e151628aed2a6abf7158809cf4f3c
 # S.No: 11 PASS
-# Time:2221110000 | Plaintext  : ae2d8a571e03ac9c9eb76fac45af8e51
-# Time:2221110000 |  Expected   : ae2d8a571e03ac9c9eb76fac45af8e51
+# Time:1695315000 | Plaintext  : ae2d8a571e03ac9c9eb76fac45af8e51
+# Time:1695315000 |  Expected   : ae2d8a571e03ac9c9eb76fac45af8e51
 # ----------------------------------
 # AES DECRYPTION TEST SUMMARY
-# PASS        : 11
+# PASS        : 10
 # FAIL        : 0
-# LATENCY ERR : 10
+# LATENCY ERR : 0
 # LATENCY REF : 80670
 # ----------------------------------
 # ✅ AES DECRYPTION TB PASSED
-# ** Note: $finish    : /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/../testbench/tb.v(295)
-#    Time: 2221110 ns  Iteration: 1  Instance: /tb
+# ** Note: $finish    : /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/../testbench/tb.v(344)
+#    Time: 1695315 ns  Iteration: 1  Instance: /tb
 # 1
-# Break in Module tb at /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/../testbench/tb.v line 295
-# End time: 16:50:38 on Apr 09,2026, Elapsed time: 0:25:15
-# Errors: 0, Warnings: 1
+# Break in Module tb at /home/maruthi/intelFPGA_lite/20.1/quartus/AES/TOP/../testbench/tb.v line 344
+# End time: 12:33:17 on Apr 20,2026, Elapsed time: 0:39:34
+# Errors: 0, Warnings: 0

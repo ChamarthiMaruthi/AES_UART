@@ -66,6 +66,15 @@ set_global_assignment -name EDA_TEST_BENCH_NAME tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME tb -section_id tb
 set_global_assignment -name EDA_TEST_BENCH_FILE ../testbench/tb.v -section_id tb
+set_global_assignment -name POWER_USE_INPUT_FILES ON
+set_global_assignment -name POWER_DEFAULT_INPUT_IO_TOGGLE_RATE 12.5%
+set_global_assignment -name POWER_USE_PVA OFF
+set_global_assignment -name POWER_DEFAULT_TOGGLE_RATE 12.5%
+set_global_assignment -name FLOW_ENABLE_POWER_ANALYZER ON
+set_global_assignment -name SMART_RECOMPILE OFF
+set_global_assignment -name POWER_INPUT_FILE_NAME simulation/modelsim/post_fit_gls.vcd -section_id post_fit_gls.vcd
+set_instance_assignment -name POWER_READ_INPUT_FILE post_fit_gls.vcd -to aes_uart_top
+set_global_assignment -name VERILOG_FILE UART_IN.v
 set_global_assignment -name SDC_FILE aes_uart_top.out.sdc
 set_global_assignment -name VERILOG_FILE aes_uart_top.v
 set_global_assignment -name VERILOG_FILE ../AES_ENCRYPTION/code/AES_TOP.v
@@ -88,12 +97,4 @@ set_global_assignment -name VERILOG_FILE ../AES_DECRYPTION/code/finalInvRound.v
 set_global_assignment -name VERILOG_FILE ../AES_DECRYPTION/code/decryptRound.v
 set_global_assignment -name VERILOG_FILE ../AES_DECRYPTION/code/inverseSubBytes.v
 set_global_assignment -name VERILOG_FILE ../AES_DECRYPTION/code/invMixColumns.v
-set_global_assignment -name POWER_USE_INPUT_FILES ON
-set_global_assignment -name POWER_DEFAULT_INPUT_IO_TOGGLE_RATE "12.5 %"
-set_global_assignment -name POWER_USE_PVA OFF
-set_global_assignment -name POWER_DEFAULT_TOGGLE_RATE 12.5%
-set_global_assignment -name FLOW_ENABLE_POWER_ANALYZER ON
-set_global_assignment -name SMART_RECOMPILE OFF
-set_global_assignment -name POWER_INPUT_FILE_NAME simulation/modelsim/post_fit_gls.vcd -section_id post_fit_gls.vcd
-set_instance_assignment -name POWER_READ_INPUT_FILE post_fit_gls.vcd -to aes_uart_top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
