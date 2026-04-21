@@ -2,7 +2,7 @@ module fifo_rx #(
     parameter DEPTH = 256,
     parameter ADDR_WIDTH = $clog2(DEPTH)
 )(
-    input        clk_3125_rx,
+    input        clk_25,
     input        reset,
     input        wr_rx,
     input        rd_rx,
@@ -36,7 +36,7 @@ module fifo_rx #(
     //wire wr_valid = wr_rx && !full;
     //wire rd_valid = rd_rx && !empty;
 
-    always @(posedge clk_3125_rx) begin
+    always @(posedge clk_25) begin
         if (reset) begin
             wr_ptr <= 0;
             rd_ptr <= 0;
@@ -63,11 +63,11 @@ module fifo_rx #(
         end
     end
     /*reg rx_block_ok_d = 0;
-    always @(posedge clk_3125_rx) begin
+    always @(posedge clk_25) begin
         rx_block_ok_d <= rx_block_ok;
     end*/
 
-    /*always @(posedge clk_3125_rx) begin
+    /*always @(posedge clk_25) begin
         if (rx_block_ok_d) begin
             $display("---- FIFO_RX MEMORY DUMP ----");
             for (k = 0; k < 16; k = k + 1) begin

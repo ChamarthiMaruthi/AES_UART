@@ -3,7 +3,7 @@ module fifo_tx #(
     parameter ADDR_WIDTH = $clog2(DEPTH),
     parameter TX_THRESHOLD = 0 // Auto-start when atleast 1 byte is available  
 )(
-    input              clk_3125_tx,  // Clock
+    input              clk_25,       // Clock
     input              reset,        // Synchronous reset
     input              wr_en,        // Write enable
     input              rd_en,        // Read enable
@@ -45,7 +45,7 @@ module fifo_tx #(
 	 end*/
 	 
     // --- FIFO Logic ---
-    always @(posedge clk_3125_tx) begin
+    always @(posedge clk_25) begin
         if (reset) begin
             wr_ptr     <= 0;
             rd_ptr     <= 0;

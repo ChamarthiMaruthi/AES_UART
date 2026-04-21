@@ -1,6 +1,6 @@
 // module declaration
 module uart_rx(
-    input clk_3125_rx,
+    input clk_25,
     input rx,
     output reg [7:0] rx_msg,
     output reg rx_parity,
@@ -42,7 +42,7 @@ end
 	 reg rx_start, sampled_parity;
 
 
-always @(posedge clk_3125_rx) begin
+always @(posedge clk_25) begin
 rx_complete <= 0;
 wr_rx <= 0;
 rx_block_ok <= 0;

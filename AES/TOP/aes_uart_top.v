@@ -2,34 +2,11 @@ module aes_uart_top #( parameter loopback_test = 1)
 (
     // ===== Clocks & Reset =====
     input  wire        clk_100,        // 100 MHz AES clock
-    input  wire        clk_3125_tx,     // 3.125 MHz UART TX clock
-    input  wire        clk_3125_rx,     // 3.125 MHz UART RX clock
+    input  wire        clk_25,         // 25 MHz system clock for UART
     input  wire        rst,   // Synchronized reset for faster clock domain
-
-    // ===== Control =====
-    input  wire        start,           // Start full encrypt→tx→rx→decrypt flow
-	 output reg         RD_RX,
-
-    // ===== AES Inputs =====
-    //input  wire [127:0] plaintext,
-    //input  wire [127:0] key,
-
-    // ===== AES Output =====
-    output wire  [127:0] decrypted_text,
-    output reg          done,
-
-    // ===== UART Physical Loopback =====
-    output wire        tx,
-    output  wire        rx,
-
-    // ========================================================
+    output reg         done,
     input wire  in,
-    output wire [7:0] input_data,
-	output wire out,
-	 // CDC
-	 output wire enc_done,
-	 output reg  fifo_wr_en,
-     output reg  enc_done_toggle 
+	output wire out
 );
 
     // ============================================================
@@ -55,7 +32,7 @@ module aes_uart_top #( parameter loopback_test = 1)
 
     reg [3:0] sys_state;
 
-    //wire [7:0] input_data;
+    wire [7:0] input_data;
     wire parity;
     wire in_complete;
     wire wr_in;
@@ -82,17 +59,8 @@ module aes_uart_top #( parameter loopback_test = 1)
     // AES Encryption Signals
     // ============================================================
     reg         enc_start;
-    //wire        enc_done;
+    wire        enc_done;
     wire [127:0] enc_ciphertext;
-    //reg  [127:0] key_reg;
-
-    /*always @(posedge clk_100 or posedge rst) begin
-        if (rst) begin
-            key_reg <= 128'd0;
-        end else begin
-            key_reg <= 128'h2b7e151628aed2a6abf7158809cf4f3c;
-        end
-    end*/
 
     AES_TOP u_aes_encrypt (
         .clk        (clk_100),
@@ -107,7 +75,7 @@ module aes_uart_top #( parameter loopback_test = 1)
     // ============================================================
     // UART Buffer System Signals
     // ============================================================
-    //reg         fifo_wr_en;
+    reg         fifo_wr_en;
     //wire        tx_start;
     wire [7:0]  ft_data;
     wire        fifo_full;
@@ -129,6 +97,8 @@ module aes_uart_top #( parameter loopback_test = 1)
     wire        tx_busy;
     wire        rx_block_ok;
     wire        wr_rx; // Write to FIFO when RX is complete and FIFO is not full
+    wire        tx;
+    wire        rx;
 	 //wire         RD_RX;
 	 
 	 // ============================================================
@@ -137,7 +107,7 @@ module aes_uart_top #( parameter loopback_test = 1)
     reg         dec_start;
     wire        dec_done;
     reg  [127:0] dec_ciphertext;
-	 //reg  RD_RX;
+	reg  RD_RX;
 
     // ============================================================
     // Byte Counters
@@ -148,7 +118,7 @@ module aes_uart_top #( parameter loopback_test = 1)
     // ============================================================
     // TX Block Request / Acknowledge
     // ============================================================
-    //reg enc_done_toggle = 0;
+    reg enc_done_toggle = 0;
     //reg enc_done_toggle_1 = 0;
 
     always @(posedge clk_100 or posedge rst) begin
@@ -165,7 +135,7 @@ module aes_uart_top #( parameter loopback_test = 1)
     reg [1:0] enc_sync;
     reg       enc_sync_d;
 
-    always @(posedge clk_3125_tx or posedge rst) begin
+    always @(posedge clk_25 or posedge rst) begin
         if (rst) begin
             enc_sync   <= 2'b00;
             enc_sync_d <= 1'b0;
@@ -177,7 +147,7 @@ module aes_uart_top #( parameter loopback_test = 1)
     end
 
     reg tx_start_1 = 0;
-    always @(posedge clk_3125_tx or posedge rst) begin
+    always @(posedge clk_25 or posedge rst) begin
         if (rst) begin
             tx_start_1 <= 1'b0;
         end else if (enc_sync[1] ^ enc_sync_d) begin
@@ -190,7 +160,7 @@ module aes_uart_top #( parameter loopback_test = 1)
         end
     end
 
-    always @(posedge clk_3125_tx or posedge rst) begin
+    always @(posedge clk_25 or posedge rst) begin
         if (rst) begin
             fifo_wr_en  <= 1'b0;
         end else  begin
@@ -205,7 +175,7 @@ module aes_uart_top #( parameter loopback_test = 1)
     end
    
     reg fifo_wr_en_hold;
-    always @(posedge clk_3125_tx or posedge rst) begin
+    always @(posedge clk_25 or posedge rst) begin
         if (rst) begin
             tx_byte_cnt  <= 4'd0;
             fifo_wr_data <= 8'd0;
@@ -224,7 +194,7 @@ module aes_uart_top #( parameter loopback_test = 1)
 
     reg [3:0] sent_cnt;
     reg tx_start;
-    always @(posedge clk_3125_tx or posedge rst) begin
+    always @(posedge clk_25 or posedge rst) begin
     if (rst) begin
         tx_start <= 1'b0;
         sent_cnt <= 4'd0;
@@ -244,8 +214,7 @@ module aes_uart_top #( parameter loopback_test = 1)
     end
 
     Buffer_top u_uart_buffer (
-        .clk_3125_tx (clk_3125_tx),
-        .clk_3125_rx (clk_3125_rx),
+        .clk_25      (clk_25),
         .reset       (rst),
 
         // TX side
@@ -280,7 +249,7 @@ module aes_uart_top #( parameter loopback_test = 1)
     reg [1:0] dec_sync = 0;
 
 
-    always @(posedge clk_3125_rx or posedge rst) begin
+    always @(posedge clk_25 or posedge rst) begin
         if (rst) begin
             rx_block_ready <= 1'b0;
         end else if (rx_block_ok) begin
@@ -293,7 +262,7 @@ module aes_uart_top #( parameter loopback_test = 1)
     end
 
     
-    always @(posedge clk_3125_rx or posedge rst) begin
+    always @(posedge clk_25 or posedge rst) begin
         if (rst) begin
             RD_RX <= 1'b0;
         end else if (rx_block_ready) begin
@@ -310,7 +279,7 @@ module aes_uart_top #( parameter loopback_test = 1)
     end
 
     reg dout_valid;
-    always @(posedge clk_3125_rx or posedge rst) begin
+    always @(posedge clk_25 or posedge rst) begin
         if (rst) begin
             dout_valid <= 1'b0;
         end else if (RD_RX && !empty)begin
@@ -320,7 +289,7 @@ module aes_uart_top #( parameter loopback_test = 1)
         end
     end
 
-    always @(posedge clk_3125_rx or posedge rst) begin
+    always @(posedge clk_25 or posedge rst) begin
         if (rst) begin
             rx_byte_cnt <= 4'd0;
             rx_block    <= 128'd0;
@@ -339,7 +308,7 @@ module aes_uart_top #( parameter loopback_test = 1)
     end
 
 
-    always @(posedge clk_3125_rx or posedge rst) begin
+    always @(posedge clk_25 or posedge rst) begin
         if (rst) begin
             dec_block_ready <= 1'b0;
         end else if (dout_valid && rx_byte_cnt == 4'd15) begin
@@ -372,7 +341,7 @@ module aes_uart_top #( parameter loopback_test = 1)
         end
     end
 
-
+    wire [127:0] decrypted_text;  // now internal wire, not port
     ADS_TOP u_aes_decrypt (
         .clk        (clk_100),
         .rst_n      (rst),
@@ -384,7 +353,7 @@ module aes_uart_top #( parameter loopback_test = 1)
     );
 
     // After ADS_TOP signals:
-    //wire [127:0] decrypted_text;  // now internal wire, not port
+
     reg  [3:0]   out_byte_idx = 0;
     reg          send     = 0;
     reg          send_start = 0;

@@ -9,15 +9,11 @@ create_clock -name clk_100 \
     -waveform {0.000 5.000} \
     [get_ports clk_100]
 
-create_clock -name clk_3125_tx \
+create_clock -name clk_25 \
     -period 40.000 \
     -waveform {0.000 20.000} \
-    [get_ports clk_3125_tx]
+    [get_ports clk_25]
 
-create_clock -name clk_3125_rx \
-    -period 40.000 \
-    -waveform {0.000 20.000} \
-    [get_ports clk_3125_rx]
 
 
 #**************************************************************
@@ -26,14 +22,14 @@ create_clock -name clk_3125_rx \
 #**************************************************************
 
 # Setup uncertainty
-set_clock_uncertainty -setup 0.20 -from [get_clocks clk_100] -to [get_clocks clk_100]
-set_clock_uncertainty -setup 0.50 -from [get_clocks clk_3125_tx] -to [get_clocks clk_3125_tx]
-set_clock_uncertainty -setup 0.50 -from [get_clocks clk_3125_rx] -to [get_clocks clk_3125_rx]
+#set_clock_uncertainty -setup 2.00 -from [get_clocks clk_100] -to [get_clocks clk_100]
+#set_clock_uncertainty -setup 0.50 -from [get_clocks clk_25] -to [get_clocks clk_25]
+#set_clock_uncertainty -setup 2.00 -from [get_clocks clk_100] -to [get_clocks clk_25]
+
 
 # Hold uncertainty
-set_clock_uncertainty -hold 0.05 -from [get_clocks clk_100] -to [get_clocks clk_100]
-set_clock_uncertainty -hold 0.10 -from [get_clocks clk_3125_tx] -to [get_clocks clk_3125_tx]
-set_clock_uncertainty -hold 0.10 -from [get_clocks clk_3125_rx] -to [get_clocks clk_3125_rx]
+set_clock_uncertainty -hold 1.00 -from [get_clocks clk_100] -to [get_clocks clk_100]
+set_clock_uncertainty -hold 0.10 -from [get_clocks clk_25] -to [get_clocks clk_25]
 
 
 #**************************************************************
@@ -45,8 +41,8 @@ set_clock_uncertainty -hold 0.10 -from [get_clocks clk_3125_rx] -to [get_clocks 
 
 set_clock_groups -asynchronous \
     -group {clk_100} \
-    -group {clk_3125_tx} \
-    -group {clk_3125_rx}
+    -group {clk_25}
+	 
 
 
 #**************************************************************
@@ -54,7 +50,7 @@ set_clock_groups -asynchronous \
 #**************************************************************
 
 # Async reset (very likely in your design)
-set_false_path -from [get_ports rst_n]
+set_false_path -from [get_ports rst]
 
 # Optional: ignore debug I/O if timing not critical
 # set_false_path -to   [get_ports {led[*]}]
@@ -68,12 +64,16 @@ set_false_path -from [get_ports rst_n]
 # These are assumptions — adjust based on board/system
 
 # Inputs to FPGA
-set_input_delay  -clock clk_100 -max 2.0 [get_ports {plaintext[*]}]
-set_input_delay  -clock clk_100 -min 0.5 [get_ports {plaintext[*]}]
+set_input_delay  -clock clk_100 -max 2.0 [get_ports {in}]
+set_input_delay  -clock clk_100 -min 0.5 [get_ports {in}]
+set_input_delay  -clock clk_100 -max 2.0 [get_ports {rst}]
+set_input_delay  -clock clk_100 -min 0.5 [get_ports {rst}]
 
 # Outputs from FPGA
-set_output_delay -clock clk_100 -max 2.0 [get_ports {ciphertext[*]}]
-set_output_delay -clock clk_100 -min 0.5 [get_ports {ciphertext[*]}]
+set_output_delay -clock clk_100 -max 2.0 [get_ports {out}]
+set_output_delay -clock clk_100 -min 0.5 [get_ports {out}]
+set_output_delay -clock clk_100 -max 2.0 [get_ports {done}]
+set_output_delay -clock clk_100 -min 0.5 [get_ports {done}]
 
 
 #**************************************************************

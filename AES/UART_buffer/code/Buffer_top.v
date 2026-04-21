@@ -1,7 +1,6 @@
 
 module Buffer_top(
-    input        clk_3125_tx,    // UART TX clock
-    input        clk_3125_rx,    // UART RX clock
+    input        clk_25,         // System clock (25 MHz)
 	 input        reset,
     // ===== TX Management Ports =====
     input        parity_type,    // Parity type for UART TX
@@ -37,7 +36,7 @@ wire [4:0] byte_counter;
 wire rx_parity;
 
 fifo_tx tx_fifo_inst (
-    .clk_3125_tx(clk_3125_tx),
+    .clk_25(clk_25), // Use the system clock for FIFO operations
     .reset(reset),
     .wr_en(wr_en && !ft_full), // Correct: Check the internal wire
     .rd_en(rd_en),                // Correct: Driven by UART
@@ -51,7 +50,7 @@ fifo_tx tx_fifo_inst (
 
 // Corrected UART TX Instance
 uart_tx tx_inst (
-    .clk_3125_tx(clk_3125_tx),
+    .clk_25(clk_25),
     .parity_type(parity_type),
     .tx_start(tx_start),            // 'tx_start' kicks off the process
     .ft_out(ft_out),             // UART gets its data from the FIFO output
@@ -63,7 +62,7 @@ uart_tx tx_inst (
 );
 // ===== UART RX Instance =====
 uart_rx rx_inst (
-    .clk_3125_rx (clk_3125_rx),
+    .clk_25      (clk_25),
     .rx          (tx),
     .rx_msg      (rx_msg),
     .rx_parity   (rx_parity),
@@ -75,7 +74,7 @@ uart_rx rx_inst (
 
 // FIFO RX Instance
 fifo_rx rx_fifo_inst (
-    .clk_3125_rx (clk_3125_rx),
+    .clk_25      (clk_25),
     .reset       (reset),
     .wr_rx       (wr_rx), // Write when RX is complete
     .rd_rx       (rd_rx),

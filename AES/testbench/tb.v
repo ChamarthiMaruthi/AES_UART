@@ -8,6 +8,7 @@ module tb;
     reg clk_100;
     reg clk_3125_tx;
     reg clk_3125_rx;
+    reg clk_25;
     reg rst;
 
     // ==============================
@@ -37,23 +38,11 @@ module tb;
     // ==============================
     aes_uart_top dut (
         .clk_100        (clk_100),
-        .clk_3125_tx    (clk_3125_tx),
-        .clk_3125_rx    (clk_3125_rx),
+        .clk_25         (clk_25),
         .rst            (rst),
-        .start          (start),
-        //.plaintext      (plaintext),
-        //.key            (key),
-        .decrypted_text (decrypted_text),
         .done            (done),
-        .tx              (tx),
-        .rx              (rx),
         .in              (in),
-        .input_data      (input_data),
-        .out             (out),
-        .enc_done       (enc_done),
-        .RD_RX          (RD_RX),
-        .fifo_wr_en     (fifo_wr_en),
-        .enc_done_toggle (enc_done_toggle)
+        .out             (out)
     );
 
     /*always @(*) begin
@@ -76,7 +65,12 @@ module tb;
     end
 
     initial begin
-        clk_3125_tx = 1;
+        clk_25 = 0;
+        forever #20 clk_25 = ~clk_25;
+    end
+
+    initial begin
+        clk_3125_tx = 0;
         forever #20 clk_3125_tx = ~clk_3125_tx;
     end
 

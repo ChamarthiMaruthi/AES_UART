@@ -1,6 +1,6 @@
 	// module declaration
 	module uart_tx(
-		 input clk_3125_tx,
+		 input clk_25,
 		 input parity_type,tx_start,
 		 input [7:0] ft_out,
 		 input ft_empty,
@@ -41,7 +41,7 @@
     // SEQUENTIAL BLOCK: Handles state transitions and counters.
     // This part only changes on the clock edge.
     //----------------------------------------------------------------------
-    always @(posedge clk_3125_tx) begin
+    always @(posedge clk_25) begin
 	 tx_done <= 0;
         case(state)
             S_IDLE: begin
